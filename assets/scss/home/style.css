@@ -87,6 +87,37 @@
   transition-delay: 0.5s;
 }
 
+.btn-shine {
+  position: relative;
+  padding: 15px 20px;
+  background-color: #201e2a;
+  color: white;
+  text-decoration: none;
+  letter-spacing: 1px;
+  transition: 0.2s all;
+  text-transform: uppercase;
+  transform: skew(-5deg);
+  display: inline-block;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.btn-shine:hover {
+  background-color: #d31c3d;
+}
+.btn-shine::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, #fff, transparent);
+  transition: 0.4s;
+}
+.btn-shine:hover::before {
+  left: 100%;
+}
+
 header {
   height: 90px;
   display: flex;
@@ -230,6 +261,7 @@ body #fav-game .content h1 {
 body #fav-game .content p {
   color: white;
   margin-top: 40px;
+  margin-bottom: 50px;
   width: 80%;
   font-size: 19px;
   line-height: 35px;
