@@ -1,0 +1,132 @@
+header {
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: #201e2a;
+
+    .navbar {
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        width: 27%;
+
+        li {
+            a {
+                text-decoration: none;
+                color: white;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 10px 15px;
+                transition: 0.3s all;
+                border-radius: 20px;
+
+                &:hover {
+                    background-color: #d31c3d;
+                }
+            }
+        }
+    }
+
+    .user-panel {
+        display: flex;
+        width: 8%;
+        justify-content: space-between;
+
+        a {
+            text-decoration: none;
+        }
+
+        .circle {
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            transition: 0.3s all;
+            cursor: pointer;
+            color: white;
+
+            &:hover {
+                background-color: #39354b;
+            }
+        }
+
+        .search {
+            position: relative;
+
+            .search-input {
+                z-index: 1;
+                position: absolute;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                bottom: -100px;
+                right: 0;
+                background-color: #201e2a;
+                width: 300px;
+                height: 60px;
+                border-radius: 5px;
+                opacity: 0;
+                pointer-events: none;
+                transition: 0.3s all;
+
+                input {
+                    height: 40px;
+                    width: 242px;
+                    outline: none;
+                    background-color: #201e2a;
+                    border: 1.5px solid #443f5a;
+                    border-radius: 3px;
+                    color: white;
+                    padding-left: 15px;
+                    transition: 0.2s all;
+
+                    &:focus {
+                        border-color: white;
+                    }
+                }
+
+                i {
+                    font-size: 20px;
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .user {
+            position: relative;
+
+            .login-register {
+                z-index: 1;
+                position: absolute;
+                top: 75px;
+                right: -75px;
+                background-color: #201e2a;
+                width: 170px;
+                border-radius: 5px;
+                opacity: 0;
+                pointer-events: none;
+                transition: 0.3s all;
+
+                a {
+                    color: #bdbbc4;
+                    transition: 0.3s all;
+                    display: block;
+                    padding: 15px 0;
+                    padding-left: 30px;
+                    font-size: 14px;
+
+                    &:hover {
+                        color: white;
+                    }
+                }
+            }
+        }
+    }
+}
