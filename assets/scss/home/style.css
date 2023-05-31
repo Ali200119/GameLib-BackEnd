@@ -235,7 +235,6 @@ header .user-panel .user .login-register a:hover {
 
 body {
   background-color: #201e2a;
-  height: 3000px;
 }
 body #fav-game {
   height: 650px;
@@ -266,4 +265,80 @@ body #fav-game .content p {
   width: 80%;
   font-size: 19px;
   line-height: 35px;
+}
+body #blog {
+  display: flex;
+  justify-content: center;
+}
+body #blog .container {
+  width: 80%;
+}
+body #blog .container .blog-items {
+  position: relative;
+  bottom: 100px;
+}
+body #blog .container .blog-items .slick-arrow {
+  position: absolute;
+  font-size: 40px;
+  color: #5a5865;
+  transition: 0.3s all;
+  cursor: pointer;
+}
+body #blog .container .blog-items .slick-arrow:hover {
+  color: white;
+}
+body #blog .container .blog-items .prev {
+  top: 43%;
+  left: -45px;
+}
+body #blog .container .blog-items .next {
+  top: 43%;
+  right: -45px;
+}
+body #blog .container .blog-items .item {
+  height: 255px;
+  border-radius: 5px;
+  margin: 10px;
+  overflow: hidden;
+  background-color: black;
+  position: relative;
+  display: block;
+  text-decoration: none;
+}
+body #blog .container .blog-items .item img {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  transition: 0.3s all;
+}
+body #blog .container .blog-items .item:hover img {
+  transform: scale(1.05);
+  opacity: 0.7;
+}
+body #blog .container .blog-items .item .content {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s all;
+}
+body #blog .container .blog-items .item .content h3, body #blog .container .blog-items .item .content h5 {
+  color: white;
+  text-align: center;
+}
+body #blog .container .blog-items .item .content h3 {
+  line-height: 25px;
+  font-weight: unset;
+}
+body #blog .container .blog-items .item .content h5 {
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+body #blog .container .blog-items .item:hover .content {
+  opacity: 1;
+  top: 50%;
+  pointer-events: unset;
 }/*# sourceMappingURL=style.css.map */
