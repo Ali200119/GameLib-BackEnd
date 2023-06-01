@@ -127,7 +127,7 @@ header {
   position: sticky;
   top: 0;
   z-index: 1;
-  background-color: #201e2a;
+  background-color: #242230;
 }
 header .navbar {
   list-style: none;
@@ -180,7 +180,7 @@ header .user-panel .search .search-input {
   align-items: center;
   bottom: -100px;
   right: 0;
-  background-color: #201e2a;
+  background-color: #242230;
   width: 300px;
   height: 60px;
   border-radius: 5px;
@@ -192,7 +192,7 @@ header .user-panel .search .search-input input {
   height: 40px;
   width: 242px;
   outline: none;
-  background-color: #201e2a;
+  background-color: #242230;
   border: 1.5px solid #443f5a;
   border-radius: 3px;
   color: white;
@@ -214,7 +214,7 @@ header .user-panel .user .login-register {
   position: absolute;
   top: 75px;
   right: -75px;
-  background-color: #201e2a;
+  background-color: #242230;
   width: 170px;
   border-radius: 5px;
   opacity: 0;
@@ -235,6 +235,7 @@ header .user-panel .user .login-register a:hover {
 
 body {
   background-color: #201e2a;
+  height: 5000px;
 }
 body #fav-game {
   height: 650px;
@@ -310,6 +311,8 @@ body #blog .container .blog-items .item img {
   height: 100%;
   border-radius: 5px;
   transition: 0.3s all;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 body #blog .container .blog-items .item:hover img {
   transform: scale(1.05);
@@ -382,26 +385,104 @@ body #games .container .tab-menu-header ul .active {
 }
 body #games .container .tab-menu-items {
   position: relative;
+  margin-top: 70px;
 }
 body #games .container .tab-menu-items .items {
   display: flex;
-  gap: 20px;
+  flex-wrap: wrap;
+  gap: 25px;
   color: white;
   position: absolute;
   transition: 0.3s all;
+  width: 100%;
+  justify-content: space-between;
 }
 body #games .container .tab-menu-items .items:nth-child(2), body #games .container .tab-menu-items .items:last-child {
   opacity: 0;
   pointer-events: none;
 }
-body #games .container .tab-menu-items .item .image {
+body #games .container .tab-menu-items .item {
   width: 415px;
+}
+body #games .container .tab-menu-items .item .image {
+  width: 100%;
   height: 235px;
-  overflow: hidden;
   transition: 0.3s all;
-  border-radius: 5px;
+  display: block;
+  margin-bottom: 20px;
 }
 body #games .container .tab-menu-items .item .image img {
   width: 100%;
   height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 5px;
+}
+body #games .container .tab-menu-items .item:hover .image {
+  transform: scale(0.97);
+}
+body #games .container .tab-menu-items .item .name {
+  color: white;
+  transition: 0.3s all;
+  text-decoration: none;
+  display: inline-block;
+}
+body #games .container .tab-menu-items .item .name h3 {
+  font-weight: unset;
+}
+body #games .container .tab-menu-items .item .name:hover {
+  color: #d31c3d;
+}
+body #games .container .tab-menu-items .item .price-view {
+  margin-top: 15px;
+  overflow: hidden;
+  height: 20px;
+}
+body #games .container .tab-menu-items .item .price-view .price {
+  color: #bdbbc4;
+  transition: 0.2s all;
+}
+body #games .container .tab-menu-items .item .price-view .view {
+  color: white;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: 0.2s all;
+  font-size: 14px;
+  font-weight: bold;
+  display: inline-block;
+}
+body #games .container .tab-menu-items .item .price-view .view:hover {
+  color: #d31c3d;
+}
+body #games .container .tab-menu-items .item:hover .price-view .price {
+  transform: translateY(-100%);
+}
+body #games .container .tab-menu-items .item:hover .price-view .view {
+  transform: translateY(-100%);
+}
+body #developers {
+  height: 350px;
+  position: relative;
+  margin-top: 780px;
+  background-color: white;
+  overflow: hidden;
+}
+body #developers .bg {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  opacity: 0.9;
+}
+body #developers .logos {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+body #developers .logos .logo img {
+  width: 155px;
+  height: 155px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }/*# sourceMappingURL=style.css.map */

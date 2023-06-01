@@ -2,12 +2,12 @@
 
 // Fav-Game Parallax
 
-let image = document.querySelector("#fav-game img");
+let favGameBG = document.querySelector("#fav-game img");
 
 window.addEventListener("scroll", function() {
     let scrollPosition = window.pageYOffset;
 
-    image.style.transform = `translateY(${scrollPosition * 0.4}px)`;
+    favGameBG.style.transform = `translateY(${scrollPosition * 0.4}px)`;
 });
 
 
@@ -50,3 +50,29 @@ for (const header of headers) {
         }
     });
 }
+
+
+
+// Developers Parallax
+
+let developersBG = document.querySelector("#developers .bg");
+
+window.addEventListener("scroll", function() {
+    let scrollPosition = window.pageYOffset;
+
+    developersBG.style.transform = `translateY(${scrollPosition * 0.4 - 1000}px)`;
+});
+
+
+
+// Developers Slider
+
+$(document).ready(function() {
+    $("#developers .logos").slick({
+        slidesToShow: 5,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 3000,
+        arrows: false
+    });
+});
