@@ -89,7 +89,6 @@
 
 .btn-shine {
   position: relative;
-  padding: 15px 20px;
   background-color: #201e2a;
   color: white;
   text-decoration: none;
@@ -265,6 +264,9 @@ body #fav-game .content p {
   width: 80%;
   font-size: 19px;
   line-height: 35px;
+}
+body #fav-game .content .btn-shine {
+  padding: 15px 20px;
 }
 body #blog {
   display: flex;
@@ -600,7 +602,8 @@ body #recent-blog .container .posts .post .content .author-date {
   display: flex;
   margin-top: 15px;
 }
-body #recent-blog .container .posts .post .content .author-date .author, body #recent-blog .container .posts .post .content .author-date .date {
+body #recent-blog .container .posts .post .content .author-date .author,
+body #recent-blog .container .posts .post .content .author-date .date {
   color: #bdbbc4;
   font-size: 15px;
 }
@@ -621,4 +624,69 @@ body #recent-blog .container .posts .post .content .more {
 }
 body #recent-blog .container .posts .post .content .more:hover {
   color: #d31c3d;
+}
+body #advantages {
+  display: flex;
+  justify-content: center;
+  margin-top: 150px;
+}
+body #advantages .container {
+  width: 80%;
+}
+body #advantages .container .title {
+  text-align: center;
+  color: white;
+  font-weight: unset;
+}
+body #advantages .container .items {
+  margin-top: 70px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+}
+body #advantages .container .items .item {
+  width: 420px;
+  height: 370px;
+  background-color: #201e2a;
+  transition: 0.3s all;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #282636;
+  border-radius: 5px;
+  cursor: pointer;
+}
+body #advantages .container .items .item .content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  transition: 0.3s all;
+}
+body #advantages .container .items .item .content i {
+  font-size: 50px;
+  color: #9492a0;
+  transition: 0.3s all;
+}
+body #advantages .container .items .item .content h3 {
+  font-weight: unset;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  color: white;
+}
+body #advantages .container .items .item .content p {
+  width: 80%;
+  text-align: center;
+  color: #9492a0;
+  font-size: 15px;
+}
+body #advantages .container .items .item:hover {
+  background-color: #282636;
+}
+body #advantages .container .items .item:hover .content {
+  transform: translateY(-25px);
+}
+body #advantages .container .items .item:hover .content i {
+  color: white;
 }/*# sourceMappingURL=style.css.map */

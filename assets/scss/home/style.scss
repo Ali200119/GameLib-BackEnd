@@ -37,6 +37,10 @@ body {
                 font-size: 19px;
                 line-height: 35px;
             }
+
+            .btn-shine {
+                padding: 15px 20px;
+            }
         }
     }
 
@@ -362,7 +366,8 @@ body {
                 .post {
                     display: flex;
 
-                    &:nth-child(2), &:last-child {
+                    &:nth-child(2),
+                    &:last-child {
                         margin-top: 40px;
                     }
 
@@ -422,7 +427,8 @@ body {
                             display: flex;
                             margin-top: 15px;
 
-                            .author, .date {
+                            .author,
+                            .date {
                                 color: #bdbbc4;
                                 font-size: 15px;
                             }
@@ -449,6 +455,83 @@ body {
                                 color: #d31c3d;
                             }
                         }
+                    }
+                }
+            }
+        }
+    }
+
+    #advantages {
+        display: flex;
+        justify-content: center;
+        margin-top: 150px;
+
+        .container {
+            width: 80%;
+
+            .title {
+                text-align: center;
+                color: white;
+                font-weight: unset;
+            }
+
+            .items {
+                margin-top: 70px;
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                width: 100%;
+
+                .item {
+                    width: 420px;
+                    height: 370px;
+                    background-color: #201e2a;
+                    transition: 0.3s all;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border: 2px solid #282636;
+                    border-radius: 5px;
+                    cursor: pointer;
+
+                    .content {
+                        display: flex;
+                        align-items: center;
+                        flex-direction: column;
+                        position: relative;
+                        transition: 0.3s all;
+
+                        i {
+                            font-size: 50px;
+                            color: #9492a0;
+                            transition: 0.3s all;
+                        }
+
+                        h3 {
+                            font-weight: unset;
+                            margin-top: 30px;
+                            margin-bottom: 30px;
+                            color: white;
+                        }
+
+                        p {
+                            width: 80%;
+                            text-align: center;
+                            color: #9492a0;
+                            font-size: 15px;
+                        }
+                    }
+
+                    &:hover {
+                        background-color: #282636;
+                    }
+
+                    &:hover .content {
+                        transform: translateY(-25px);
+                    }
+
+                    &:hover .content i {
+                        color: white;
                     }
                 }
             }
