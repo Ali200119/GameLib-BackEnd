@@ -235,7 +235,6 @@ header .user-panel .user .login-register a:hover {
 
 body {
   background-color: #201e2a;
-  height: 5000px;
 }
 body #fav-game {
   height: 650px;
@@ -467,6 +466,11 @@ body #developers {
   background-color: white;
   overflow: hidden;
 }
+@media only screen and (max-width: 1618px) {
+  body #developers {
+    margin-top: 1150px;
+  }
+}
 body #developers .bg {
   width: 100%;
   -o-object-fit: cover;
@@ -477,7 +481,7 @@ body #developers .logos {
   position: absolute;
   width: 100%;
   top: 50%;
-  left: 0;
+  left: 5%;
   transform: translateY(-50%);
 }
 body #developers .logos .logo img {
@@ -485,4 +489,136 @@ body #developers .logos .logo img {
   height: 155px;
   -o-object-fit: cover;
      object-fit: cover;
+}
+body #recent-blog {
+  margin-top: 140px;
+  display: flex;
+  justify-content: center;
+}
+body #recent-blog .container {
+  width: 80%;
+}
+body #recent-blog .container .title {
+  display: flex;
+  justify-content: space-between;
+}
+body #recent-blog .container .title h1 {
+  color: white;
+  font-weight: unset;
+}
+body #recent-blog .container .title a {
+  text-decoration: none;
+  color: white;
+  display: block;
+  transition: 0.3s all;
+}
+body #recent-blog .container .title a span {
+  font-size: 12px;
+  position: relative;
+  display: inline-block;
+  -webkit-animation: jumping 2s ease-in-out infinite;
+          animation: jumping 2s ease-in-out infinite;
+  -webkit-animation-delay: calc(0.1s * var(--i));
+          animation-delay: calc(0.1s * var(--i));
+}
+@-webkit-keyframes jumping {
+  0%, 40%, 100% {
+    transform: translateY(0);
+  }
+  20% {
+    transform: translateY(-20px);
+  }
+}
+@keyframes jumping {
+  0%, 40%, 100% {
+    transform: translateY(0);
+  }
+  20% {
+    transform: translateY(-20px);
+  }
+}
+body #recent-blog .container .title a:hover {
+  color: #d31c3d;
+}
+body #recent-blog .container .posts {
+  margin-top: 50px;
+}
+body #recent-blog .container .posts .post {
+  display: flex;
+}
+body #recent-blog .container .posts .post:nth-child(2), body #recent-blog .container .posts .post:last-child {
+  margin-top: 40px;
+}
+body #recent-blog .container .posts .post:hover img {
+  transform: scale(1.05);
+}
+body #recent-blog .container .posts .post .image {
+  overflow: hidden;
+  position: relative;
+  width: 425px;
+  height: 235px;
+  border-radius: 5px;
+  display: block;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+body #recent-blog .container .posts .post .image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: 0.3s all;
+}
+body #recent-blog .container .posts .post .image span {
+  text-transform: uppercase;
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  font-size: 13px;
+  color: white;
+  padding: 4px 8px;
+  background-color: #39354b;
+  font-weight: bold;
+  transform: skew(-5deg);
+  border-radius: 3px;
+}
+body #recent-blog .container .posts .post .content {
+  margin-left: 35px;
+}
+body #recent-blog .container .posts .post .content .title {
+  text-decoration: none;
+  color: white;
+  transition: 0.3s all;
+  margin-top: 20px;
+  font-size: 20px;
+  display: inline-block;
+}
+body #recent-blog .container .posts .post .content .title:hover {
+  color: #d31c3d;
+}
+body #recent-blog .container .posts .post .content .author-date {
+  display: flex;
+  margin-top: 15px;
+}
+body #recent-blog .container .posts .post .content .author-date .author, body #recent-blog .container .posts .post .content .author-date .date {
+  color: #bdbbc4;
+  font-size: 15px;
+}
+body #recent-blog .container .posts .post .content .author-date .date {
+  margin-left: 20px;
+}
+body #recent-blog .container .posts .post .content .description {
+  color: #bdbbc4;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  width: 96%;
+}
+body #recent-blog .container .posts .post .content .more {
+  text-decoration: none;
+  color: white;
+  transition: 0.3s all;
+  font-size: 13px;
+}
+body #recent-blog .container .posts .post .content .more:hover {
+  color: #d31c3d;
 }/*# sourceMappingURL=style.css.map */
