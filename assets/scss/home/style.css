@@ -232,6 +232,38 @@ header .user-panel .user .login-register a:hover {
   color: white;
 }
 
+footer {
+  margin-top: 100px;
+}
+footer .social {
+  height: 380px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer .social .social-list {
+  display: flex;
+  width: 35%;
+  justify-content: space-between;
+}
+footer .social .social-list .btn-shine {
+  padding: 30px;
+  font-size: 30px;
+}
+footer .copyright {
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer .copyright h4 {
+  color: #9492a0;
+  font-weight: unset;
+}
+
 body {
   background-color: #201e2a;
 }
@@ -359,7 +391,7 @@ body #games .container .title {
   text-align: center;
   font-weight: unset;
   color: white;
-  font-size: 26px;
+  font-size: 28px;
 }
 body #games .container .tab-menu-header {
   display: flex;
@@ -625,6 +657,49 @@ body #recent-blog .container .posts .post .content .more {
 body #recent-blog .container .posts .post .content .more:hover {
   color: #d31c3d;
 }
+body #subscribe {
+  display: flex;
+  justify-content: center;
+  background-color: #242230;
+  height: 200px;
+  margin-top: 200px;
+}
+body #subscribe .container {
+  width: 80%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+body #subscribe .container .title {
+  color: white;
+  font-weight: unset;
+  font-size: 28px;
+}
+body #subscribe .container .input {
+  display: flex;
+  width: 40%;
+  justify-content: space-between;
+}
+body #subscribe .container .input input {
+  height: 40px;
+  width: 365px;
+  outline: none;
+  background-color: #242230;
+  border: 1.5px solid #443f5a;
+  border-radius: 3px;
+  color: white;
+  padding-left: 15px;
+  transition: 0.2s all;
+}
+body #subscribe .container .input input:focus {
+  border-color: white;
+}
+body #subscribe .container .input .btn-shine {
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+}
 body #advantages {
   display: flex;
   justify-content: center;
@@ -637,6 +712,7 @@ body #advantages .container .title {
   text-align: center;
   color: white;
   font-weight: unset;
+  font-size: 28px;
 }
 body #advantages .container .items {
   margin-top: 70px;

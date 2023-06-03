@@ -2,6 +2,7 @@
 @use "../components/loading";
 @use "../components/button";
 @use "../layouts/header";
+@use "../layouts/footer";
 
 body {
     background-color: #201e2a;
@@ -150,7 +151,7 @@ body {
                 text-align: center;
                 font-weight: unset;
                 color: white;
-                font-size: 26px;
+                font-size: 28px;
             }
 
             .tab-menu-header {
@@ -461,6 +462,56 @@ body {
         }
     }
 
+    #subscribe {
+        display: flex;
+        justify-content: center;
+        background-color: #242230;
+        height: 200px;
+        margin-top: 200px;
+
+        .container {
+            width: 80%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-direction: column;
+
+            .title {
+                color: white;
+                font-weight: unset;
+                font-size: 28px;
+            }
+
+            .input {
+                display: flex;
+                width: 40%;
+                justify-content: space-between;
+
+                input {
+                    height: 40px;
+                    width: 365px;
+                    outline: none;
+                    background-color: #242230;
+                    border: 1.5px solid #443f5a;
+                    border-radius: 3px;
+                    color: white;
+                    padding-left: 15px;
+                    transition: 0.2s all;
+
+                    &:focus {
+                        border-color: white;
+                    }
+                }
+
+                .btn-shine {
+                    padding: 10px 15px;
+                    border: none;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
     #advantages {
         display: flex;
         justify-content: center;
@@ -473,6 +524,7 @@ body {
                 text-align: center;
                 color: white;
                 font-weight: unset;
+                font-size: 28px;
             }
 
             .items {
