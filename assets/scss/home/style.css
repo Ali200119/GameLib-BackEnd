@@ -156,7 +156,6 @@ header .user-panel a {
   text-decoration: none;
 }
 header .user-panel .circle {
-  padding: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -164,6 +163,8 @@ header .user-panel .circle {
   transition: 0.3s all;
   cursor: pointer;
   color: white;
+  width: 40px;
+  height: 40px;
 }
 header .user-panel .circle:hover {
   background-color: #39354b;
@@ -264,32 +265,61 @@ footer .copyright h4 {
   font-weight: unset;
 }
 
+#up {
+  position: fixed;
+  z-index: 1;
+  right: 30px;
+  bottom: 30px;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s all;
+}
+#up .arrow {
+  transition: 0.3s all;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #9492a0;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  cursor: pointer;
+}
+#up .arrow i {
+  color: white;
+}
+#up .arrow:hover {
+  background-color: #d31c3d;
+  border-color: #d31c3d;
+}
+
 body {
   background-color: #201e2a;
 }
-body #fav-game {
+body main #fav-game {
   height: 650px;
   width: 100%;
   position: relative;
   overflow: hidden;
+  background-color: black;
 }
-body #fav-game img {
+body main #fav-game img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   opacity: 0.6;
 }
-body #fav-game .content {
+body main #fav-game .content {
   position: absolute;
   top: 20%;
   left: 10%;
 }
-body #fav-game .content h1 {
+body main #fav-game .content h1 {
   color: white;
   font-size: 47px;
 }
-body #fav-game .content p {
+body main #fav-game .content p {
   color: white;
   margin-top: 40px;
   margin-bottom: 50px;
@@ -297,39 +327,39 @@ body #fav-game .content p {
   font-size: 19px;
   line-height: 35px;
 }
-body #fav-game .content .btn-shine {
+body main #fav-game .content .btn-shine {
   padding: 15px 20px;
 }
-body #blog {
+body main #blog {
   display: flex;
   justify-content: center;
 }
-body #blog .container {
+body main #blog .container {
   width: 80%;
 }
-body #blog .container .blog-items {
+body main #blog .container .blog-items {
   position: relative;
   bottom: 100px;
 }
-body #blog .container .blog-items .slick-arrow {
+body main #blog .container .blog-items .slick-arrow {
   position: absolute;
   font-size: 40px;
   color: #5a5865;
   transition: 0.3s all;
   cursor: pointer;
 }
-body #blog .container .blog-items .slick-arrow:hover {
+body main #blog .container .blog-items .slick-arrow:hover {
   color: white;
 }
-body #blog .container .blog-items .prev {
+body main #blog .container .blog-items .prev {
   top: 43%;
   left: -45px;
 }
-body #blog .container .blog-items .next {
+body main #blog .container .blog-items .next {
   top: 43%;
   right: -45px;
 }
-body #blog .container .blog-items .item {
+body main #blog .container .blog-items .item {
   height: 255px;
   border-radius: 5px;
   margin: 10px;
@@ -339,7 +369,7 @@ body #blog .container .blog-items .item {
   display: block;
   text-decoration: none;
 }
-body #blog .container .blog-items .item img {
+body main #blog .container .blog-items .item img {
   width: 100%;
   height: 100%;
   border-radius: 5px;
@@ -347,11 +377,11 @@ body #blog .container .blog-items .item img {
   -o-object-fit: cover;
      object-fit: cover;
 }
-body #blog .container .blog-items .item:hover img {
+body main #blog .container .blog-items .item:hover img {
   transform: scale(1.05);
   opacity: 0.7;
 }
-body #blog .container .blog-items .item .content {
+body main #blog .container .blog-items .item .content {
   position: absolute;
   top: 55%;
   left: 50%;
@@ -361,66 +391,66 @@ body #blog .container .blog-items .item .content {
   pointer-events: none;
   transition: 0.3s all;
 }
-body #blog .container .blog-items .item .content h3,
-body #blog .container .blog-items .item .content h5 {
+body main #blog .container .blog-items .item .content h3,
+body main #blog .container .blog-items .item .content h5 {
   color: white;
   text-align: center;
 }
-body #blog .container .blog-items .item .content h3 {
+body main #blog .container .blog-items .item .content h3 {
   line-height: 25px;
   font-weight: unset;
 }
-body #blog .container .blog-items .item .content h5 {
+body main #blog .container .blog-items .item .content h5 {
   text-transform: uppercase;
   margin-bottom: 20px;
 }
-body #blog .container .blog-items .item:hover .content {
+body main #blog .container .blog-items .item:hover .content {
   opacity: 1;
   top: 50%;
   pointer-events: unset;
 }
-body #games {
+body main #games {
   display: flex;
   justify-content: center;
   margin-top: 40px;
 }
-body #games .container {
+body main #games .container {
   width: 80%;
 }
-body #games .container .title {
+body main #games .container .title {
   text-align: center;
   font-weight: unset;
   color: white;
   font-size: 28px;
 }
-body #games .container .tab-menu-header {
+body main #games .container .tab-menu-header {
   display: flex;
   justify-content: center;
   margin-top: 40px;
 }
-body #games .container .tab-menu-header ul {
+body main #games .container .tab-menu-header ul {
   display: flex;
   justify-content: space-between;
   list-style: none;
   width: 25%;
 }
-body #games .container .tab-menu-header ul li {
+body main #games .container .tab-menu-header ul li {
   color: #bdbbc4;
   padding: 15px 20px;
   cursor: pointer;
   transition: 0.3s all;
 }
-body #games .container .tab-menu-header ul li:hover {
+body main #games .container .tab-menu-header ul li:hover {
   color: white;
 }
-body #games .container .tab-menu-header ul .active {
+body main #games .container .tab-menu-header ul .active {
   border-bottom: 2px solid #d31c3d;
 }
-body #games .container .tab-menu-items {
+body main #games .container .tab-menu-items {
   position: relative;
   margin-top: 70px;
 }
-body #games .container .tab-menu-items .items {
+body main #games .container .tab-menu-items .items {
   display: flex;
   flex-wrap: wrap;
   gap: 25px;
@@ -430,52 +460,52 @@ body #games .container .tab-menu-items .items {
   width: 100%;
   justify-content: space-between;
 }
-body #games .container .tab-menu-items .items:nth-child(2), body #games .container .tab-menu-items .items:last-child {
+body main #games .container .tab-menu-items .items:nth-child(2), body main #games .container .tab-menu-items .items:last-child {
   opacity: 0;
   pointer-events: none;
 }
-body #games .container .tab-menu-items .item {
+body main #games .container .tab-menu-items .item {
   width: 415px;
 }
-body #games .container .tab-menu-items .item .image {
+body main #games .container .tab-menu-items .item .image {
   width: 100%;
   height: 235px;
   transition: 0.3s all;
   display: block;
   margin-bottom: 20px;
 }
-body #games .container .tab-menu-items .item .image img {
+body main #games .container .tab-menu-items .item .image img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 5px;
 }
-body #games .container .tab-menu-items .item:hover .image {
+body main #games .container .tab-menu-items .item:hover .image {
   transform: scale(0.97);
 }
-body #games .container .tab-menu-items .item .name {
+body main #games .container .tab-menu-items .item .name {
   color: white;
   transition: 0.3s all;
   text-decoration: none;
   display: inline-block;
 }
-body #games .container .tab-menu-items .item .name h3 {
+body main #games .container .tab-menu-items .item .name h3 {
   font-weight: unset;
 }
-body #games .container .tab-menu-items .item .name:hover {
+body main #games .container .tab-menu-items .item .name:hover {
   color: #d31c3d;
 }
-body #games .container .tab-menu-items .item .price-view {
+body main #games .container .tab-menu-items .item .price-view {
   margin-top: 15px;
   overflow: hidden;
   height: 20px;
 }
-body #games .container .tab-menu-items .item .price-view .price {
+body main #games .container .tab-menu-items .item .price-view .price {
   color: #bdbbc4;
   transition: 0.2s all;
 }
-body #games .container .tab-menu-items .item .price-view .view {
+body main #games .container .tab-menu-items .item .price-view .view {
   color: white;
   text-transform: uppercase;
   text-decoration: none;
@@ -484,16 +514,16 @@ body #games .container .tab-menu-items .item .price-view .view {
   font-weight: bold;
   display: inline-block;
 }
-body #games .container .tab-menu-items .item .price-view .view:hover {
+body main #games .container .tab-menu-items .item .price-view .view:hover {
   color: #d31c3d;
 }
-body #games .container .tab-menu-items .item:hover .price-view .price {
+body main #games .container .tab-menu-items .item:hover .price-view .price {
   transform: translateY(-100%);
 }
-body #games .container .tab-menu-items .item:hover .price-view .view {
+body main #games .container .tab-menu-items .item:hover .price-view .view {
   transform: translateY(-100%);
 }
-body #developers {
+body main #developers {
   height: 350px;
   position: relative;
   margin-top: 780px;
@@ -501,52 +531,52 @@ body #developers {
   overflow: hidden;
 }
 @media only screen and (max-width: 1618px) {
-  body #developers {
+  body main #developers {
     margin-top: 1150px;
   }
 }
-body #developers .bg {
+body main #developers .bg {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   opacity: 0.9;
 }
-body #developers .logos {
+body main #developers .logos {
   position: absolute;
   width: 100%;
   top: 50%;
   left: 5%;
   transform: translateY(-50%);
 }
-body #developers .logos .logo img {
+body main #developers .logos .logo img {
   width: 155px;
   height: 155px;
   -o-object-fit: cover;
      object-fit: cover;
 }
-body #recent-blog {
+body main #recent-blog {
   margin-top: 140px;
   display: flex;
   justify-content: center;
 }
-body #recent-blog .container {
+body main #recent-blog .container {
   width: 80%;
 }
-body #recent-blog .container .title {
+body main #recent-blog .container .title {
   display: flex;
   justify-content: space-between;
 }
-body #recent-blog .container .title h1 {
+body main #recent-blog .container .title h1 {
   color: white;
   font-weight: unset;
 }
-body #recent-blog .container .title a {
+body main #recent-blog .container .title a {
   text-decoration: none;
   color: white;
   display: block;
   transition: 0.3s all;
 }
-body #recent-blog .container .title a span {
+body main #recent-blog .container .title a span {
   font-size: 12px;
   position: relative;
   display: inline-block;
@@ -571,22 +601,22 @@ body #recent-blog .container .title a span {
     transform: translateY(-20px);
   }
 }
-body #recent-blog .container .title a:hover {
+body main #recent-blog .container .title a:hover {
   color: #d31c3d;
 }
-body #recent-blog .container .posts {
+body main #recent-blog .container .posts {
   margin-top: 50px;
 }
-body #recent-blog .container .posts .post {
+body main #recent-blog .container .posts .post {
   display: flex;
 }
-body #recent-blog .container .posts .post:nth-child(2), body #recent-blog .container .posts .post:last-child {
+body main #recent-blog .container .posts .post:nth-child(2), body main #recent-blog .container .posts .post:last-child {
   margin-top: 40px;
 }
-body #recent-blog .container .posts .post:hover img {
+body main #recent-blog .container .posts .post:hover img {
   transform: scale(1.05);
 }
-body #recent-blog .container .posts .post .image {
+body main #recent-blog .container .posts .post .image {
   overflow: hidden;
   position: relative;
   width: 425px;
@@ -596,14 +626,14 @@ body #recent-blog .container .posts .post .image {
   text-decoration: none;
   flex-shrink: 0;
 }
-body #recent-blog .container .posts .post .image img {
+body main #recent-blog .container .posts .post .image img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   transition: 0.3s all;
 }
-body #recent-blog .container .posts .post .image span {
+body main #recent-blog .container .posts .post .image span {
   text-transform: uppercase;
   position: absolute;
   top: 15px;
@@ -616,10 +646,10 @@ body #recent-blog .container .posts .post .image span {
   transform: skew(-5deg);
   border-radius: 3px;
 }
-body #recent-blog .container .posts .post .content {
+body main #recent-blog .container .posts .post .content {
   margin-left: 35px;
 }
-body #recent-blog .container .posts .post .content .title {
+body main #recent-blog .container .posts .post .content .title {
   text-decoration: none;
   color: white;
   transition: 0.3s all;
@@ -627,61 +657,59 @@ body #recent-blog .container .posts .post .content .title {
   font-size: 20px;
   display: inline-block;
 }
-body #recent-blog .container .posts .post .content .title:hover {
+body main #recent-blog .container .posts .post .content .title:hover {
   color: #d31c3d;
 }
-body #recent-blog .container .posts .post .content .author-date {
-  display: flex;
+body main #recent-blog .container .posts .post .content .author-date {
   margin-top: 15px;
 }
-body #recent-blog .container .posts .post .content .author-date .author,
-body #recent-blog .container .posts .post .content .author-date .date {
+body main #recent-blog .container .posts .post .content .author-date span {
   color: #bdbbc4;
   font-size: 15px;
 }
-body #recent-blog .container .posts .post .content .author-date .date {
+body main #recent-blog .container .posts .post .content .author-date span:last-child {
   margin-left: 20px;
 }
-body #recent-blog .container .posts .post .content .description {
+body main #recent-blog .container .posts .post .content .description {
   color: #bdbbc4;
   margin-top: 30px;
   margin-bottom: 30px;
   width: 96%;
 }
-body #recent-blog .container .posts .post .content .more {
+body main #recent-blog .container .posts .post .content .more {
   text-decoration: none;
   color: white;
   transition: 0.3s all;
   font-size: 13px;
 }
-body #recent-blog .container .posts .post .content .more:hover {
+body main #recent-blog .container .posts .post .content .more:hover {
   color: #d31c3d;
 }
-body #subscribe {
+body main #subscribe {
   display: flex;
   justify-content: center;
   background-color: #242230;
   height: 200px;
   margin-top: 200px;
 }
-body #subscribe .container {
+body main #subscribe .container {
   width: 80%;
   display: flex;
   justify-content: space-around;
   align-items: center;
   flex-direction: column;
 }
-body #subscribe .container .title {
+body main #subscribe .container .title {
   color: white;
   font-weight: unset;
   font-size: 28px;
 }
-body #subscribe .container .input {
+body main #subscribe .container .input {
   display: flex;
   width: 40%;
   justify-content: space-between;
 }
-body #subscribe .container .input input {
+body main #subscribe .container .input input {
   height: 40px;
   width: 365px;
   outline: none;
@@ -692,36 +720,36 @@ body #subscribe .container .input input {
   padding-left: 15px;
   transition: 0.2s all;
 }
-body #subscribe .container .input input:focus {
+body main #subscribe .container .input input:focus {
   border-color: white;
 }
-body #subscribe .container .input .btn-shine {
+body main #subscribe .container .input .btn-shine {
   padding: 10px 15px;
   border: none;
   cursor: pointer;
 }
-body #advantages {
+body main #advantages {
   display: flex;
   justify-content: center;
   margin-top: 150px;
 }
-body #advantages .container {
+body main #advantages .container {
   width: 80%;
 }
-body #advantages .container .title {
+body main #advantages .container .title {
   text-align: center;
   color: white;
   font-weight: unset;
   font-size: 28px;
 }
-body #advantages .container .items {
+body main #advantages .container .items {
   margin-top: 70px;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   width: 100%;
 }
-body #advantages .container .items .item {
+body main #advantages .container .items .item {
   width: 420px;
   height: 370px;
   background-color: #201e2a;
@@ -733,36 +761,36 @@ body #advantages .container .items .item {
   border-radius: 5px;
   cursor: pointer;
 }
-body #advantages .container .items .item .content {
+body main #advantages .container .items .item .content {
   display: flex;
   align-items: center;
   flex-direction: column;
   position: relative;
   transition: 0.3s all;
 }
-body #advantages .container .items .item .content i {
+body main #advantages .container .items .item .content i {
   font-size: 50px;
   color: #9492a0;
   transition: 0.3s all;
 }
-body #advantages .container .items .item .content h3 {
+body main #advantages .container .items .item .content h3 {
   font-weight: unset;
   margin-top: 30px;
   margin-bottom: 30px;
   color: white;
 }
-body #advantages .container .items .item .content p {
+body main #advantages .container .items .item .content p {
   width: 80%;
   text-align: center;
   color: #9492a0;
   font-size: 15px;
 }
-body #advantages .container .items .item:hover {
+body main #advantages .container .items .item:hover {
   background-color: #282636;
 }
-body #advantages .container .items .item:hover .content {
+body main #advantages .container .items .item:hover .content {
   transform: translateY(-25px);
 }
-body #advantages .container .items .item:hover .content i {
+body main #advantages .container .items .item:hover .content i {
   color: white;
 }/*# sourceMappingURL=style.css.map */

@@ -42,7 +42,6 @@ header {
         }
 
         .circle {
-            padding: 10px;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -50,6 +49,8 @@ header {
             transition: 0.3s all;
             cursor: pointer;
             color: white;
+            width: 40px;
+            height: 40px;
 
             &:hover {
                 background-color: #39354b;
