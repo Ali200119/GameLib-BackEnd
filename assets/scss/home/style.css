@@ -655,7 +655,6 @@ body main #recent-blog .container .posts .post .content .title {
   transition: 0.3s all;
   margin-top: 20px;
   font-size: 20px;
-  display: inline-block;
 }
 body main #recent-blog .container .posts .post .content .title:hover {
   color: #d31c3d;
