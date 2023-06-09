@@ -9,8 +9,8 @@ aboutBGContainer.addEventListener("mousemove", function (event) {
     const mouseX = event.pageX - this.offsetLeft;
     const mouseY = event.pageY - this.offsetTop;
 
-    const xPercentage = (mouseX / containerWidth - 0.5) * 30;
-    const yPercentage = (mouseY / containerHeight - 0.5) * 30;
+    const xPercentage = (mouseX / containerWidth - 0.5) * 45;
+    const yPercentage = (mouseY / containerHeight - 0.5) * 45;
 
     aboutBG.style.transform = `translate(${xPercentage}px, ${yPercentage}px)`;
 });

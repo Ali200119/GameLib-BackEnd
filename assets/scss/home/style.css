@@ -537,6 +537,7 @@ body main #developers {
 }
 body main #developers .bg {
   width: 100%;
+  height: 250%;
   -o-object-fit: cover;
      object-fit: cover;
   opacity: 0.9;

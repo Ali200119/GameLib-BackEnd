@@ -229,6 +229,35 @@ body main #image img {
      object-fit: cover;
   transition: 0.5s all ease;
 }
+body main #text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+body main #text .content {
+  width: 70%;
+}
+body main #text .content .title {
+  color: white;
+  margin-bottom: 30px;
+  font-size: 35px;
+  font-weight: unset;
+}
+body main #text .content .description {
+  color: #bdbbc4;
+  font-size: 14px;
+  margin-bottom: 27px;
+}
+body main #text .content .btn-shine {
+  padding: 15px 20px;
+  font-size: 15px;
+  background-color: #d31c3d;
+}
+body main #text .content .btn-shine:hover {
+  background-color: white;
+  color: black;
+}
 body footer {
   margin: 0;
 }/*# sourceMappingURL=about.css.map */
