@@ -10,6 +10,17 @@ body {
     main {
         display: flex;
 
+        #image {
+            width: 50%;
+            height: 92vh;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
         #inputs {
             width: 50%;
             display: flex;
@@ -49,7 +60,9 @@ body {
                         }
                     }
 
-                    &:nth-child(4), &:nth-child(5) {
+                    &:nth-child(3) {
+                        margin-bottom: 20px;
+                        
                         input {
                             padding-right: 45px;
                         }
@@ -62,6 +75,17 @@ body {
                         top: 50%;
                         transform: translateY(-50%);
                         cursor: pointer;
+                    }
+                }
+
+                .forgot-password {
+                    color: #9492a0;
+                    transition: 0.3s all;
+                    text-decoration: none;
+                    font-size: 13px;
+
+                    &:hover {
+                        color: #d31c3d;
                     }
                 }
 
@@ -82,17 +106,6 @@ body {
                         }
                     }
                 }
-            }
-        }
-
-        #image {
-            width: 50%;
-            height: 92vh;
-
-            img {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
             }
         }
     }
