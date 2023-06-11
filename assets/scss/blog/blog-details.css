@@ -17,6 +17,7 @@
   display: inline-block;
   border-radius: 5px;
   overflow: hidden;
+  border: none;
 }
 .btn-shine:hover {
   background-color: #d31c3d;
@@ -296,7 +297,7 @@ body main #devide .container #panel .search .search-input input {
   border: 1.5px solid #443f5a;
   border-radius: 3px;
   color: white;
-  padding-left: 15px;
+  padding: 15px;
   transition: 0.2s all;
 }
 body main #devide .container #panel .search .search-input input:focus {
@@ -400,5 +401,112 @@ body main #devide .container #panel .social .items .item i {
   color: white;
 }
 body main #devide .container #blog-content {
-  margin-left: 70px;
+  margin-left: 85px;
+}
+body main #devide .container #blog-content .text {
+  color: #bdbbc4;
+  font-size: 14px;
+  line-height: 24px;
+}
+body main #devide .container #blog-content .images {
+  display: flex;
+  gap: 20px;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 75px;
+}
+body main #devide .container #blog-content .images img {
+  width: 420px;
+  height: 250px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 4px;
+}
+body main #devide .container #blog-content .comments {
+  margin-top: 150px;
+}
+body main #devide .container #blog-content .comments .title {
+  color: white;
+  font-weight: unset;
+  font-size: 22px;
+}
+body main #devide .container #blog-content .comments .items {
+  margin-top: 50px;
+}
+body main #devide .container #blog-content .comments .items .item {
+  position: relative;
+  margin-top: 40px;
+}
+body main #devide .container #blog-content .comments .items .item:first-child {
+  margin-top: 0;
+}
+body main #devide .container #blog-content .comments .items .item .username {
+  color: white;
+  font-weight: unset;
+  margin-bottom: 5px;
+}
+body main #devide .container #blog-content .comments .items .item .date {
+  color: #9492a0;
+}
+body main #devide .container #blog-content .comments .items .item .description {
+  background-color: #282636;
+  border-radius: 5px;
+  color: #bdbbc4;
+  font-size: 14px;
+  line-height: 24px;
+  padding: 20px;
+  margin-top: 20px;
+}
+body main #devide .container #blog-content .comments .items .item i {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: white;
+  border: 1px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.2s all;
+  right: 15px;
+  top: 10px;
+}
+body main #devide .container #blog-content .comments .items .item i:hover {
+  background-color: #d31c3d;
+  border-color: #d31c3d;
+}
+body main #devide .container #blog-content .comments .post-comment {
+  margin-top: 100px;
+}
+body main #devide .container #blog-content .comments .post-comment .title {
+  color: white;
+  font-weight: unset;
+  font-size: 22px;
+}
+body main #devide .container #blog-content .comments .post-comment textarea {
+  width: 100%;
+  margin-top: 25px;
+  padding: 20px;
+  outline: none;
+  background-color: #242230;
+  border: 1.5px solid #443f5a;
+  border-radius: 3px;
+  color: white;
+  transition: 0.2s all;
+  font-size: 14px;
+}
+body main #devide .container #blog-content .comments .post-comment textarea:focus {
+  border-color: white;
+}
+body main #devide .container #blog-content .comments .post-comment .btn-shine {
+  margin-top: 35px;
+  padding: 15px 20px;
+  font-size: 12px;
+  background-color: #d31c3d;
+  cursor: pointer;
+}
+body main #devide .container #blog-content .comments .post-comment .btn-shine:hover {
+  background-color: white;
+  color: black;
 }/*# sourceMappingURL=blog-details.css.map */

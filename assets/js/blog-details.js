@@ -9,3 +9,15 @@ window.addEventListener("scroll", function() {
 
     blogBG.style.transform = `translateY(${scrollPosition * 0.4}px)`;
 });
+
+
+
+// Delete Comment
+
+let removeBtns = document.querySelectorAll("#blog-content .comments .items .item i");
+
+for (const remove of removeBtns) {
+    remove.addEventListener("click", function() {
+        this.parentNode.remove();
+    });
+}

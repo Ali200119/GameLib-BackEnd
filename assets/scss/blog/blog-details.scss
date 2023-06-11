@@ -26,7 +26,7 @@ body {
             display: flex;
             justify-content: center;
             bottom: 80px;
-            
+
             .content {
                 background-color: #282636;
                 border-radius: 5px;
@@ -99,7 +99,7 @@ body {
                                 border: 1.5px solid #443f5a;
                                 border-radius: 3px;
                                 color: white;
-                                padding-left: 15px;
+                                padding: 15px;
                                 transition: 0.2s all;
 
                                 &:focus {
@@ -189,7 +189,8 @@ body {
                                     }
                                 }
 
-                                &:nth-child(2), &:last-child {
+                                &:nth-child(2),
+                                &:last-child {
                                     margin-top: 20px;
                                 }
                             }
@@ -218,7 +219,7 @@ body {
                                 height: 40px;
                                 border-radius: 50%;
                                 text-decoration: none;
-                                
+
                                 i {
                                     color: white;
                                 }
@@ -228,7 +229,132 @@ body {
                 }
 
                 #blog-content {
-                    margin-left: 70px;
+                    margin-left: 85px;
+
+                    .text {
+                        color: #bdbbc4;
+                        font-size: 14px;
+                        line-height: 24px;
+                    }
+
+                    .images {
+                        display: flex;
+                        gap: 20px;
+                        justify-content: space-around;
+                        flex-wrap: wrap;
+                        margin-top: 75px;
+
+                        img {
+                            width: 420px;
+                            height: 250px;
+                            object-fit: cover;
+                            border-radius: 4px;
+                        }
+                    }
+
+                    .comments {
+                        margin-top: 150px;
+
+                        .title {
+                            color: white;
+                            font-weight: unset;
+                            font-size: 22px;
+                        }
+
+                        .items {
+                            margin-top: 50px;
+
+                            .item {
+                                position: relative;
+                                margin-top: 40px;
+
+                                &:first-child {
+                                    margin-top: 0;
+                                }
+
+                                .username {
+                                    color: white;
+                                    font-weight: unset;
+                                    margin-bottom: 5px;
+                                }
+
+                                .date {
+                                    color: #9492a0;
+                                }
+
+                                .description {
+                                    background-color: #282636;
+                                    border-radius: 5px;
+                                    color: #bdbbc4;
+                                    font-size: 14px;
+                                    line-height: 24px;
+                                    padding: 20px;
+                                    margin-top: 20px;
+                                }
+
+                                i {
+                                    position: absolute;
+                                    width: 40px;
+                                    height: 40px;
+                                    border-radius: 50%;
+                                    color: white;
+                                    border: 1px solid white;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    cursor: pointer;
+                                    transition: 0.2s all;
+                                    right: 15px;
+                                    top: 10px;
+
+                                    &:hover {
+                                        background-color: #d31c3d;
+                                        border-color: #d31c3d;
+                                    }
+                                }
+                            }
+                        }
+
+                        .post-comment {
+                            margin-top: 100px;
+
+                            .title {
+                                color: white;
+                                font-weight: unset;
+                                font-size: 22px;
+                            }
+
+                            textarea {
+                                width: 100%;
+                                margin-top: 25px;
+                                padding: 20px;
+                                outline: none;
+                                background-color: #242230;
+                                border: 1.5px solid #443f5a;
+                                border-radius: 3px;
+                                color: white;
+                                transition: 0.2s all;
+                                font-size: 14px;
+
+                                &:focus {
+                                    border-color: white;
+                                }
+                            }
+
+                            .btn-shine {
+                                margin-top: 35px;
+                                padding: 15px 20px;
+                                font-size: 12px;
+                                background-color: #d31c3d;
+                                cursor: pointer;
+
+                                &:hover {
+                                    background-color: white;
+                                    color: black;
+                                }
+                            }
+                        }
+                    }
                 }
             }
         }

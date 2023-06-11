@@ -99,6 +99,7 @@
   display: inline-block;
   border-radius: 5px;
   overflow: hidden;
+  border: none;
 }
 .btn-shine:hover {
   background-color: #d31c3d;

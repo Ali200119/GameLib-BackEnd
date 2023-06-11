@@ -217,48 +217,77 @@ body {
 }
 body main {
   display: flex;
-  height: 735px;
+}
+body main #inputs {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 92vh;
+}
+body main #inputs form {
+  width: 35%;
+}
+body main #inputs form h1 {
+  font-weight: unset;
+  color: white;
+}
+body main #inputs form .inputBox {
+  margin-top: 30px;
+  position: relative;
+}
+body main #inputs form .inputBox:nth-child(2) {
+  margin-top: 50px;
+}
+body main #inputs form .inputBox input {
+  width: 100%;
+  outline: none;
+  background-color: #242230;
+  border: 1.5px solid #443f5a;
+  border-radius: 3px;
+  color: white;
+  padding: 15px;
+  transition: 0.2s all;
+}
+body main #inputs form .inputBox input:focus {
+  border-color: white;
+}
+body main #inputs form .inputBox:nth-child(4) input, body main #inputs form .inputBox:nth-child(5) input {
+  padding-right: 45px;
+}
+body main #inputs form .inputBox i {
+  position: absolute;
+  color: white;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+body main #inputs form .flex {
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
+}
+body main #inputs form .flex .btn-shine {
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 14px;
+  background-color: #d31c3d;
+}
+body main #inputs form .flex .btn-shine:hover {
+  background-color: white;
+  color: black;
 }
 body main #image {
   width: 50%;
-  overflow: hidden;
+  height: 92vh;
 }
 body main #image img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  transition: 0.5s all ease;
-}
-body main #text {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 50%;
-}
-body main #text .content {
-  width: 70%;
-}
-body main #text .content .title {
-  color: white;
-  margin-bottom: 30px;
-  font-size: 35px;
-  font-weight: unset;
-}
-body main #text .content .description {
-  color: #bdbbc4;
-  font-size: 14px;
-  margin-bottom: 27px;
-}
-body main #text .content .btn-shine {
-  padding: 15px 20px;
-  font-size: 15px;
-  background-color: #d31c3d;
-}
-body main #text .content .btn-shine:hover {
-  background-color: white;
-  color: black;
 }
 body footer {
-  margin: 0;
-}/*# sourceMappingURL=about.css.map */
+  margin-top: 0;
+}/*# sourceMappingURL=register.css.map */
