@@ -66,6 +66,9 @@ header .navbar li a {
 header .navbar li a:hover {
   background-color: #d31c3d;
 }
+header .navbar li .active {
+  background-color: #d31c3d;
+}
 header .user-panel {
   display: flex;
   width: 8%;

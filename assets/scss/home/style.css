@@ -148,6 +148,9 @@ header .navbar li a {
 header .navbar li a:hover {
   background-color: #d31c3d;
 }
+header .navbar li .active {
+  background-color: #d31c3d;
+}
 header .user-panel {
   display: flex;
   width: 8%;
@@ -455,7 +458,6 @@ body main #games .container .tab-menu-items .items {
   display: flex;
   flex-wrap: wrap;
   gap: 25px;
-  color: white;
   position: absolute;
   transition: 0.3s all;
   width: 100%;
@@ -465,48 +467,48 @@ body main #games .container .tab-menu-items .items:nth-child(2), body main #game
   opacity: 0;
   pointer-events: none;
 }
-body main #games .container .tab-menu-items .item {
+body main #games .container .tab-menu-items .items .item {
   width: 415px;
 }
-body main #games .container .tab-menu-items .item .image {
+body main #games .container .tab-menu-items .items .item .image {
   width: 100%;
   height: 235px;
   transition: 0.3s all;
   display: block;
   margin-bottom: 20px;
 }
-body main #games .container .tab-menu-items .item .image img {
+body main #games .container .tab-menu-items .items .item .image img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 5px;
 }
-body main #games .container .tab-menu-items .item:hover .image {
+body main #games .container .tab-menu-items .items .item:hover .image {
   transform: scale(0.97);
 }
-body main #games .container .tab-menu-items .item .name {
+body main #games .container .tab-menu-items .items .item .name {
   color: white;
   transition: 0.3s all;
   text-decoration: none;
   display: inline-block;
 }
-body main #games .container .tab-menu-items .item .name h3 {
+body main #games .container .tab-menu-items .items .item .name h3 {
   font-weight: unset;
 }
-body main #games .container .tab-menu-items .item .name:hover {
+body main #games .container .tab-menu-items .items .item .name:hover {
   color: #d31c3d;
 }
-body main #games .container .tab-menu-items .item .price-view {
+body main #games .container .tab-menu-items .items .item .price-view {
   margin-top: 15px;
   overflow: hidden;
   height: 20px;
 }
-body main #games .container .tab-menu-items .item .price-view .price {
+body main #games .container .tab-menu-items .items .item .price-view .price {
   color: #bdbbc4;
   transition: 0.2s all;
 }
-body main #games .container .tab-menu-items .item .price-view .view {
+body main #games .container .tab-menu-items .items .item .price-view .view {
   color: white;
   text-transform: uppercase;
   text-decoration: none;
@@ -515,13 +517,13 @@ body main #games .container .tab-menu-items .item .price-view .view {
   font-weight: bold;
   display: inline-block;
 }
-body main #games .container .tab-menu-items .item .price-view .view:hover {
+body main #games .container .tab-menu-items .items .item .price-view .view:hover {
   color: #d31c3d;
 }
-body main #games .container .tab-menu-items .item:hover .price-view .price {
+body main #games .container .tab-menu-items .items .item:hover .price-view .price {
   transform: translateY(-100%);
 }
-body main #games .container .tab-menu-items .item:hover .price-view .view {
+body main #games .container .tab-menu-items .items .item:hover .price-view .view {
   transform: translateY(-100%);
 }
 body main #developers {
@@ -650,13 +652,14 @@ body main #recent-blog .container .posts .post .image span {
 }
 body main #recent-blog .container .posts .post .content {
   margin-left: 35px;
+  padding-top: 20px;
 }
 body main #recent-blog .container .posts .post .content .title {
   text-decoration: none;
   color: white;
   transition: 0.3s all;
-  margin-top: 20px;
   font-size: 20px;
+  display: inline;
 }
 body main #recent-blog .container .posts .post .content .title:hover {
   color: #d31c3d;
