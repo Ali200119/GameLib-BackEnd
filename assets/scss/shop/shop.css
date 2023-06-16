@@ -575,4 +575,29 @@ body main .container #panel .genres .items .genre {
 body main .container #panel .genres .items .genre:hover {
   background-color: #d31c3d;
   border-color: #d31c3d;
+}
+body main .container #panel .social {
+  margin-top: 70px;
+}
+body main .container #panel .social .title {
+  color: white;
+  font-weight: unset;
+}
+body main .container #panel .social .items {
+  margin-top: 35px;
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+body main .container #panel .social .items .item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  text-decoration: none;
+}
+body main .container #panel .social .items .item i {
+  color: white;
 }/*# sourceMappingURL=shop.css.map */

@@ -1,7 +1,6 @@
 @use "../utilities/settings";
 @use "../components/button";
 @use "../layouts/header";
-@use "../layouts/footer";
 @use "../layouts/up";
 
 body {
@@ -15,7 +14,7 @@ body {
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 92vh;
+            height: calc(100vh - 90px);
 
             form {
                 width: 35%;
@@ -67,14 +66,26 @@ body {
 
                 .flex {
                     display: flex;
-                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
                     margin-top: 25px;
+
+                    h5 {
+                        font-weight: unset;
+                        color: #9492a0;
+
+                        a {
+                            text-decoration: none;
+                            color: white;
+                        }
+                    }
 
                     .btn-shine {
                         padding: 10px 20px;
                         cursor: pointer;
                         font-size: 14px;
                         background-color: #d31c3d;
+                        margin-top: 25px;
     
                         &:hover {
                             background-color: white;
@@ -87,7 +98,7 @@ body {
 
         #image {
             width: 50%;
-            height: 92vh;
+            height: calc(100vh - 90px);
 
             img {
                 width: 100%;
@@ -95,9 +106,5 @@ body {
                 object-fit: cover;
             }
         }
-    }
-
-    footer {
-        margin-top: 0;
     }
 }

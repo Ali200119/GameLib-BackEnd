@@ -457,7 +457,7 @@ body main #games .container .tab-menu-items {
 body main #games .container .tab-menu-items .items {
   display: flex;
   flex-wrap: wrap;
-  gap: 25px;
+  gap: 55px;
   position: absolute;
   transition: 0.3s all;
   width: 100%;
