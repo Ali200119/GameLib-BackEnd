@@ -5,6 +5,10 @@
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
+body {
+  background-color: #201e2a;
+}
+
 #loading {
   position: fixed;
   top: 0;
@@ -297,33 +301,30 @@ footer .copyright h4 {
   border-color: #d31c3d;
 }
 
-body {
-  background-color: #201e2a;
-}
-body main #fav-game {
+main #fav-game {
   height: 650px;
   width: 100%;
   position: relative;
   overflow: hidden;
   background-color: black;
 }
-body main #fav-game img {
+main #fav-game img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   opacity: 0.6;
 }
-body main #fav-game .content {
+main #fav-game .content {
   position: absolute;
   top: 20%;
   left: 10%;
 }
-body main #fav-game .content h1 {
+main #fav-game .content h1 {
   color: white;
   font-size: 47px;
 }
-body main #fav-game .content p {
+main #fav-game .content p {
   color: white;
   margin-top: 40px;
   margin-bottom: 50px;
@@ -331,39 +332,39 @@ body main #fav-game .content p {
   font-size: 19px;
   line-height: 35px;
 }
-body main #fav-game .content .btn-shine {
+main #fav-game .content .btn-shine {
   padding: 15px 20px;
 }
-body main #blog {
+main #blog {
   display: flex;
   justify-content: center;
 }
-body main #blog .container {
+main #blog .container {
   width: 80%;
 }
-body main #blog .container .blog-items {
+main #blog .container .blog-items {
   position: relative;
   bottom: 100px;
 }
-body main #blog .container .blog-items .slick-arrow {
+main #blog .container .blog-items .slick-arrow {
   position: absolute;
   font-size: 40px;
   color: #5a5865;
   transition: 0.3s all;
   cursor: pointer;
 }
-body main #blog .container .blog-items .slick-arrow:hover {
+main #blog .container .blog-items .slick-arrow:hover {
   color: white;
 }
-body main #blog .container .blog-items .prev {
+main #blog .container .blog-items .prev {
   top: 43%;
   left: -45px;
 }
-body main #blog .container .blog-items .next {
+main #blog .container .blog-items .next {
   top: 43%;
   right: -45px;
 }
-body main #blog .container .blog-items .item {
+main #blog .container .blog-items .item {
   height: 255px;
   border-radius: 5px;
   margin: 10px;
@@ -373,7 +374,7 @@ body main #blog .container .blog-items .item {
   display: block;
   text-decoration: none;
 }
-body main #blog .container .blog-items .item img {
+main #blog .container .blog-items .item img {
   width: 100%;
   height: 100%;
   border-radius: 5px;
@@ -381,11 +382,11 @@ body main #blog .container .blog-items .item img {
   -o-object-fit: cover;
      object-fit: cover;
 }
-body main #blog .container .blog-items .item:hover img {
+main #blog .container .blog-items .item:hover img {
   transform: scale(1.05);
   opacity: 0.7;
 }
-body main #blog .container .blog-items .item .content {
+main #blog .container .blog-items .item .content {
   position: absolute;
   top: 55%;
   left: 50%;
@@ -395,66 +396,66 @@ body main #blog .container .blog-items .item .content {
   pointer-events: none;
   transition: 0.3s all;
 }
-body main #blog .container .blog-items .item .content h3,
-body main #blog .container .blog-items .item .content h5 {
+main #blog .container .blog-items .item .content h3,
+main #blog .container .blog-items .item .content h5 {
   color: white;
   text-align: center;
 }
-body main #blog .container .blog-items .item .content h3 {
+main #blog .container .blog-items .item .content h3 {
   line-height: 25px;
   font-weight: unset;
 }
-body main #blog .container .blog-items .item .content h5 {
+main #blog .container .blog-items .item .content h5 {
   text-transform: uppercase;
   margin-bottom: 20px;
 }
-body main #blog .container .blog-items .item:hover .content {
+main #blog .container .blog-items .item:hover .content {
   opacity: 1;
   top: 50%;
   pointer-events: unset;
 }
-body main #games {
+main #games {
   display: flex;
   justify-content: center;
   margin-top: 40px;
 }
-body main #games .container {
+main #games .container {
   width: 80%;
 }
-body main #games .container .title {
+main #games .container .title {
   text-align: center;
   font-weight: unset;
   color: white;
   font-size: 28px;
 }
-body main #games .container .tab-menu-header {
+main #games .container .tab-menu-header {
   display: flex;
   justify-content: center;
   margin-top: 40px;
 }
-body main #games .container .tab-menu-header ul {
+main #games .container .tab-menu-header ul {
   display: flex;
   justify-content: space-between;
   list-style: none;
   width: 25%;
 }
-body main #games .container .tab-menu-header ul li {
+main #games .container .tab-menu-header ul li {
   color: #bdbbc4;
   padding: 15px 20px;
   cursor: pointer;
   transition: 0.3s all;
 }
-body main #games .container .tab-menu-header ul li:hover {
+main #games .container .tab-menu-header ul li:hover {
   color: white;
 }
-body main #games .container .tab-menu-header ul .active {
+main #games .container .tab-menu-header ul .active {
   border-bottom: 2px solid #d31c3d;
 }
-body main #games .container .tab-menu-items {
+main #games .container .tab-menu-items {
   position: relative;
   margin-top: 70px;
 }
-body main #games .container .tab-menu-items .items {
+main #games .container .tab-menu-items .items {
   display: flex;
   flex-wrap: wrap;
   gap: 55px;
@@ -463,52 +464,52 @@ body main #games .container .tab-menu-items .items {
   width: 100%;
   justify-content: space-between;
 }
-body main #games .container .tab-menu-items .items:nth-child(2), body main #games .container .tab-menu-items .items:last-child {
+main #games .container .tab-menu-items .items:nth-child(2), main #games .container .tab-menu-items .items:last-child {
   opacity: 0;
   pointer-events: none;
 }
-body main #games .container .tab-menu-items .items .item {
+main #games .container .tab-menu-items .items .item {
   width: 415px;
 }
-body main #games .container .tab-menu-items .items .item .image {
+main #games .container .tab-menu-items .items .item .image {
   width: 100%;
   height: 235px;
   transition: 0.3s all;
   display: block;
   margin-bottom: 20px;
 }
-body main #games .container .tab-menu-items .items .item .image img {
+main #games .container .tab-menu-items .items .item .image img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 5px;
 }
-body main #games .container .tab-menu-items .items .item:hover .image {
+main #games .container .tab-menu-items .items .item:hover .image {
   transform: scale(0.97);
 }
-body main #games .container .tab-menu-items .items .item .name {
+main #games .container .tab-menu-items .items .item .name {
   color: white;
   transition: 0.3s all;
   text-decoration: none;
   display: inline-block;
 }
-body main #games .container .tab-menu-items .items .item .name h3 {
+main #games .container .tab-menu-items .items .item .name h3 {
   font-weight: unset;
 }
-body main #games .container .tab-menu-items .items .item .name:hover {
+main #games .container .tab-menu-items .items .item .name:hover {
   color: #d31c3d;
 }
-body main #games .container .tab-menu-items .items .item .price-view {
+main #games .container .tab-menu-items .items .item .price-view {
   margin-top: 15px;
   overflow: hidden;
   height: 20px;
 }
-body main #games .container .tab-menu-items .items .item .price-view .price {
+main #games .container .tab-menu-items .items .item .price-view .price {
   color: #bdbbc4;
   transition: 0.2s all;
 }
-body main #games .container .tab-menu-items .items .item .price-view .view {
+main #games .container .tab-menu-items .items .item .price-view .view {
   color: white;
   text-transform: uppercase;
   text-decoration: none;
@@ -517,16 +518,16 @@ body main #games .container .tab-menu-items .items .item .price-view .view {
   font-weight: bold;
   display: inline-block;
 }
-body main #games .container .tab-menu-items .items .item .price-view .view:hover {
+main #games .container .tab-menu-items .items .item .price-view .view:hover {
   color: #d31c3d;
 }
-body main #games .container .tab-menu-items .items .item:hover .price-view .price {
+main #games .container .tab-menu-items .items .item:hover .price-view .price {
   transform: translateY(-100%);
 }
-body main #games .container .tab-menu-items .items .item:hover .price-view .view {
+main #games .container .tab-menu-items .items .item:hover .price-view .view {
   transform: translateY(-100%);
 }
-body main #developers {
+main #developers {
   height: 350px;
   position: relative;
   margin-top: 780px;
@@ -534,53 +535,53 @@ body main #developers {
   overflow: hidden;
 }
 @media only screen and (max-width: 1618px) {
-  body main #developers {
+  main #developers {
     margin-top: 1150px;
   }
 }
-body main #developers .bg {
+main #developers .bg {
   width: 100%;
   height: 250%;
   -o-object-fit: cover;
      object-fit: cover;
   opacity: 0.9;
 }
-body main #developers .logos {
+main #developers .logos {
   position: absolute;
   width: 100%;
   top: 50%;
   left: 5%;
   transform: translateY(-50%);
 }
-body main #developers .logos .logo img {
+main #developers .logos .logo img {
   width: 155px;
   height: 155px;
   -o-object-fit: cover;
      object-fit: cover;
 }
-body main #recent-blog {
+main #recent-blog {
   margin-top: 140px;
   display: flex;
   justify-content: center;
 }
-body main #recent-blog .container {
+main #recent-blog .container {
   width: 80%;
 }
-body main #recent-blog .container .title {
+main #recent-blog .container .title {
   display: flex;
   justify-content: space-between;
 }
-body main #recent-blog .container .title h1 {
+main #recent-blog .container .title h1 {
   color: white;
   font-weight: unset;
 }
-body main #recent-blog .container .title a {
+main #recent-blog .container .title a {
   text-decoration: none;
   color: white;
   display: block;
   transition: 0.3s all;
 }
-body main #recent-blog .container .title a span {
+main #recent-blog .container .title a span {
   font-size: 12px;
   position: relative;
   display: inline-block;
@@ -605,22 +606,22 @@ body main #recent-blog .container .title a span {
     transform: translateY(-20px);
   }
 }
-body main #recent-blog .container .title a:hover {
+main #recent-blog .container .title a:hover {
   color: #d31c3d;
 }
-body main #recent-blog .container .posts {
+main #recent-blog .container .posts {
   margin-top: 50px;
 }
-body main #recent-blog .container .posts .post {
+main #recent-blog .container .posts .post {
   display: flex;
 }
-body main #recent-blog .container .posts .post:nth-child(2), body main #recent-blog .container .posts .post:last-child {
+main #recent-blog .container .posts .post:nth-child(2), main #recent-blog .container .posts .post:last-child {
   margin-top: 40px;
 }
-body main #recent-blog .container .posts .post:hover img {
+main #recent-blog .container .posts .post:hover img {
   transform: scale(1.05);
 }
-body main #recent-blog .container .posts .post .image {
+main #recent-blog .container .posts .post .image {
   overflow: hidden;
   position: relative;
   width: 425px;
@@ -630,14 +631,14 @@ body main #recent-blog .container .posts .post .image {
   text-decoration: none;
   flex-shrink: 0;
 }
-body main #recent-blog .container .posts .post .image img {
+main #recent-blog .container .posts .post .image img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   transition: 0.3s all;
 }
-body main #recent-blog .container .posts .post .image span {
+main #recent-blog .container .posts .post .image span {
   text-transform: uppercase;
   position: absolute;
   top: 15px;
@@ -650,70 +651,70 @@ body main #recent-blog .container .posts .post .image span {
   transform: skew(-5deg);
   border-radius: 3px;
 }
-body main #recent-blog .container .posts .post .content {
+main #recent-blog .container .posts .post .content {
   margin-left: 35px;
   padding-top: 20px;
 }
-body main #recent-blog .container .posts .post .content .title {
+main #recent-blog .container .posts .post .content .title {
   text-decoration: none;
   color: white;
   transition: 0.3s all;
   font-size: 20px;
   display: inline;
 }
-body main #recent-blog .container .posts .post .content .title:hover {
+main #recent-blog .container .posts .post .content .title:hover {
   color: #d31c3d;
 }
-body main #recent-blog .container .posts .post .content .author-date {
+main #recent-blog .container .posts .post .content .author-date {
   margin-top: 15px;
 }
-body main #recent-blog .container .posts .post .content .author-date span {
+main #recent-blog .container .posts .post .content .author-date span {
   color: #bdbbc4;
   font-size: 15px;
 }
-body main #recent-blog .container .posts .post .content .author-date span:last-child {
+main #recent-blog .container .posts .post .content .author-date span:last-child {
   margin-left: 20px;
 }
-body main #recent-blog .container .posts .post .content .description {
+main #recent-blog .container .posts .post .content .description {
   color: #bdbbc4;
   margin-top: 30px;
   margin-bottom: 30px;
   width: 96%;
 }
-body main #recent-blog .container .posts .post .content .more {
+main #recent-blog .container .posts .post .content .more {
   text-decoration: none;
   color: white;
   transition: 0.3s all;
   font-size: 13px;
 }
-body main #recent-blog .container .posts .post .content .more:hover {
+main #recent-blog .container .posts .post .content .more:hover {
   color: #d31c3d;
 }
-body main #subscribe {
+main #subscribe {
   display: flex;
   justify-content: center;
   background-color: #242230;
   height: 200px;
   margin-top: 200px;
 }
-body main #subscribe .container {
+main #subscribe .container {
   width: 80%;
   display: flex;
   justify-content: space-around;
   align-items: center;
   flex-direction: column;
 }
-body main #subscribe .container .title {
+main #subscribe .container .title {
   color: white;
   font-weight: unset;
   font-size: 28px;
 }
-body main #subscribe .container .input {
+main #subscribe .container .input {
   display: flex;
   width: 40%;
   justify-content: space-between;
 }
-body main #subscribe .container .input input {
+main #subscribe .container .input input {
   height: 40px;
   width: 365px;
   outline: none;
@@ -724,36 +725,36 @@ body main #subscribe .container .input input {
   padding-left: 15px;
   transition: 0.2s all;
 }
-body main #subscribe .container .input input:focus {
+main #subscribe .container .input input:focus {
   border-color: white;
 }
-body main #subscribe .container .input .btn-shine {
+main #subscribe .container .input .btn-shine {
   padding: 10px 15px;
   border: none;
   cursor: pointer;
 }
-body main #advantages {
+main #advantages {
   display: flex;
   justify-content: center;
   margin-top: 150px;
 }
-body main #advantages .container {
+main #advantages .container {
   width: 80%;
 }
-body main #advantages .container .title {
+main #advantages .container .title {
   text-align: center;
   color: white;
   font-weight: unset;
   font-size: 28px;
 }
-body main #advantages .container .items {
+main #advantages .container .items {
   margin-top: 70px;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   width: 100%;
 }
-body main #advantages .container .items .item {
+main #advantages .container .items .item {
   width: 420px;
   height: 370px;
   background-color: #201e2a;
@@ -765,36 +766,36 @@ body main #advantages .container .items .item {
   border-radius: 5px;
   cursor: pointer;
 }
-body main #advantages .container .items .item .content {
+main #advantages .container .items .item .content {
   display: flex;
   align-items: center;
   flex-direction: column;
   position: relative;
   transition: 0.3s all;
 }
-body main #advantages .container .items .item .content i {
+main #advantages .container .items .item .content i {
   font-size: 50px;
   color: #9492a0;
   transition: 0.3s all;
 }
-body main #advantages .container .items .item .content h3 {
+main #advantages .container .items .item .content h3 {
   font-weight: unset;
   margin-top: 30px;
   margin-bottom: 30px;
   color: white;
 }
-body main #advantages .container .items .item .content p {
+main #advantages .container .items .item .content p {
   width: 80%;
   text-align: center;
   color: #9492a0;
   font-size: 15px;
 }
-body main #advantages .container .items .item:hover {
+main #advantages .container .items .item:hover {
   background-color: #282636;
 }
-body main #advantages .container .items .item:hover .content {
+main #advantages .container .items .item:hover .content {
   transform: translateY(-25px);
 }
-body main #advantages .container .items .item:hover .content i {
+main #advantages .container .items .item:hover .content i {
   color: white;
 }/*# sourceMappingURL=style.css.map */

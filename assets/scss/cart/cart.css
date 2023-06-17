@@ -5,6 +5,10 @@
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
+body {
+  background-color: #201e2a;
+}
+
 .btn-shine {
   position: relative;
   background-color: #201e2a;
@@ -215,64 +219,61 @@ footer .copyright h4 {
   border-color: #d31c3d;
 }
 
-body {
-  background-color: #201e2a;
-}
-body main {
+main {
   margin-top: 150px;
   display: flex;
   justify-content: center;
 }
-body main .container {
+main .container {
   width: 80%;
 }
-body main .container .title {
+main .container .title {
   color: white;
   font-size: 35px;
   font-weight: unset;
 }
-body main .container #devide {
+main .container #devide {
   display: flex;
   justify-content: space-between;
   margin-top: 70px;
 }
-body main .container #devide #games {
+main .container #devide #games {
   width: 65%;
   border: 2px solid #39354b;
   border-radius: 4px;
   padding: 25px;
 }
-body main .container #devide #games table {
+main .container #devide #games table {
   width: 100%;
   border-collapse: collapse;
 }
-body main .container #devide #games table thead {
+main .container #devide #games table thead {
   border-bottom: 2px solid #2c2a3c;
 }
-body main .container #devide #games table thead tr th {
+main .container #devide #games table thead tr th {
   padding-bottom: 40px;
   color: #b9b7c0;
   font-weight: unset;
 }
-body main .container #devide #games table tbody tr td {
+main .container #devide #games table tbody tr td {
   color: white;
   text-align: center;
   padding: 25px 0;
 }
-body main .container #devide #games table tbody tr .name {
+main .container #devide #games table tbody tr .name {
   display: flex;
   align-items: center;
 }
-body main .container #devide #games table tbody tr .name i {
+main .container #devide #games table tbody tr .name i {
   color: #b9b7c0;
   font-size: 25px;
   transition: 0.3s all;
   cursor: pointer;
 }
-body main .container #devide #games table tbody tr .name i:hover {
+main .container #devide #games table tbody tr .name i:hover {
   color: white;
 }
-body main .container #devide #games table tbody tr .name img {
+main .container #devide #games table tbody tr .name img {
   width: 90px;
   height: 90px;
   border-radius: 3px;
@@ -280,21 +281,21 @@ body main .container #devide #games table tbody tr .name img {
      object-fit: cover;
   margin-left: 25px;
 }
-body main .container #devide #games table tbody tr .name span {
+main .container #devide #games table tbody tr .name span {
   margin-left: 25px;
 }
-body main .container #devide #games .clear {
+main .container #devide #games .clear {
   padding: 10px 15px;
   font-size: 13px;
   background-color: #d31c3d;
   cursor: pointer;
   margin-top: 30px;
 }
-body main .container #devide #games .clear:hover {
+main .container #devide #games .clear:hover {
   background-color: white;
   color: black;
 }
-body main .container #devide .empty {
+main .container #devide .empty {
   font-weight: unset;
   padding: 25px 0 25px 20px;
   background-color: #242230;
@@ -303,7 +304,7 @@ body main .container #devide .empty {
   width: 100%;
   display: none;
 }
-body main .container #devide #checkout {
+main .container #devide #checkout {
   background-color: #242230;
   border-radius: 4px;
   padding: 30px;
@@ -312,26 +313,26 @@ body main .container #devide #checkout {
   height: -moz-fit-content;
   height: fit-content;
 }
-body main .container #devide #checkout .title {
+main .container #devide #checkout .title {
   font-size: 18px;
   font-weight: unset;
   text-align: center;
 }
-body main .container #devide #checkout .subtotal {
+main .container #devide #checkout .subtotal {
   display: flex;
   justify-content: space-between;
   width: 100%;
   color: white;
   margin-top: 30px;
 }
-body main .container #devide #checkout .total {
+main .container #devide #checkout .total {
   display: flex;
   justify-content: space-between;
   width: 100%;
   color: white;
   margin-top: 20px;
 }
-body main .container #devide #checkout .btn-shine {
+main .container #devide #checkout .btn-shine {
   padding: 13px 0;
   width: 100%;
   font-size: 14px;
@@ -339,7 +340,7 @@ body main .container #devide #checkout .btn-shine {
   cursor: pointer;
   margin-top: 30px;
 }
-body main .container #devide #checkout .btn-shine:hover {
+main .container #devide #checkout .btn-shine:hover {
   background-color: white;
   color: black;
 }/*# sourceMappingURL=cart.css.map */

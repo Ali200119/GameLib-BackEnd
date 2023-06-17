@@ -5,6 +5,10 @@
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
+body {
+  background-color: #201e2a;
+}
+
 #loading {
   position: fixed;
   top: 0;
@@ -297,33 +301,30 @@ footer .copyright h4 {
   border-color: #d31c3d;
 }
 
-body {
-  background-color: #201e2a;
-}
-body main {
+main {
   margin-top: 150px;
   display: flex;
   justify-content: center;
 }
-body main .container {
+main .container {
   width: 80%;
   display: flex;
   justify-content: space-between;
 }
-body main .container #games {
+main .container #games {
   width: 65%;
 }
-body main .container #games .title {
+main .container #games .title {
   color: white;
   font-size: 35px;
   font-weight: unset;
 }
-body main .container #games .sort {
+main .container #games .sort {
   margin-top: 60px;
   display: inline-block;
   position: relative;
 }
-body main .container #games .sort select {
+main .container #games .sort select {
   border: 2px solid #443f5a;
   width: 235px;
   color: #bcbac3;
@@ -332,15 +333,15 @@ body main .container #games .sort select {
           appearance: none;
   border-radius: 3px;
   outline: none;
-  padding: 13px 13px;
+  padding: 13px;
   background-color: transparent;
   cursor: pointer;
   transition: 0.3s all;
 }
-body main .container #games .sort select:focus {
+main .container #games .sort select:focus {
   border-color: white;
 }
-body main .container #games .sort i {
+main .container #games .sort i {
   color: #bcbac3;
   position: absolute;
   right: 20px;
@@ -348,7 +349,7 @@ body main .container #games .sort i {
   top: 50%;
   transform: translateY(-50%);
 }
-body main .container #games .items {
+main .container #games .items {
   display: flex;
   flex-wrap: wrap;
   gap: 55px;
@@ -356,48 +357,48 @@ body main .container #games .items {
   justify-content: space-between;
   margin-top: 40px;
 }
-body main .container #games .items .item {
+main .container #games .items .item {
   width: 415px;
 }
-body main .container #games .items .item .image {
+main .container #games .items .item .image {
   width: 100%;
   height: 235px;
   transition: 0.3s all;
   display: block;
   margin-bottom: 20px;
 }
-body main .container #games .items .item .image img {
+main .container #games .items .item .image img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 5px;
 }
-body main .container #games .items .item:hover .image {
+main .container #games .items .item:hover .image {
   transform: scale(0.97);
 }
-body main .container #games .items .item .name {
+main .container #games .items .item .name {
   color: white;
   transition: 0.3s all;
   text-decoration: none;
   display: inline-block;
 }
-body main .container #games .items .item .name h3 {
+main .container #games .items .item .name h3 {
   font-weight: unset;
 }
-body main .container #games .items .item .name:hover {
+main .container #games .items .item .name:hover {
   color: #d31c3d;
 }
-body main .container #games .items .item .price-view {
+main .container #games .items .item .price-view {
   margin-top: 15px;
   overflow: hidden;
   height: 20px;
 }
-body main .container #games .items .item .price-view .price {
+main .container #games .items .item .price-view .price {
   color: #bdbbc4;
   transition: 0.2s all;
 }
-body main .container #games .items .item .price-view .view {
+main .container #games .items .item .price-view .view {
   color: white;
   text-transform: uppercase;
   text-decoration: none;
@@ -406,28 +407,28 @@ body main .container #games .items .item .price-view .view {
   font-weight: bold;
   display: inline-block;
 }
-body main .container #games .items .item .price-view .view:hover {
+main .container #games .items .item .price-view .view:hover {
   color: #d31c3d;
 }
-body main .container #games .items .item:hover .price-view .price {
+main .container #games .items .item:hover .price-view .price {
   transform: translateY(-100%);
 }
-body main .container #games .items .item:hover .price-view .view {
+main .container #games .items .item:hover .price-view .view {
   transform: translateY(-100%);
 }
-body main .container #panel {
+main .container #panel {
   width: 30%;
 }
-body main .container #panel .search .title {
+main .container #panel .search .title {
   color: white;
   font-weight: unset;
 }
-body main .container #panel .search .search-input {
+main .container #panel .search .search-input {
   display: flex;
   align-items: center;
   margin-top: 30px;
 }
-body main .container #panel .search .search-input input {
+main .container #panel .search .search-input input {
   height: 47px;
   width: 350px;
   outline: none;
@@ -438,10 +439,10 @@ body main .container #panel .search .search-input input {
   padding: 15px;
   transition: 0.2s all;
 }
-body main .container #panel .search .search-input input:focus {
+main .container #panel .search .search-input input:focus {
   border-color: white;
 }
-body main .container #panel .search .search-input i {
+main .container #panel .search .search-input i {
   font-size: 17px;
   display: flex;
   justify-content: center;
@@ -454,29 +455,29 @@ body main .container #panel .search .search-input i {
   height: 40px;
   margin-left: 10px;
 }
-body main .container #panel .search .search-input i:hover {
+main .container #panel .search .search-input i:hover {
   background-color: #39354b;
 }
-body main .container #panel .latest-games {
+main .container #panel .latest-games {
   margin-top: 70px;
 }
-body main .container #panel .latest-games .title {
+main .container #panel .latest-games .title {
   color: white;
   font-weight: unset;
 }
-body main .container #panel .latest-games .items {
+main .container #panel .latest-games .items {
   margin-top: 35px;
 }
-body main .container #panel .latest-games .items .item {
+main .container #panel .latest-games .items .item {
   display: flex;
 }
-body main .container #panel .latest-games .items .item:nth-child(2), body main .container #panel .latest-games .items .item:last-child {
+main .container #panel .latest-games .items .item:nth-child(2), main .container #panel .latest-games .items .item:last-child {
   margin-top: 30px;
 }
-body main .container #panel .latest-games .items .item:hover .image {
+main .container #panel .latest-games .items .item:hover .image {
   transform: scale(0.96);
 }
-body main .container #panel .latest-games .items .item .image {
+main .container #panel .latest-games .items .item .image {
   text-decoration: none;
   display: block;
   width: 90px;
@@ -484,59 +485,59 @@ body main .container #panel .latest-games .items .item .image {
   transition: 0.3s all;
   border-radius: 4px;
 }
-body main .container #panel .latest-games .items .item .image img {
+main .container #panel .latest-games .items .item .image img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 4px;
 }
-body main .container #panel .latest-games .items .item .content {
+main .container #panel .latest-games .items .item .content {
   margin-left: 15px;
 }
-body main .container #panel .latest-games .items .item .content .name {
+main .container #panel .latest-games .items .item .content .name {
   text-decoration: none;
   color: white;
   transition: 0.3s all;
 }
-body main .container #panel .latest-games .items .item .content .name:hover {
+main .container #panel .latest-games .items .item .content .name:hover {
   color: #d31c3d;
 }
-body main .container #panel .latest-games .items .item .content .price {
+main .container #panel .latest-games .items .item .content .price {
   margin-top: 10px;
   color: #bdbbc4;
   margin-bottom: 10px;
 }
-body main .container #panel .latest-games .items .item .content .view {
+main .container #panel .latest-games .items .item .content .view {
   text-decoration: none;
   color: white;
   text-transform: uppercase;
   font-size: 13px;
   transition: 0.3s all;
 }
-body main .container #panel .latest-games .items .item .content .view:hover {
+main .container #panel .latest-games .items .item .content .view:hover {
   color: #d31c3d;
 }
-body main .container #panel .platforms {
+main .container #panel .platforms {
   margin-top: 70px;
 }
-body main .container #panel .platforms .title {
+main .container #panel .platforms .title {
   color: white;
   font-weight: unset;
 }
-body main .container #panel .platforms .platform {
+main .container #panel .platforms .platform {
   margin-top: 25px;
   display: flex;
   align-items: center;
 }
-body main .container #panel .platforms .platform:first-child {
+main .container #panel .platforms .platform:first-child {
   margin-top: 35px;
 }
-body main .container #panel .platforms .platform i {
+main .container #panel .platforms .platform i {
   color: white;
   font-size: 6px;
 }
-body main .container #panel .platforms .platform .name {
+main .container #panel .platforms .platform .name {
   color: white;
   font-weight: unset;
   cursor: pointer;
@@ -544,26 +545,26 @@ body main .container #panel .platforms .platform .name {
   margin-left: 15px;
   width: 100%;
 }
-body main .container #panel .platforms .platform .name:hover {
+main .container #panel .platforms .platform .name:hover {
   color: #d31c3d;
 }
-body main .container #panel .platforms .platform span {
+main .container #panel .platforms .platform span {
   color: #bdbbc4;
 }
-body main .container #panel .genres {
+main .container #panel .genres {
   margin-top: 70px;
 }
-body main .container #panel .genres .title {
+main .container #panel .genres .title {
   color: white;
   font-weight: unset;
 }
-body main .container #panel .genres .items {
+main .container #panel .genres .items {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
   margin-top: 25px;
 }
-body main .container #panel .genres .items .genre {
+main .container #panel .genres .items .genre {
   color: white;
   transition: 0.3s all;
   font-weight: unset;
@@ -572,24 +573,24 @@ body main .container #panel .genres .items .genre {
   cursor: pointer;
   border: 1.5px solid #443f5a;
 }
-body main .container #panel .genres .items .genre:hover {
+main .container #panel .genres .items .genre:hover {
   background-color: #d31c3d;
   border-color: #d31c3d;
 }
-body main .container #panel .social {
+main .container #panel .social {
   margin-top: 70px;
 }
-body main .container #panel .social .title {
+main .container #panel .social .title {
   color: white;
   font-weight: unset;
 }
-body main .container #panel .social .items {
+main .container #panel .social .items {
   margin-top: 35px;
   display: flex;
   gap: 15px;
   flex-wrap: wrap;
 }
-body main .container #panel .social .items .item {
+main .container #panel .social .items .item {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -598,6 +599,6 @@ body main .container #panel .social .items .item {
   border-radius: 50%;
   text-decoration: none;
 }
-body main .container #panel .social .items .item i {
+main .container #panel .social .items .item i {
   color: white;
 }/*# sourceMappingURL=shop.css.map */

@@ -4,154 +4,150 @@
 @use "../layouts/footer";
 @use "../layouts/up";
 
-body {
-    background-color: #201e2a;
+main {
+    margin-top: 150px;
+    display: flex;
+    justify-content: center;
 
-    main {
-        margin-top: 150px;
-        display: flex;
-        justify-content: center;
+    .container {
+        width: 80%;
 
-        .container {
-            width: 80%;
+        .title {
+            color: white;
+            font-size: 35px;
+            font-weight: unset;
+        }
 
-            .title {
-                color: white;
-                font-size: 35px;
-                font-weight: unset;
+        #devide {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 70px;
+
+            #games {
+                width: 65%;
+                border: 2px solid #39354b;
+                border-radius: 4px;
+                padding: 25px;
+
+                table {
+                    width: 100%;
+                    border-collapse: collapse;
+
+                    thead {
+                        border-bottom: 2px solid #2c2a3c;
+
+                        tr {
+                            th {
+                                padding-bottom: 40px;
+                                color: #b9b7c0;
+                                font-weight: unset;
+                            }
+                        }
+                    }
+
+                    tbody {
+                        tr {
+                            td {
+                                color: white;
+                                text-align: center;
+                                padding: 25px 0;
+                            }
+
+                            .name {
+                                display: flex;
+                                align-items: center;
+
+                                i {
+                                    color: #b9b7c0;
+                                    font-size: 25px;
+                                    transition: 0.3s all;
+                                    cursor: pointer;
+
+                                    &:hover {
+                                        color: white;
+                                    }
+                                }
+
+                                img {
+                                    width: 90px;
+                                    height: 90px;
+                                    border-radius: 3px;
+                                    object-fit: cover;
+                                    margin-left: 25px;
+                                }
+
+                                span {
+                                    margin-left: 25px;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .clear {
+                    padding: 10px 15px;
+                    font-size: 13px;
+                    background-color: #d31c3d;
+                    cursor: pointer;
+                    margin-top: 30px;
+
+                    &:hover {
+                        background-color: white;
+                        color: black;
+                    }
+                }
             }
 
-            #devide {
-                display: flex;
-                justify-content: space-between;
-                margin-top: 70px;
+            .empty {
+                font-weight: unset;
+                padding: 25px 0 25px 20px;
+                background-color: #242230;
+                color: #b9b7c0;
+                border-radius: 3px;
+                width: 100%;
+                display: none;
+            }
 
-                #games {
-                    width: 65%;
-                    border: 2px solid #39354b;
-                    border-radius: 4px;
-                    padding: 25px;
-
-                    table {
-                        width: 100%;
-                        border-collapse: collapse;
-
-                        thead {
-                            border-bottom: 2px solid #2c2a3c;
-
-                            tr {
-                                th {
-                                    padding-bottom: 40px;
-                                    color: #b9b7c0;
-                                    font-weight: unset;
-                                }
-                            }
-                        }
-
-                        tbody {
-                            tr {
-                                td {
-                                    color: white;
-                                    text-align: center;
-                                    padding: 25px 0;
-                                }
-
-                                .name {
-                                    display: flex;
-                                    align-items: center;
-
-                                    i {
-                                        color: #b9b7c0;
-                                        font-size: 25px;
-                                        transition: 0.3s all;
-                                        cursor: pointer;
-
-                                        &:hover {
-                                            color: white;
-                                        }
-                                    }
-
-                                    img {
-                                        width: 90px;
-                                        height: 90px;
-                                        border-radius: 3px;
-                                        object-fit: cover;
-                                        margin-left: 25px;
-                                    }
-
-                                    span {
-                                        margin-left: 25px;
-                                    }
-                                }
-                            }
-                        }
-                    }
-
-                    .clear {
-                        padding: 10px 15px;
-                        font-size: 13px;
-                        background-color: #d31c3d;
-                        cursor: pointer;
-                        margin-top: 30px;
-
-                        &:hover {
-                            background-color: white;
-                            color: black;
-                        }
-                    }
-                }
-
-                .empty {
+            #checkout {
+                background-color: #242230;
+                border-radius: 4px;
+                padding: 30px;
+                width: 25%;
+                height: fit-content;
+                
+                .title {
+                    font-size: 18px;
                     font-weight: unset;
-                    padding: 25px 0 25px 20px;
-                    background-color: #242230;
-                    color: #b9b7c0;
-                    border-radius: 3px;
-                    width: 100%;
-                    display: none;
+                    text-align: center;
                 }
 
-                #checkout {
-                    background-color: #242230;
-                    border-radius: 4px;
-                    padding: 30px;
-                    width: 25%;
-                    height: fit-content;
-                    
-                    .title {
-                        font-size: 18px;
-                        font-weight: unset;
-                        text-align: center;
-                    }
+                .subtotal {
+                    display: flex;
+                    justify-content: space-between;
+                    width: 100%;
+                    color: white;
+                    margin-top: 30px;
+                }
 
-                    .subtotal {
-                        display: flex;
-                        justify-content: space-between;
-                        width: 100%;
-                        color: white;
-                        margin-top: 30px;
-                    }
+                .total {
+                    display: flex;
+                    justify-content: space-between;
+                    width: 100%;
+                    color: white;
+                    margin-top: 20px;
+                }
 
-                    .total {
-                        display: flex;
-                        justify-content: space-between;
-                        width: 100%;
-                        color: white;
-                        margin-top: 20px;
-                    }
+                .btn-shine {
+                    padding: 13px 0;
+                    width: 100%;
+                    font-size: 14px;
+                    background-color: #d31c3d;
+                    cursor: pointer;
+                    margin-top: 30px;
 
-                    .btn-shine {
-                        padding: 13px 0;
-                        width: 100%;
-                        font-size: 14px;
-                        background-color: #d31c3d;
-                        cursor: pointer;
-                        margin-top: 30px;
-
-                        &:hover {
-                            background-color: white;
-                            color: black;
-                        }
+                    &:hover {
+                        background-color: white;
+                        color: black;
                     }
                 }
             }

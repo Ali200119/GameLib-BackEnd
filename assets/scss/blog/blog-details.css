@@ -5,6 +5,10 @@
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
+body {
+  background-color: #201e2a;
+}
+
 .btn-shine {
   position: relative;
   background-color: #201e2a;
@@ -215,28 +219,25 @@ footer .copyright h4 {
   border-color: #d31c3d;
 }
 
-body {
-  background-color: #201e2a;
-}
-body main #blog-bg {
+main #blog-bg {
   height: 540px;
   overflow: hidden;
   position: relative;
 }
-body main #blog-bg img {
+main #blog-bg img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   position: absolute;
 }
-body main #title {
+main #title {
   position: relative;
   display: flex;
   justify-content: center;
   bottom: 80px;
 }
-body main #title .content {
+main #title .content {
   background-color: #282636;
   border-radius: 5px;
   width: 50%;
@@ -244,7 +245,7 @@ body main #title .content {
   flex-direction: column;
   align-items: center;
 }
-body main #title .content span {
+main #title .content span {
   text-transform: uppercase;
   font-size: 13px;
   color: white;
@@ -255,44 +256,44 @@ body main #title .content span {
   border-radius: 3px;
   margin-top: 45px;
 }
-body main #title .content h1 {
+main #title .content h1 {
   text-align: center;
   color: white;
   font-weight: unset;
   font-size: 30px;
   margin-top: 20px;
 }
-body main #title .content .date-author-comments {
+main #title .content .date-author-comments {
   display: flex;
   gap: 35px;
   margin-top: 20px;
   margin-bottom: 45px;
 }
-body main #title .content .date-author-comments h4 {
+main #title .content .date-author-comments h4 {
   font-weight: unset;
   color: #9492a0;
 }
-body main #devide {
+main #devide {
   display: flex;
   justify-content: center;
 }
-body main #devide .container {
+main #devide .container {
   width: 80%;
   display: flex;
 }
-body main #devide .container #panel {
+main #devide .container #panel {
   width: 30%;
 }
-body main #devide .container #panel .search .title {
+main #devide .container #panel .search .title {
   color: white;
   font-weight: unset;
 }
-body main #devide .container #panel .search .search-input {
+main #devide .container #panel .search .search-input {
   display: flex;
   align-items: center;
   margin-top: 30px;
 }
-body main #devide .container #panel .search .search-input input {
+main #devide .container #panel .search .search-input input {
   height: 47px;
   width: 350px;
   outline: none;
@@ -303,10 +304,10 @@ body main #devide .container #panel .search .search-input input {
   padding: 15px;
   transition: 0.2s all;
 }
-body main #devide .container #panel .search .search-input input:focus {
+main #devide .container #panel .search .search-input input:focus {
   border-color: white;
 }
-body main #devide .container #panel .search .search-input i {
+main #devide .container #panel .search .search-input i {
   font-size: 17px;
   display: flex;
   justify-content: center;
@@ -319,79 +320,79 @@ body main #devide .container #panel .search .search-input i {
   height: 40px;
   margin-left: 10px;
 }
-body main #devide .container #panel .search .search-input i:hover {
+main #devide .container #panel .search .search-input i:hover {
   background-color: #39354b;
 }
-body main #devide .container #panel .latest-posts {
+main #devide .container #panel .latest-posts {
   margin-top: 70px;
 }
-body main #devide .container #panel .latest-posts .title {
+main #devide .container #panel .latest-posts .title {
   color: white;
   font-weight: unset;
 }
-body main #devide .container #panel .latest-posts .posts {
+main #devide .container #panel .latest-posts .posts {
   margin-top: 30px;
 }
-body main #devide .container #panel .latest-posts .posts .post {
+main #devide .container #panel .latest-posts .posts .post {
   display: flex;
 }
-body main #devide .container #panel .latest-posts .posts .post:hover .image {
+main #devide .container #panel .latest-posts .posts .post:hover .image {
   transform: scale(0.95);
 }
-body main #devide .container #panel .latest-posts .posts .post .image {
+main #devide .container #panel .latest-posts .posts .post .image {
   flex-shrink: 0;
   width: 90px;
   height: 90px;
   transition: 0.3s all;
   display: block;
 }
-body main #devide .container #panel .latest-posts .posts .post .image img {
+main #devide .container #panel .latest-posts .posts .post .image img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 15px;
 }
-body main #devide .container #panel .latest-posts .posts .post .content {
+main #devide .container #panel .latest-posts .posts .post .content {
   margin-left: 10px;
 }
-body main #devide .container #panel .latest-posts .posts .post .content .title {
+main #devide .container #panel .latest-posts .posts .post .content .title {
   color: white;
   font-weight: unset;
   margin-top: 5px;
   text-decoration: none;
   transition: 0.3s all;
 }
-body main #devide .container #panel .latest-posts .posts .post .content .title:hover {
+main #devide .container #panel .latest-posts .posts .post .content .title:hover {
   color: #d31c3d;
 }
-body main #devide .container #panel .latest-posts .posts .post .content .author-date {
+main #devide .container #panel .latest-posts .posts .post .content .author-date {
   margin-top: 15px;
 }
-body main #devide .container #panel .latest-posts .posts .post .content .author-date span {
+main #devide .container #panel .latest-posts .posts .post .content .author-date span {
   color: #bdbbc4;
   font-size: 15px;
 }
-body main #devide .container #panel .latest-posts .posts .post .content .author-date span:last-child {
+main #devide .container #panel .latest-posts .posts .post .content .author-date span:last-child {
   margin-left: 15px;
 }
-body main #devide .container #panel .latest-posts .posts .post:nth-child(2), body main #devide .container #panel .latest-posts .posts .post:last-child {
+main #devide .container #panel .latest-posts .posts .post:nth-child(2), main #devide .container #panel .latest-posts .posts .post:last-child {
   margin-top: 20px;
 }
-body main #devide .container #panel .social {
+main #devide .container #panel .social {
   margin-top: 70px;
 }
-body main #devide .container #panel .social .title {
+main #devide .container #panel .social .title {
   color: white;
   font-weight: unset;
 }
-body main #devide .container #panel .social .items {
+main #devide .container #panel .social .items {
   margin-top: 35px;
   display: flex;
   gap: 15px;
   flex-wrap: wrap;
 }
-body main #devide .container #panel .social .items .item {
+main #devide .container #panel .social .items .item {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -400,58 +401,58 @@ body main #devide .container #panel .social .items .item {
   border-radius: 50%;
   text-decoration: none;
 }
-body main #devide .container #panel .social .items .item i {
+main #devide .container #panel .social .items .item i {
   color: white;
 }
-body main #devide .container #blog-content {
+main #devide .container #blog-content {
   margin-left: 85px;
 }
-body main #devide .container #blog-content .text {
+main #devide .container #blog-content .text {
   color: #bdbbc4;
   font-size: 14px;
   line-height: 24px;
 }
-body main #devide .container #blog-content .images {
+main #devide .container #blog-content .images {
   display: flex;
   gap: 20px;
   justify-content: space-around;
   flex-wrap: wrap;
   margin-top: 75px;
 }
-body main #devide .container #blog-content .images img {
+main #devide .container #blog-content .images img {
   width: 420px;
   height: 250px;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 4px;
 }
-body main #devide .container #blog-content .comments {
+main #devide .container #blog-content .comments {
   margin-top: 150px;
 }
-body main #devide .container #blog-content .comments .title {
+main #devide .container #blog-content .comments .title {
   color: white;
   font-weight: unset;
   font-size: 22px;
 }
-body main #devide .container #blog-content .comments .items {
+main #devide .container #blog-content .comments .items {
   margin-top: 50px;
 }
-body main #devide .container #blog-content .comments .items .item {
+main #devide .container #blog-content .comments .items .item {
   position: relative;
   margin-top: 40px;
 }
-body main #devide .container #blog-content .comments .items .item:first-child {
+main #devide .container #blog-content .comments .items .item:first-child {
   margin-top: 0;
 }
-body main #devide .container #blog-content .comments .items .item .username {
+main #devide .container #blog-content .comments .items .item .username {
   color: white;
   font-weight: unset;
   margin-bottom: 5px;
 }
-body main #devide .container #blog-content .comments .items .item .date {
+main #devide .container #blog-content .comments .items .item .date {
   color: #9492a0;
 }
-body main #devide .container #blog-content .comments .items .item .description {
+main #devide .container #blog-content .comments .items .item .description {
   background-color: #282636;
   border-radius: 5px;
   color: #bdbbc4;
@@ -460,7 +461,7 @@ body main #devide .container #blog-content .comments .items .item .description {
   padding: 20px;
   margin-top: 20px;
 }
-body main #devide .container #blog-content .comments .items .item i {
+main #devide .container #blog-content .comments .items .item i {
   position: absolute;
   width: 40px;
   height: 40px;
@@ -475,19 +476,19 @@ body main #devide .container #blog-content .comments .items .item i {
   right: 15px;
   top: 10px;
 }
-body main #devide .container #blog-content .comments .items .item i:hover {
+main #devide .container #blog-content .comments .items .item i:hover {
   background-color: #d31c3d;
   border-color: #d31c3d;
 }
-body main #devide .container #blog-content .comments .post-comment {
+main #devide .container #blog-content .comments .post-comment {
   margin-top: 100px;
 }
-body main #devide .container #blog-content .comments .post-comment .title {
+main #devide .container #blog-content .comments .post-comment .title {
   color: white;
   font-weight: unset;
   font-size: 22px;
 }
-body main #devide .container #blog-content .comments .post-comment textarea {
+main #devide .container #blog-content .comments .post-comment textarea {
   width: 100%;
   margin-top: 25px;
   padding: 20px;
@@ -499,17 +500,17 @@ body main #devide .container #blog-content .comments .post-comment textarea {
   transition: 0.2s all;
   font-size: 14px;
 }
-body main #devide .container #blog-content .comments .post-comment textarea:focus {
+main #devide .container #blog-content .comments .post-comment textarea:focus {
   border-color: white;
 }
-body main #devide .container #blog-content .comments .post-comment .btn-shine {
+main #devide .container #blog-content .comments .post-comment .btn-shine {
   margin-top: 35px;
   padding: 15px 20px;
   font-size: 12px;
   background-color: #d31c3d;
   cursor: pointer;
 }
-body main #devide .container #blog-content .comments .post-comment .btn-shine:hover {
+main #devide .container #blog-content .comments .post-comment .btn-shine:hover {
   background-color: white;
   color: black;
 }/*# sourceMappingURL=blog-details.css.map */

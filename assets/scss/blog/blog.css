@@ -5,6 +5,10 @@
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
+body {
+  background-color: #201e2a;
+}
+
 .btn-shine {
   position: relative;
   background-color: #201e2a;
@@ -215,23 +219,20 @@ footer .copyright h4 {
   border-color: #d31c3d;
 }
 
-body {
-  background-color: #201e2a;
-}
-body main #fav-blog {
+main #fav-blog {
   height: 410px;
   overflow: hidden;
   background-color: black;
   position: relative;
 }
-body main #fav-blog img {
+main #fav-blog img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   opacity: 0.6;
 }
-body main #fav-blog .content {
+main #fav-blog .content {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -242,39 +243,39 @@ body main #fav-blog .content {
   align-items: center;
   width: 100%;
 }
-body main #fav-blog .content .title {
+main #fav-blog .content .title {
   color: white;
   font-size: 35px;
   margin-bottom: 15px;
   text-align: center;
 }
-body main #fav-blog .content .btn-shine {
+main #fav-blog .content .btn-shine {
   padding: 15px 30px;
   font-size: 12px;
   margin-top: 15px;
 }
-body main #devide {
+main #devide {
   margin-top: 150px;
   display: flex;
   justify-content: center;
 }
-body main #devide .container {
+main #devide .container {
   width: 80%;
   display: flex;
 }
-body main #devide .container #panel {
+main #devide .container #panel {
   width: 30%;
 }
-body main #devide .container #panel .search .title {
+main #devide .container #panel .search .title {
   color: white;
   font-weight: unset;
 }
-body main #devide .container #panel .search .search-input {
+main #devide .container #panel .search .search-input {
   display: flex;
   align-items: center;
   margin-top: 30px;
 }
-body main #devide .container #panel .search .search-input input {
+main #devide .container #panel .search .search-input input {
   height: 47px;
   width: 350px;
   outline: none;
@@ -285,10 +286,10 @@ body main #devide .container #panel .search .search-input input {
   padding: 15px;
   transition: 0.2s all;
 }
-body main #devide .container #panel .search .search-input input:focus {
+main #devide .container #panel .search .search-input input:focus {
   border-color: white;
 }
-body main #devide .container #panel .search .search-input i {
+main #devide .container #panel .search .search-input i {
   font-size: 17px;
   display: flex;
   justify-content: center;
@@ -301,79 +302,79 @@ body main #devide .container #panel .search .search-input i {
   height: 40px;
   margin-left: 10px;
 }
-body main #devide .container #panel .search .search-input i:hover {
+main #devide .container #panel .search .search-input i:hover {
   background-color: #39354b;
 }
-body main #devide .container #panel .latest-posts {
+main #devide .container #panel .latest-posts {
   margin-top: 70px;
 }
-body main #devide .container #panel .latest-posts .title {
+main #devide .container #panel .latest-posts .title {
   color: white;
   font-weight: unset;
 }
-body main #devide .container #panel .latest-posts .posts {
+main #devide .container #panel .latest-posts .posts {
   margin-top: 30px;
 }
-body main #devide .container #panel .latest-posts .posts .post {
+main #devide .container #panel .latest-posts .posts .post {
   display: flex;
 }
-body main #devide .container #panel .latest-posts .posts .post:hover .image {
+main #devide .container #panel .latest-posts .posts .post:hover .image {
   transform: scale(0.95);
 }
-body main #devide .container #panel .latest-posts .posts .post .image {
+main #devide .container #panel .latest-posts .posts .post .image {
   flex-shrink: 0;
   width: 90px;
   height: 90px;
   transition: 0.3s all;
   display: block;
 }
-body main #devide .container #panel .latest-posts .posts .post .image img {
+main #devide .container #panel .latest-posts .posts .post .image img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 15px;
 }
-body main #devide .container #panel .latest-posts .posts .post .content {
+main #devide .container #panel .latest-posts .posts .post .content {
   margin-left: 10px;
 }
-body main #devide .container #panel .latest-posts .posts .post .content .title {
+main #devide .container #panel .latest-posts .posts .post .content .title {
   color: white;
   font-weight: unset;
   margin-top: 5px;
   text-decoration: none;
   transition: 0.3s all;
 }
-body main #devide .container #panel .latest-posts .posts .post .content .title:hover {
+main #devide .container #panel .latest-posts .posts .post .content .title:hover {
   color: #d31c3d;
 }
-body main #devide .container #panel .latest-posts .posts .post .content .author-date {
+main #devide .container #panel .latest-posts .posts .post .content .author-date {
   margin-top: 15px;
 }
-body main #devide .container #panel .latest-posts .posts .post .content .author-date span {
+main #devide .container #panel .latest-posts .posts .post .content .author-date span {
   color: #bdbbc4;
   font-size: 15px;
 }
-body main #devide .container #panel .latest-posts .posts .post .content .author-date span:last-child {
+main #devide .container #panel .latest-posts .posts .post .content .author-date span:last-child {
   margin-left: 15px;
 }
-body main #devide .container #panel .latest-posts .posts .post:nth-child(2), body main #devide .container #panel .latest-posts .posts .post:last-child {
+main #devide .container #panel .latest-posts .posts .post:nth-child(2), main #devide .container #panel .latest-posts .posts .post:last-child {
   margin-top: 20px;
 }
-body main #devide .container #panel .social {
+main #devide .container #panel .social {
   margin-top: 70px;
 }
-body main #devide .container #panel .social .title {
+main #devide .container #panel .social .title {
   color: white;
   font-weight: unset;
 }
-body main #devide .container #panel .social .items {
+main #devide .container #panel .social .items {
   margin-top: 35px;
   display: flex;
   gap: 15px;
   flex-wrap: wrap;
 }
-body main #devide .container #panel .social .items .item {
+main #devide .container #panel .social .items .item {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -382,22 +383,22 @@ body main #devide .container #panel .social .items .item {
   border-radius: 50%;
   text-decoration: none;
 }
-body main #devide .container #panel .social .items .item i {
+main #devide .container #panel .social .items .item i {
   color: white;
 }
-body main #devide .container #posts {
+main #devide .container #posts {
   margin-left: 70px;
 }
-body main #devide .container #posts .items .item {
+main #devide .container #posts .items .item {
   display: flex;
 }
-body main #devide .container #posts .items .item:nth-child(2), body main #devide .container #posts .items .item:last-child {
+main #devide .container #posts .items .item:nth-child(2), main #devide .container #posts .items .item:last-child {
   margin-top: 40px;
 }
-body main #devide .container #posts .items .item:hover img {
+main #devide .container #posts .items .item:hover img {
   transform: scale(1.05);
 }
-body main #devide .container #posts .items .item .image {
+main #devide .container #posts .items .item .image {
   overflow: hidden;
   position: relative;
   width: 420px;
@@ -407,14 +408,14 @@ body main #devide .container #posts .items .item .image {
   text-decoration: none;
   flex-shrink: 0;
 }
-body main #devide .container #posts .items .item .image img {
+main #devide .container #posts .items .item .image img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   transition: 0.3s all;
 }
-body main #devide .container #posts .items .item .image span {
+main #devide .container #posts .items .item .image span {
   text-transform: uppercase;
   position: absolute;
   top: 15px;
@@ -427,60 +428,60 @@ body main #devide .container #posts .items .item .image span {
   transform: skew(-5deg);
   border-radius: 3px;
 }
-body main #devide .container #posts .items .item .content {
+main #devide .container #posts .items .item .content {
   margin-left: 35px;
   margin-top: 20px;
 }
-body main #devide .container #posts .items .item .content .title {
+main #devide .container #posts .items .item .content .title {
   text-decoration: none;
   color: white;
   transition: 0.3s all;
   font-size: 20px;
 }
-body main #devide .container #posts .items .item .content .title:hover {
+main #devide .container #posts .items .item .content .title:hover {
   color: #d31c3d;
 }
-body main #devide .container #posts .items .item .content .author-date {
+main #devide .container #posts .items .item .content .author-date {
   margin-top: 15px;
 }
-body main #devide .container #posts .items .item .content .author-date span {
+main #devide .container #posts .items .item .content .author-date span {
   color: #bdbbc4;
   font-size: 15px;
 }
-body main #devide .container #posts .items .item .content .author-date span:last-child {
+main #devide .container #posts .items .item .content .author-date span:last-child {
   margin-left: 20px;
 }
-body main #devide .container #posts .items .item .content .description {
+main #devide .container #posts .items .item .content .description {
   color: #bdbbc4;
   margin-top: 30px;
   margin-bottom: 30px;
   width: 96%;
 }
-body main #devide .container #posts .items .item .content .more {
+main #devide .container #posts .items .item .content .more {
   text-decoration: none;
   color: white;
   transition: 0.3s all;
   font-size: 13px;
 }
-body main #devide .container #posts .items .item .content .more:hover {
+main #devide .container #posts .items .item .content .more:hover {
   color: #d31c3d;
 }
-body main #devide .container #posts .pagination {
+main #devide .container #posts .pagination {
   display: flex;
   align-items: center;
   gap: 20px;
   margin-top: 50px;
 }
-body main #devide .container #posts .pagination .prev, body main #devide .container #posts .pagination .next {
+main #devide .container #posts .pagination .prev, main #devide .container #posts .pagination .next {
   color: white;
   transition: 0.3s all;
   text-decoration: none;
   font-size: 12px;
 }
-body main #devide .container #posts .pagination .prev:hover, body main #devide .container #posts .pagination .next:hover {
+main #devide .container #posts .pagination .prev:hover, main #devide .container #posts .pagination .next:hover {
   color: #d31c3d;
 }
-body main #devide .container #posts .pagination .number {
+main #devide .container #posts .pagination .number {
   text-decoration: none;
   display: flex;
   justify-content: center;
@@ -492,6 +493,6 @@ body main #devide .container #posts .pagination .number {
   font-size: 12px;
   border-radius: 50%;
 }
-body main #devide .container #posts .pagination .number:hover {
+main #devide .container #posts .pagination .number:hover {
   background-color: #d31c3d;
 }/*# sourceMappingURL=blog.css.map */
