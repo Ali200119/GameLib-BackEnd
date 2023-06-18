@@ -2,29 +2,17 @@
 
 // Search
 
+let search = document.getElementById("search");
+let body = document.querySelector("body");
+
 document.querySelector("header .user-panel .search .open-close").addEventListener("click", function() {
-    let search = document.querySelector("header .user-panel .search .search-input");
-
-    if (search.style.opacity == 0) {
-        search.style.opacity = 1;
-        search.style.pointerEvents = "unset";
-    }
-
-    else {
-        search.style.opacity = 0;
-        search.style.pointerEvents = "none";
-    }
+    search.style.top = 0;
+    body.style.overflow = "hidden";
 });
 
-document.addEventListener("click", function(event) {
-    let target = event.target;
-    let searchParent = document.querySelector("header .user-panel .search");
-    let search = document.querySelector("header .user-panel .search .search-input");
-
-    if (target !== search && !searchParent.contains(target)) {
-        search.style.opacity = 0;
-        search.style.pointerEvents = "none";
-    }
+document.querySelector("#search .close").addEventListener("click", function() {
+    search.style.top = "-100%";
+    body.style.overflow = "unset";
 });
 
 

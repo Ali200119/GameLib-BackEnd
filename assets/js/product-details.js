@@ -32,6 +32,31 @@ window.addEventListener("scroll", function () {
 
 
 
+// Full Screen Screenshot
+
+let screenshots = document.querySelectorAll("#visuals .screenshots .screenshot");
+
+for (const screenshot of screenshots) {
+    screenshot.addEventListener("click", function () {
+        document.getElementById("full-screen").style.opacity = 1;
+        document.getElementById("full-screen").style.pointerEvents = "unset";
+        document.querySelector("body").style.overflow = "hidden";
+
+        let image = this.firstElementChild.getAttribute("src");
+        document.querySelector("#full-screen .image img").setAttribute("src", image);
+    });
+}
+
+document.querySelector("#full-screen i").addEventListener("click", function () {
+    document.getElementById("full-screen").style.opacity = 0;
+    document.getElementById("full-screen").style.pointerEvents = "none";
+    document.querySelector("body").style.overflow = "unset";
+
+    document.querySelector("#full-screen .image img").removeAttribute("src");
+});
+
+
+
 // Appearance Effect
 
 appearance(document.getElementById("key-art-options"));
