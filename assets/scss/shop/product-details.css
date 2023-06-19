@@ -415,6 +415,7 @@ main #cover-key-art-options #key-art-options .container .options .platforms sele
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
+  cursor: pointer;
 }
 main #cover-key-art-options #key-art-options .container .options .platforms i {
   color: white;
@@ -542,36 +543,21 @@ main #about-info .container .about .description {
 }
 main #about-info .container .info {
   width: 525px;
-}
-main #about-info .container .info .developer,
-main #about-info .container .info .publisher,
-main #about-info .container .info .release-date,
-main #about-info .container .info .genre {
   display: flex;
 }
-main #about-info .container .info .developer h4,
-main #about-info .container .info .publisher h4,
-main #about-info .container .info .release-date h4,
-main #about-info .container .info .genre h4 {
-  font-weight: unset;
-}
-main #about-info .container .info .developer h4:first-child,
-main #about-info .container .info .publisher h4:first-child,
-main #about-info .container .info .release-date h4:first-child,
-main #about-info .container .info .genre h4:first-child {
+main #about-info .container .info .info-title {
   color: gray;
-  margin-right: 40px;
 }
-main #about-info .container .info .developer h4:last-child,
-main #about-info .container .info .publisher h4:last-child,
-main #about-info .container .info .release-date h4:last-child,
-main #about-info .container .info .genre h4:last-child {
+main #about-info .container .info .info-data {
+  margin-left: 50px;
   color: white;
 }
-main #about-info .container .info .publisher,
-main #about-info .container .info .release-date,
-main #about-info .container .info .genre {
+main #about-info .container .info .info-title h4, main #about-info .container .info .info-title div, main #about-info .container .info .info-data h4, main #about-info .container .info .info-data div {
   margin-top: 10px;
+  font-weight: unset;
+}
+main #about-info .container .info .info-title h4:first-child, main #about-info .container .info .info-title div:first-child, main #about-info .container .info .info-data h4:first-child, main #about-info .container .info .info-data div:first-child {
+  margin-top: 0;
 }
 main #visuals {
   display: flex;
@@ -624,6 +610,154 @@ main #visuals .container .screenshots img {
      object-fit: cover;
   border-radius: 12px;
 }
+main #countdown {
+  margin-top: 65px;
+  height: 300px;
+  position: relative;
+  background-color: black;
+}
+main #countdown img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  opacity: 0.4;
+}
+main #countdown .time {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  gap: 25px;
+}
+main #countdown .time .days, main #countdown .time .hours, main #countdown .time .minutes, main #countdown .time .seconds {
+  color: white;
+}
+main #countdown .time .days span, main #countdown .time .hours span, main #countdown .time .minutes span, main #countdown .time .seconds span {
+  background-color: #201e2a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: skewX(-3deg);
+  border-radius: 3px;
+  padding: 35px 45px;
+  font-size: 50px;
+}
+main #countdown .time .days h4, main #countdown .time .hours h4, main #countdown .time .minutes h4, main #countdown .time .seconds h4 {
+  text-align: center;
+  font-weight: unset;
+  margin-top: 15px;
+  letter-spacing: 1px;
+}
+main #countdown .released {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+main #countdown .released h1 {
+  color: white;
+  letter-spacing: 15px;
+  font-size: 70px;
+}
+main #comments {
+  margin-top: 80px;
+  display: flex;
+  justify-content: center;
+  transform: translateY(80px);
+  transition: 1s all;
+  opacity: 0;
+  pointer-events: none;
+}
+main #comments .container {
+  width: 80%;
+}
+main #comments .container .title {
+  color: white;
+  font-weight: unset;
+  font-size: 22px;
+}
+main #comments .container .items {
+  margin-top: 50px;
+}
+main #comments .container .items .item {
+  position: relative;
+  margin-top: 40px;
+}
+main #comments .container .items .item:first-child {
+  margin-top: 0;
+}
+main #comments .container .items .item .username {
+  color: white;
+  font-weight: unset;
+  margin-bottom: 5px;
+}
+main #comments .container .items .item .date {
+  color: #9492a0;
+}
+main #comments .container .items .item .description {
+  background-color: #282636;
+  border-radius: 5px;
+  color: #bdbbc4;
+  font-size: 14px;
+  line-height: 24px;
+  padding: 20px;
+  margin-top: 20px;
+}
+main #comments .container .items .item i {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: white;
+  border: 1px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.2s all;
+  right: 15px;
+  top: 10px;
+}
+main #comments .container .items .item i:hover {
+  background-color: #d31c3d;
+  border-color: #d31c3d;
+}
+main #comments .container .post-comment {
+  margin-top: 100px;
+}
+main #comments .container .post-comment .title {
+  color: white;
+  font-weight: unset;
+  font-size: 22px;
+}
+main #comments .container .post-comment textarea {
+  width: 100%;
+  margin-top: 25px;
+  padding: 20px;
+  outline: none;
+  background-color: #242230;
+  border: 1.5px solid #443f5a;
+  border-radius: 3px;
+  color: white;
+  transition: 0.2s all;
+  font-size: 14px;
+}
+main #comments .container .post-comment textarea:focus {
+  border-color: white;
+}
+main #comments .container .post-comment .btn-shine {
+  margin-top: 35px;
+  padding: 15px 20px;
+  font-size: 12px;
+  background-color: #d31c3d;
+  cursor: pointer;
+}
+main #comments .container .post-comment .btn-shine:hover {
+  background-color: white;
+  color: black;
+}
 
 #full-screen {
   position: fixed;
@@ -631,12 +765,10 @@ main #visuals .container .screenshots img {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
-  display: flex;
   justify-content: center;
   align-items: center;
   z-index: 1;
-  opacity: 0;
-  pointer-events: none;
+  display: none;
 }
 #full-screen .image {
   width: 80%;

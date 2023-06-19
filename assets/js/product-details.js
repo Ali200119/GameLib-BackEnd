@@ -38,8 +38,7 @@ let screenshots = document.querySelectorAll("#visuals .screenshots .screenshot")
 
 for (const screenshot of screenshots) {
     screenshot.addEventListener("click", function () {
-        document.getElementById("full-screen").style.opacity = 1;
-        document.getElementById("full-screen").style.pointerEvents = "unset";
+        document.getElementById("full-screen").style.display = "flex";
         document.querySelector("body").style.overflow = "hidden";
 
         let image = this.firstElementChild.getAttribute("src");
@@ -48,12 +47,40 @@ for (const screenshot of screenshots) {
 }
 
 document.querySelector("#full-screen i").addEventListener("click", function () {
-    document.getElementById("full-screen").style.opacity = 0;
-    document.getElementById("full-screen").style.pointerEvents = "none";
+    document.getElementById("full-screen").style.display = "none";
     document.querySelector("body").style.overflow = "unset";
 
     document.querySelector("#full-screen .image img").removeAttribute("src");
 });
+
+
+
+// Countdown
+
+if (document.getElementById("countdown").lastElementChild.classList.contains("time")) {
+    let days = document.querySelector("#countdown .time .days span");
+    let hours = document.querySelector("#countdown .time .hours span");
+    let minutes = document.querySelector("#countdown .time .minutes span");
+    let seconds = document.querySelector("#countdown .time .seconds span");
+    let releaseDate = document.querySelector("#countdown .time");
+
+    let endTime = new Date(`${releaseDate.getAttribute("data-day")} ${releaseDate.getAttribute("data-month")} ${releaseDate.getAttribute("data-year")} 00:00:00`)
+
+    function updateCountdownTime() {
+        let currentTime = new Date();
+        let diff = endTime - currentTime;
+        let day = Math.floor(diff / 1000 / 60 / 60 / 24);
+        let hour = Math.floor(diff / 1000 / 60 / 60) % 24;
+        let min = Math.floor(diff / 1000 / 60) % 60;
+        let sec = Math.floor(diff / 1000) % 60;
+        days.innerHTML = day < 10 ? `0` + day : day;
+        hours.innerHTML = hour < 10 ? `0` + hour : hour;
+        minutes.innerHTML = min < 10 ? `0` + min : min;
+        seconds.innerHTML = sec < 10 ? `0` + sec : sec;
+    }
+
+    setInterval(updateCountdownTime, 1000);
+}
 
 
 
@@ -71,7 +98,23 @@ window.addEventListener("scroll", function () {
     if (scrollPosition > 265) {
         appearance(document.getElementById("visuals"));
     }
+
+    if (scrollPosition > 1800) {
+        appearance(document.getElementById("comments"));
+    }
 });
+
+
+
+// Delete Comment
+
+let removeCommentBtns = document.querySelectorAll("#comments .items .item i");
+
+for (const remove of removeCommentBtns) {
+    remove.addEventListener("click", function() {
+        this.parentNode.remove();
+    });
+}
 
 
 

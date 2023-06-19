@@ -14,9 +14,9 @@ window.addEventListener("scroll", function() {
 
 // Delete Comment
 
-let removeBtns = document.querySelectorAll("#blog-content .comments .items .item i");
+let removeCommentBtns = document.querySelectorAll("#blog-content .comments .items .item i");
 
-for (const remove of removeBtns) {
+for (const remove of removeCommentBtns) {
     remove.addEventListener("click", function() {
         this.parentNode.remove();
     });
