@@ -1,7 +1,6 @@
 "use strict"
 
-setInterval(function() {
-    clearInterval();
+setTimeout(function() {
     document.querySelector("#loading .title").classList.add("hide");
     document.querySelector("#loading .animation").classList.add("hide");
 

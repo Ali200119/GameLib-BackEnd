@@ -24,7 +24,7 @@ main {
             margin-top: 70px;
 
             #games {
-                width: 65%;
+                width: 70%;
                 border: 2px solid #39354b;
                 border-radius: 4px;
                 padding: 25px;
@@ -80,6 +80,38 @@ main {
                                     margin-left: 25px;
                                 }
                             }
+
+                            .count {
+                                display: flex;
+                                justify-content: space-between;
+                                align-items: center;
+                                border: 2px solid #39354b;
+                                padding: 5px;
+                                border-radius: 25px;
+
+                                i {
+                                    display: flex;
+                                    width: 30px;
+                                    height: 30px;
+                                    justify-content: center;
+                                    align-items: center;
+                                    background-color: #39354b;
+                                    color: #b9b7c0;
+                                    transition: 0.3s all;
+                                    border-radius: 50%;
+                                    cursor: pointer;
+
+                                    &:hover {
+                                        background-color: #d31c3d;
+                                    }
+                                }
+
+                                span {
+                                    color: white;
+                                    margin-left: 7px;
+                                    margin-right: 7px;
+                                }
+                            }
                         }
                     }
                 }
@@ -114,19 +146,11 @@ main {
                 padding: 30px;
                 width: 25%;
                 height: fit-content;
-                
+
                 .title {
                     font-size: 18px;
                     font-weight: unset;
                     text-align: center;
-                }
-
-                .subtotal {
-                    display: flex;
-                    justify-content: space-between;
-                    width: 100%;
-                    color: white;
-                    margin-top: 30px;
                 }
 
                 .total {
@@ -134,7 +158,7 @@ main {
                     justify-content: space-between;
                     width: 100%;
                     color: white;
-                    margin-top: 20px;
+                    margin-top: 30px;
                 }
 
                 .btn-shine {

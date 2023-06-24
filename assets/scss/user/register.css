@@ -48,7 +48,7 @@ header {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
-  z-index: 1;
+  z-index: 2;
   background-color: #242230;
 }
 header .navbar {
@@ -255,7 +255,7 @@ main #inputs form .inputBox input {
 main #inputs form .inputBox input:focus {
   border-color: white;
 }
-main #inputs form .inputBox:nth-child(4) input, main #inputs form .inputBox:nth-child(5) input {
+main #inputs form .inputBox:nth-child(5) input, main #inputs form .inputBox:nth-child(6) input {
   padding-right: 45px;
 }
 main #inputs form .inputBox i {

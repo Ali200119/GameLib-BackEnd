@@ -1,15 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/scss/user/login.css">
     <link rel="icon" href="./assets/img/static-images/icon.png">
-    <title>Login</title>
+    <title>Search Results for ""</title>
 </head>
-
 <body>
     <header>
         <a href="./home.html"><img src="./assets/img/static-images/logo.svg" alt="logo"></a>
@@ -41,33 +38,7 @@
     </header>
 
     <main>
-        <section id="image">
-            <img src="./assets/img/static-images/Login BG.jpg">
-        </section>
-
-        <section id="inputs">
-            <form>
-                <h1>Login</h1>
-
-                <div class="inputBox">
-                    <input type="text" placeholder="Email or Username">
-                </div>
-
-                <div class="inputBox">
-                    <input type="password" placeholder="Password">
-                    <i class="fa-regular fa-eye"></i>
-                </div>
-
-                <div class="options">
-                    <a href="#" class="forgot-password">Forgot your password?</a>
-                    <h5>Dont't have an account? <a href="./register.html">Register</a></h5>
-                </div>
-
-                <div class="flex">
-                    <button type="submit" class="btn-shine">Sign In</button>
-                </div>
-            </form>
-        </section>
+        
 
         <section id="search">
             <div class="search-input">
@@ -77,13 +48,44 @@
     
             <i class="fa-regular fa-circle-xmark close"></i>
         </section>
+    
+        <section id="up">
+            <div class="arrow">
+                <i class="fa-solid fa-arrow-up"></i>
+            </div>
+        </section>
     </main>
+
+    <footer>
+        <div class="social" style="background-image: url('./assets/img/static-images/Footer\ BG.jpg');">
+            <div class="social-list">
+                <a href="https://www.twitch.tv" class="btn-shine">
+                    <i class="fa-brands fa-twitch"></i>
+                </a>
+
+                <a href="https://www.youtube.com" class="btn-shine">
+                    <i class="fa-brands fa-youtube"></i>
+                </a>
+
+                <a href="https://discord.com" class="btn-shine">
+                    <i class="fa-brands fa-discord"></i>
+                </a>
+
+                <a href="https://twitter.com" class="btn-shine">
+                    <i class="fa-brands fa-twitter"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <h4>© 2023 GameLib</h4>
+        </div>
+    </footer>
 
 
 
     <script src="https://kit.fontawesome.com/0e5ed62bbe.js" crossorigin="anonymous"></script>
     <script src="./assets/js/layout.js"></script>
-    <script src="./assets/js/user.js"></script>
+    <script src="./assets/js/components/scroll-to-up.js"></script>
 </body>
-
 </html>

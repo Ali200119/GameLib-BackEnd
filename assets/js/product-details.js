@@ -32,6 +32,23 @@ window.addEventListener("scroll", function () {
 
 
 
+// Add to Cart
+
+document.querySelector("#cover-key-art-options #key-art-options .options button").addEventListener("click", function () {
+    let alert = document.getElementById("game-added-alert");
+
+    alert.innerText = `${this.parentNode.parentNode.firstElementChild.innerText} has been added to the cart`;
+    alert.style.opacity = 1;
+    alert.style.pointerEvents = "unset";
+
+    setTimeout(function () {
+        alert.style.opacity = 0;
+        alert.style.pointerEvents = "none";
+    }, 3000);
+});
+
+
+
 // Full Screen Screenshot
 
 let screenshots = document.querySelectorAll("#visuals .screenshots .screenshot");
@@ -111,7 +128,7 @@ window.addEventListener("scroll", function () {
 let removeCommentBtns = document.querySelectorAll("#comments .items .item i");
 
 for (const remove of removeCommentBtns) {
-    remove.addEventListener("click", function() {
+    remove.addEventListener("click", function () {
         this.parentNode.remove();
     });
 }

@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/scss/about/about.css">
+    <link rel="stylesheet" href="./assets/scss/contact/contact.css">
     <link rel="icon" href="./assets/img/static-images/icon.png">
-    <title>About</title>
+    <title>Contact Us</title>
 </head>
 <body>
     <header>
@@ -16,8 +16,8 @@
             <li><a href="./home.html">Home</a></li>
             <li><a href="./shop.html">Shop</a></li>
             <li><a href="./blog.html">Blog</a></li>
-            <li><a href="./contact.html">Contact</a></li>
-            <li><a href="./about.html" class="active">About</a></li>
+            <li><a href="./contact.html" class="active">Contact</a></li>
+            <li><a href="./about.html">About</a></li>
         </ul>
 
         <div class="user-panel">
@@ -39,22 +39,38 @@
     </header>
 
     <main>
-        <section id="image">
-            <img src="./assets/img/about/Ninja Cyberpunk.jpg">
+        <section id="contact-bg">
+            <img src="./assets/img/static-images/Contact BG.jpeg">
+            
+            <h1 class="title">Contact Us</h1>
         </section>
 
-        <section id="text">
-            <div class="content">
-                <h1 class="title">Welcome to GameLib!</h1>
+        <section id="devide">
+            <div class="container">
+                <section id="social">
+                    <h1 class="title">Follow us</h1>
+    
+                        <div class="items">
+                            <a href="#" class="item" style="background-color: blue;">
+                                <i class="fa-brands fa-facebook"></i>
+                            </a>
+                        </div>
+                </section>
 
-                <div class="description">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo dolore, harum neque odit ea illum sed veniam impedit tempora reprehenderit!
-                </div>
+                <section id="form">
+                    <form>
+                        <input type="text" placeholder="Full Name *">
 
-                <a href="./home.html" class="btn-shine">Back to Home</a>
+                        <input type="email" placeholder="Email *">
+
+                        <textarea rows="7" placeholder="Message *"></textarea>
+                        
+                        <button class="btn-shine">Submit</button>
+                    </form>
+                </section>
             </div>
         </section>
-
+        
         <section id="search">
             <div class="search-input">
                 <input type="text" placeholder="Type to Search Games...">
@@ -102,6 +118,6 @@
     <script src="https://kit.fontawesome.com/0e5ed62bbe.js" crossorigin="anonymous"></script>
     <script src="./assets/js/layout.js"></script>
     <script src="./assets/js/components/scroll-to-up.js"></script>
-    <script src="./assets/js/about.js"></script>
+    <script src="./assets/js/contact.js"></script>
 </body>
 </html>
