@@ -38,14 +38,16 @@ public class HomeController : Controller
             IEnumerable<Blog> blogs = await _blogService.GetAllWithIncludesAsync();
             IEnumerable<Advantage> advantages = await _advantageService.GetAllAsync();
             IEnumerable<Developer> developers = await _developerService.GetAllAsync();
+            Subscribe subscribe = new Subscribe();
 
             HomeVM model = new HomeVM
             {
                 SectionHeaders = sectionHeaders,
                 Games = games,
-                Blogs = blogs,
-                Advantages = advantages,
-                Developers = developers
+                Blogs = blogs.OrderByDescending(b => b.CreatedAt).Take(4),
+                Advantages = advantages.OrderByDescending(a => a.CreatedAt).Take(3),
+                Developers = developers,
+                Subscribe = subscribe
             };
 
             return View(model);

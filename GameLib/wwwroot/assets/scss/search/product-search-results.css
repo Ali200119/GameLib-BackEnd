@@ -407,4 +407,34 @@ main #search-results .container .items .item:hover .price-view .price {
 }
 main #search-results .container .items .item:hover .price-view .view {
   transform: translateY(-100%);
+}
+main #search-results .container .not-found {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 120px;
+}
+main #search-results .container .not-found .title {
+  text-align: center;
+  color: white;
+  font-weight: unset;
+  font-size: 35px;
+}
+main #search-results .container .not-found .description {
+  text-align: center;
+  color: #bdbbc4;
+  font-weight: unset;
+  margin-top: 70px;
+  width: 40%;
+}
+main #search-results .container .not-found .btn-shine {
+  padding: 15px 20px;
+  font-size: 15px;
+  background-color: #d31c3d;
+  margin-top: 45px;
+}
+main #search-results .container .not-found .btn-shine:hover {
+  background-color: white;
+  color: black;
 }/*# sourceMappingURL=product-search-results.css.map */

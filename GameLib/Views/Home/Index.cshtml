@@ -50,7 +50,7 @@
 <section id="blog">
     <div class="container">
         <div class="blog-items">
-            @foreach (var blog in Model.Blogs.OrderByDescending(b => b.CreatedAt).Take(4))
+            @foreach (var blog in Model.Blogs)
             {
                 <a asp-controller="Blog" asp-action="Details" asp-route-id="@blog.Id" class="item">
                     <img src="~/assets/img/blog/@blog.BlogImages.FirstOrDefault(bi => bi.IsMain).Name">
@@ -185,7 +185,7 @@
         </div>
 
         <div class="posts">
-            @foreach (var blog in Model.Blogs.OrderByDescending(b => b.CreatedAt).Take(3))
+            @foreach (var blog in Model.Blogs.Take(3))
             {
                 <div class="post">
                     <a class="image" asp-controller="Blog" asp-action="Details" asp-route-id="@blog.Id">
@@ -235,7 +235,7 @@
         <h1 class="title">@Model.SectionHeaders["HomeAdventages"]</h1>
 
         <div class="items">
-            @foreach (var advantages in Model.Advantages.OrderByDescending(a => a.CreatedAt))
+            @foreach (var advantages in Model.Advantages.OrderByDescending(a => a.CreatedAt).Take(3))
             {
                 <div class="item">
                     <div class="content">
@@ -249,15 +249,6 @@
     </div>
 </section>
 
-<section id="search">
-    <div class="search-input">
-        <input type="text" placeholder="Type to Search Games...">
-        <i class="fa-solid fa-magnifying-glass"></i>
-    </div>
-
-    <i class="fa-regular fa-circle-xmark close"></i>
-</section>
-
 <section id="up">
     <div class="arrow">
         <i class="fa-solid fa-arrow-up"></i>
@@ -265,6 +256,7 @@
 </section>
 
 @section Scripts {
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
             integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
             crossorigin="anonymous" referrerpolicy="no-referrer"></script>

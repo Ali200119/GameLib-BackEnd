@@ -6,5 +6,6 @@ namespace Repository.Repositories.Interfaces
 	public interface IGameRepository: IRepository<Game>
 	{
 		Task<Game> GetByIdWithFullDataAsync(int? id);
-	}
+		Task<IEnumerable<Game>> SearchByNameAsync(string searchText);
+    }
 }

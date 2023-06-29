@@ -25,17 +25,17 @@ namespace Repository.Repositories
 
         public async Task CreateAsync(T entity)
         {
-            if (entity is null) throw new ArgumentNullException(nameof(entity));
+            if (entity is null) throw new ArgumentNullException();
+
             await entities.AddAsync(entity);
             await SaveChangesAsync();
         }
 
         public async Task DeleteAsync(T entity)
         {
-            if (entity is null) { throw new ArgumentNullException(nameof(entity)); }
+            if (entity is null) throw new ArgumentNullException();
 
             entities.Remove(entity);
-
             await SaveChangesAsync();
         }
 
@@ -50,14 +50,14 @@ namespace Repository.Repositories
 
             T entity = await entities.IncludeMultiple(includes).FirstOrDefaultAsync(e => e.Id == id);
 
-            if (entity is null) throw new NullReferenceException("Not Found Data");
+            if (entity is null) throw new NullReferenceException();
 
             return entity;
         }
 
         public async Task UpdateAsync(T entity)
         {
-            if (entity is null) throw new ArgumentNullException(nameof(entity));
+            if (entity is null) throw new ArgumentNullException();
 
             entities.Update(entity);
             await SaveChangesAsync();
@@ -65,13 +65,13 @@ namespace Repository.Repositories
 
         public async Task SoftDeleteAsync(T entity)
         {
-            if (entity is null) throw new ArgumentNullException(nameof(entity));
+            if (entity is null) throw new ArgumentNullException();
 
             entity.SoftDelete = true;
 
             await SaveChangesAsync();
         }
 
-        public async Task SaveChangesAsync() => _context.SaveChangesAsync();
+        private async Task SaveChangesAsync() => _context.SaveChangesAsync();
     }
 }

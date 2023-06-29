@@ -27,5 +27,14 @@ namespace Repository.Repositories
 
             return game;
         }
+
+        public async Task<IEnumerable<Game>> SearchByNameAsync(string searchText)
+        {
+            if (searchText is null) throw new ArgumentNullException();
+
+            return await entities.Where(g => g.Name.ToLower().Trim().Contains(searchText.ToLower().Trim()))
+                                 .Include(g => g.GameImages)
+                                 .ToListAsync();
+        }
     }
 }

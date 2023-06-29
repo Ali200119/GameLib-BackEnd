@@ -2,17 +2,27 @@
 
 // Search
 
-let search = document.getElementById("search");
+let searchPage = document.getElementById("search");
 let body = document.querySelector("body");
 
 document.querySelector("header .user-panel .search .open-close").addEventListener("click", function() {
-    search.style.top = 0;
+    searchPage.style.top = 0;
     body.style.overflow = "hidden";
 });
 
 document.querySelector("#search .close").addEventListener("click", function() {
-    search.style.top = "-100%";
+    searchPage.style.top = "-100%";
     body.style.overflow = "unset";
+});
+
+document.querySelector("#search .search-input i").addEventListener("click", function () {
+    search();
+});
+
+document.querySelector("#search .search-input input").addEventListener("keydown", function (event) {
+    if (event.keyCode === 13) {
+        search();
+    }
 });
 
 
@@ -43,3 +53,17 @@ document.addEventListener("click", function(event) {
         loginRegister.style.pointerEvents = "none";
     }
 });
+
+
+
+
+
+// Functions
+
+function search() {
+    let searchText = document.querySelector("#search .search-input input");
+
+    if (searchText.value.trim() != "") {
+        window.location.assign(`/Search/SearchByGames?searchText=${searchText.value}`);
+    }
+}

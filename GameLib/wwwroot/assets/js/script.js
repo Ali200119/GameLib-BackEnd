@@ -76,3 +76,52 @@ $(document).ready(function() {
         arrows: false
     });
 });
+
+
+
+// Subscribe
+
+document.querySelector("#subscribe form").addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    subscribe();
+});
+
+
+
+
+// Functions
+
+function subscribe() {
+    let input = document.querySelector("#subscribe form input");
+
+    if (input.value.trim() != "") {
+        let url = `/Subscribe/SubscribeToNewsletter?email=${input.value}`;
+
+        fetch(url, {
+            method: "POST"
+        }).then(function (response) {
+            if (response.ok) {
+                return response.json();
+            }
+        }).then(function (data) {
+            if (data) {
+                Swal.fire(
+                    'Thank you!',
+                    'You have successfully subscribed to our newsletter',
+                    'success'
+                )
+            }
+
+            else {
+                Swal.fire(
+                    'Already subscribed',
+                    'This email has already been subscribed to our newsletter',
+                    'info'
+                )
+            }
+
+            input.value = "";
+        });
+    }
+}

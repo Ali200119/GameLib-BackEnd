@@ -16,6 +16,8 @@
     <None Remove="Views\Cart\" />
     <None Remove="Views\Contact\" />
     <None Remove="Views\Shop\" />
+    <None Remove="Views\Search\" />
+    <None Remove="Views\Error\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\Home\" />
@@ -24,6 +26,8 @@
     <Folder Include="Views\Cart\" />
     <Folder Include="Views\Contact\" />
     <Folder Include="Views\Shop\" />
+    <Folder Include="Views\Search\" />
+    <Folder Include="Views\Error\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.15" />

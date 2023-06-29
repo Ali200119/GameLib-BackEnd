@@ -10,5 +10,6 @@ namespace Service.ViewModels.Home
 		public IEnumerable<Blog> Blogs { get; set; }
 		public IEnumerable<Developer> Developers { get; set; }
 		public IEnumerable<Advantage> Advantages { get; set; }
+		public Subscribe Subscribe { get; set; }
 	}
 }

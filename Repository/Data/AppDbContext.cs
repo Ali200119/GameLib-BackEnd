@@ -1244,7 +1244,7 @@ namespace Repository.Data
                 new GameImage
                 {
                     Id = 49,
-                    Name = "Microsot Flight Simulator.jpg",
+                    Name = "Microsoft Flight Simulator.jpg",
                     IsMain = true,
                     GameId = 9
                 },
@@ -1612,6 +1612,20 @@ namespace Repository.Data
                     Id = 5,
                     Key = "HomeAdventages",
                     Value = "Why Users Trust Us"
+                },
+
+                new SectionHeader
+                {
+                    Id = 6,
+                    Key = "GameDetailsAbout",
+                    Value = "About the Game"
+                },
+
+                new SectionHeader
+                {
+                    Id = 7,
+                    Key = "GameDetailsVisuals",
+                    Value = "Visuals"
                 }
             );
 

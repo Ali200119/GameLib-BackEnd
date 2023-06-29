@@ -24,5 +24,12 @@ namespace Service.Services
 
             return await _gameRepo.GetByIdWithFullDataAsync(id);
         }
+
+        public async Task<IEnumerable<Game>> GetByNameWithIncludesAsync(string searchText)
+        {
+            if (searchText is null) throw new ArgumentNullException();
+
+            return await _gameRepo.SearchByNameAsync(searchText);
+        }
     }
 }
