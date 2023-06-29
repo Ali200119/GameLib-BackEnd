@@ -1,0 +1,249 @@
+﻿@{
+    ViewBag.Title = "Shop";
+}
+
+@section CSS {
+    <link rel="stylesheet" href="~/assets/scss/shop/shop.css">
+}
+
+@section NavBar {
+    <ul class="navbar">
+        <li><a asp-controller="Home" asp-action="Index">Home</a></li>
+        <li><a asp-controller="Shop" asp-action="Index" class="active">Shop</a></li>
+        <li><a asp-controller="Blog" asp-action="Index">Blog</a></li>
+        <li><a asp-controller="Contact" asp-action="Index">Contact</a></li>
+        <li><a asp-controller="About" asp-action="Index">About</a></li>
+    </ul>
+}
+
+<div class="container">
+    <section id="games">
+        <h1 class="title">Shop</h1>
+
+        <div class="sort">
+            <select>
+                <option value="">Sort by name</option>
+                <option selected value="">Sort by recent</option>
+                <option value="">Sort by price: low to high</option>
+                <option value="">Sort by price: high to low</option>
+            </select>
+
+            <i class="fa-solid fa-chevron-down"></i>
+        </div>
+
+        <div class="items">
+            <div class="item">
+                <a class="image" href="#">
+                    <img src="~/assets/img/games/God of War.jpg">
+                </a>
+
+                <a class="name" href="#">
+                    <h3>God of War</h3>
+                </a>
+
+                <div class="price-view">
+                    <div class="price">
+                        <span>$</span>
+                        <span>59.99</span>
+                    </div>
+
+                    <a class="view" href="#">View Game</a>
+                </div>
+            </div>
+
+            <div class="item">
+                <a class="image" href="#">
+                    <img src="~/assets/img/games/God of War.jpg">
+                </a>
+
+                <a class="name" href="#">
+                    <h3>God of War</h3>
+                </a>
+
+                <div class="price-view">
+                    <div class="price">
+                        <span>$</span>
+                        <span>59.99</span>
+                    </div>
+
+                    <a class="view" href="#">View Game</a>
+                </div>
+            </div>
+
+            <div class="item">
+                <a class="image" href="#">
+                    <img src="~/assets/img/games/God of War.jpg">
+                </a>
+
+                <a class="name" href="#">
+                    <h3>God of War</h3>
+                </a>
+
+                <div class="price-view">
+                    <div class="price">
+                        <span>$</span>
+                        <span>59.99</span>
+                    </div>
+
+                    <a class="view" href="#">View Game</a>
+                </div>
+            </div>
+
+            <div class="item">
+                <a class="image" href="#">
+                    <img src="~/assets/img/games/God of War.jpg">
+                </a>
+
+                <a class="name" href="#">
+                    <h3>God of War</h3>
+                </a>
+
+                <div class="price-view">
+                    <div class="price">
+                        <span>$</span>
+                        <span>59.99</span>
+                    </div>
+
+                    <a class="view" href="#">View Game</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="panel">
+        <div class="search">
+            <h3 class="title">Search</h3>
+
+            <div class="search-input">
+                <input type="text" placeholder="Search blogs">
+
+                <i class="fa-solid fa-magnifying-glass circle"></i>
+            </div>
+        </div>
+
+        <div class="latest-games">
+            <h3 class="title">Latest Games</h3>
+
+            <div class="items">
+                <div class="item">
+                    <a href="#" class="image">
+                        <img src="~/assets/img/games/Ratchet and Clank Rift Apart.jpg">
+                    </a>
+
+                    <div class="content">
+                        <a href="#" class="name">Ratchet and Clank: Rift Apart</a>
+
+                        <div class="price">
+                            <span>$</span>
+                            <span>59.99</span>
+                        </div>
+
+                        <a href="#" class="view">View Game</a>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <a href="#" class="image">
+                        <img src="~/assets/img/games/Ratchet and Clank Rift Apart.jpg">
+                    </a>
+
+                    <div class="content">
+                        <a href="#" class="name">Ratchet and Clank: Rift Apart</a>
+
+                        <div class="price">
+                            <span>$</span>
+                            <span>59.99</span>
+                        </div>
+
+                        <a href="#" class="view">View Game</a>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <a href="#" class="image">
+                        <img src="~/assets/img/games/Ratchet and Clank Rift Apart.jpg">
+                    </a>
+
+                    <div class="content">
+                        <a href="#" class="name">Ratchet and Clank: Rift Apart</a>
+
+                        <div class="price">
+                            <span>$</span>
+                            <span>59.99</span>
+                        </div>
+
+                        <a href="#" class="view">View Game</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="platforms">
+            <h3 class="title">Platforms</h3>
+
+            <div class="platform">
+                <i class="fa-solid fa-circle"></i>
+                <h4 class="name">PC</h4>
+                <span>(#)</span>
+            </div>
+
+            <div class="platform">
+                <i class="fa-solid fa-circle"></i>
+                <h4 class="name">PlayStation 5</h4>
+                <span>(#)</span>
+            </div>
+
+            <div class="platform">
+                <i class="fa-solid fa-circle"></i>
+                <h4 class="name">Xbox Series X</h4>
+                <span>(#)</span>
+            </div>
+        </div>
+
+        <div class="genres">
+            <h3 class="title">Genres</h3>
+
+            <div class="items">
+                <h4 class="genre">Adventure</h4>
+                <h4 class="genre">Action</h4>
+                <h4 class="genre">Shooter</h4>
+                <h4 class="genre">RPG</h4>
+                <h4 class="genre">Strategy</h4>
+                <h4 class="genre">Survival</h4>
+                <h4 class="genre">Sports</h4>
+                <h4 class="genre">Horror</h4>
+                <h4 class="genre">Fighting</h4>
+            </div>
+        </div>
+
+        <div class="social">
+            <h3 class="title">Follow us</h3>
+
+            <div class="items">
+                <a href="#" class="item" style="background-color: blue;">
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+</div>
+
+<section id="search">
+    <div class="search-input">
+        <input type="text" placeholder="Type to Search Games...">
+        <i class="fa-solid fa-magnifying-glass"></i>
+    </div>
+
+    <i class="fa-regular fa-circle-xmark close"></i>
+</section>
+
+<section id="up">
+    <div class="arrow">
+        <i class="fa-solid fa-arrow-up"></i>
+    </div>
+</section>
+
+@section Scripts {
+    <script src="~/assets/js/components/scroll-to-up.js"></script>
+    <script src="./assets/js/product-details.js"></script>
+}

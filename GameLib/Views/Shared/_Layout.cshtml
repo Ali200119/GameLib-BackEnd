@@ -1,0 +1,75 @@
+﻿@inject IStaticDataService _staticDataService;
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    @RenderSection("CSS", false)
+    <link rel="icon" href="~/assets/img/static-images/@_staticDataService.GetAllSettings()["Icon"]">
+    <title>@ViewBag.Title</title>
+</head>
+
+<body>
+    <header>
+        <a asp-controller="Home" asp-action="Index"><img src="~/assets/img/static-images/@_staticDataService.GetAllSettings()["Logo"]" alt="logo"></a>
+
+        @RenderSection("NavBar", false)
+
+        <div class="user-panel">
+            <div class="search">
+                <i class="fa-solid fa-magnifying-glass circle open-close"></i>
+            </div>
+
+            <a asp-controller="Cart" asp-action="Index"><i class="fa-solid fa-bag-shopping circle"></i></a>
+
+            <div class="user">
+                <i class="fa-solid fa-user circle"></i>
+
+                <div class="login-register">
+                    <a href="./login.html">Login</a>
+                    <a href="./register.html">Register</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        @RenderBody()
+    </main>
+
+    <footer>
+        <div class="social" style="background-image: url('/assets/img/static-images/Footer\ BG.jpg');">
+            <div class="social-list">
+                <a href="https://www.twitch.tv" class="btn-shine">
+                    <i class="fa-brands fa-twitch"></i>
+                </a>
+
+                <a href="https://www.youtube.com" class="btn-shine">
+                    <i class="fa-brands fa-youtube"></i>
+                </a>
+
+                <a href="https://discord.com" class="btn-shine">
+                    <i class="fa-brands fa-discord"></i>
+                </a>
+
+                <a href="https://twitter.com" class="btn-shine">
+                    <i class="fa-brands fa-twitter"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <h4>@_staticDataService.GetAllSettings()["Copyright"]</h4>
+        </div>
+    </footer>
+
+
+
+    <script src="https://kit.fontawesome.com/0e5ed62bbe.js" crossorigin="anonymous"></script>
+    <script src="~/assets/js/layout.js"></script>
+    @RenderSection("Scripts", false)
+</body>
+</html>

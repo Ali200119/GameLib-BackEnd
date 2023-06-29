@@ -1,0 +1,861 @@
+{
+  "Files": [
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/obj/Debug/net6.0/scopedcss/projectbundle/GameLib.bundle.scp.css",
+      "PackagePath": "staticwebassets/GameLib.bundle.scp.css"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/.DS_Store",
+      "PackagePath": "staticwebassets/.DS_Store"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/.DS_Store",
+      "PackagePath": "staticwebassets/assets/.DS_Store"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/img/.DS_Store",
+      "PackagePath": "staticwebassets/assets/img/.DS_Store"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/img/about/Ninja Cyberpunk.jpg",
+      "PackagePath": "staticwebassets/assets/img/about/Ninja Cyberpunk.jpg"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/img/blog/.DS_Store",
+      "PackagePath": "staticwebassets/assets/img/blog/.DS_Store"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/img/blog/Assassin's Creed Mirage Screenshot 1.jpeg",
+      "PackagePath": "staticwebassets/assets/img/blog/Assassin's Creed Mirage Screenshot 1.jpeg"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/img/blog/Assassin's Creed Mirage Screenshot 2.jpeg",
+      "PackagePath": "staticwebassets/assets/img/blog/Assassin's Creed Mirage Screenshot 2.jpeg"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/img/blog/Assassin's Creed Mirage Screenshot 3.jpeg",
+      "PackagePath": "staticwebassets/assets/img/blog/Assassin's Creed Mirage Screenshot 3.jpeg"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/img/blog/Assassin's Creed Mirage Screenshot 4.jpeg",
+      "PackagePath": "staticwebassets/assets/img/blog/Assassin's Creed Mirage Screenshot 4.jpeg"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/img/blog/Assassin's Creed Mirage Screenshot 5.jpeg",
+      "PackagePath": "staticwebassets/assets/img/blog/Assassin's Creed Mirage Screenshot 5.jpeg"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/img/blog/Assassin's Creed Mirage.jpg",
+      "PackagePath": "staticwebassets/assets/img/blog/Assassin's Creed Mirage.jpg"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/img/blog/Marvel's Spider-Man 2 Screenshot 1.jpg",
+      "PackagePath": "staticwebassets/assets/img/blog/Marvel's Spider-Man 2 Screenshot 1.jpg"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/img/blog/Marvel's Spider-Man 2 Screenshot 2.jpg",
+      "PackagePath": "staticwebassets/assets/img/blog/Marvel's Spider-Man 2 Screenshot 2.jpg"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/img/blog/Marvel's Spider-Man 2 Screenshot 3.jpg",
+      "PackagePath": "staticwebassets/assets/img/blog/Marvel's Spider-Man 2 Screenshot 3.jpg"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/img/blog/Marvel's Spider-Man 2 Screenshot 4.jpg",
+      "PackagePath": "staticwebassets/assets/img/blog/Marvel's Spider-Man 2 Screenshot 4.jpg"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/img/blog/Marvel's Spider-Man 2 Screenshot 5.jpg",
+      "PackagePath": "staticwebassets/assets/img/blog/Marvel's Spider-Man 2 Screenshot 5.jpg"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/img/blog/Marvel's Spider-Man 2.jpg",
+      "PackagePath": "staticwebassets/assets/img/blog/Marvel's Spider-Man 2.jpg"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/img/blog/Phantom Blade Zero Screenshot 1.jpeg",
+      "PackagePath": "staticwebassets/assets/img/blog/Phantom Blade Zero Screenshot 1.jpeg"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/img/blog/Phantom Blade Zero Screenshot 2.jpeg",
+      "PackagePath": "staticwebassets/assets/img/blog/Phantom Blade Zero Screenshot 2.jpeg"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/img/blog/Phantom Blade Zero Screenshot 3.jpeg",
+      "PackagePath": "staticwebassets/assets/img/blog/Phantom Blade Zero Screenshot 3.jpeg"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/img/blog/Phantom Blade Zero Screenshot 4.webp",
+      "PackagePath": "staticwebassets/assets/img/blog/Phantom Blade Zero Screenshot 4.webp"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/img/blog/Phantom Blade Zero Screenshot 5.jpg",
+      "PackagePath": "staticwebassets/assets/img/blog/Phantom Blade Zero Screenshot 5.jpg"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/img/blog/Phantom Blade Zero.jpg",
+      "PackagePath": "staticwebassets/assets/img/blog/Phantom Blade Zero.jpg"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/img/blog/Ultros Screenshot 1.jpeg",
+      "PackagePath": "staticwebassets/assets/img/blog/Ultros Screenshot 1.jpeg"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/img/blog/Ultros Screenshot 2.jpeg",
+      "PackagePath": "staticwebassets/assets/img/blog/Ultros Screenshot 2.jpeg"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/img/blog/Ultros Screenshot 3.jpeg",
+      "PackagePath": "staticwebassets/assets/img/blog/Ultros Screenshot 3.jpeg"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/img/blog/Ultros Screenshot 4.jpeg",
+      "PackagePath": "staticwebassets/assets/img/blog/Ultros Screenshot 4.jpeg"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/img/blog/Ultros Screenshot 5.jpeg",
+      "PackagePath": "staticwebassets/assets/img/blog/Ultros Screenshot 5.jpeg"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/img/blog/Ultros.png",
+      "PackagePath": "staticwebassets/assets/img/blog/Ultros.png"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/img/developers/343 Industries.png",
+      "PackagePath": "staticwebassets/assets/img/developers/343 Industries.png"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/img/developers/Bend Studio.png",
+      "PackagePath": "staticwebassets/assets/img/developers/Bend Studio.png"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/img/developers/DICE.png",
+      "PackagePath": "staticwebassets/assets/img/developers/DICE.png"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/img/developers/Developers BG.jpeg",
+      "PackagePath": "staticwebassets/assets/img/developers/Developers BG.jpeg"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/img/developers/Guerrilla Games.png",
+      "PackagePath": "staticwebassets/assets/img/developers/Guerrilla Games.png"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/img/developers/Insomniac Games.webp",
+      "PackagePath": "staticwebassets/assets/img/developers/Insomniac Games.webp"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/img/developers/Moon Studios.png",
+      "PackagePath": "staticwebassets/assets/img/developers/Moon Studios.png"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/img/developers/Naughty Dog.png",
+      "PackagePath": "staticwebassets/assets/img/developers/Naughty Dog.png"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/img/developers/Santa Monica Studio.png",
+      "PackagePath": "staticwebassets/assets/img/developers/Santa Monica Studio.png"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/img/developers/Sucker Punch.png",
+      "PackagePath": "staticwebassets/assets/img/developers/Sucker Punch.png"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/img/developers/Turn 10 Studios.png",
+      "PackagePath": "staticwebassets/assets/img/developers/Turn 10 Studios.png"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/img/games/.DS_Store",
+      "PackagePath": "staticwebassets/assets/img/games/.DS_Store"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/img/games/Battlefield 2042 Screenshot 1.jpeg",
+      "PackagePath": "staticwebassets/assets/img/games/Battlefield 2042 Screenshot 1.jpeg"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/img/games/Battlefield 2042 Screenshot 2.jpeg",
+      "PackagePath": "staticwebassets/assets/img/games/Battlefield 2042 Screenshot 2.jpeg"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/img/games/Battlefield 2042 Screenshot 3.jpeg",
+      "PackagePath": "staticwebassets/assets/img/games/Battlefield 2042 Screenshot 3.jpeg"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/img/games/Battlefield 2042 Screenshot 4.jpeg",
+      "PackagePath": "staticwebassets/assets/img/games/Battlefield 2042 Screenshot 4.jpeg"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/img/games/Battlefield 2042 Screenshot 5.jpeg",
+      "PackagePath": "staticwebassets/assets/img/games/Battlefield 2042 Screenshot 5.jpeg"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/img/games/Battlefield 2042.jpg",
+      "PackagePath": "staticwebassets/assets/img/games/Battlefield 2042.jpg"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/img/games/Forza Motorsport 7 Screenshot 1.jpeg",
+      "PackagePath": "staticwebassets/assets/img/games/Forza Motorsport 7 Screenshot 1.jpeg"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/img/games/Forza Motorsport 7 Screenshot 2.jpeg",
+      "PackagePath": "staticwebassets/assets/img/games/Forza Motorsport 7 Screenshot 2.jpeg"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/img/games/Forza Motorsport 7 Screenshot 3.jpeg",
+      "PackagePath": "staticwebassets/assets/img/games/Forza Motorsport 7 Screenshot 3.jpeg"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/img/games/Forza Motorsport 7 Screenshot 4.jpeg",
+      "PackagePath": "staticwebassets/assets/img/games/Forza Motorsport 7 Screenshot 4.jpeg"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/img/games/Forza Motorsport 7 Screenshot 5.jpeg",
+      "PackagePath": "staticwebassets/assets/img/games/Forza Motorsport 7 Screenshot 5.jpeg"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/img/games/Forza Motorsport 7.jpg",
+      "PackagePath": "staticwebassets/assets/img/games/Forza Motorsport 7.jpg"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/img/games/God of War Screenshot 1.jpeg",
+      "PackagePath": "staticwebassets/assets/img/games/God of War Screenshot 1.jpeg"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/img/games/God of War Screenshot 2.jpeg",
+      "PackagePath": "staticwebassets/assets/img/games/God of War Screenshot 2.jpeg"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/img/games/God of War Screenshot 3.jpeg",
+      "PackagePath": "staticwebassets/assets/img/games/God of War Screenshot 3.jpeg"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/img/games/God of War Screenshot 4.jpeg",
+      "PackagePath": "staticwebassets/assets/img/games/God of War Screenshot 4.jpeg"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/img/games/God of War Screenshot 5.jpeg",
+      "PackagePath": "staticwebassets/assets/img/games/God of War Screenshot 5.jpeg"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/img/games/God of War.jpeg",
+      "PackagePath": "staticwebassets/assets/img/games/God of War.jpeg"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/img/games/God of War.jpg",
+      "PackagePath": "staticwebassets/assets/img/games/God of War.jpg"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/img/games/Halo Infinite Screenshot 1.jpeg",
+      "PackagePath": "staticwebassets/assets/img/games/Halo Infinite Screenshot 1.jpeg"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/img/games/Halo Infinite Screenshot 2.jpeg",
+      "PackagePath": "staticwebassets/assets/img/games/Halo Infinite Screenshot 2.jpeg"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/img/games/Halo Infinite Screenshot 3.png",
+      "PackagePath": "staticwebassets/assets/img/games/Halo Infinite Screenshot 3.png"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/img/games/Halo Infinite Screenshot 4.png",
+      "PackagePath": "staticwebassets/assets/img/games/Halo Infinite Screenshot 4.png"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/img/games/Halo Infinite Screenshot 5.jpeg",
+      "PackagePath": "staticwebassets/assets/img/games/Halo Infinite Screenshot 5.jpeg"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/img/games/Halo Infinite.png",
+      "PackagePath": "staticwebassets/assets/img/games/Halo Infinite.png"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/img/games/Marvel's Spider-Man 2 Screenshot 1.jpg",
+      "PackagePath": "staticwebassets/assets/img/games/Marvel's Spider-Man 2 Screenshot 1.jpg"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/img/games/Marvel's Spider-Man 2 Screenshot 2.jpg",
+      "PackagePath": "staticwebassets/assets/img/games/Marvel's Spider-Man 2 Screenshot 2.jpg"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/img/games/Marvel's Spider-Man 2 Screenshot 3.jpg",
+      "PackagePath": "staticwebassets/assets/img/games/Marvel's Spider-Man 2 Screenshot 3.jpg"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/img/games/Marvel's Spider-Man 2 Screenshot 4.jpg",
+      "PackagePath": "staticwebassets/assets/img/games/Marvel's Spider-Man 2 Screenshot 4.jpg"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/img/games/Marvel's Spider-Man 2 Screenshot 5.jpg",
+      "PackagePath": "staticwebassets/assets/img/games/Marvel's Spider-Man 2 Screenshot 5.jpg"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/img/games/Marvel's Spider-Man 2.jpeg",
+      "PackagePath": "staticwebassets/assets/img/games/Marvel's Spider-Man 2.jpeg"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/img/games/Marvel's Spider-Man Miles Morales Screenshot 1.jpeg",
+      "PackagePath": "staticwebassets/assets/img/games/Marvel's Spider-Man Miles Morales Screenshot 1.jpeg"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/img/games/Marvel's Spider-Man Miles Morales Screenshot 2.jpeg",
+      "PackagePath": "staticwebassets/assets/img/games/Marvel's Spider-Man Miles Morales Screenshot 2.jpeg"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/img/games/Marvel's Spider-Man Miles Morales Screenshot 3.jpeg",
+      "PackagePath": "staticwebassets/assets/img/games/Marvel's Spider-Man Miles Morales Screenshot 3.jpeg"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/img/games/Marvel's Spider-Man Miles Morales Screenshot 4.jpeg",
+      "PackagePath": "staticwebassets/assets/img/games/Marvel's Spider-Man Miles Morales Screenshot 4.jpeg"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/img/games/Marvel's Spider-Man Miles Morales Screenshot 5.jpeg",
+      "PackagePath": "staticwebassets/assets/img/games/Marvel's Spider-Man Miles Morales Screenshot 5.jpeg"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/img/games/Marvel's Spider-Man Miles Morales.jpeg",
+      "PackagePath": "staticwebassets/assets/img/games/Marvel's Spider-Man Miles Morales.jpeg"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/img/games/Marvel's Spider-Man Remastered Screenshot 1.jpeg",
+      "PackagePath": "staticwebassets/assets/img/games/Marvel's Spider-Man Remastered Screenshot 1.jpeg"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/img/games/Marvel's Spider-Man Remastered Screenshot 2.jpeg",
+      "PackagePath": "staticwebassets/assets/img/games/Marvel's Spider-Man Remastered Screenshot 2.jpeg"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/img/games/Marvel's Spider-Man Remastered Screenshot 3.jpeg",
+      "PackagePath": "staticwebassets/assets/img/games/Marvel's Spider-Man Remastered Screenshot 3.jpeg"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/img/games/Marvel's Spider-Man Remastered Screenshot 4.jpeg",
+      "PackagePath": "staticwebassets/assets/img/games/Marvel's Spider-Man Remastered Screenshot 4.jpeg"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/img/games/Marvel's Spider-Man Remastered Screenshot 5.jpeg",
+      "PackagePath": "staticwebassets/assets/img/games/Marvel's Spider-Man Remastered Screenshot 5.jpeg"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/img/games/Marvel's Spider-Man Remastered.jpg",
+      "PackagePath": "staticwebassets/assets/img/games/Marvel's Spider-Man Remastered.jpg"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/img/games/Microsoft Flight Simulator Screenshot 1.jpeg",
+      "PackagePath": "staticwebassets/assets/img/games/Microsoft Flight Simulator Screenshot 1.jpeg"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/img/games/Microsoft Flight Simulator Screenshot 2.jpeg",
+      "PackagePath": "staticwebassets/assets/img/games/Microsoft Flight Simulator Screenshot 2.jpeg"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/img/games/Microsoft Flight Simulator Screenshot 3.jpeg",
+      "PackagePath": "staticwebassets/assets/img/games/Microsoft Flight Simulator Screenshot 3.jpeg"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/img/games/Microsoft Flight Simulator Screenshot 4.jpeg",
+      "PackagePath": "staticwebassets/assets/img/games/Microsoft Flight Simulator Screenshot 4.jpeg"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/img/games/Microsoft Flight Simulator Screenshot 5.jpeg",
+      "PackagePath": "staticwebassets/assets/img/games/Microsoft Flight Simulator Screenshot 5.jpeg"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/img/games/Microsoft Flight Simulator.jpg",
+      "PackagePath": "staticwebassets/assets/img/games/Microsoft Flight Simulator.jpg"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/img/games/Mortal Kombat 1 Screenshot 1.jpeg",
+      "PackagePath": "staticwebassets/assets/img/games/Mortal Kombat 1 Screenshot 1.jpeg"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/img/games/Mortal Kombat 1 Screenshot 2.jpeg",
+      "PackagePath": "staticwebassets/assets/img/games/Mortal Kombat 1 Screenshot 2.jpeg"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/img/games/Mortal Kombat 1 Screenshot 3.jpeg",
+      "PackagePath": "staticwebassets/assets/img/games/Mortal Kombat 1 Screenshot 3.jpeg"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/img/games/Mortal Kombat 1 Screenshot 4.jpeg",
+      "PackagePath": "staticwebassets/assets/img/games/Mortal Kombat 1 Screenshot 4.jpeg"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/img/games/Mortal Kombat 1 Screenshot 5.jpeg",
+      "PackagePath": "staticwebassets/assets/img/games/Mortal Kombat 1 Screenshot 5.jpeg"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/img/games/Mortal Kombat 1.png",
+      "PackagePath": "staticwebassets/assets/img/games/Mortal Kombat 1.png"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/img/games/Ori and the Will of the Wisps Screenshot 1.png",
+      "PackagePath": "staticwebassets/assets/img/games/Ori and the Will of the Wisps Screenshot 1.png"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/img/games/Ori and the Will of the Wisps Screenshot 2.png",
+      "PackagePath": "staticwebassets/assets/img/games/Ori and the Will of the Wisps Screenshot 2.png"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/img/games/Ori and the Will of the Wisps Screenshot 3.jpeg",
+      "PackagePath": "staticwebassets/assets/img/games/Ori and the Will of the Wisps Screenshot 3.jpeg"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/img/games/Ori and the Will of the Wisps Screenshot 4.jpeg",
+      "PackagePath": "staticwebassets/assets/img/games/Ori and the Will of the Wisps Screenshot 4.jpeg"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/img/games/Ori and the Will of the Wisps Screenshot 5.jpeg",
+      "PackagePath": "staticwebassets/assets/img/games/Ori and the Will of the Wisps Screenshot 5.jpeg"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/img/games/Ori and the Will of the Wisps.jpg",
+      "PackagePath": "staticwebassets/assets/img/games/Ori and the Will of the Wisps.jpg"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/img/games/Ratchet and Clank Rift Apart Screenshot 1.jpeg",
+      "PackagePath": "staticwebassets/assets/img/games/Ratchet and Clank Rift Apart Screenshot 1.jpeg"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/img/games/Ratchet and Clank Rift Apart Screenshot 2.jpeg",
+      "PackagePath": "staticwebassets/assets/img/games/Ratchet and Clank Rift Apart Screenshot 2.jpeg"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/img/games/Ratchet and Clank Rift Apart Screenshot 3.jpeg",
+      "PackagePath": "staticwebassets/assets/img/games/Ratchet and Clank Rift Apart Screenshot 3.jpeg"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/img/games/Ratchet and Clank Rift Apart Screenshot 4.jpeg",
+      "PackagePath": "staticwebassets/assets/img/games/Ratchet and Clank Rift Apart Screenshot 4.jpeg"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/img/games/Ratchet and Clank Rift Apart Screenshot 5.webp",
+      "PackagePath": "staticwebassets/assets/img/games/Ratchet and Clank Rift Apart Screenshot 5.webp"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/img/games/Ratchet and Clank Rift Apart.jpg",
+      "PackagePath": "staticwebassets/assets/img/games/Ratchet and Clank Rift Apart.jpg"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/img/games/Sunset Overdrive Screenshot 1.jpeg",
+      "PackagePath": "staticwebassets/assets/img/games/Sunset Overdrive Screenshot 1.jpeg"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/img/games/Sunset Overdrive Screenshot 2.jpeg",
+      "PackagePath": "staticwebassets/assets/img/games/Sunset Overdrive Screenshot 2.jpeg"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/img/games/Sunset Overdrive Screenshot 3.jpeg",
+      "PackagePath": "staticwebassets/assets/img/games/Sunset Overdrive Screenshot 3.jpeg"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/img/games/Sunset Overdrive Screenshot 4.jpeg",
+      "PackagePath": "staticwebassets/assets/img/games/Sunset Overdrive Screenshot 4.jpeg"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/img/games/Sunset Overdrive Screenshot 5.jpeg",
+      "PackagePath": "staticwebassets/assets/img/games/Sunset Overdrive Screenshot 5.jpeg"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/img/games/Sunset Overdrive.jpg",
+      "PackagePath": "staticwebassets/assets/img/games/Sunset Overdrive.jpg"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/img/games/The Last of Us Part 1 Screenshot 1.jpeg",
+      "PackagePath": "staticwebassets/assets/img/games/The Last of Us Part 1 Screenshot 1.jpeg"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/img/games/The Last of Us Part 1 Screenshot 2.jpeg",
+      "PackagePath": "staticwebassets/assets/img/games/The Last of Us Part 1 Screenshot 2.jpeg"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/img/games/The Last of Us Part 1 Screenshot 3.jpeg",
+      "PackagePath": "staticwebassets/assets/img/games/The Last of Us Part 1 Screenshot 3.jpeg"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/img/games/The Last of Us Part 1 Screenshot 4.jpeg",
+      "PackagePath": "staticwebassets/assets/img/games/The Last of Us Part 1 Screenshot 4.jpeg"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/img/games/The Last of Us Part 1 Screenshot 5.jpeg",
+      "PackagePath": "staticwebassets/assets/img/games/The Last of Us Part 1 Screenshot 5.jpeg"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/img/games/The Last of Us Part 1.jpg",
+      "PackagePath": "staticwebassets/assets/img/games/The Last of Us Part 1.jpg"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/img/games/Uncharted Legacy of Thieves Collection Screenshot 1.jpeg",
+      "PackagePath": "staticwebassets/assets/img/games/Uncharted Legacy of Thieves Collection Screenshot 1.jpeg"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/img/games/Uncharted Legacy of Thieves Collection Screenshot 2.jpeg",
+      "PackagePath": "staticwebassets/assets/img/games/Uncharted Legacy of Thieves Collection Screenshot 2.jpeg"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/img/games/Uncharted Legacy of Thieves Collection Screenshot 3.jpeg",
+      "PackagePath": "staticwebassets/assets/img/games/Uncharted Legacy of Thieves Collection Screenshot 3.jpeg"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/img/games/Uncharted Legacy of Thieves Collection Screenshot 4.jpeg",
+      "PackagePath": "staticwebassets/assets/img/games/Uncharted Legacy of Thieves Collection Screenshot 4.jpeg"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/img/games/Uncharted Legacy of Thieves Collection Screenshot 5.jpeg",
+      "PackagePath": "staticwebassets/assets/img/games/Uncharted Legacy of Thieves Collection Screenshot 5.jpeg"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/img/games/Uncharted Legacy of Thieves Collection.jpg",
+      "PackagePath": "staticwebassets/assets/img/games/Uncharted Legacy of Thieves Collection.jpg"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/img/games/Watch Dogs 2 Screenshot 1.webp",
+      "PackagePath": "staticwebassets/assets/img/games/Watch Dogs 2 Screenshot 1.webp"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/img/games/Watch Dogs 2 Screenshot 2.jpeg",
+      "PackagePath": "staticwebassets/assets/img/games/Watch Dogs 2 Screenshot 2.jpeg"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/img/games/Watch Dogs 2 Screenshot 3.jpeg",
+      "PackagePath": "staticwebassets/assets/img/games/Watch Dogs 2 Screenshot 3.jpeg"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/img/games/Watch Dogs 2 Screenshot 4.jpeg",
+      "PackagePath": "staticwebassets/assets/img/games/Watch Dogs 2 Screenshot 4.jpeg"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/img/games/Watch Dogs 2 Screenshot 5.jpeg",
+      "PackagePath": "staticwebassets/assets/img/games/Watch Dogs 2 Screenshot 5.jpeg"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/img/games/Watch Dogs 2.png",
+      "PackagePath": "staticwebassets/assets/img/games/Watch Dogs 2.png"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/img/static-images/.DS_Store",
+      "PackagePath": "staticwebassets/assets/img/static-images/.DS_Store"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/img/static-images/Contact BG.jpeg",
+      "PackagePath": "staticwebassets/assets/img/static-images/Contact BG.jpeg"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/img/static-images/Footer BG.jpg",
+      "PackagePath": "staticwebassets/assets/img/static-images/Footer BG.jpg"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/img/static-images/Login BG.jpg",
+      "PackagePath": "staticwebassets/assets/img/static-images/Login BG.jpg"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/img/static-images/Register BG.jpg",
+      "PackagePath": "staticwebassets/assets/img/static-images/Register BG.jpg"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/img/static-images/icon.png",
+      "PackagePath": "staticwebassets/assets/img/static-images/icon.png"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/img/static-images/logo.svg",
+      "PackagePath": "staticwebassets/assets/img/static-images/logo.svg"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/js/about.js",
+      "PackagePath": "staticwebassets/assets/js/about.js"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/js/blog-details.js",
+      "PackagePath": "staticwebassets/assets/js/blog-details.js"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/js/blog.js",
+      "PackagePath": "staticwebassets/assets/js/blog.js"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/js/cart.js",
+      "PackagePath": "staticwebassets/assets/js/cart.js"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/js/components/loading.js",
+      "PackagePath": "staticwebassets/assets/js/components/loading.js"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/js/components/scroll-to-up.js",
+      "PackagePath": "staticwebassets/assets/js/components/scroll-to-up.js"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/js/contact.js",
+      "PackagePath": "staticwebassets/assets/js/contact.js"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/js/layout.js",
+      "PackagePath": "staticwebassets/assets/js/layout.js"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/js/product-details.js",
+      "PackagePath": "staticwebassets/assets/js/product-details.js"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/js/script.js",
+      "PackagePath": "staticwebassets/assets/js/script.js"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/js/user.js",
+      "PackagePath": "staticwebassets/assets/js/user.js"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/scss/about/about.css",
+      "PackagePath": "staticwebassets/assets/scss/about/about.css"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/scss/about/about.css.map",
+      "PackagePath": "staticwebassets/assets/scss/about/about.css.map"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/scss/about/about.scss",
+      "PackagePath": "staticwebassets/assets/scss/about/about.scss"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/scss/blog/blog-details.css",
+      "PackagePath": "staticwebassets/assets/scss/blog/blog-details.css"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/scss/blog/blog-details.css.map",
+      "PackagePath": "staticwebassets/assets/scss/blog/blog-details.css.map"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/scss/blog/blog-details.scss",
+      "PackagePath": "staticwebassets/assets/scss/blog/blog-details.scss"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/scss/blog/blog.css",
+      "PackagePath": "staticwebassets/assets/scss/blog/blog.css"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/scss/blog/blog.css.map",
+      "PackagePath": "staticwebassets/assets/scss/blog/blog.css.map"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/scss/blog/blog.scss",
+      "PackagePath": "staticwebassets/assets/scss/blog/blog.scss"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/scss/cart/cart.css",
+      "PackagePath": "staticwebassets/assets/scss/cart/cart.css"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/scss/cart/cart.css.map",
+      "PackagePath": "staticwebassets/assets/scss/cart/cart.css.map"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/scss/cart/cart.scss",
+      "PackagePath": "staticwebassets/assets/scss/cart/cart.scss"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/scss/components/_button.scss",
+      "PackagePath": "staticwebassets/assets/scss/components/_button.scss"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/scss/components/_loading.scss",
+      "PackagePath": "staticwebassets/assets/scss/components/_loading.scss"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/scss/contact/contact.css",
+      "PackagePath": "staticwebassets/assets/scss/contact/contact.css"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/scss/contact/contact.css.map",
+      "PackagePath": "staticwebassets/assets/scss/contact/contact.css.map"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/scss/contact/contact.scss",
+      "PackagePath": "staticwebassets/assets/scss/contact/contact.scss"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/scss/error/error.css",
+      "PackagePath": "staticwebassets/assets/scss/error/error.css"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/scss/error/error.css.map",
+      "PackagePath": "staticwebassets/assets/scss/error/error.css.map"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/scss/error/error.scss",
+      "PackagePath": "staticwebassets/assets/scss/error/error.scss"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/scss/home/style.css",
+      "PackagePath": "staticwebassets/assets/scss/home/style.css"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/scss/home/style.css.map",
+      "PackagePath": "staticwebassets/assets/scss/home/style.css.map"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/scss/home/style.scss",
+      "PackagePath": "staticwebassets/assets/scss/home/style.scss"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/scss/layouts/_footer.scss",
+      "PackagePath": "staticwebassets/assets/scss/layouts/_footer.scss"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/scss/layouts/_header.scss",
+      "PackagePath": "staticwebassets/assets/scss/layouts/_header.scss"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/scss/layouts/_up.scss",
+      "PackagePath": "staticwebassets/assets/scss/layouts/_up.scss"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/scss/search/blog-search-results.css",
+      "PackagePath": "staticwebassets/assets/scss/search/blog-search-results.css"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/scss/search/blog-search-results.css.map",
+      "PackagePath": "staticwebassets/assets/scss/search/blog-search-results.css.map"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/scss/search/blog-search-results.scss",
+      "PackagePath": "staticwebassets/assets/scss/search/blog-search-results.scss"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/scss/search/product-search-results.css",
+      "PackagePath": "staticwebassets/assets/scss/search/product-search-results.css"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/scss/search/product-search-results.css.map",
+      "PackagePath": "staticwebassets/assets/scss/search/product-search-results.css.map"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/scss/search/product-search-results.scss",
+      "PackagePath": "staticwebassets/assets/scss/search/product-search-results.scss"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/scss/shop/product-details.css",
+      "PackagePath": "staticwebassets/assets/scss/shop/product-details.css"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/scss/shop/product-details.css.map",
+      "PackagePath": "staticwebassets/assets/scss/shop/product-details.css.map"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/scss/shop/product-details.scss",
+      "PackagePath": "staticwebassets/assets/scss/shop/product-details.scss"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/scss/shop/shop.css",
+      "PackagePath": "staticwebassets/assets/scss/shop/shop.css"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/scss/shop/shop.css.map",
+      "PackagePath": "staticwebassets/assets/scss/shop/shop.css.map"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/scss/shop/shop.scss",
+      "PackagePath": "staticwebassets/assets/scss/shop/shop.scss"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/scss/user/login.css",
+      "PackagePath": "staticwebassets/assets/scss/user/login.css"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/scss/user/login.css.map",
+      "PackagePath": "staticwebassets/assets/scss/user/login.css.map"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/scss/user/login.scss",
+      "PackagePath": "staticwebassets/assets/scss/user/login.scss"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/scss/user/register.css",
+      "PackagePath": "staticwebassets/assets/scss/user/register.css"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/scss/user/register.css.map",
+      "PackagePath": "staticwebassets/assets/scss/user/register.css.map"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/scss/user/register.scss",
+      "PackagePath": "staticwebassets/assets/scss/user/register.scss"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/scss/utilities/_settings.scss",
+      "PackagePath": "staticwebassets/assets/scss/utilities/_settings.scss"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/slick/slick.css",
+      "PackagePath": "staticwebassets/assets/slick/slick.css"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/slick/slick.min.js",
+      "PackagePath": "staticwebassets/assets/slick/slick.min.js"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/lib/jquery-validation-unobtrusive/LICENSE.txt",
+      "PackagePath": "staticwebassets/lib/jquery-validation-unobtrusive/LICENSE.txt"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/lib/jquery-validation/LICENSE.md",
+      "PackagePath": "staticwebassets/lib/jquery-validation/LICENSE.md"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/lib/jquery-validation/dist/additional-methods.js",
+      "PackagePath": "staticwebassets/lib/jquery-validation/dist/additional-methods.js"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/lib/jquery-validation/dist/additional-methods.min.js",
+      "PackagePath": "staticwebassets/lib/jquery-validation/dist/additional-methods.min.js"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/lib/jquery-validation/dist/jquery.validate.js",
+      "PackagePath": "staticwebassets/lib/jquery-validation/dist/jquery.validate.js"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/lib/jquery-validation/dist/jquery.validate.min.js",
+      "PackagePath": "staticwebassets/lib/jquery-validation/dist/jquery.validate.min.js"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/lib/jquery/LICENSE.txt",
+      "PackagePath": "staticwebassets/lib/jquery/LICENSE.txt"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/lib/jquery/dist/jquery.js",
+      "PackagePath": "staticwebassets/lib/jquery/dist/jquery.js"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/lib/jquery/dist/jquery.min.js",
+      "PackagePath": "staticwebassets/lib/jquery/dist/jquery.min.js"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/lib/jquery/dist/jquery.min.map",
+      "PackagePath": "staticwebassets/lib/jquery/dist/jquery.min.map"
+    },
+    {
+      "Id": "obj/Debug/net6.0/staticwebassets/msbuild.GameLib.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj/Debug/net6.0/staticwebassets/msbuild.build.GameLib.props",
+      "PackagePath": "build\\GameLib.props"
+    },
+    {
+      "Id": "obj/Debug/net6.0/staticwebassets/msbuild.buildMultiTargeting.GameLib.props",
+      "PackagePath": "buildMultiTargeting\\GameLib.props"
+    },
+    {
+      "Id": "obj/Debug/net6.0/staticwebassets/msbuild.buildTransitive.GameLib.props",
+      "PackagePath": "buildTransitive\\GameLib.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

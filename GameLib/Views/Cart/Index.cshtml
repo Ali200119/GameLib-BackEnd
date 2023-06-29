@@ -1,0 +1,134 @@
+﻿@{
+    ViewBag.Title = "Cart";
+}
+
+@section CSS {
+    <link rel="stylesheet" href="~/assets/scss/cart/cart.css">
+}
+
+@section NavBar {
+    <ul class="navbar">
+        <li><a asp-controller="Home" asp-action="Index">Home</a></li>
+        <li><a asp-controller="Shop" asp-action="Index">Shop</a></li>
+        <li><a asp-controller="Blog" asp-action="Index">Blog</a></li>
+        <li><a asp-controller="Contact" asp-action="Index">Contact</a></li>
+        <li><a asp-controller="About" asp-action="Index">About</a></li>
+    </ul>
+}
+
+<div class="container">
+    <h1 class="title">Cart</h1>
+
+    <section id="devide">
+        <section id="games">
+            <table>
+                <thead>
+                    <tr>
+                        <th>GAME</th>
+                        <th>PLATFORM</th>
+                        <th>PRICE</th>
+                        <th>COUNT</th>
+                        <th>SUBTOTAL</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td class="name">
+                            <i class="fa-solid fa-xmark"></i>
+                            <img src="~/assets/img/games/Marvel's Spider-Man Miles Morales.jpeg">
+                            <span>Marvel's Spider-Man Miles Morales</span>
+                        </td>
+
+                        <td>PS5</td>
+
+                        <td class="price">
+                            <span>$</span>
+                            <span>59.99</span>
+                        </td>
+
+                        <td>
+                            <div class="count">
+                                <i class="fa-solid fa-minus decrease"></i>
+                                <span>1</span>
+                                <i class="fa-solid fa-plus increase"></i>
+                            </div>
+                        </td>
+
+                        <td class="subtotal">
+                            <span>$</span>
+                            <span>59.99</span>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="name">
+                            <i class="fa-solid fa-xmark"></i>
+                            <img src="~/assets/img/games/Marvel's Spider-Man Remastered.jpg">
+                            <span>Marvel's Spider-Man Remastered</span>
+                        </td>
+
+                        <td>PS5</td>
+
+                        <td class="price">
+                            <span>$</span>
+                            <span>59.99</span>
+                        </td>
+
+                        <td>
+                            <div class="count">
+                                <i class="fa-solid fa-minus decrease"></i>
+                                <span>1</span>
+                                <i class="fa-solid fa-plus increase"></i>
+                            </div>
+                        </td>
+
+                        <td class="subtotal">
+                            <span>$</span>
+                            <span>59.99</span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <button class="btn-shine clear">Clear Cart</button>
+        </section>
+
+        <h4 class="empty">Your cart is currently empty</h4>
+
+        <section id="checkout">
+            <h4 class="title">Cart totals</h4>
+
+            <div class="total">
+                <h5>Total</h5>
+
+                <div class="price">
+                    <span>$</span>
+                    <span></span>
+                </div>
+            </div>
+
+            <button class="btn-shine">Proceed to Checkout</button>
+        </section>
+    </section>
+</div>
+
+<section id="search">
+    <div class="search-input">
+        <input type="text" placeholder="Type to Search Games...">
+        <i class="fa-solid fa-magnifying-glass"></i>
+    </div>
+
+    <i class="fa-regular fa-circle-xmark close"></i>
+</section>
+
+<section id="up">
+    <div class="arrow">
+        <i class="fa-solid fa-arrow-up"></i>
+    </div>
+</section>
+
+@section Scripts {
+    <script src="~/assets/js/components/scroll-to-up.js"></script>
+    <script src="~/assets/js/cart.js"></script>
+}

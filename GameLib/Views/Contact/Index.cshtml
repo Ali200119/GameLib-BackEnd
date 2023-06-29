@@ -1,0 +1,62 @@
+﻿@{
+    ViewBag.Title = "Contact Us";
+}
+
+@section CSS {
+    <link rel="stylesheet" href="~/assets/scss/contact/contact.css">
+}
+
+@section NavBar {
+    <ul class="navbar">
+        <li><a asp-controller="Home" asp-action="Index">Home</a></li>
+        <li><a asp-controller="Shop" asp-action="Index">Shop</a></li>
+        <li><a asp-controller="Blog" asp-action="Index">Blog</a></li>
+        <li><a asp-controller="Contact" asp-action="Index" class="active">Contact</a></li>
+        <li><a asp-controller="About" asp-action="Index">About</a></li>
+    </ul>
+}
+
+<section id="contact-bg">
+    <img src="~/assets/img/static-images/Contact BG.jpeg">
+
+    <h1 class="title">Contact Us</h1>
+</section>
+
+<section id="devide">
+    <div class="container">
+        <section id="social">
+            <h1 class="title">Follow us</h1>
+
+            <div class="items">
+                <a href="#" class="item" style="background-color: blue;">
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+            </div>
+        </section>
+
+        <section id="form">
+            <form>
+                <input type="text" placeholder="Full Name *">
+
+                <input type="email" placeholder="Email *">
+
+                <textarea rows="7" placeholder="Message *"></textarea>
+
+                <button class="btn-shine">Submit</button>
+            </form>
+        </section>
+    </div>
+</section>
+
+<section id="search">
+    <div class="search-input">
+        <input type="text" placeholder="Type to Search Games...">
+        <i class="fa-solid fa-magnifying-glass"></i>
+    </div>
+
+    <i class="fa-regular fa-circle-xmark close"></i>
+</section>
+
+@section Scripts {
+    <script src="~/assets/js/contact.js"></script>
+}
