@@ -13,15 +13,11 @@
     <None Remove="ViewModels\" />
     <None Remove="Services\" />
     <None Remove="Services\Interfaces\" />
-    <None Remove="ViewModels\Home\" />
-    <None Remove="ViewModels\Shop\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="ViewModels\" />
     <Folder Include="Services\" />
     <Folder Include="Services\Interfaces\" />
-    <Folder Include="ViewModels\Home\" />
-    <Folder Include="ViewModels\Shop\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Repository\Repository.csproj" />

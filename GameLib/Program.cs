@@ -24,6 +24,8 @@ builder.Services.AddScoped<ISettingRepository, SettingRepository>();
 builder.Services.AddScoped<IDeveloperRepository, DeveloperRepository>();
 builder.Services.AddScoped<ISubscribeRepository, SubscribeRepository>();
 builder.Services.AddScoped<ISocialRepository, SocialRepository>();
+builder.Services.AddScoped<IPlatformRepository, PlatformRepository>();
+builder.Services.AddScoped<IGenreRepository, GenreRepository>();
 
 builder.Services.AddScoped<IAdvantageService, AdvantageService>();
 builder.Services.AddScoped<IBlogService, BlogService>();
@@ -32,6 +34,8 @@ builder.Services.AddScoped<IStaticDataService, StaticDataService>();
 builder.Services.AddScoped<IDeveloperService, DeveloperService>();
 builder.Services.AddScoped<ISubscribeService, SubscribeService>();
 builder.Services.AddScoped<ISocialService, SocialService>();
+builder.Services.AddScoped<IPlatformService, PlatformService>();
+builder.Services.AddScoped<IGenreService, GenreService>();
 
 var app = builder.Build();
 

@@ -2,7 +2,7 @@
 using Domain.Models;
 using Microsoft.AspNetCore.Mvc;
 using Service.Services.Interfaces;
-using Service.ViewModels.Home;
+using Service.ViewModels;
 
 namespace GameLib.Controllers;
 

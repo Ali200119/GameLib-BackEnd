@@ -20,6 +20,6 @@ namespace Service.Services
 
         public async Task<IEnumerable<Blog>> GetAllWithIncludesAsync() => await _blogRepo.GetAllAsync(b => b.BlogImages, b => b.BlogAuthor);
         
-        public async Task<Blog> GetByIdAsync(int? id) => await _blogRepo.GetByIdAsync(id, b => b.BlogImages);
+        public async Task<Blog> GetByIdWithIncludesAsync(int? id) => await _blogRepo.GetByIdAsync(id, b => b.BlogImages, b => b.BlogAuthor);
     }
 }

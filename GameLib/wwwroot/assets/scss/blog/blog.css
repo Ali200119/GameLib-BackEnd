@@ -210,6 +210,9 @@ footer .social .social-list {
 footer .social .social-list .btn-shine {
   padding: 30px;
   font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 footer .copyright {
   height: 80px;
@@ -316,6 +319,7 @@ main #devide .container #panel .search .search-input input {
   color: white;
   padding: 15px;
   transition: 0.2s all;
+  font-size: 14px;
 }
 main #devide .container #panel .search .search-input input:focus {
   border-color: white;

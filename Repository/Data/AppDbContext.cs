@@ -1633,6 +1633,20 @@ namespace Repository.Data
                     Id = 7,
                     Key = "GameDetailsVisuals",
                     Value = "Visuals"
+                },
+
+                new SectionHeader
+                {
+                    Id = 8,
+                    Key = "BlogDetailsLatestBlogs",
+                    Value = "Latest Posts"
+                },
+
+                new SectionHeader
+                {
+                    Id = 9,
+                    Key = "BlogDetailsSocial",
+                    Value = "Follow Us"
                 }
             );
 

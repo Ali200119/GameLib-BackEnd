@@ -40,6 +40,7 @@ main {
                     background-color: transparent;
                     cursor: pointer;
                     transition: 0.3s all;
+                    font-size: 14px;
 
                     &:focus {
                         border-color: white;
@@ -53,6 +54,8 @@ main {
                     font-size: 13px;
                     top: 50%;
                     transform: translateY(-50%);
+                    cursor: pointer;
+                    pointer-events: none;
                 }
             }
 
@@ -161,6 +164,7 @@ main {
                         color: white;
                         padding: 15px;
                         transition: 0.2s all;
+                        font-size: 14px;
 
                         &:focus {
                             border-color: white;
@@ -200,10 +204,10 @@ main {
 
                     .item {
                         display: flex;
+                        margin-top: 30px;
 
-                        &:nth-child(2),
-                        &:last-child {
-                            margin-top: 30px;
+                        &:first-child {
+                            margin-top: 0;
                         }
 
                         &:hover .image {
@@ -351,13 +355,14 @@ main {
                         display: flex;
                         justify-content: center;
                         align-items: center;
-                        width: 40px;
-                        height: 40px;
+                        width: 45px;
+                        height: 45px;
                         border-radius: 50%;
                         text-decoration: none;
-                        
+
                         i {
                             color: white;
+                            font-size: 20px;
                         }
                     }
                 }

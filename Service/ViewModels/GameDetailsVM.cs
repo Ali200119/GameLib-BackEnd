@@ -1,7 +1,7 @@
 ﻿using System;
 using Domain.Models;
 
-namespace Service.ViewModels.Shop
+namespace Service.ViewModels
 {
 	public class GameDetailsVM
 	{

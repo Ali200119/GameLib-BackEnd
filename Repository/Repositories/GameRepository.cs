@@ -36,5 +36,37 @@ namespace Repository.Repositories
                                  .Include(g => g.GameImages)
                                  .ToListAsync();
         }
+
+        //public async Task<IEnumerable<Game>> Sort(string pattern, string filter)
+        //{
+        //    switch (pattern)
+        //    {
+        //        case "sort":
+        //            {
+        //                switch (filter)
+        //                {
+        //                    case "recent":
+        //                        {
+        //                            return await entities.OrderByDescending(g => g.CreatedAt).Include(g => g.GameImages).ToListAsync();
+        //                        }
+
+        //                    case "name":
+        //                        {
+        //                            return await entities.OrderBy(g => g.Name).ToListAsync();
+        //                        }
+
+        //                    case "low price to high":
+        //                        {
+        //                            return await entities.OrderBy(g => g.Price).ToListAsync();
+        //                        }
+
+        //                    case "high price to low":
+        //                        {
+        //                            return await entities.OrderByDescending(g => g.Price).ToListAsync();
+        //                        }
+        //                }
+        //            }
+        //    }
+        //}
     }
 }

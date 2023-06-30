@@ -1,5 +1,7 @@
-﻿@{
-    ViewBag.Title = "Blog Details";
+﻿@model BlogDetailsVM
+
+@{
+    ViewBag.Title = Model.Blog.Title;
 }
 
 @section CSS {
@@ -17,18 +19,18 @@
 }
 
 <section id="blog-bg">
-    <img src="~/assets/img/blog/Marvel's Spider-Man 2.jpg">
+    <img src="~/assets/img/blog/@Model.Blog.BlogImages.FirstOrDefault(bi => bi.IsMain).Name">
 </section>
 
 <section id="title">
     <div class="content">
-        <span>Marvel's Spider-Man 2</span>
+        <span>@Model.Blog.Game</span>
 
-        <h1>Marvel's Spider-Man 2 Gameplay Revealed</h1>
+        <h1>@Model.Blog.Title</h1>
 
         <div class="date-author-comments">
-            <h4>May 24, 2023</h4>
-            <h4>Test</h4>
+            <h4>@Model.Blog.CreatedAt.ToString("MMMM dd, yyyy", new CultureInfo("en"))</h4>
+            <h4>@Model.Blog.BlogAuthor.Name</h4>
             <h4>2 Comments</h4>
         </div>
     </div>
@@ -41,89 +43,64 @@
                 <h3 class="title">Search</h3>
 
                 <div class="search-input">
-                    <input type="text" placeholder="Enter a search term">
+                    <input type="text" placeholder="Search by blogs">
 
                     <i class="fa-solid fa-magnifying-glass circle"></i>
                 </div>
             </div>
 
             <div class="latest-posts">
-                <h3 class="title">Latest Posts</h3>
+                <h3 class="title">@Model.SectionHeaders["BlogDetailsLatestBlogs"]</h3>
 
                 <div class="posts">
-                    <div class="post">
-                        <a href="#" class="image">
-                            <img src="~/assets/img/blog/Assassin's Creed Mirage.jpg">
-                        </a>
+                    @foreach (var blog in Model.LatestBlogs)
+                    {
+                        <div class="post">
+                            <a asp-controller="Blog" asp-action="Details" asp-route-id="@blog.Id" class="image">
+                                <img src="~/assets/img/blog/@blog.BlogImages.FirstOrDefault(bi => bi.IsMain).Name">
+                            </a>
 
-                        <div class="content">
-                            <a href="#" class="title">First Assassin’s Creed Mirage Gameplay Revealed, Launches October 12</a>
+                            <div class="content">
+                                <a asp-controller="Blog" asp-action="Details" asp-route-id="@blog.Id" class="title">@blog.Title</a>
 
-                            <div class="author-date">
-                                <span>By Test</span>
-                                <span>July 4, 2023</span>
+                                <div class="author-date">
+                                    <span>By @blog.BlogAuthor.Name</span>
+                                    <span>@blog.CreatedAt.ToString("MMMM dd, yyyy", new CultureInfo("en"))</span>
+                                </div>
                             </div>
                         </div>
-                    </div>
-
-                    <div class="post">
-                        <a href="#" class="image">
-                            <img src="~/assets/img/blog/Assassin's Creed Mirage.jpg">
-                        </a>
-
-                        <div class="content">
-                            <a href="#" class="title">First Assassin’s Creed Mirage Gameplay Revealed, Launches October 12</a>
-
-                            <div class="author-date">
-                                <span>By Test</span>
-                                <span>July 4, 2023</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="post">
-                        <a href="#" class="image">
-                            <img src="~/assets/img/blog/Assassin's Creed Mirage.jpg">
-                        </a>
-
-                        <div class="content">
-                            <a href="#" class="title">First Assassin’s Creed Mirage Gameplay Revealed, Launches October 12</a>
-
-                            <div class="author-date">
-                                <span>By Test</span>
-                                <span>July 4, 2023</span>
-                            </div>
-                        </div>
-                    </div>
+                    }
                 </div>
             </div>
 
             <div class="social">
-                <h3 class="title">Follow us</h3>
+                <h3 class="title">@Model.SectionHeaders["BlogDetailsSocial"]</h3>
 
                 <div class="items">
-                    <a href="#" class="item" style="background-color: blue;">
-                        <i class="fa-brands fa-facebook"></i>
-                    </a>
+                    @foreach (var social in Model.Socials)
+                    {
+                        <a href="@social.Link" class="item" style="background-color: @social.Color;">
+                            @Html.Raw(social.Icon)
+                        </a>
+                    }
                 </div>
             </div>
         </section>
 
         <section id="blog-content">
             <div class="text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor voluptate laboriosam quidem labore ipsa? Magni fugit optio voluptatem doloremque esse! Vel exercitationem facilis hic culpa officia iste ipsum eligendi dolore numquam molestias. Eligendi, quisquam iusto dolor necessitatibus ab sapiente delectus libero nesciunt eum? Dolor consequuntur architecto nemo quaerat minima ea!
+                @Html.Raw(Model.Blog.Description)
             </div>
 
             <div class="images">
-                <img src="~/assets/img/blog/Marvel's Spider-Man 2 Screenshot 1.jpg">
-                <img src="~/assets/img/blog/Marvel's Spider-Man 2 Screenshot 2.jpg">
-                <img src="~/assets/img/blog/Marvel's Spider-Man 2 Screenshot 3.jpg">
-                <img src="~/assets/img/blog/Marvel's Spider-Man 2 Screenshot 4.jpg">
-                <img src="~/assets/img/blog/Marvel's Spider-Man 2 Screenshot 5.jpg">
+                @foreach (var blog in Model.Blog.BlogImages.Where(bi => !bi.IsMain))
+                {
+                    <img src="~/assets/img/blog/@blog.Name">
+                }
             </div>
 
             <div class="comments">
-                <h1 class="title">1 Thoughts on "Marvel's Spider-Man 2 Gameplay Revealed"</h1>
+                <h1 class="title">1 Thoughts on "@Model.Blog.Title"</h1>
 
                 <div class="items">
                     <div class="item">

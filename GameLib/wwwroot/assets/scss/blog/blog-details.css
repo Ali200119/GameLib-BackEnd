@@ -210,6 +210,9 @@ footer .social .social-list {
 footer .social .social-list .btn-shine {
   padding: 30px;
   font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 footer .copyright {
   height: 80px;
@@ -427,13 +430,14 @@ main #devide .container #panel .social .items .item {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 40px;
-  height: 40px;
+  width: 45px;
+  height: 45px;
   border-radius: 50%;
   text-decoration: none;
 }
 main #devide .container #panel .social .items .item i {
   color: white;
+  font-size: 20px;
 }
 main #devide .container #blog-content {
   margin-left: 85px;

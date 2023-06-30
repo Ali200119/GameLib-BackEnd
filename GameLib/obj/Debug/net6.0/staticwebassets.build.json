@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "6wkPxzwhwZ/ukVpiq+drqmNZDSCydnhU4AM90tyGNkk=",
+  "Hash": "mHwiqlL+4IDz/4J4Ut6PKywP8CaH5/K2nNu77f2flRk=",
   "Source": "GameLib",
   "BasePath": "_content/GameLib",
   "Mode": "Default",
@@ -1052,23 +1052,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/assets/img/games/God of War.jpeg"
-    },
-    {
-      "Identity": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/img/games/God of War.jpg",
-      "SourceId": "GameLib",
-      "SourceType": "Discovered",
-      "ContentRoot": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/",
-      "BasePath": "_content/GameLib",
-      "RelativePath": "assets/img/games/God of War.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/assets/img/games/God of War.jpg"
     },
     {
       "Identity": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/img/games/Halo Infinite Screenshot 1.jpeg",
@@ -2584,6 +2567,23 @@
       "OriginalItemSpec": "wwwroot/assets/js/script.js"
     },
     {
+      "Identity": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/js/shop.js",
+      "SourceId": "GameLib",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/",
+      "BasePath": "_content/GameLib",
+      "RelativePath": "assets/js/shop.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/assets/js/shop.js"
+    },
+    {
       "Identity": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/js/user.js",
       "SourceId": "GameLib",
       "SourceType": "Discovered",
@@ -2599,6 +2599,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/assets/js/user.js"
+    },
+    {
+      "Identity": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/scss/.DS_Store",
+      "SourceId": "GameLib",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/",
+      "BasePath": "_content/GameLib",
+      "RelativePath": "assets/scss/.DS_Store",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/assets/scss/.DS_Store"
     },
     {
       "Identity": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/scss/about/about.css",

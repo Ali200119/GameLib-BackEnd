@@ -1,7 +1,7 @@
 ﻿using System;
 using Domain.Models;
 
-namespace Service.ViewModels.Home
+namespace Service.ViewModels
 {
 	public class HomeVM
 	{

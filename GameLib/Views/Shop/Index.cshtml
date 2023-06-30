@@ -1,4 +1,6 @@
-﻿@{
+﻿@model ShopVM
+
+@{
     ViewBag.Title = "Shop";
 }
 
@@ -9,7 +11,7 @@
 @section NavBar {
     <ul class="navbar">
         <li><a asp-controller="Home" asp-action="Index">Home</a></li>
-        <li><a asp-controller="Shop" asp-action="Index" class="active">Shop</a></li>
+        <li><a href="#" class="active">Shop</a></li>
         <li><a asp-controller="Blog" asp-action="Index">Blog</a></li>
         <li><a asp-controller="Contact" asp-action="Index">Contact</a></li>
         <li><a asp-controller="About" asp-action="Index">About</a></li>
@@ -22,91 +24,37 @@
 
         <div class="sort">
             <select>
-                <option value="">Sort by name</option>
-                <option selected value="">Sort by recent</option>
-                <option value="">Sort by price: low to high</option>
-                <option value="">Sort by price: high to low</option>
+                <option>Sort by name</option>
+                <option>Sort by recent</option>
+                <option>Sort by price: low to high</option>
+                <option>Sort by price: high to low</option>
             </select>
 
             <i class="fa-solid fa-chevron-down"></i>
         </div>
 
         <div class="items">
-            <div class="item">
-                <a class="image" href="#">
-                    <img src="~/assets/img/games/God of War.jpg">
-                </a>
+            @foreach (var game in Model.Games)
+            {
+                <div class="item">
+                    <a class="image" asp-controller="Shop" asp-action="Details" asp-route-id="@game.Id">
+                        <img src="~/assets/img/games/@game.GameImages.FirstOrDefault(gi => gi.IsMain).Name">
+                    </a>
 
-                <a class="name" href="#">
-                    <h3>God of War</h3>
-                </a>
+                    <a class="name" asp-controller="Shop" asp-action="Details" asp-route-id="@game.Id">
+                        <h3>@game.Name</h3>
+                    </a>
 
-                <div class="price-view">
-                    <div class="price">
-                        <span>$</span>
-                        <span>59.99</span>
+                    <div class="price-view">
+                        <div class="price">
+                            <span>$</span>
+                            <span>@game.Price</span>
+                        </div>
+
+                        <a class="view" asp-controller="Shop" asp-action="Details" asp-route-id="@game.Id">View Game</a>
                     </div>
-
-                    <a class="view" href="#">View Game</a>
                 </div>
-            </div>
-
-            <div class="item">
-                <a class="image" href="#">
-                    <img src="~/assets/img/games/God of War.jpg">
-                </a>
-
-                <a class="name" href="#">
-                    <h3>God of War</h3>
-                </a>
-
-                <div class="price-view">
-                    <div class="price">
-                        <span>$</span>
-                        <span>59.99</span>
-                    </div>
-
-                    <a class="view" href="#">View Game</a>
-                </div>
-            </div>
-
-            <div class="item">
-                <a class="image" href="#">
-                    <img src="~/assets/img/games/God of War.jpg">
-                </a>
-
-                <a class="name" href="#">
-                    <h3>God of War</h3>
-                </a>
-
-                <div class="price-view">
-                    <div class="price">
-                        <span>$</span>
-                        <span>59.99</span>
-                    </div>
-
-                    <a class="view" href="#">View Game</a>
-                </div>
-            </div>
-
-            <div class="item">
-                <a class="image" href="#">
-                    <img src="~/assets/img/games/God of War.jpg">
-                </a>
-
-                <a class="name" href="#">
-                    <h3>God of War</h3>
-                </a>
-
-                <div class="price-view">
-                    <div class="price">
-                        <span>$</span>
-                        <span>59.99</span>
-                    </div>
-
-                    <a class="view" href="#">View Game</a>
-                </div>
-            </div>
+            }
         </div>
     </section>
 
@@ -125,94 +73,49 @@
             <h3 class="title">Latest Games</h3>
 
             <div class="items">
-                <div class="item">
-                    <a href="#" class="image">
-                        <img src="~/assets/img/games/Ratchet and Clank Rift Apart.jpg">
-                    </a>
+                @foreach (var game in Model.Games.OrderByDescending(g => g.CreatedAt).Take(5))
+                {
+                    <div class="item">
+                        <a asp-controller="Shop" asp-action="Details" asp-route-id="@game.Id" class="image">
+                            <img src="~/assets/img/games/@game.GameImages.FirstOrDefault(gi => gi.IsMain).Name">
+                        </a>
 
-                    <div class="content">
-                        <a href="#" class="name">Ratchet and Clank: Rift Apart</a>
+                        <div class="content">
+                            <a asp-controller="Shop" asp-action="Details" asp-route-id="@game.Id" class="name">@game.Name</a>
 
-                        <div class="price">
-                            <span>$</span>
-                            <span>59.99</span>
+                            <div class="price">
+                                <span>$</span>
+                                <span>@game.Price</span>
+                            </div>
+
+                            <a asp-controller="Shop" asp-action="Details" asp-route-id="@game.Id" class="view">View Game</a>
                         </div>
-
-                        <a href="#" class="view">View Game</a>
                     </div>
-                </div>
-
-                <div class="item">
-                    <a href="#" class="image">
-                        <img src="~/assets/img/games/Ratchet and Clank Rift Apart.jpg">
-                    </a>
-
-                    <div class="content">
-                        <a href="#" class="name">Ratchet and Clank: Rift Apart</a>
-
-                        <div class="price">
-                            <span>$</span>
-                            <span>59.99</span>
-                        </div>
-
-                        <a href="#" class="view">View Game</a>
-                    </div>
-                </div>
-
-                <div class="item">
-                    <a href="#" class="image">
-                        <img src="~/assets/img/games/Ratchet and Clank Rift Apart.jpg">
-                    </a>
-
-                    <div class="content">
-                        <a href="#" class="name">Ratchet and Clank: Rift Apart</a>
-
-                        <div class="price">
-                            <span>$</span>
-                            <span>59.99</span>
-                        </div>
-
-                        <a href="#" class="view">View Game</a>
-                    </div>
-                </div>
+                }
             </div>
         </div>
 
         <div class="platforms">
             <h3 class="title">Platforms</h3>
 
-            <div class="platform">
-                <i class="fa-solid fa-circle"></i>
-                <h4 class="name">PC</h4>
-                <span>(#)</span>
-            </div>
-
-            <div class="platform">
-                <i class="fa-solid fa-circle"></i>
-                <h4 class="name">PlayStation 5</h4>
-                <span>(#)</span>
-            </div>
-
-            <div class="platform">
-                <i class="fa-solid fa-circle"></i>
-                <h4 class="name">Xbox Series X</h4>
-                <span>(#)</span>
-            </div>
+            @foreach (var platform in Model.Platforms)
+            {
+                <div class="platform">
+                    <i class="fa-solid fa-circle"></i>
+                    <h4 class="name">@platform.Name</h4>
+                    <span>(@platform.GamePlatforms.Select(gp => gp.Game).Count())</span>
+                </div>
+            }
         </div>
 
         <div class="genres">
             <h3 class="title">Genres</h3>
 
             <div class="items">
-                <h4 class="genre">Adventure</h4>
-                <h4 class="genre">Action</h4>
-                <h4 class="genre">Shooter</h4>
-                <h4 class="genre">RPG</h4>
-                <h4 class="genre">Strategy</h4>
-                <h4 class="genre">Survival</h4>
-                <h4 class="genre">Sports</h4>
-                <h4 class="genre">Horror</h4>
-                <h4 class="genre">Fighting</h4>
+                @foreach (var genre in Model.Genres)
+                {
+                    <h4 class="genre">@genre.Name</h4>
+                }
             </div>
         </div>
 
@@ -220,9 +123,12 @@
             <h3 class="title">Follow us</h3>
 
             <div class="items">
-                <a href="#" class="item" style="background-color: blue;">
-                    <i class="fa-brands fa-facebook"></i>
-                </a>
+                @foreach (var social in Model.Socials)
+                {
+                    <a href="@social.Link" class="item" style="background-color: @social.Color;">
+                        @Html.Raw(social.Icon)
+                    </a>
+                }
             </div>
         </div>
     </section>
@@ -236,5 +142,5 @@
 
 @section Scripts {
     <script src="~/assets/js/components/scroll-to-up.js"></script>
-    <script src="./assets/js/product-details.js"></script>
+    <script src="./assets/js/shop.js"></script>
 }

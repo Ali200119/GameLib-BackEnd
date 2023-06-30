@@ -292,6 +292,9 @@ footer .social .social-list {
 footer .social .social-list .btn-shine {
   padding: 30px;
   font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 footer .copyright {
   height: 80px;

@@ -6,7 +6,7 @@ using Domain.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Service.Services.Interfaces;
-using Service.ViewModels.Shop;
+using Service.ViewModels;
 
 namespace GameLib.Controllers
 {
@@ -14,19 +14,43 @@ namespace GameLib.Controllers
     {
         private readonly IStaticDataService _staticDataService;
         private readonly IGameService _gameService;
+        private readonly IPlatformService _plarformService;
+        private readonly IGenreService _genreService;
+        private readonly ISocialService _socialService;
 
         public ShopController(IStaticDataService staticDataService,
-                              IGameService gameService)
+                              IGameService gameService,
+                              IPlatformService plarformService,
+                              IGenreService genreService,
+                              ISocialService socialService)
         {
             _staticDataService = staticDataService;
             _gameService = gameService;
+            _plarformService = plarformService;
+            _genreService = genreService;
+            _socialService = socialService;
         }
 
 
 
         public async Task<IActionResult> Index()
         {
-            return View();
+            Dictionary<string, string> sectionHeaders = _staticDataService.GetAllSectionHeaders();
+            IEnumerable<Game> games = await _gameService.GetAllWithIncludesAsync();
+            IEnumerable<Platform> platforms = await _plarformService.GetAllWithIncludesAsync();
+            IEnumerable<Genre> genres = await _genreService.GetAllAsync();
+            IEnumerable<Social> socials = await _socialService.GetAllAsync();
+
+            ShopVM model = new ShopVM
+            {
+                SectionHeaders = sectionHeaders,
+                Games = games.OrderBy(g => g.Name),
+                Platforms = platforms,
+                Genres = genres,
+                Socials = socials
+            };
+
+            return View(model);
         }
 
         [HttpGet]
@@ -62,6 +86,7 @@ namespace GameLib.Controllers
                 return NotFound();
             }
         }
+
 
 
         private async Task<SelectList> GetPlatformsAsync(int id)

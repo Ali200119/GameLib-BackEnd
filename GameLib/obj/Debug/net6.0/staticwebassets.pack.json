@@ -241,10 +241,6 @@
       "PackagePath": "staticwebassets/assets/img/games/God of War.jpeg"
     },
     {
-      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/img/games/God of War.jpg",
-      "PackagePath": "staticwebassets/assets/img/games/God of War.jpg"
-    },
-    {
       "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/img/games/Halo Infinite Screenshot 1.jpeg",
       "PackagePath": "staticwebassets/assets/img/games/Halo Infinite Screenshot 1.jpeg"
     },
@@ -601,8 +597,16 @@
       "PackagePath": "staticwebassets/assets/js/script.js"
     },
     {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/js/shop.js",
+      "PackagePath": "staticwebassets/assets/js/shop.js"
+    },
+    {
       "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/js/user.js",
       "PackagePath": "staticwebassets/assets/js/user.js"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/scss/.DS_Store",
+      "PackagePath": "staticwebassets/assets/scss/.DS_Store"
     },
     {
       "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/scss/about/about.css",

@@ -96,7 +96,7 @@ function subscribe() {
     let input = document.querySelector("#subscribe form input");
 
     if (input.value.trim() != "") {
-        let url = `/Subscribe/SubscribeToNewsletter?email=${input.value}`;
+        let url = `/Subscribe/SubscribeToNewsletter?email=${input.value.trim().toLowerCase()}`;
 
         fetch(url, {
             method: "POST"

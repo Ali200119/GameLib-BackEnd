@@ -292,6 +292,9 @@ footer .social .social-list {
 footer .social .social-list .btn-shine {
   padding: 30px;
   font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 footer .copyright {
   height: 80px;
@@ -368,6 +371,7 @@ main .container #games .sort select {
   background-color: transparent;
   cursor: pointer;
   transition: 0.3s all;
+  font-size: 14px;
 }
 main .container #games .sort select:focus {
   border-color: white;
@@ -379,6 +383,8 @@ main .container #games .sort i {
   font-size: 13px;
   top: 50%;
   transform: translateY(-50%);
+  cursor: pointer;
+  pointer-events: none;
 }
 main .container #games .items {
   display: flex;
@@ -469,6 +475,7 @@ main .container #panel .search .search-input input {
   color: white;
   padding: 15px;
   transition: 0.2s all;
+  font-size: 14px;
 }
 main .container #panel .search .search-input input:focus {
   border-color: white;
@@ -501,9 +508,10 @@ main .container #panel .latest-games .items {
 }
 main .container #panel .latest-games .items .item {
   display: flex;
-}
-main .container #panel .latest-games .items .item:nth-child(2), main .container #panel .latest-games .items .item:last-child {
   margin-top: 30px;
+}
+main .container #panel .latest-games .items .item:first-child {
+  margin-top: 0;
 }
 main .container #panel .latest-games .items .item:hover .image {
   transform: scale(0.96);
@@ -625,11 +633,12 @@ main .container #panel .social .items .item {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 40px;
-  height: 40px;
+  width: 45px;
+  height: 45px;
   border-radius: 50%;
   text-decoration: none;
 }
 main .container #panel .social .items .item i {
   color: white;
+  font-size: 20px;
 }/*# sourceMappingURL=shop.css.map */
