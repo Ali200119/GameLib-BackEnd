@@ -6,7 +6,7 @@
 @use "../layouts/up";
 
 main {
-    margin-top: 100px;
+    margin-top: 70px;
 
     #search-results {
         display: flex;
@@ -15,12 +15,19 @@ main {
         .container {
             width: 80%;
 
+            .search-text {
+                color: white;
+                text-align: center;
+                font-weight: unset;
+                font-size: 33px;
+            }
+
             .items {
                 display: flex;
                 flex-wrap: wrap;
                 gap: 55px;
                 width: 100%;
-                justify-content: space-between;
+                margin-top: 70px;
 
                 .item {
                     width: 415px;

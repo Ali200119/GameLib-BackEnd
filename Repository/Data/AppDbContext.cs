@@ -52,7 +52,7 @@ namespace Repository.Data
                 new Advantage
                 {
                     Id = 1,
-                    Icon = "<i class='fa-solid fa-users'></i>",
+                    Icon = "<i class=\"fa-solid fa-users\"></i>",
                     Title = "The Best Community",
                     Description = "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus, nemo."
                 },
@@ -60,7 +60,7 @@ namespace Repository.Data
                 new Advantage
                 {
                     Id = 2,
-                    Icon = "<i class='fa-solid fa-box'></i>",
+                    Icon = "<i class=\"fa-solid fa-box\"></i>",
                     Title = "Payment Types",
                     Description = "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus, nemo."
                 },
@@ -68,7 +68,7 @@ namespace Repository.Data
                 new Advantage
                 {
                     Id = 3,
-                    Icon = "<i class='fa-solid fa-gift'></i>",
+                    Icon = "<i class=\"fa-solid fa-gift\"></i>",
                     Title = "Rewards",
                     Description = "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus, nemo."
                 }
@@ -1573,6 +1573,13 @@ namespace Repository.Data
                 new Setting
                 {
                     Id = 3,
+                    Key = "FooterBG",
+                    Value = "Footer BG.jpg"
+                },
+
+                new Setting
+                {
+                    Id = 4,
                     Key = "Copyright",
                     Value = "© 2023 GameLib"
                 }
@@ -1597,7 +1604,7 @@ namespace Repository.Data
                 {
                     Id = 3,
                     Key = "HomeSubscribe",
-                    Value = "Subscribe"
+                    Value = "Subscribe to Our Newsletter"
                 },
 
                 new SectionHeader
@@ -1994,6 +2001,62 @@ namespace Repository.Data
                     Id = 34,
                     GameId = 15,
                     GenreId = 3
+                }
+            );
+
+            modelBuilder.Entity<Social>().HasData(
+                new Social
+                {
+                    Id = 1,
+                    Icon = "<i class=\"fa-brands fa-twitch\"></i>",
+                    Name = "Twitch",
+                    Link = "https://www.twitch.tv",
+                    Color = "#6441a5"
+                },
+
+                new Social
+                {
+                    Id = 2,
+                    Icon = "<i class=\"fa-brands fa-youtube\"></i>",
+                    Name = "YouTube",
+                    Link = "https://www.youtube.com",
+                    Color = "red"
+                },
+
+                new Social
+                {
+                    Id = 3,
+                    Icon = "<i class=\"fa-brands fa-discord\"></i>",
+                    Name = "Discord",
+                    Link = "https://discord.com",
+                    Color = "#7289da"
+                },
+
+                new Social
+                {
+                    Id = 4,
+                    Icon = "<i class=\"fa-brands fa-twitter\"></i>",
+                    Name = "Twitter",
+                    Link = "https://twitter.com",
+                    Color = "#00acee"
+                },
+
+                new Social
+                {
+                    Id = 5,
+                    Icon = "<i class=\"fa-brands fa-facebook-f\"></i>",
+                    Name = "FaceBook",
+                    Link = "https://www.facebook.com",
+                    Color = "#3b5998"
+                },
+
+                new Social
+                {
+                    Id = 6,
+                    Icon = "<i class=\"fa-brands fa-instagram\"></i>",
+                    Name = "Instagram",
+                    Link = "https://www.instagram.com",
+                    Color = "#bc2a8d"
                 }
             );
         }

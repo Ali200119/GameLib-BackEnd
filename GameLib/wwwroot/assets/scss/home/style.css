@@ -493,7 +493,11 @@ main #games .container .tab-menu-items .items {
   position: absolute;
   transition: 0.3s all;
   width: 100%;
-  justify-content: space-between;
+}
+@media only screen and (max-width: 1693px) {
+  main #games .container .tab-menu-items .items {
+    justify-content: space-between;
+  }
 }
 main #games .container .tab-menu-items .items:nth-child(2), main #games .container .tab-menu-items .items:last-child {
   opacity: 0;
@@ -565,7 +569,7 @@ main #developers {
   background-color: white;
   overflow: hidden;
 }
-@media only screen and (max-width: 1618px) {
+@media only screen and (max-width: 1693px) {
   main #developers {
     margin-top: 1150px;
   }

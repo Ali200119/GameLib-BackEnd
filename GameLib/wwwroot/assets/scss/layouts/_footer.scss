@@ -16,8 +16,12 @@ footer {
             justify-content: space-between;
 
             .btn-shine {
-                padding: 30px;
+                width: 90px;
+                height: 90px;
                 font-size: 30px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
             }
         }
     }

@@ -333,7 +333,7 @@ footer .copyright h4 {
 }
 
 main {
-  margin-top: 100px;
+  margin-top: 70px;
 }
 main #search-results {
   display: flex;
@@ -342,12 +342,18 @@ main #search-results {
 main #search-results .container {
   width: 80%;
 }
+main #search-results .container .search-text {
+  color: white;
+  text-align: center;
+  font-weight: unset;
+  font-size: 33px;
+}
 main #search-results .container .items {
   display: flex;
   flex-wrap: wrap;
   gap: 55px;
   width: 100%;
-  justify-content: space-between;
+  margin-top: 70px;
 }
 main #search-results .container .items .item {
   width: 415px;

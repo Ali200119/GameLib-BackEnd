@@ -193,7 +193,10 @@ main {
                     position: absolute;
                     transition: 0.3s all;
                     width: 100%;
-                    justify-content: space-between;
+                    
+                    @media only screen and (max-width: 1693px) {
+                        justify-content: space-between;
+                    }
 
                     &:nth-child(2),
                     &:last-child {
@@ -277,7 +280,7 @@ main {
     }
 
     #developers {
-        @media only screen and (max-width: 1618px) {
+        @media only screen and (max-width: 1693px) {
             margin-top: 1150px;
         }
 

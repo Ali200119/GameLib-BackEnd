@@ -28,7 +28,7 @@
 <section id="fav-game">
 
     @{
-        var favGame = Model.Games.FirstOrDefault(g => g.FavGame);
+        Game favGame = Model.Games.FirstOrDefault(g => g.FavGame);
     }
 
     <img src="~/assets/img/games/@favGame.GameImages.FirstOrDefault(gi => gi.IsMain).Name" alt="fav-game">
