@@ -72,6 +72,11 @@ namespace Repository.Repositories
             await SaveChangesAsync();
         }
 
+        public async Task<int> GetCountAsync()
+        {
+            return await entities.CountAsync();
+        }
+
         private async Task SaveChangesAsync() => _context.SaveChangesAsync();
     }
 }

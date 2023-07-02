@@ -21,5 +21,14 @@ namespace Service.Services
         public async Task<IEnumerable<Blog>> GetAllWithIncludesAsync() => await _blogRepo.GetAllAsync(b => b.BlogImages, b => b.BlogAuthor);
         
         public async Task<Blog> GetByIdWithIncludesAsync(int? id) => await _blogRepo.GetByIdAsync(id, b => b.BlogImages, b => b.BlogAuthor);
+
+        public async Task<IEnumerable<Blog>> GetPaginatedDatasAsync(int page, int take)
+        {
+            IEnumerable<Blog> blogs = await _blogRepo.GetAllAsync(b => b.BlogImages, b => b.BlogAuthor);
+
+            return blogs.Skip(page * take - take).Take(take);
+        }
+
+        public async Task<int> GetCountAsync() => await _blogRepo.GetCountAsync();
     }
 }

@@ -37,36 +37,37 @@ namespace Repository.Repositories
                                  .ToListAsync();
         }
 
-        //public async Task<IEnumerable<Game>> Sort(string pattern, string filter)
-        //{
-        //    switch (pattern)
-        //    {
-        //        case "sort":
-        //            {
-        //                switch (filter)
-        //                {
-        //                    case "recent":
-        //                        {
-        //                            return await entities.OrderByDescending(g => g.CreatedAt).Include(g => g.GameImages).ToListAsync();
-        //                        }
+        public async Task<IEnumerable<Game>> Sort(string pattern)
+        {
+            if (pattern is null) throw new ArgumentNullException();
 
-        //                    case "name":
-        //                        {
-        //                            return await entities.OrderBy(g => g.Name).ToListAsync();
-        //                        }
+            IEnumerable<Game> games = await entities.Include(g => g.GameImages)
+                                                    .Include(g => g.GamePlatforms)
+                                                    .ThenInclude(gp => gp.Platform)
+                                                    .Include(g => g.GameGenres)
+                                                    .ThenInclude(gg => gg.Genre)
+                                                    .ToListAsync();
 
-        //                    case "low price to high":
-        //                        {
-        //                            return await entities.OrderBy(g => g.Price).ToListAsync();
-        //                        }
+            switch (pattern)
+            {
+                case "recent":
+                    {
+                        return games.OrderByDescending(g => g.ReleaseDate);
+                    }
 
-        //                    case "high price to low":
-        //                        {
-        //                            return await entities.OrderByDescending(g => g.Price).ToListAsync();
-        //                        }
-        //                }
-        //            }
-        //    }
-        //}
+                case "low price to high":
+                    {
+                        return games.OrderBy(g => g.Price);
+                    }
+
+                case "high price to low":
+                    {
+                        return games.OrderByDescending(g => g.Price);
+                    }
+
+                default:
+                    return games.OrderBy(g => g.Name);
+            }
+        }
     }
 }

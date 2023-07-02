@@ -137,6 +137,7 @@ main {
 
                         .post {
                             display: flex;
+                            margin-top: 40px;
 
                             &:hover .image {
                                 transform: scale(0.95);
@@ -186,9 +187,8 @@ main {
                                 }
                             }
 
-                            &:nth-child(2),
-                            &:last-child {
-                                margin-top: 20px;
+                            &:first-child {
+                                margin-top: 0;
                             }
                         }
                     }
@@ -231,7 +231,7 @@ main {
 
                 .text {
                     color: #bdbbc4;
-                    font-size: 14px;
+                    font-size: 15px;
                     line-height: 24px;
                 }
 

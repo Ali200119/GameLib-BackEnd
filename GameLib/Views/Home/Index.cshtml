@@ -19,11 +19,11 @@
     </ul>
 }
 
-<!-- <section id="loading">
-            <div class="title">GameLib</div>
+ <section id="loading">
+    <div class="title">GameLib</div>
 
-            <div class="animation">Loading...</div>
-        </section> -->
+    <div class="animation">Loading...</div>
+ </section>
 
 <section id="fav-game">
 
@@ -79,75 +79,15 @@
 
         <div class="tab-menu-items">
             <div data-category="playstation" class="items">
-                @foreach (var game in Model.Games.OrderByDescending(g => g.CreatedAt).Where(g => g.ForPlaySation).Take(6))
-                {
-                    <div class="item">
-                        <a class="image" asp-controller="Shop" asp-action="Details" asp-route-id="@game.Id">
-                            <img src="~/assets/img/games/@game.GameImages.FirstOrDefault(g => g.IsMain).Name">
-                        </a>
-
-                        <a class="name" asp-controller="Shop" asp-action="Details" asp-route-id="@game.Id">
-                            <h3>@game.Name</h3>
-                        </a>
-
-                        <div class="price-view">
-                            <div class="price">
-                                <span>$</span>
-                                <span>@game.Price</span>
-                            </div>
-
-                            <a class="view" asp-controller="Shop" asp-action="Details" asp-route-id="@game.Id">View Game</a>
-                        </div>
-                    </div>
-                }
+                <partial name="_GamesPartial" model="Model.Games.OrderByDescending(g => g.CreatedAt).Where(g => g.ForPlaySation).Take(6)"/>
             </div>
 
             <div data-category="xbox" class="items">
-                @foreach (var game in Model.Games.OrderByDescending(g => g.CreatedAt).Where(g => g.ForXbox).Take(6))
-                {
-                    <div class="item">
-                        <a class="image" asp-controller="Shop" asp-action="Details" asp-route-id="@game.Id">
-                            <img src="~/assets/img/games/@game.GameImages.FirstOrDefault(g => g.IsMain).Name">
-                        </a>
-
-                        <a class="name" asp-controller="Shop" asp-action="Details" asp-route-id="@game.Id">
-                            <h3>@game.Name</h3>
-                        </a>
-
-                        <div class="price-view">
-                            <div class="price">
-                                <span>$</span>
-                                <span>@game.Price</span>
-                            </div>
-
-                            <a class="view" asp-controller="Shop" asp-action="Details" asp-route-id="@game.Id">View Game</a>
-                        </div>
-                    </div>
-                }
+                <partial name="_GamesPartial" model="Model.Games.OrderByDescending(g => g.CreatedAt).Where(g => g.ForXbox).Take(6)"/>
             </div>
 
             <div data-category="pc" class="items">
-                @foreach (var game in Model.Games.OrderByDescending(g => g.CreatedAt).Where(g => g.ForPC).Take(6))
-                {
-                    <div class="item">
-                        <a class="image" asp-controller="Shop" asp-action="Details" asp-route-id="@game.Id">
-                            <img src="~/assets/img/games/@game.GameImages.FirstOrDefault(g => g.IsMain).Name">
-                        </a>
-
-                        <a class="name" asp-controller="Shop" asp-action="Details" asp-route-id="@game.Id">
-                            <h3>@game.Name</h3>
-                        </a>
-
-                        <div class="price-view">
-                            <div class="price">
-                                <span>$</span>
-                                <span>@game.Price</span>
-                            </div>
-
-                            <a class="view" asp-controller="Shop" asp-action="Details" asp-route-id="@game.Id">View Game</a>
-                        </div>
-                    </div>
-                }
+                <partial name="_GamesPartial" model="@Model.Games.OrderByDescending(g => g.CreatedAt).Where(g => g.ForPC).Take(6)"/>
             </div>
         </div>
     </div>
@@ -202,12 +142,7 @@
                         </div>
 
                         <p class="description">
-                            @{
-                                string blogDescription = blog.Description;
-                                int firstSentenceIndexForBlog = blogDescription.IndexOfAny(new char[] { '.', '!', '?' });
-                            }
-
-                            @blogDescription.Substring(0, firstSentenceIndexForBlog + 1)
+                            @blog.ShortDescription
                         </p>
 
                         <a class="more" asp-controller="Blog" asp-action="Details" asp-route-id="@blog.Id">READ MORE</a>
@@ -261,7 +196,7 @@
             integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
             crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="~/assets/slick/slick.min.js"></script>
-    <!-- <script src="~/assets/js/components/loading.js"></script> -->
+     <script src="~/assets/js/components/loading.js"></script>
     <script src="~/assets/js/components/scroll-to-up.js"></script>
     <script src="~/assets/js/script.js"></script>
 }

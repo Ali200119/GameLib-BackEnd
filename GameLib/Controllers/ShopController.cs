@@ -14,19 +14,19 @@ namespace GameLib.Controllers
     {
         private readonly IStaticDataService _staticDataService;
         private readonly IGameService _gameService;
-        private readonly IPlatformService _plarformService;
+        private readonly IPlatformService _platformService;
         private readonly IGenreService _genreService;
         private readonly ISocialService _socialService;
 
         public ShopController(IStaticDataService staticDataService,
                               IGameService gameService,
-                              IPlatformService plarformService,
+                              IPlatformService platformService,
                               IGenreService genreService,
                               ISocialService socialService)
         {
             _staticDataService = staticDataService;
             _gameService = gameService;
-            _plarformService = plarformService;
+            _platformService = platformService;
             _genreService = genreService;
             _socialService = socialService;
         }
@@ -37,7 +37,7 @@ namespace GameLib.Controllers
         {
             Dictionary<string, string> sectionHeaders = _staticDataService.GetAllSectionHeaders();
             IEnumerable<Game> games = await _gameService.GetAllWithIncludesAsync();
-            IEnumerable<Platform> platforms = await _plarformService.GetAllWithIncludesAsync();
+            IEnumerable<Platform> platforms = await _platformService.GetAllWithIncludesAsync();
             IEnumerable<Genre> genres = await _genreService.GetAllAsync();
             IEnumerable<Social> socials = await _socialService.GetAllAsync();
 
@@ -51,6 +51,69 @@ namespace GameLib.Controllers
             };
 
             return View(model);
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> Sort(string pattern)
+        {
+            try
+            {
+                if (pattern is null) throw new ArgumentNullException();
+
+                return PartialView("_GamesPartial", await _gameService.Sort(pattern));
+            }
+
+            catch (ArgumentNullException)
+            {
+                return BadRequest();
+            }
+
+            catch (NullReferenceException)
+            {
+                return NotFound();
+            }
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> FilterByPlatform(int? platformId)
+        {
+            try
+            {
+                if (platformId is null) throw new ArgumentNullException();
+
+                return PartialView("_GamesPartial", await _platformService.FilterGames(platformId));
+            }
+
+            catch (ArgumentNullException)
+            {
+                return BadRequest();
+            }
+
+            catch (NullReferenceException)
+            {
+                return NotFound();
+            }
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> FilterByGenre(int? genreId)
+        {
+            try
+            {
+                if (genreId is null) throw new ArgumentNullException();
+
+                return PartialView("_GamesPartial", await _genreService.FilterGames(genreId));
+            }
+
+            catch (ArgumentNullException)
+            {
+                return BadRequest();
+            }
+
+            catch (NullReferenceException)
+            {
+                return NotFound();
+            }
         }
 
         [HttpGet]

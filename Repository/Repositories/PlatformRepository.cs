@@ -19,5 +19,19 @@ namespace Repository.Repositories
         public async Task<IEnumerable<Platform>> GetAllWithFullDataAsync() => await entities.Include(p => p.GamePlatforms)
                                                                                             .ThenInclude(gp => gp.Game)
                                                                                             .ToListAsync();
+
+        public async Task<Platform> GetByIdWithFullDataAsync(int? id)
+        {
+            if (id is null) throw new ArgumentNullException();
+
+            Platform platform = await entities.Include(p => p.GamePlatforms)
+                                 .ThenInclude(gp => gp.Game)
+                                 .ThenInclude(g => g.GameImages)
+                                 .FirstOrDefaultAsync(p => p.Id == id);
+
+            if (platform is null) throw new NullReferenceException();
+
+            return platform;
+        }
     }
 }

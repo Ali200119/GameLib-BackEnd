@@ -7,5 +7,6 @@ namespace Service.Services.Interfaces
 	{
 		Task<IEnumerable<Platform>> GetAllAsync();
 		Task<IEnumerable<Platform>> GetAllWithIncludesAsync();
+		Task<IEnumerable<Game>> FilterGames(int? id);
 	}
 }

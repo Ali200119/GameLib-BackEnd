@@ -369,6 +369,7 @@ main #devide .container #panel .latest-posts .posts {
 }
 main #devide .container #panel .latest-posts .posts .post {
   display: flex;
+  margin-top: 40px;
 }
 main #devide .container #panel .latest-posts .posts .post:hover .image {
   transform: scale(0.95);
@@ -410,8 +411,8 @@ main #devide .container #panel .latest-posts .posts .post .content .author-date 
 main #devide .container #panel .latest-posts .posts .post .content .author-date span:last-child {
   margin-left: 15px;
 }
-main #devide .container #panel .latest-posts .posts .post:nth-child(2), main #devide .container #panel .latest-posts .posts .post:last-child {
-  margin-top: 20px;
+main #devide .container #panel .latest-posts .posts .post:first-child {
+  margin-top: 0;
 }
 main #devide .container #panel .social {
   margin-top: 70px;
@@ -444,7 +445,7 @@ main #devide .container #blog-content {
 }
 main #devide .container #blog-content .text {
   color: #bdbbc4;
-  font-size: 14px;
+  font-size: 15px;
   line-height: 24px;
 }
 main #devide .container #blog-content .images {

@@ -31,5 +31,12 @@ namespace Service.Services
 
             return await _gameRepo.SearchByNameAsync(searchText);
         }
+
+        public async Task<IEnumerable<Game>> Sort(string pattern)
+        {
+            if (pattern is null) throw new ArgumentNullException();
+
+            return await _gameRepo.Sort(pattern);
+        }
     }
 }

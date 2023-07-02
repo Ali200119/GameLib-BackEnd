@@ -7,6 +7,6 @@ namespace Repository.Repositories.Interfaces
 	{
 		Task<Game> GetByIdWithFullDataAsync(int? id);
 		Task<IEnumerable<Game>> SearchByNameAsync(string searchText);
-		//Task<IEnumerable<Game>> Sort(string pattern, string filter);
-    }
+		Task<IEnumerable<Game>> Sort(string pattern);
+	}
 }

@@ -19,5 +19,23 @@ namespace Service.Services
 
 
         public async Task<IEnumerable<Genre>> GetAllAsync() => await _genreRepo.GetAllAsync();
+
+        public async Task<IEnumerable<Game>> FilterGames(int? id)
+        {
+            if (id is null) throw new ArgumentNullException();
+
+            List<Game> games = new List<Game>();
+
+            Genre genre = await _genreRepo.GetByIdWithFullDataAsync(id);
+
+            if (genre is null) throw new NullReferenceException();
+
+            foreach (var game in genre.GameGenres.Select(gp => gp.Game))
+            {
+                games.Add(game);
+            }
+
+            return games;
+        }
     }
 }

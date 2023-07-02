@@ -44,7 +44,7 @@ public class HomeController : Controller
             {
                 SectionHeaders = sectionHeaders,
                 Games = games,
-                Blogs = blogs.OrderByDescending(b => b.CreatedAt).Take(4),
+                Blogs = blogs.OrderByDescending(b => b.CreatedAt).Take(5),
                 Advantages = advantages.OrderByDescending(a => a.CreatedAt).Take(3),
                 Developers = developers,
                 Subscribe = subscribe

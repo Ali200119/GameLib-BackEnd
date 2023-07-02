@@ -7,6 +7,7 @@ namespace Domain.Models
 	{
 		public string Title { get; set; }
 		public string Game { get; set; }
+		public string ShortDescription { get; set; }
 		public string Description { get; set; }
 		public bool FavBlog { get; set; } = false;
 		public ICollection<BlogImage> BlogImages { get; set; }

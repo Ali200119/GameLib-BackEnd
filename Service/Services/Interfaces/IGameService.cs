@@ -8,5 +8,6 @@ namespace Service.Services.Interfaces
 		Task<IEnumerable<Game>> GetAllWithIncludesAsync();
 		Task<Game> GetByIdWithIncludesAsync(int? id);
 		Task<IEnumerable<Game>> GetByNameWithIncludesAsync(string searchText);
+		Task<IEnumerable<Game>> Sort(string pattern);
     }
 }

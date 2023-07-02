@@ -106,6 +106,7 @@ namespace Repository.Data
                     Id = 1,
                     Title = "Marvel's Spider-Man 2 Gameplay Revealed",
                     Game = "Marvel's Spider-Man 2",
+                    ShortDescription = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor voluptate laboriosam quidem labore ipsa? Magni fugit optio voluptatem doloremque esse! Vel exercitationem facilis hic culpa officia iste ipsum eligendi dolore numquam molestias.",
                     Description = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor voluptate laboriosam quidem labore ipsa? Magni fugit optio voluptatem doloremque esse! Vel exercitationem facilis hic culpa officia iste ipsum eligendi dolore numquam molestias. Eligendi, quisquam iusto dolor necessitatibus ab sapiente delectus libero nesciunt eum? Dolor consequuntur architecto nemo quaerat minima ea!",
                     BlogAuthorId = 1
                 },
@@ -115,6 +116,7 @@ namespace Repository.Data
                     Id = 2,
                     Title = "Phantom Blade Zero: A New Beginning in A Long Journey",
                     Game = "Phantom Blade Zero",
+                    ShortDescription = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor voluptate laboriosam quidem labore ipsa? Magni fugit optio voluptatem doloremque esse! Vel exercitationem facilis hic culpa officia iste ipsum eligendi dolore numquam molestias.",
                     Description = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor voluptate laboriosam quidem labore ipsa? Magni fugit optio voluptatem doloremque esse! Vel exercitationem facilis hic culpa officia iste ipsum eligendi dolore numquam molestias. Eligendi, quisquam iusto dolor necessitatibus ab sapiente delectus libero nesciunt eum? Dolor consequuntur architecto nemo quaerat minima ea!",
                     BlogAuthorId = 2
                 },
@@ -124,6 +126,7 @@ namespace Repository.Data
                     Id = 3,
                     Title = "First Assassin’s Creed Mirage Gameplay Revealed, Launches October 12",
                     Game = "Assassin's Creed Mirage",
+                    ShortDescription = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor voluptate laboriosam quidem labore ipsa? Magni fugit optio voluptatem doloremque esse! Vel exercitationem facilis hic culpa officia iste ipsum eligendi dolore numquam molestias.",
                     Description = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor voluptate laboriosam quidem labore ipsa? Magni fugit optio voluptatem doloremque esse! Vel exercitationem facilis hic culpa officia iste ipsum eligendi dolore numquam molestias. Eligendi, quisquam iusto dolor necessitatibus ab sapiente delectus libero nesciunt eum? Dolor consequuntur architecto nemo quaerat minima ea!",
                     BlogAuthorId = 3
                 },
@@ -133,6 +136,7 @@ namespace Repository.Data
                     Id = 4,
                     Title = "Revealing Ultros, A Psychedelic Sci-Fi Side-Scroller Coming to PS5 and PS4 in 2024",
                     Game = "Ultros",
+                    ShortDescription = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor voluptate laboriosam quidem labore ipsa? Magni fugit optio voluptatem doloremque esse! Vel exercitationem facilis hic culpa officia iste ipsum eligendi dolore numquam molestias.",
                     Description = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor voluptate laboriosam quidem labore ipsa? Magni fugit optio voluptatem doloremque esse! Vel exercitationem facilis hic culpa officia iste ipsum eligendi dolore numquam molestias. Eligendi, quisquam iusto dolor necessitatibus ab sapiente delectus libero nesciunt eum? Dolor consequuntur architecto nemo quaerat minima ea!",
                     BlogAuthorId = 4,
                     FavBlog = true
@@ -540,7 +544,7 @@ namespace Repository.Data
                     ForPlaySation = true,
                     ForXbox = false,
                     ForPC = true,
-                    Trailer = "2reK8k8nwBc",
+                    Trailer = "55PRv_e00wc",
                     ReleaseDate = new DateTime(2021, 06, 11)
                 },
 

@@ -11,5 +11,7 @@ namespace Repository.Repositories.Interfaces
         Task CreateAsync(T entity);
         Task UpdateAsync(T entity);
         Task DeleteAsync(T entity);
+        Task SoftDeleteAsync(T entity);
+        Task<int> GetCountAsync();
     }
 }

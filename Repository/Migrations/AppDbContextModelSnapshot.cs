@@ -59,30 +59,30 @@ namespace Repository.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8400),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9200),
                             Description = "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus, nemo.",
                             Icon = "<i class=\"fa-solid fa-users\"></i>",
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8420),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9230),
                             SoftDelete = false,
                             Title = "The Best Community"
                         },
                         new
                         {
                             Id = 2,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8420),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9240),
                             Description = "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus, nemo.",
                             Icon = "<i class=\"fa-solid fa-box\"></i>",
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8420),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9240),
                             SoftDelete = false,
                             Title = "Payment Types"
                         },
                         new
                         {
                             Id = 3,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8420),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9240),
                             Description = "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus, nemo.",
                             Icon = "<i class=\"fa-solid fa-gift\"></i>",
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8430),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9240),
                             SoftDelete = false,
                             Title = "Rewards"
                         });
@@ -116,6 +116,10 @@ namespace Repository.Migrations
                     b.Property<DateTime>("ModifiedAt")
                         .HasColumnType("datetime2");
 
+                    b.Property<string>("ShortDescription")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<bool>("SoftDelete")
                         .HasColumnType("bit");
 
@@ -134,11 +138,12 @@ namespace Repository.Migrations
                         {
                             Id = 1,
                             BlogAuthorId = 1,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8550),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9330),
                             Description = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor voluptate laboriosam quidem labore ipsa? Magni fugit optio voluptatem doloremque esse! Vel exercitationem facilis hic culpa officia iste ipsum eligendi dolore numquam molestias. Eligendi, quisquam iusto dolor necessitatibus ab sapiente delectus libero nesciunt eum? Dolor consequuntur architecto nemo quaerat minima ea!",
                             FavBlog = false,
                             Game = "Marvel's Spider-Man 2",
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8550),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9330),
+                            ShortDescription = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor voluptate laboriosam quidem labore ipsa? Magni fugit optio voluptatem doloremque esse! Vel exercitationem facilis hic culpa officia iste ipsum eligendi dolore numquam molestias.",
                             SoftDelete = false,
                             Title = "Marvel's Spider-Man 2 Gameplay Revealed"
                         },
@@ -146,11 +151,12 @@ namespace Repository.Migrations
                         {
                             Id = 2,
                             BlogAuthorId = 2,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8560),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9330),
                             Description = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor voluptate laboriosam quidem labore ipsa? Magni fugit optio voluptatem doloremque esse! Vel exercitationem facilis hic culpa officia iste ipsum eligendi dolore numquam molestias. Eligendi, quisquam iusto dolor necessitatibus ab sapiente delectus libero nesciunt eum? Dolor consequuntur architecto nemo quaerat minima ea!",
                             FavBlog = false,
                             Game = "Phantom Blade Zero",
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8560),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9330),
+                            ShortDescription = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor voluptate laboriosam quidem labore ipsa? Magni fugit optio voluptatem doloremque esse! Vel exercitationem facilis hic culpa officia iste ipsum eligendi dolore numquam molestias.",
                             SoftDelete = false,
                             Title = "Phantom Blade Zero: A New Beginning in A Long Journey"
                         },
@@ -158,11 +164,12 @@ namespace Repository.Migrations
                         {
                             Id = 3,
                             BlogAuthorId = 3,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8560),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9340),
                             Description = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor voluptate laboriosam quidem labore ipsa? Magni fugit optio voluptatem doloremque esse! Vel exercitationem facilis hic culpa officia iste ipsum eligendi dolore numquam molestias. Eligendi, quisquam iusto dolor necessitatibus ab sapiente delectus libero nesciunt eum? Dolor consequuntur architecto nemo quaerat minima ea!",
                             FavBlog = false,
                             Game = "Assassin's Creed Mirage",
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8560),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9340),
+                            ShortDescription = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor voluptate laboriosam quidem labore ipsa? Magni fugit optio voluptatem doloremque esse! Vel exercitationem facilis hic culpa officia iste ipsum eligendi dolore numquam molestias.",
                             SoftDelete = false,
                             Title = "First Assassin’s Creed Mirage Gameplay Revealed, Launches October 12"
                         },
@@ -170,11 +177,12 @@ namespace Repository.Migrations
                         {
                             Id = 4,
                             BlogAuthorId = 4,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8560),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9340),
                             Description = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor voluptate laboriosam quidem labore ipsa? Magni fugit optio voluptatem doloremque esse! Vel exercitationem facilis hic culpa officia iste ipsum eligendi dolore numquam molestias. Eligendi, quisquam iusto dolor necessitatibus ab sapiente delectus libero nesciunt eum? Dolor consequuntur architecto nemo quaerat minima ea!",
                             FavBlog = true,
                             Game = "Ultros",
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8560),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9340),
+                            ShortDescription = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor voluptate laboriosam quidem labore ipsa? Magni fugit optio voluptatem doloremque esse! Vel exercitationem facilis hic culpa officia iste ipsum eligendi dolore numquam molestias.",
                             SoftDelete = false,
                             Title = "Revealing Ultros, A Psychedelic Sci-Fi Side-Scroller Coming to PS5 and PS4 in 2024"
                         });
@@ -209,32 +217,32 @@ namespace Repository.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8530),
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8530),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9310),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9310),
                             Name = "Aaron Jason Espinoza",
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 2,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8540),
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8540),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9310),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9310),
                             Name = "Ethan Reid",
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 3,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8540),
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8540),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9310),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9320),
                             Name = "Lily Grant",
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 4,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8540),
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8540),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9320),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9320),
                             Name = "Jane Stevenson",
                             SoftDelete = false
                         });
@@ -278,9 +286,9 @@ namespace Repository.Migrations
                         {
                             Id = 1,
                             BlogId = 1,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8580),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9350),
                             IsMain = true,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8580),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9350),
                             Name = "Marvel's Spider-Man 2.jpg",
                             SoftDelete = false
                         },
@@ -288,9 +296,9 @@ namespace Repository.Migrations
                         {
                             Id = 2,
                             BlogId = 1,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8580),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9350),
                             IsMain = false,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8580),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9350),
                             Name = "Marvel's Spider-Man 2 Screenshot 1.jpg",
                             SoftDelete = false
                         },
@@ -298,9 +306,9 @@ namespace Repository.Migrations
                         {
                             Id = 3,
                             BlogId = 1,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8580),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9360),
                             IsMain = false,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8580),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9360),
                             Name = "Marvel's Spider-Man 2 Screenshot 2.jpg",
                             SoftDelete = false
                         },
@@ -308,9 +316,9 @@ namespace Repository.Migrations
                         {
                             Id = 4,
                             BlogId = 1,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8580),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9360),
                             IsMain = false,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8580),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9360),
                             Name = "Marvel's Spider-Man 2 Screenshot 3.jpg",
                             SoftDelete = false
                         },
@@ -318,9 +326,9 @@ namespace Repository.Migrations
                         {
                             Id = 5,
                             BlogId = 1,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8590),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9360),
                             IsMain = false,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8590),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9360),
                             Name = "Marvel's Spider-Man 2 Screenshot 4.jpg",
                             SoftDelete = false
                         },
@@ -328,9 +336,9 @@ namespace Repository.Migrations
                         {
                             Id = 6,
                             BlogId = 1,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8590),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9360),
                             IsMain = false,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8590),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9360),
                             Name = "Marvel's Spider-Man 2 Screenshot 5.jpg",
                             SoftDelete = false
                         },
@@ -338,9 +346,9 @@ namespace Repository.Migrations
                         {
                             Id = 7,
                             BlogId = 2,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8590),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9360),
                             IsMain = true,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8590),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9360),
                             Name = "Phantom Blade Zero.jpg",
                             SoftDelete = false
                         },
@@ -348,9 +356,9 @@ namespace Repository.Migrations
                         {
                             Id = 8,
                             BlogId = 2,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8590),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9370),
                             IsMain = false,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8590),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9370),
                             Name = "Phantom Blade Zero Screenshot 1.jpeg",
                             SoftDelete = false
                         },
@@ -358,9 +366,9 @@ namespace Repository.Migrations
                         {
                             Id = 9,
                             BlogId = 2,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8590),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9370),
                             IsMain = false,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8600),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9370),
                             Name = "Phantom Blade Zero Screenshot 2.jpeg",
                             SoftDelete = false
                         },
@@ -368,9 +376,9 @@ namespace Repository.Migrations
                         {
                             Id = 10,
                             BlogId = 2,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8600),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9370),
                             IsMain = false,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8600),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9370),
                             Name = "Phantom Blade Zero Screenshot 3.jpeg",
                             SoftDelete = false
                         },
@@ -378,9 +386,9 @@ namespace Repository.Migrations
                         {
                             Id = 11,
                             BlogId = 2,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8600),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9370),
                             IsMain = false,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8600),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9370),
                             Name = "Phantom Blade Zero Screenshot 4.webp",
                             SoftDelete = false
                         },
@@ -388,9 +396,9 @@ namespace Repository.Migrations
                         {
                             Id = 12,
                             BlogId = 2,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8600),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9370),
                             IsMain = false,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8600),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9380),
                             Name = "Phantom Blade Zero Screenshot 5.jpg",
                             SoftDelete = false
                         },
@@ -398,9 +406,9 @@ namespace Repository.Migrations
                         {
                             Id = 13,
                             BlogId = 3,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8600),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9380),
                             IsMain = true,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8600),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9380),
                             Name = "Assassin's Creed Mirage.jpg",
                             SoftDelete = false
                         },
@@ -408,9 +416,9 @@ namespace Repository.Migrations
                         {
                             Id = 14,
                             BlogId = 3,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8610),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9380),
                             IsMain = false,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8610),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9380),
                             Name = "Assassin's Creed Mirage Screenshot 1.jpeg",
                             SoftDelete = false
                         },
@@ -418,9 +426,9 @@ namespace Repository.Migrations
                         {
                             Id = 15,
                             BlogId = 3,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8610),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9380),
                             IsMain = false,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8610),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9380),
                             Name = "Assassin's Creed Mirage Screenshot 2.jpeg",
                             SoftDelete = false
                         },
@@ -428,9 +436,9 @@ namespace Repository.Migrations
                         {
                             Id = 16,
                             BlogId = 3,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8610),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9380),
                             IsMain = false,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8610),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9380),
                             Name = "Assassin's Creed Mirage Screenshot 3.jpeg",
                             SoftDelete = false
                         },
@@ -438,9 +446,9 @@ namespace Repository.Migrations
                         {
                             Id = 17,
                             BlogId = 3,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8610),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9390),
                             IsMain = false,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8610),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9390),
                             Name = "Assassin's Creed Mirage Screenshot 4.jpeg",
                             SoftDelete = false
                         },
@@ -448,9 +456,9 @@ namespace Repository.Migrations
                         {
                             Id = 18,
                             BlogId = 3,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8610),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9390),
                             IsMain = false,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8620),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9390),
                             Name = "Assassin's Creed Mirage Screenshot 5.jpeg",
                             SoftDelete = false
                         },
@@ -458,9 +466,9 @@ namespace Repository.Migrations
                         {
                             Id = 19,
                             BlogId = 4,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8620),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9390),
                             IsMain = true,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8620),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9390),
                             Name = "Ultros.png",
                             SoftDelete = false
                         },
@@ -468,9 +476,9 @@ namespace Repository.Migrations
                         {
                             Id = 20,
                             BlogId = 4,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8620),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9390),
                             IsMain = false,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8620),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9390),
                             Name = "Ultros Screenshot 1.jpeg",
                             SoftDelete = false
                         },
@@ -478,9 +486,9 @@ namespace Repository.Migrations
                         {
                             Id = 21,
                             BlogId = 4,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8620),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9400),
                             IsMain = false,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8620),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9400),
                             Name = "Ultros Screenshot 2.jpeg",
                             SoftDelete = false
                         },
@@ -488,9 +496,9 @@ namespace Repository.Migrations
                         {
                             Id = 22,
                             BlogId = 4,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8620),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9400),
                             IsMain = false,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8620),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9400),
                             Name = "Ultros Screenshot 3.jpeg",
                             SoftDelete = false
                         },
@@ -498,9 +506,9 @@ namespace Repository.Migrations
                         {
                             Id = 23,
                             BlogId = 4,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8630),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9400),
                             IsMain = false,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8630),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9400),
                             Name = "Ultros Screenshot 4.jpeg",
                             SoftDelete = false
                         },
@@ -508,9 +516,9 @@ namespace Repository.Migrations
                         {
                             Id = 24,
                             BlogId = 4,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8630),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9400),
                             IsMain = false,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8630),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9400),
                             Name = "Ultros Screenshot 5.jpeg",
                             SoftDelete = false
                         });
@@ -549,54 +557,54 @@ namespace Repository.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8650),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9420),
                             Logo = "Insomniac Games.webp",
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8650),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9420),
                             Name = "Insomniac Games",
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 2,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8650),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9420),
                             Logo = "343 Industries.png",
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8650),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9420),
                             Name = "343 Industries",
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 3,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8650),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9420),
                             Logo = "Guerrilla Games.png",
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8650),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9430),
                             Name = "Guerrilla Games",
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 4,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8660),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9430),
                             Logo = "Santa Monica Studio.png",
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8660),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9430),
                             Name = "Santa Monica Studio",
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 5,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8660),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9430),
                             Logo = "DICE.png",
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8660),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9430),
                             Name = "DICE",
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 6,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8660),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9430),
                             Logo = "Turn 10 Studios.png",
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8660),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9430),
                             Name = "Turn 10 Studios",
                             SoftDelete = false
                         });
@@ -665,14 +673,14 @@ namespace Repository.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8670),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9440),
                             Description = "From Santa Monica Studio and creative director Cory Barlog comes a new beginning for one of gaming’s most recognizable icons. Living as a man outside the shadow of the gods, Kratos must adapt to unfamiliar lands, unexpected threats, and a second chance at being a father. Together with his son Atreus, the pair will venture into the brutal Norse wilds and fight to fulfill a deeply personal quest.",
                             Developer = "Santa Monica Studio",
                             FavGame = false,
                             ForPC = true,
                             ForPlaySation = true,
                             ForXbox = false,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8670),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9440),
                             Name = "God of War",
                             Price = 19.99m,
                             Publisher = "Sony Interactive Entertainment",
@@ -683,14 +691,14 @@ namespace Repository.Migrations
                         new
                         {
                             Id = 2,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8680),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9460),
                             Description = "Lead your team to victory in both large all-out warfare and close-quarters combat on maps from the world of 2042 and classic Battlefield titles. Find your playstyle in class-based gameplay and take on several experiences comprising elevated versions of Conquest and Breakthrough. Explore Battlefield Portal, a platform where players can discover, create, and share unexpected battles from Battlefield's past and present.",
                             Developer = "DICE",
                             FavGame = false,
                             ForPC = true,
                             ForPlaySation = true,
                             ForXbox = true,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8680),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9460),
                             Name = "Battlefield 2042",
                             Price = 59.99m,
                             Publisher = "EA",
@@ -701,14 +709,14 @@ namespace Repository.Migrations
                         new
                         {
                             Id = 3,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8690),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9460),
                             Description = "In an experience delivered by award winning developer Naughty Dog, UNCHARTED: Legacy of Thieves Collection includes the two critically acclaimed, single player adventures: UNCHARTED 4: A Thief’s End and UNCHARTED: The Lost Legacy. Discover lost history with the charismatic yet complex thieves, Nathan Drake and Chloe Frazer, as they travel the world with a sense of wonder, pursuing extraordinary adventures and lost lore – remastered in stunning detail for the PS5™ console with improved visuals and frame rate.",
                             Developer = "Naughty Dog",
                             FavGame = false,
                             ForPC = true,
                             ForPlaySation = true,
                             ForXbox = false,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8690),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9460),
                             Name = "Uncharted: Legacy of Thieves Collection",
                             Price = 49.99m,
                             Publisher = "Sony Interactive Entertainment",
@@ -719,14 +727,14 @@ namespace Repository.Migrations
                         new
                         {
                             Id = 4,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8690),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9460),
                             Description = "This isn’t the Spider-Man you’ve met or ever seen before. This is an experienced Peter Parker who’s more masterful at fighting big crime in New York City. At the same time, he’s struggling to balance his chaotic personal life and career while the fate of Marvel’s New York rest upon his shoulders.",
                             Developer = "Insomniac Games",
                             FavGame = false,
                             ForPC = true,
                             ForPlaySation = true,
                             ForXbox = false,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8690),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9460),
                             Name = "Marvel's Spider-Man: Remastered",
                             Price = 49.99m,
                             Publisher = "Sony Interactive Entertainment",
@@ -737,14 +745,14 @@ namespace Repository.Migrations
                         new
                         {
                             Id = 5,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8700),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9470),
                             Description = "In a ravaged civilization, where infected and hardened survivors run rampant, Joel, a weary protagonist, is hired to smuggle 14-year-old Ellie out of a military quarantine zone. However, what starts as a small job soon transforms into a brutal cross-country journey.",
                             Developer = "Naughty Dog",
                             FavGame = false,
                             ForPC = true,
                             ForPlaySation = true,
                             ForXbox = false,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8700),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9470),
                             Name = "The Last of Us Part 1",
                             Price = 69.99m,
                             Publisher = "Sony Interactive Entertainment",
@@ -755,14 +763,14 @@ namespace Repository.Migrations
                         new
                         {
                             Id = 6,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8700),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9470),
                             Description = "In the latest adventure in the Marvel’s Spider-Man universe, teenager Miles Morales is adjusting to his new home while following in the footsteps of his mentor, Peter Parker, as a new Spider-Man. But when a fierce power struggle threatens to destroy his new home, the aspiring hero realizes that with great power, there must also come great responsibility. To save all of Marvel’s New York, Miles must take up the mantle of Spider-Man and own it.",
                             Developer = "Insomniac Games",
                             FavGame = false,
                             ForPC = true,
                             ForPlaySation = true,
                             ForXbox = false,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8700),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9470),
                             Name = "Marvel's Spider-Man: Miles Morales",
                             Price = 49.99m,
                             Publisher = "Sony Interactive Entertainment",
@@ -773,14 +781,14 @@ namespace Repository.Migrations
                         new
                         {
                             Id = 7,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8700),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9470),
                             Description = "When all hope is lost and humanity’s fate hangs in the balance, the Master Chief is ready to confront the most ruthless foe he’s ever faced. Step inside the armor of humanity’s greatest hero to experience an epic adventure and explore the massive scale of the Halo ring.",
                             Developer = "343 Industries",
                             FavGame = false,
                             ForPC = true,
                             ForPlaySation = false,
                             ForXbox = true,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8700),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9470),
                             Name = "Halo Infinite",
                             Price = 59.99m,
                             Publisher = "Xbox Game Studios",
@@ -791,14 +799,14 @@ namespace Repository.Migrations
                         new
                         {
                             Id = 8,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8710),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9480),
                             Description = "Forza Motorsport 7 is where Racers, Drifters, Drag Racers, Tuners, and Creators come together in a community devoted to everything automotive. Drive the cars of your dreams, with more than 700 amazing vehicles to choose from including the largest collection of Ferraris, Porsches, and Lamborghinis ever. Challenge yourself across 30 famous destinations and 200 Tracks, where race conditions change every time you return to the Track.",
                             Developer = "Turn 10 Studios",
                             FavGame = false,
                             ForPC = true,
                             ForPlaySation = false,
                             ForXbox = true,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8710),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9480),
                             Name = "Forza Motorsport 7",
                             Price = 29.99m,
                             Publisher = "Microsoft Studios",
@@ -809,14 +817,14 @@ namespace Repository.Migrations
                         new
                         {
                             Id = 9,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8710),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9480),
                             Description = "From light planes to wide body jets to gliders and helicopters, fly highly detailed and accurate aircraft in the Microsoft Flight Simulator 40th Anniversary Edition. The world is at your fingertips.",
                             Developer = "Asobo Studio",
                             FavGame = false,
                             ForPC = true,
                             ForPlaySation = false,
                             ForXbox = true,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8710),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9480),
                             Name = "Microsoft Flight Simulator",
                             Price = 59.99m,
                             Publisher = "Xbox Game Studios",
@@ -827,14 +835,14 @@ namespace Repository.Migrations
                         new
                         {
                             Id = 10,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8710),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9480),
                             Description = "Don’t miss the game that IGN awarded Best Xbox One Game of 2014, the game that Polygon rated 9 out of 10, and the game that Eurogamer calls “a breath of fresh air.” In Sunset Overdrive, the year is 2027 and Sunset City is under siege. A contaminated energy drink has transformed most of the population into toxic mutants. For many it's the end of the world, but for you it’s a dream come true. Your old boss? Dead. Your boring job? Gone. Transform the open-world into your tactical playground by grinding, vaulting and wall-running across the city while using a devastating, unconventional arsenal. With hyper-agility, unique weapons, and customizable special abilities, Sunset Overdrive rewrites the rules of traditional shooters and delivers an explosive, irreverent, stylish, and totally unique adventure exclusively to Xbox One.",
                             Developer = "Insomniac Games",
                             FavGame = false,
                             ForPC = true,
                             ForPlaySation = false,
                             ForXbox = true,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8710),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9480),
                             Name = "Sunset Overdrive",
                             Price = 29.99m,
                             Publisher = "Microsoft Studios",
@@ -845,14 +853,14 @@ namespace Repository.Migrations
                         new
                         {
                             Id = 11,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8720),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9490),
                             Description = "The little spirit Ori is no stranger to peril, but when a fateful flight puts the owlet Ku in harm’s way, it will take more than bravery to bring a family back together, heal a broken land, and discover Ori’s true destiny. From the creators of the acclaimed action-platformer Ori and the Blind Forest comes an adventure through a beautiful world filled with friends and foes that come to life in stunning, hand-painted artwork. Set to a fully orchestrated original score, Ori and the Will of the Wisps continues the Moon Studios tradition of tightly crafted platforming action and deeply emotional storytelling.",
                             Developer = "Moon Studios",
                             FavGame = false,
                             ForPC = true,
                             ForPlaySation = false,
                             ForXbox = true,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8720),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9490),
                             Name = "Ori and the Will of the Wisps",
                             Price = 29.99m,
                             Publisher = "Xbox Game Studios",
@@ -863,32 +871,32 @@ namespace Repository.Migrations
                         new
                         {
                             Id = 12,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8720),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9490),
                             Description = "Ratchet and Clank are back! Help them stop a robotic emperor intent on conquering cross-dimensional worlds, with their own universe next in the firing line. Witness the evolution of the dream team as they’re joined by Rivet – a Lombax resistance fighter from another dimension.",
                             Developer = "Insomniac Games",
                             FavGame = false,
                             ForPC = true,
                             ForPlaySation = true,
                             ForXbox = false,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8720),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9490),
                             Name = "Ratchet and Clank: Rift Apart",
                             Price = 69.99m,
                             Publisher = "Sony Interactive Entertainment",
                             ReleaseDate = new DateTime(2021, 6, 11, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             SoftDelete = false,
-                            Trailer = "2reK8k8nwBc"
+                            Trailer = "55PRv_e00wc"
                         },
                         new
                         {
                             Id = 13,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8730),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9490),
                             Description = "It’s In Our Blood! Discover a reborn Mortal Kombat Universe created by the Fire God Liu Kang. Mortal Kombat 1 ushers in a new era of the iconic franchise with a new fighting system, game modes, and fatalities!",
                             Developer = "NetherRealm Studios",
                             FavGame = false,
                             ForPC = true,
                             ForPlaySation = true,
                             ForXbox = true,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8730),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9500),
                             Name = "Mortal Kombat 1",
                             Price = 69.99m,
                             Publisher = "Warner Bros. Interactive",
@@ -899,14 +907,14 @@ namespace Repository.Migrations
                         new
                         {
                             Id = 14,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8730),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9500),
                             Description = "Spider-Men Peter Parker and Miles Morales face the ultimate test of strength inside and outside the mask as they fight to save the city, each other and the ones they love, from the monstrous Venom and the dangerous new symbiote threat. Explore an expansive Marvel’s New York with faster web-swinging and the all-new Web Wings, quickly switching between Peter and Miles to experience different stories, epic new abilities and high-tech gear.",
                             Developer = "Insomniac Games",
                             FavGame = false,
                             ForPC = false,
                             ForPlaySation = true,
                             ForXbox = false,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8730),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9500),
                             Name = "Marvel's Spider-Man 2",
                             Price = 69.99m,
                             Publisher = "Sony Interactive Entertainment",
@@ -917,14 +925,14 @@ namespace Repository.Migrations
                         new
                         {
                             Id = 15,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8730),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9500),
                             Description = "Play as Marcus Holloway, a brilliant young hacker living in the birthplace of the tech revolution, the San Francisco Bay Area. Team up with Dedsec, a notorious group of hackers, and expose the hidden dangers of ctOS 2.0, which, in the hands of corrupt corporations, is being wrongfully used to monitor and manipulate citizens on a massive scale.",
                             Developer = "Ubisoft",
                             FavGame = true,
                             ForPC = true,
                             ForPlaySation = true,
                             ForXbox = true,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8730),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9500),
                             Name = "Watch Dogs 2",
                             Price = 49.99m,
                             Publisher = "Ubisoft Entertainment",
@@ -969,307 +977,307 @@ namespace Repository.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9210),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9960),
                             GameId = 1,
                             GenreId = 1,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9210),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9960),
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 2,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9210),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9960),
                             GameId = 1,
                             GenreId = 2,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9210),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9960),
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 3,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9210),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9960),
                             GameId = 2,
                             GenreId = 2,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9210),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9960),
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 4,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9210),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9960),
                             GameId = 2,
                             GenreId = 3,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9210),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9960),
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 5,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9210),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9970),
                             GameId = 3,
                             GenreId = 1,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9220),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9970),
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 6,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9220),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9970),
                             GameId = 3,
                             GenreId = 2,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9220),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9970),
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 7,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9220),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9970),
                             GameId = 3,
                             GenreId = 3,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9220),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9970),
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 8,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9220),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9970),
                             GameId = 4,
                             GenreId = 1,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9220),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9970),
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 9,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9220),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9970),
                             GameId = 4,
                             GenreId = 2,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9220),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9980),
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 10,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9230),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9980),
                             GameId = 5,
                             GenreId = 1,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9230),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9980),
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 11,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9230),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9980),
                             GameId = 5,
                             GenreId = 2,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9230),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9980),
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 12,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9230),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9980),
                             GameId = 6,
                             GenreId = 1,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9230),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9980),
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 13,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9230),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9980),
                             GameId = 6,
                             GenreId = 2,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9230),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9990),
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 14,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9240),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9990),
                             GameId = 7,
                             GenreId = 1,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9240),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9990),
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 15,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9240),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9990),
                             GameId = 7,
                             GenreId = 3,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9240),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9990),
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 16,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9240),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9990),
                             GameId = 8,
                             GenreId = 7,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9240),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9990),
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 17,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9240),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9990),
                             GameId = 9,
                             GenreId = 10,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9240),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9990),
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 18,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9250),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 838, DateTimeKind.Local),
                             GameId = 10,
                             GenreId = 1,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9250),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 838, DateTimeKind.Local),
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 19,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9250),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 838, DateTimeKind.Local),
                             GameId = 10,
                             GenreId = 2,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9250),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 838, DateTimeKind.Local),
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 20,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9250),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 838, DateTimeKind.Local),
                             GameId = 10,
                             GenreId = 3,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9250),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 838, DateTimeKind.Local),
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 21,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9250),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 838, DateTimeKind.Local),
                             GameId = 11,
                             GenreId = 1,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9250),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 838, DateTimeKind.Local),
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 22,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9250),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 838, DateTimeKind.Local),
                             GameId = 11,
                             GenreId = 3,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9250),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 838, DateTimeKind.Local),
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 23,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9260),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 838, DateTimeKind.Local).AddTicks(10),
                             GameId = 11,
                             GenreId = 8,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9260),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 838, DateTimeKind.Local).AddTicks(10),
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 24,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9260),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 838, DateTimeKind.Local).AddTicks(10),
                             GameId = 11,
                             GenreId = 11,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9260),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 838, DateTimeKind.Local).AddTicks(10),
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 25,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9260),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 838, DateTimeKind.Local).AddTicks(10),
                             GameId = 12,
                             GenreId = 1,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9260),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 838, DateTimeKind.Local).AddTicks(10),
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 26,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9260),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 838, DateTimeKind.Local).AddTicks(10),
                             GameId = 12,
                             GenreId = 3,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9260),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 838, DateTimeKind.Local).AddTicks(10),
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 27,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9270),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 838, DateTimeKind.Local).AddTicks(10),
                             GameId = 12,
                             GenreId = 11,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9270),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 838, DateTimeKind.Local).AddTicks(20),
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 28,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9270),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 838, DateTimeKind.Local).AddTicks(20),
                             GameId = 13,
                             GenreId = 2,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9270),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 838, DateTimeKind.Local).AddTicks(20),
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 29,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9270),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 838, DateTimeKind.Local).AddTicks(20),
                             GameId = 13,
                             GenreId = 8,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9270),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 838, DateTimeKind.Local).AddTicks(20),
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 30,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9270),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 838, DateTimeKind.Local).AddTicks(20),
                             GameId = 14,
                             GenreId = 1,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9270),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 838, DateTimeKind.Local).AddTicks(20),
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 31,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9280),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 838, DateTimeKind.Local).AddTicks(20),
                             GameId = 14,
                             GenreId = 2,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9280),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 838, DateTimeKind.Local).AddTicks(30),
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 32,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9280),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 838, DateTimeKind.Local).AddTicks(30),
                             GameId = 15,
                             GenreId = 1,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9280),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 838, DateTimeKind.Local).AddTicks(30),
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 33,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9280),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 838, DateTimeKind.Local).AddTicks(30),
                             GameId = 15,
                             GenreId = 2,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9280),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 838, DateTimeKind.Local).AddTicks(30),
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 34,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9280),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 838, DateTimeKind.Local).AddTicks(30),
                             GameId = 15,
                             GenreId = 3,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9280),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 838, DateTimeKind.Local).AddTicks(30),
                             SoftDelete = false
                         });
                 });
@@ -1311,900 +1319,900 @@ namespace Repository.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8860),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9630),
                             GameId = 1,
                             IsMain = true,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8860),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9630),
                             Name = "God of War.jpeg",
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 2,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8870),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9630),
                             GameId = 1,
                             IsMain = false,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8870),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9630),
                             Name = "God of War Screenshot 1.jpeg",
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 3,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8870),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9630),
                             GameId = 1,
                             IsMain = false,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8870),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9640),
                             Name = "God of War Screenshot 2.jpeg",
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 4,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8870),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9640),
                             GameId = 1,
                             IsMain = false,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8870),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9640),
                             Name = "God of War Screenshot 3.jpeg",
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 5,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8870),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9640),
                             GameId = 1,
                             IsMain = false,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8870),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9640),
                             Name = "God of War Screenshot 4.jpeg",
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 6,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8880),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9640),
                             GameId = 1,
                             IsMain = false,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8880),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9640),
                             Name = "God of War Screenshot 5.jpeg",
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 7,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8880),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9640),
                             GameId = 2,
                             IsMain = true,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8880),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9640),
                             Name = "Battlefield 2042.jpg",
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 8,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8880),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9650),
                             GameId = 2,
                             IsMain = false,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8880),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9650),
                             Name = "Battlefield 2042 Screenshot 1.jpeg",
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 9,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8880),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9650),
                             GameId = 2,
                             IsMain = false,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8880),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9650),
                             Name = "Battlefield 2042 Screenshot 2.jpeg",
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 10,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8890),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9650),
                             GameId = 2,
                             IsMain = false,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8890),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9650),
                             Name = "Battlefield 2042 Screenshot 3.jpeg",
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 11,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8890),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9650),
                             GameId = 2,
                             IsMain = false,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8890),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9650),
                             Name = "Battlefield 2042 Screenshot 4.jpeg",
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 12,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8890),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9660),
                             GameId = 2,
                             IsMain = false,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8890),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9660),
                             Name = "Battlefield 2042 Screenshot 5.jpeg",
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 13,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8890),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9660),
                             GameId = 3,
                             IsMain = true,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8890),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9660),
                             Name = "Uncharted Legacy of Thieves Collection.jpg",
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 14,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8890),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9660),
                             GameId = 3,
                             IsMain = false,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8900),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9660),
                             Name = "Uncharted Legacy of Thieves Collection Screenshot 1.jpeg",
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 15,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8900),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9660),
                             GameId = 3,
                             IsMain = false,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8900),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9660),
                             Name = "Uncharted Legacy of Thieves Collection Screenshot 2.jpeg",
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 16,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8900),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9660),
                             GameId = 3,
                             IsMain = false,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8900),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9670),
                             Name = "Uncharted Legacy of Thieves Collection Screenshot 3.jpeg",
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 17,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8900),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9670),
                             GameId = 3,
                             IsMain = false,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8900),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9670),
                             Name = "Uncharted Legacy of Thieves Collection Screenshot 4.jpeg",
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 18,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8900),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9670),
                             GameId = 3,
                             IsMain = false,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8900),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9670),
                             Name = "Uncharted Legacy of Thieves Collection Screenshot 5.jpeg",
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 19,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8910),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9670),
                             GameId = 4,
                             IsMain = true,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8910),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9670),
                             Name = "Marvel's Spider-Man Remastered.jpg",
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 20,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8910),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9670),
                             GameId = 4,
                             IsMain = false,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8910),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9670),
                             Name = "Marvel's Spider-Man Remastered Screenshot 1.jpeg",
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 21,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8910),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9680),
                             GameId = 4,
                             IsMain = false,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8910),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9680),
                             Name = "Marvel's Spider-Man Remastered Screenshot 2.jpeg",
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 22,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8910),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9680),
                             GameId = 4,
                             IsMain = false,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8910),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9680),
                             Name = "Marvel's Spider-Man Remastered Screenshot 3.jpeg",
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 23,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8920),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9680),
                             GameId = 4,
                             IsMain = false,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8920),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9680),
                             Name = "Marvel's Spider-Man Remastered Screenshot 4.jpeg",
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 24,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8920),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9680),
                             GameId = 4,
                             IsMain = false,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8920),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9680),
                             Name = "Marvel's Spider-Man Remastered Screenshot 5.jpeg",
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 25,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8920),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9680),
                             GameId = 5,
                             IsMain = true,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8920),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9690),
                             Name = "The Last of Us Part 1.jpg",
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 26,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8920),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9690),
                             GameId = 5,
                             IsMain = false,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8920),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9690),
                             Name = "The Last of Us Part 1 Screenshot 1.jpeg",
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 27,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8920),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9690),
                             GameId = 5,
                             IsMain = false,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8920),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9690),
                             Name = "The Last of Us Part 1 Screenshot 2.jpeg",
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 28,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8930),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9690),
                             GameId = 5,
                             IsMain = false,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8930),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9690),
                             Name = "The Last of Us Part 1 Screenshot 3.jpeg",
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 29,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8930),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9690),
                             GameId = 5,
                             IsMain = false,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8930),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9690),
                             Name = "The Last of Us Part 1 Screenshot 4.jpeg",
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 30,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8930),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9700),
                             GameId = 5,
                             IsMain = false,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8930),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9700),
                             Name = "The Last of Us Part 1 Screenshot 5.jpeg",
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 31,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8930),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9700),
                             GameId = 6,
                             IsMain = true,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8930),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9700),
                             Name = "Marvel's Spider-Man Miles Morales.jpeg",
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 32,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8940),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9700),
                             GameId = 6,
                             IsMain = false,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8940),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9700),
                             Name = "Marvel's Spider-Man Miles Morales Screenshot 1.jpeg",
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 33,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8940),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9700),
                             GameId = 6,
                             IsMain = false,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8940),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9700),
                             Name = "Marvel's Spider-Man Miles Morales Screenshot 2.jpeg",
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 34,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8940),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9700),
                             GameId = 6,
                             IsMain = false,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8940),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9710),
                             Name = "Marvel's Spider-Man Miles Morales Screenshot 3.jpeg",
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 35,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8940),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9710),
                             GameId = 6,
                             IsMain = false,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8940),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9710),
                             Name = "Marvel's Spider-Man Miles Morales Screenshot 4.jpeg",
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 36,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8940),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9710),
                             GameId = 6,
                             IsMain = false,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8950),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9710),
                             Name = "Marvel's Spider-Man Miles Morales Screenshot 5.jpeg",
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 37,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8950),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9710),
                             GameId = 7,
                             IsMain = true,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8950),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9710),
                             Name = "Halo Infinite.png",
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 38,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8950),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9710),
                             GameId = 7,
                             IsMain = false,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8950),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9710),
                             Name = "Halo Infinite Screenshot 1.jpeg",
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 39,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8950),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9720),
                             GameId = 7,
                             IsMain = false,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8950),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9720),
                             Name = "Halo Infinite Screenshot 2.jpeg",
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 40,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8950),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9720),
                             GameId = 7,
                             IsMain = false,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8960),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9720),
                             Name = "Halo Infinite Screenshot 3.png",
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 41,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8960),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9720),
                             GameId = 7,
                             IsMain = false,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8960),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9720),
                             Name = "Halo Infinite Screenshot 4.png",
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 42,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8960),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9720),
                             GameId = 7,
                             IsMain = false,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8960),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9720),
                             Name = "Halo Infinite Screenshot 5.jpeg",
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 43,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8960),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9730),
                             GameId = 8,
                             IsMain = true,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8960),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9730),
                             Name = "Forza Motorsport 7.jpg",
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 44,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8960),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9730),
                             GameId = 8,
                             IsMain = false,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8960),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9730),
                             Name = "Forza Motorsport 7 Screenshot 1.jpeg",
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 45,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8970),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9730),
                             GameId = 8,
                             IsMain = false,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8970),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9730),
                             Name = "Forza Motorsport 7 Screenshot 2.jpeg",
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 46,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8970),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9730),
                             GameId = 8,
                             IsMain = false,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8970),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9730),
                             Name = "Forza Motorsport 7 Screenshot 3.jpeg",
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 47,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8970),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9730),
                             GameId = 8,
                             IsMain = false,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8970),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9740),
                             Name = "Forza Motorsport 7 Screenshot 4.jpeg",
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 48,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8970),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9740),
                             GameId = 8,
                             IsMain = false,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8970),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9740),
                             Name = "Forza Motorsport 7 Screenshot 5.jpeg",
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 49,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8970),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9740),
                             GameId = 9,
                             IsMain = true,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8970),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9740),
                             Name = "Microsoft Flight Simulator.jpg",
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 50,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8980),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9740),
                             GameId = 9,
                             IsMain = false,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8980),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9740),
                             Name = "Microsoft Flight Simulator Screenshot 1.jpeg",
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 51,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8980),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9740),
                             GameId = 9,
                             IsMain = false,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8980),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9740),
                             Name = "Microsoft Flight Simulator Screenshot 2.jpeg",
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 52,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8980),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9750),
                             GameId = 9,
                             IsMain = false,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8980),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9750),
                             Name = "Microsoft Flight Simulator Screenshot 3.jpeg",
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 53,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8980),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9750),
                             GameId = 9,
                             IsMain = false,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8980),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9750),
                             Name = "Microsoft Flight Simulator Screenshot 4.jpeg",
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 54,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8990),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9750),
                             GameId = 9,
                             IsMain = false,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8990),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9750),
                             Name = "Microsoft Flight Simulator Screenshot 5.jpeg",
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 55,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8990),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9750),
                             GameId = 10,
                             IsMain = true,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8990),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9750),
                             Name = "Sunset Overdrive.jpg",
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 56,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8990),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9750),
                             GameId = 10,
                             IsMain = false,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8990),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9760),
                             Name = "Sunset Overdrive Screenshot 1.jpeg",
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 57,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8990),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9760),
                             GameId = 10,
                             IsMain = false,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8990),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9760),
                             Name = "Sunset Overdrive Screenshot 2.jpeg",
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 58,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9000),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9760),
                             GameId = 10,
                             IsMain = false,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9000),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9760),
                             Name = "Sunset Overdrive Screenshot 3.jpeg",
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 59,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9000),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9760),
                             GameId = 10,
                             IsMain = false,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9000),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9760),
                             Name = "Sunset Overdrive Screenshot 4.jpeg",
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 60,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9000),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9760),
                             GameId = 10,
                             IsMain = false,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9000),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9760),
                             Name = "Sunset Overdrive Screenshot 5.jpeg",
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 61,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9000),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9770),
                             GameId = 11,
                             IsMain = true,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9000),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9770),
                             Name = "Ori and the Will of the Wisps.jpg",
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 62,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9000),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9770),
                             GameId = 11,
                             IsMain = false,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9010),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9770),
                             Name = "Ori and the Will of the Wisps Screenshot 1.png",
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 63,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9010),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9770),
                             GameId = 11,
                             IsMain = false,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9010),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9770),
                             Name = "Ori and the Will of the Wisps Screenshot 2.png",
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 64,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9010),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9770),
                             GameId = 11,
                             IsMain = false,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9010),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9770),
                             Name = "Ori and the Will of the Wisps Screenshot 3.jpeg",
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 65,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9010),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9780),
                             GameId = 11,
                             IsMain = false,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9010),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9780),
                             Name = "Ori and the Will of the Wisps Screenshot 4.jpeg",
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 66,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9010),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9780),
                             GameId = 11,
                             IsMain = false,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9010),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9780),
                             Name = "Ori and the Will of the Wisps Screenshot 5.jpeg",
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 67,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9020),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9780),
                             GameId = 12,
                             IsMain = true,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9020),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9780),
                             Name = "Ratchet and Clank Rift Apart.jpg",
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 68,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9020),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9780),
                             GameId = 12,
                             IsMain = false,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9020),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9780),
                             Name = "Ratchet and Clank Rift Apart Screenshot 1.jpeg",
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 69,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9020),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9780),
                             GameId = 12,
                             IsMain = false,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9020),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9790),
                             Name = "Ratchet and Clank Rift Apart Screenshot 2.jpeg",
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 70,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9020),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9790),
                             GameId = 12,
                             IsMain = false,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9020),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9790),
                             Name = "Ratchet and Clank Rift Apart Screenshot 3.jpeg",
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 71,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9020),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9790),
                             GameId = 12,
                             IsMain = false,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9030),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9790),
                             Name = "Ratchet and Clank Rift Apart Screenshot 4.jpeg",
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 72,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9030),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9790),
                             GameId = 12,
                             IsMain = false,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9030),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9790),
                             Name = "Ratchet and Clank Rift Apart Screenshot 5.webp",
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 73,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9030),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9790),
                             GameId = 13,
                             IsMain = true,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9030),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9790),
                             Name = "Mortal Kombat 1.png",
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 74,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9030),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9800),
                             GameId = 13,
                             IsMain = false,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9030),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9800),
                             Name = "Mortal Kombat 1 Screenshot 1.jpeg",
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 75,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9030),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9800),
                             GameId = 13,
                             IsMain = false,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9030),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9800),
                             Name = "Mortal Kombat 1 Screenshot 2.jpeg",
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 76,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9040),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9800),
                             GameId = 13,
                             IsMain = false,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9040),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9800),
                             Name = "Mortal Kombat 1 Screenshot 3.jpeg",
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 77,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9040),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9800),
                             GameId = 13,
                             IsMain = false,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9040),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9800),
                             Name = "Mortal Kombat 1 Screenshot 4.jpeg",
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 78,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9040),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9800),
                             GameId = 13,
                             IsMain = false,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9040),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9800),
                             Name = "Mortal Kombat 1 Screenshot 5.jpeg",
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 79,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9040),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9810),
                             GameId = 14,
                             IsMain = true,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9040),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9810),
                             Name = "Marvel's Spider-Man 2.jpeg",
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 80,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9050),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9810),
                             GameId = 14,
                             IsMain = false,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9050),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9810),
                             Name = "Marvel's Spider-Man 2 Screenshot 1.jpg",
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 81,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9050),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9810),
                             GameId = 14,
                             IsMain = false,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9050),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9810),
                             Name = "Marvel's Spider-Man 2 Screenshot 2.jpg",
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 82,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9050),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9810),
                             GameId = 14,
                             IsMain = false,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9050),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9810),
                             Name = "Marvel's Spider-Man 2 Screenshot 3.jpg",
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 83,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9050),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9820),
                             GameId = 14,
                             IsMain = false,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9050),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9820),
                             Name = "Marvel's Spider-Man 2 Screenshot 4.jpg",
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 84,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9060),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9820),
                             GameId = 14,
                             IsMain = false,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9060),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9820),
                             Name = "Marvel's Spider-Man 2 Screenshot 5.jpg",
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 85,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9060),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9820),
                             GameId = 15,
                             IsMain = true,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9060),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9820),
                             Name = "Watch Dogs 2.png",
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 86,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9060),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9820),
                             GameId = 15,
                             IsMain = false,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9060),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9820),
                             Name = "Watch Dogs 2 Screenshot 1.webp",
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 87,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9060),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9820),
                             GameId = 15,
                             IsMain = false,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9060),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9830),
                             Name = "Watch Dogs 2 Screenshot 2.jpeg",
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 88,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9070),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9830),
                             GameId = 15,
                             IsMain = false,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9070),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9830),
                             Name = "Watch Dogs 2 Screenshot 3.jpeg",
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 89,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9070),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9830),
                             GameId = 15,
                             IsMain = false,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9070),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9830),
                             Name = "Watch Dogs 2 Screenshot 4.jpeg",
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 90,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9070),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9830),
                             GameId = 15,
                             IsMain = false,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9070),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9830),
                             Name = "Watch Dogs 2 Screenshot 5.jpeg",
                             SoftDelete = false
                         });
@@ -2245,333 +2253,333 @@ namespace Repository.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8750),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9520),
                             GameId = 1,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8750),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9520),
                             PlatformId = 1,
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 2,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8750),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9520),
                             GameId = 1,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8750),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9520),
                             PlatformId = 5,
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 3,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8750),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9520),
                             GameId = 2,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8750),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9530),
                             PlatformId = 1,
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 4,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8760),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9530),
                             GameId = 2,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8760),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9530),
                             PlatformId = 2,
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 5,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8760),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9530),
                             GameId = 2,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8760),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9530),
                             PlatformId = 3,
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 6,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8760),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9530),
                             GameId = 2,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8760),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9530),
                             PlatformId = 4,
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 7,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8760),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9530),
                             GameId = 2,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8760),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9530),
                             PlatformId = 5,
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 8,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8770),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9530),
                             GameId = 3,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8770),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9540),
                             PlatformId = 2,
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 9,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8770),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9540),
                             GameId = 3,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8770),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9540),
                             PlatformId = 5,
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 10,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8770),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9540),
                             GameId = 4,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8770),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9540),
                             PlatformId = 2,
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 11,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8770),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9540),
                             GameId = 4,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8770),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9540),
                             PlatformId = 5,
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 12,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8780),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9540),
                             GameId = 5,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8780),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9540),
                             PlatformId = 2,
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 13,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8780),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9550),
                             GameId = 5,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8780),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9550),
                             PlatformId = 5,
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 14,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8780),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9550),
                             GameId = 6,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8780),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9550),
                             PlatformId = 1,
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 15,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8780),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9550),
                             GameId = 6,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8780),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9550),
                             PlatformId = 2,
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 16,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8780),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9550),
                             GameId = 6,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8780),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9550),
                             PlatformId = 5,
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 17,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8790),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9560),
                             GameId = 7,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8790),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9560),
                             PlatformId = 3,
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 18,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8790),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9560),
                             GameId = 7,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8790),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9560),
                             PlatformId = 4,
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 19,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8790),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9560),
                             GameId = 7,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8790),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9560),
                             PlatformId = 5,
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 20,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8790),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9560),
                             GameId = 8,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8790),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9560),
                             PlatformId = 3,
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 21,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8800),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9560),
                             GameId = 8,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8800),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9560),
                             PlatformId = 5,
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 22,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8800),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9570),
                             GameId = 9,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8800),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9570),
                             PlatformId = 4,
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 23,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8800),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9570),
                             GameId = 9,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8800),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9570),
                             PlatformId = 5,
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 24,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8800),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9570),
                             GameId = 10,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8800),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9570),
                             PlatformId = 3,
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 25,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8800),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9570),
                             GameId = 10,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8810),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9570),
                             PlatformId = 5,
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 26,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8810),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9570),
                             GameId = 11,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8810),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9570),
                             PlatformId = 3,
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 27,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8810),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9580),
                             GameId = 11,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8810),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9580),
                             PlatformId = 4,
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 28,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8810),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9580),
                             GameId = 11,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8810),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9580),
                             PlatformId = 5,
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 29,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8810),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9580),
                             GameId = 12,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8810),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9580),
                             PlatformId = 2,
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 30,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8820),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9580),
                             GameId = 12,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8820),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9580),
                             PlatformId = 5,
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 31,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8820),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9590),
                             GameId = 13,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8820),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9590),
                             PlatformId = 2,
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 32,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8820),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9590),
                             GameId = 13,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8820),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9590),
                             PlatformId = 4,
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 33,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8820),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9590),
                             GameId = 13,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8820),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9590),
                             PlatformId = 5,
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 34,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8820),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9590),
                             GameId = 14,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8820),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9590),
                             PlatformId = 2,
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 35,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8830),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9590),
                             GameId = 15,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8830),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9600),
                             PlatformId = 1,
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 36,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8830),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9600),
                             GameId = 15,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8830),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9600),
                             PlatformId = 3,
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 37,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8830),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9600),
                             GameId = 15,
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(8830),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9600),
                             PlatformId = 5,
                             SoftDelete = false
                         });
@@ -2606,88 +2614,88 @@ namespace Repository.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9170),
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9170),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9920),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9930),
                             Name = "Adventure",
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 2,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9170),
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9170),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9930),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9930),
                             Name = "Action",
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 3,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9180),
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9180),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9930),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9930),
                             Name = "Shooter",
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 4,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9180),
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9180),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9930),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9930),
                             Name = "RPG",
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 5,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9180),
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9180),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9930),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9930),
                             Name = "Strategy",
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 6,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9180),
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9180),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9940),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9940),
                             Name = "Survival",
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 7,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9180),
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9180),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9940),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9940),
                             Name = "Sports",
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 8,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9190),
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9190),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9940),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9940),
                             Name = "Fighting",
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 9,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9190),
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9190),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9940),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9940),
                             Name = "Horror",
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 10,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9190),
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9190),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9940),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9940),
                             Name = "Simulation",
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 11,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9190),
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9190),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9950),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9950),
                             Name = "Platformer",
                             SoftDelete = false
                         });
@@ -2722,40 +2730,40 @@ namespace Repository.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9150),
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9150),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9910),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9910),
                             Name = "PlayStation 4",
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 2,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9150),
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9150),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9910),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9910),
                             Name = "PlayStation 5",
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 3,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9160),
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9160),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9910),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9910),
                             Name = "Xbox One",
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 4,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9160),
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9160),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9910),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9910),
                             Name = "Xbox Series X | S",
                             SoftDelete = false
                         },
                         new
                         {
                             Id = 5,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9160),
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9160),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9910),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9920),
                             Name = "PC",
                             SoftDelete = false
                         });
@@ -2794,81 +2802,81 @@ namespace Repository.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9120),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9880),
                             Key = "HomeGames",
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9120),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9880),
                             SoftDelete = false,
                             Value = "Games"
                         },
                         new
                         {
                             Id = 2,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9120),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9880),
                             Key = "HomeRecentBlogs",
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9120),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9880),
                             SoftDelete = false,
                             Value = "Recent Publications"
                         },
                         new
                         {
                             Id = 3,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9120),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9880),
                             Key = "HomeSubscribe",
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9120),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9880),
                             SoftDelete = false,
                             Value = "Subscribe to Our Newsletter"
                         },
                         new
                         {
                             Id = 4,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9130),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9880),
                             Key = "HomeDevelopersBG",
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9130),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9880),
                             SoftDelete = false,
                             Value = "Developers BG.jpeg"
                         },
                         new
                         {
                             Id = 5,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9130),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9880),
                             Key = "HomeAdventages",
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9130),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9890),
                             SoftDelete = false,
                             Value = "Why Users Trust Us"
                         },
                         new
                         {
                             Id = 6,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9130),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9890),
                             Key = "GameDetailsAbout",
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9130),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9890),
                             SoftDelete = false,
                             Value = "About the Game"
                         },
                         new
                         {
                             Id = 7,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9130),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9890),
                             Key = "GameDetailsVisuals",
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9130),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9890),
                             SoftDelete = false,
                             Value = "Visuals"
                         },
                         new
                         {
                             Id = 8,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9140),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9890),
                             Key = "BlogDetailsLatestBlogs",
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9140),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9890),
                             SoftDelete = false,
                             Value = "Latest Posts"
                         },
                         new
                         {
                             Id = 9,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9140),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9890),
                             Key = "BlogDetailsSocial",
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9140),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9890),
                             SoftDelete = false,
                             Value = "Follow Us"
                         });
@@ -2907,36 +2915,36 @@ namespace Repository.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9100),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9860),
                             Key = "Icon",
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9100),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9860),
                             SoftDelete = false,
                             Value = "icon.png"
                         },
                         new
                         {
                             Id = 2,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9100),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9860),
                             Key = "Logo",
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9100),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9860),
                             SoftDelete = false,
                             Value = "logo.svg"
                         },
                         new
                         {
                             Id = 3,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9110),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9860),
                             Key = "FooterBG",
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9110),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9860),
                             SoftDelete = false,
                             Value = "Footer BG.jpg"
                         },
                         new
                         {
                             Id = 4,
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9110),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9870),
                             Key = "Copyright",
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9110),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 837, DateTimeKind.Local).AddTicks(9870),
                             SoftDelete = false,
                             Value = "© 2023 GameLib"
                         });
@@ -2984,10 +2992,10 @@ namespace Repository.Migrations
                         {
                             Id = 1,
                             Color = "#6441a5",
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9300),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 838, DateTimeKind.Local).AddTicks(50),
                             Icon = "<i class=\"fa-brands fa-twitch\"></i>",
                             Link = "https://www.twitch.tv",
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9300),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 838, DateTimeKind.Local).AddTicks(50),
                             Name = "Twitch",
                             SoftDelete = false
                         },
@@ -2995,10 +3003,10 @@ namespace Repository.Migrations
                         {
                             Id = 2,
                             Color = "red",
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9300),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 838, DateTimeKind.Local).AddTicks(50),
                             Icon = "<i class=\"fa-brands fa-youtube\"></i>",
                             Link = "https://www.youtube.com",
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9300),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 838, DateTimeKind.Local).AddTicks(60),
                             Name = "YouTube",
                             SoftDelete = false
                         },
@@ -3006,10 +3014,10 @@ namespace Repository.Migrations
                         {
                             Id = 3,
                             Color = "#7289da",
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9310),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 838, DateTimeKind.Local).AddTicks(60),
                             Icon = "<i class=\"fa-brands fa-discord\"></i>",
                             Link = "https://discord.com",
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9310),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 838, DateTimeKind.Local).AddTicks(60),
                             Name = "Discord",
                             SoftDelete = false
                         },
@@ -3017,10 +3025,10 @@ namespace Repository.Migrations
                         {
                             Id = 4,
                             Color = "#00acee",
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9310),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 838, DateTimeKind.Local).AddTicks(60),
                             Icon = "<i class=\"fa-brands fa-twitter\"></i>",
                             Link = "https://twitter.com",
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9310),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 838, DateTimeKind.Local).AddTicks(60),
                             Name = "Twitter",
                             SoftDelete = false
                         },
@@ -3028,10 +3036,10 @@ namespace Repository.Migrations
                         {
                             Id = 5,
                             Color = "#3b5998",
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9310),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 838, DateTimeKind.Local).AddTicks(80),
                             Icon = "<i class=\"fa-brands fa-facebook-f\"></i>",
                             Link = "https://www.facebook.com",
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9310),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 838, DateTimeKind.Local).AddTicks(80),
                             Name = "FaceBook",
                             SoftDelete = false
                         },
@@ -3039,10 +3047,10 @@ namespace Repository.Migrations
                         {
                             Id = 6,
                             Color = "#bc2a8d",
-                            CreatedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9310),
+                            CreatedAt = new DateTime(2023, 7, 2, 16, 18, 48, 838, DateTimeKind.Local).AddTicks(80),
                             Icon = "<i class=\"fa-brands fa-instagram\"></i>",
                             Link = "https://www.instagram.com",
-                            ModifiedAt = new DateTime(2023, 6, 30, 19, 42, 12, 241, DateTimeKind.Local).AddTicks(9320),
+                            ModifiedAt = new DateTime(2023, 7, 2, 16, 18, 48, 838, DateTimeKind.Local).AddTicks(80),
                             Name = "Instagram",
                             SoftDelete = false
                         });

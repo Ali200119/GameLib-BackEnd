@@ -44,15 +44,31 @@
                     <span>@Model.Game.Price</span>
                 </div>
 
-                <div class="add-to-cart">
-                    <button>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        Add to Cart
-                    </button>
-                </div>
+                @if (Model.Game.ReleaseDate > DateTime.Now)
+                {
+                    <div class="coming-soon">
+                        <button>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            Coming Soon
+                        </button>
+                    </div>
+                }
+
+                else
+                {
+                    <div class="add-to-cart">
+                        <button>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            Add to Cart
+                        </button>
+                    </div>
+                }
             </div>
         </div>
     </section>

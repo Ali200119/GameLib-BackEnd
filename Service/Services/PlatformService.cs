@@ -21,5 +21,23 @@ namespace Service.Services
         public async Task<IEnumerable<Platform>> GetAllAsync() => await _platformRepo.GetAllAsync();
 
         public async Task<IEnumerable<Platform>> GetAllWithIncludesAsync() => await _platformRepo.GetAllWithFullDataAsync();
+
+        public async Task<IEnumerable<Game>> FilterGames(int? id)
+        {
+            if (id is null) throw new ArgumentNullException();
+
+            List<Game> games = new List<Game>();
+
+            Platform platform = await _platformRepo.GetByIdWithFullDataAsync(id);
+
+            if (platform is null) throw new NullReferenceException();
+
+            foreach (var game in platform.GamePlatforms.Select(gp => gp.Game))
+            {
+                games.Add(game);
+            }
+
+            return games;
+        }
     }
 }

@@ -24,37 +24,17 @@
 
         <div class="sort">
             <select>
-                <option>Sort by name</option>
-                <option>Sort by recent</option>
-                <option>Sort by price: low to high</option>
-                <option>Sort by price: high to low</option>
+                <option value="name">Sort by name</option>
+                <option value="recent">Sort by recent</option>
+                <option value="low price to high">Sort by price: low to high</option>
+                <option value="high price to low">Sort by price: high to low</option>
             </select>
 
             <i class="fa-solid fa-chevron-down"></i>
         </div>
 
         <div class="items">
-            @foreach (var game in Model.Games)
-            {
-                <div class="item">
-                    <a class="image" asp-controller="Shop" asp-action="Details" asp-route-id="@game.Id">
-                        <img src="~/assets/img/games/@game.GameImages.FirstOrDefault(gi => gi.IsMain).Name">
-                    </a>
-
-                    <a class="name" asp-controller="Shop" asp-action="Details" asp-route-id="@game.Id">
-                        <h3>@game.Name</h3>
-                    </a>
-
-                    <div class="price-view">
-                        <div class="price">
-                            <span>$</span>
-                            <span>@game.Price</span>
-                        </div>
-
-                        <a class="view" asp-controller="Shop" asp-action="Details" asp-route-id="@game.Id">View Game</a>
-                    </div>
-                </div>
-            }
+            <partial name="_GamesPartial" model="Model.Games"/>
         </div>
     </section>
 
@@ -73,7 +53,7 @@
             <h3 class="title">Latest Games</h3>
 
             <div class="items">
-                @foreach (var game in Model.Games.OrderByDescending(g => g.CreatedAt).Take(5))
+                @foreach (var game in Model.Games.OrderByDescending(g => g.ReleaseDate).Take(5))
                 {
                     <div class="item">
                         <a asp-controller="Shop" asp-action="Details" asp-route-id="@game.Id" class="image">
@@ -102,7 +82,7 @@
             {
                 <div class="platform">
                     <i class="fa-solid fa-circle"></i>
-                    <h4 class="name">@platform.Name</h4>
+                    <h4 data-id="@platform.Id" class="name">@platform.Name</h4>
                     <span>(@platform.GamePlatforms.Select(gp => gp.Game).Count())</span>
                 </div>
             }
@@ -114,7 +94,7 @@
             <div class="items">
                 @foreach (var genre in Model.Genres)
                 {
-                    <h4 class="genre">@genre.Name</h4>
+                    <h4 data-id="@genre.Id" class="genre">@genre.Name</h4>
                 }
             </div>
         </div>
