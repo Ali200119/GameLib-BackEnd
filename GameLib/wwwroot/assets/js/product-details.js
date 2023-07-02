@@ -32,18 +32,30 @@ window.addEventListener("scroll", function () {
 
 // Add to Cart
 
-document.querySelector("#cover-key-art-options #key-art-options .options button").addEventListener("click", function () {
-    let alert = document.getElementById("game-added-alert");
+if (document.querySelector("#cover-key-art-options #key-art-options .options").lastElementChild.classList.contains("add-to-cart")) {
+    document.querySelector("#cover-key-art-options #key-art-options .options .add-to-cart button").addEventListener("click", function () {
+        let alert = document.getElementById("game-added-alert");
 
-    alert.innerText = `${this.parentNode.parentNode.firstElementChild.innerText} has been added to the cart`;
-    alert.style.opacity = 1;
-    alert.style.pointerEvents = "unset";
+        alert.innerText = `${this.parentNode.parentNode.firstElementChild.innerText} has been added to the cart`;
+        alert.style.opacity = 1;
+        alert.style.pointerEvents = "unset";
 
-    setTimeout(function () {
-        alert.style.opacity = 0;
-        alert.style.pointerEvents = "none";
-    }, 3000);
-});
+        setTimeout(function () {
+            alert.style.opacity = 0;
+            alert.style.pointerEvents = "none";
+        }, 3000);
+    });
+}
+
+else {
+    document.querySelector("#cover-key-art-options #key-art-options .options .coming-soon button").addEventListener("click", function () {
+        Swal.fire(
+            'Coming soon',
+            `${this.parentNode.parentNode.firstElementChild.innerText} hasn't been released yet`,
+            'info'
+        )
+    });
+}
 
 
 

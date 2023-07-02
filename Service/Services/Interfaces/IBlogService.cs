@@ -8,6 +8,7 @@ namespace Service.Services.Interfaces
 		Task<IEnumerable<Blog>> GetAllWithIncludesAsync();
 		Task<Blog> GetByIdWithIncludesAsync(int? id);
 		Task<IEnumerable<Blog>> GetPaginatedDatasAsync(int page, int take);
-		Task<int> GetCountAsync();
+        Task<IEnumerable<Blog>> GetByNameWithIncludesAsync(string searchText);
+        Task<int> GetCountAsync();
     }
 }

@@ -1642,14 +1642,14 @@ namespace Repository.Data
                 new SectionHeader
                 {
                     Id = 8,
-                    Key = "BlogDetailsLatestBlogs",
+                    Key = "BlogLatestBlogs",
                     Value = "Latest Posts"
                 },
 
                 new SectionHeader
                 {
                     Id = 9,
-                    Key = "BlogDetailsSocial",
+                    Key = "Social",
                     Value = "Follow Us"
                 }
             );

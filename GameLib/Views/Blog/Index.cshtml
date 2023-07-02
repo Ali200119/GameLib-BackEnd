@@ -39,14 +39,14 @@
                 <h3 class="title">Search</h3>
 
                 <div class="search-input">
-                    <input type="text" placeholder="Search blogs">
+                    <input type="text" placeholder="Search by blogs">
 
                     <i class="fa-solid fa-magnifying-glass circle"></i>
                 </div>
             </div>
 
             <div class="latest-posts">
-                <h3 class="title">Latest Posts</h3>
+                <h3 class="title">@Model.SectionHeaders["BlogLatestBlogs"]</h3>
 
                 <div class="posts">
                     @foreach (var blog in Model.Blogs.OrderByDescending(b => b.CreatedAt).Take(4))
@@ -70,7 +70,7 @@
             </div>
 
             <div class="social">
-                <h3 class="title">Follow us</h3>
+                <h3 class="title">@Model.SectionHeaders["Social"]</h3>
                 
                 <div class="items">
                     @foreach (var social in Model.Socials)

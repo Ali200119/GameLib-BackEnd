@@ -30,5 +30,12 @@ namespace Service.Services
         }
 
         public async Task<int> GetCountAsync() => await _blogRepo.GetCountAsync();
+
+        public async Task<IEnumerable<Blog>> GetByNameWithIncludesAsync(string searchText)
+        {
+            if (searchText is null) throw new ArgumentNullException();
+
+            return await _blogRepo.SearchByNameAsync(searchText);
+        }
     }
 }
