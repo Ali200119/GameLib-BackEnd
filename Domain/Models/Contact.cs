@@ -6,7 +6,7 @@ namespace Domain.Models
 {
 	public class Contact: BaseEntity
 	{
-		[Required]
+		[Required, Display(Name = "Full Name")]
 		public string FullName { get; set; }
 
 		[Required, DataType(DataType.EmailAddress)]

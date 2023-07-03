@@ -1,4 +1,6 @@
-﻿@{
+﻿@model ContactVM
+
+@{
     ViewBag.Title = "Contact Us";
 }
 
@@ -25,24 +27,30 @@
 <section id="devide">
     <div class="container">
         <section id="social">
-            <h1 class="title">Follow us</h1>
+            <h1 class="title">@Model.SectionHeaders["Social"]</h1>
 
             <div class="items">
-                <a href="#" class="item" style="background-color: blue;">
-                    <i class="fa-brands fa-facebook"></i>
-                </a>
+                @foreach (var social in Model.Socials)
+                {
+                    <a href="@social.Link" class="item" style="background-color: @social.Color;">
+                        @Html.Raw(social.Icon)
+                    </a>
+                }
             </div>
         </section>
 
         <section id="form">
-            <form>
-                <input type="text" placeholder="Full Name *">
+            <form method="post" asp-controller="Contact" asp-action="Index">
+                <input asp-for="@Model.Contact.FullName" autocomplete="off" placeholder="Full Name *">
+                <span asp-validation-for="@Model.Contact.FullName" style="color: red;"></span>
 
-                <input type="email" placeholder="Email *">
+                <input asp-for="@Model.Contact.Email" autocomplete="off" placeholder="Email *">
+                <span asp-validation-for="@Model.Contact.Email" style="color: red;"></span>
 
-                <textarea rows="7" placeholder="Message *"></textarea>
+                <textarea asp-for="@Model.Contact.Message" rows="7" placeholder="Message *"></textarea>
+                <span asp-validation-for="@Model.Contact.Message" style="color: red; display: block;"></span>
 
-                <button class="btn-shine">Submit</button>
+                <button type="submit" class="btn-shine">Submit</button>
             </form>
         </section>
     </div>
@@ -50,4 +58,5 @@
 
 @section Scripts {
     <script src="~/assets/js/contact.js"></script>
+    <partial name="_ValidationScriptsPartial" />
 }

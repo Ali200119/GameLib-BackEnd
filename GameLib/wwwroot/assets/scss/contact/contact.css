@@ -210,6 +210,9 @@ footer .social .social-list {
 footer .social .social-list .btn-shine {
   padding: 30px;
   font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 footer .copyright {
   height: 80px;
@@ -300,13 +303,14 @@ main #devide .container #social .items .item {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 40px;
-  height: 40px;
+  width: 45px;
+  height: 45px;
   border-radius: 50%;
   text-decoration: none;
 }
 main #devide .container #social .items .item i {
   color: white;
+  font-size: 20px;
 }
 main #devide .container #form {
   width: 45%;
@@ -320,11 +324,12 @@ main #devide .container #form form input {
   color: white;
   padding: 15px;
   transition: 0.2s all;
+  font-size: 14px;
 }
 main #devide .container #form form input:focus {
   border-color: white;
 }
-main #devide .container #form form input:nth-child(2) {
+main #devide .container #form form input:nth-child(3) {
   margin-top: 30px;
 }
 main #devide .container #form form textarea {

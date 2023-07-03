@@ -1,11 +1,12 @@
 ﻿using System;
 using System.Diagnostics.Metrics;
 using Domain.Models;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace Repository.Data
 {
-	public class AppDbContext: DbContext
+	public class AppDbContext: IdentityDbContext<AppUser>
 	{
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
 
@@ -13,6 +14,7 @@ namespace Repository.Data
         public DbSet<Blog> Blogs { get; set; }
         public DbSet<BlogAuthor> BlogAuthors { get; set; }
         public DbSet<BlogImage> BlogImages { get; set; }
+        public DbSet<Contact> Contacts { get; set; }
         public DbSet<Developer> Developers { get; set; }
         public DbSet<Game> Games { get; set; }
         public DbSet<GameImage> GameImages { get; set; }
@@ -34,6 +36,7 @@ namespace Repository.Data
             modelBuilder.Entity<Blog>().HasQueryFilter(b => !b.SoftDelete);
             modelBuilder.Entity<BlogAuthor>().HasQueryFilter(ba => !ba.SoftDelete);
             modelBuilder.Entity<BlogImage>().HasQueryFilter(bi => !bi.SoftDelete);
+            modelBuilder.Entity<Contact>().HasQueryFilter(c => !c.SoftDelete);
             modelBuilder.Entity<Developer>().HasQueryFilter(d => !d.SoftDelete);
             modelBuilder.Entity<Game>().HasQueryFilter(g => !g.SoftDelete);
             modelBuilder.Entity<GameImage>().HasQueryFilter(gi => !gi.SoftDelete);
@@ -1651,6 +1654,13 @@ namespace Repository.Data
                     Id = 9,
                     Key = "Social",
                     Value = "Follow Us"
+                },
+
+                new SectionHeader
+                {
+                    Id = 10,
+                    Key = "ContactBG",
+                    Value = "Contact BG.jpeg"
                 }
             );
 
