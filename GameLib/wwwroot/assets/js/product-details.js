@@ -127,15 +127,53 @@ window.addEventListener("scroll", function () {
 
 
 
+// Comments' Count
+
+commentsCount();
+
+
+
+// Check Comment
+
+document.querySelector("#comments form textarea").addEventListener("keyup", function () {
+    if (this.value != "") {
+        this.nextElementSibling.style.opacity = 1;
+        this.nextElementSibling.style.pointerEvents = "unset";
+    }
+
+    else {
+        this.nextElementSibling.style.opacity = 0;
+        this.nextElementSibling.style.pointerEvents = "none";
+    }
+});
+
+
+
 // Delete Comment
 
-let removeCommentBtns = document.querySelectorAll("#comments .items .item i");
+if (document.querySelector("#comments .items").children.length != 0) {
+    let comments = document.querySelectorAll("#comments .items .item");
 
-for (const remove of removeCommentBtns) {
-    remove.addEventListener("click", function () {
-        this.parentNode.remove();
-    });
+    for (const comment of comments) {
+        if (comment.lastElementChild.classList.contains("delete")) {
+            comment.lastElementChild.addEventListener("click", function () {
+                let commentId = this.getAttribute("data-commentId");
+                let element = this.parentNode;
+                let url = `/Shop/DeleteComment?id=${commentId}`;
+
+                fetch(url, {
+                    method: "POST"
+                }).then(function (response) {
+                    if (response.ok) {
+                        element.remove();
+                        commentsCount();
+                    }
+                });
+            });
+        }
+    }
 }
+
 
 
 
@@ -146,4 +184,10 @@ function appearance(element) {
     element.style.transform = "unset";
     element.style.opacity = 1;
     element.style.pointerEvents = "unset";
+}
+
+function commentsCount() {
+    let count = document.querySelector("#comments .items").children.length;
+
+    document.querySelector("#comments .title span").innerText = count;
 }

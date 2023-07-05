@@ -56,6 +56,23 @@ document.addEventListener("click", function(event) {
 
 
 
+// Logout
+
+if (document.querySelector("header .user-panel .user .login-register").lastElementChild.classList.contains("logout")) {
+    document.querySelector("header .user-panel .user .login-register").lastElementChild.addEventListener("click", function () {
+        let url = "/Account/Logout";
+
+        fetch(url, {
+            method: "POST"
+        }).then(function (response) {
+            if (response.ok) {
+                window.location.reload();
+            }
+        })
+    });
+}
+
+
 
 
 // Functions

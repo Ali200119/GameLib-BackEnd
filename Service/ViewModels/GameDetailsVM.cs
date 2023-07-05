@@ -7,5 +7,7 @@ namespace Service.ViewModels
 	{
 		public Dictionary<string, string> SectionHeaders { get; set; }
 		public Game Game { get; set; }
+		public IEnumerable<GameComment> Comments { get; set; }
+		public GameComment GameComment { get; set; }
 	}
 }

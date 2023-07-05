@@ -748,6 +748,8 @@ main #comments .container .post-comment .btn-shine {
   font-size: 12px;
   background-color: #d31c3d;
   cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
 }
 main #comments .container .post-comment .btn-shine:hover {
   background-color: white;

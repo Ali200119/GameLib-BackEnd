@@ -1,5 +1,6 @@
 ﻿@inject IStaticDataService _staticDataService;
 @inject ISocialService _socialService;
+@inject UserManager<AppUser> _userManager;
 
 @{
     IEnumerable<Social> socials = await _socialService.GetAllAsync();
@@ -34,8 +35,17 @@
                 <i class="fa-solid fa-user circle"></i>
 
                 <div class="login-register">
-                    <a href="./login.html">Login</a>
-                    <a href="./register.html">Register</a>
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        <a href="#">@_userManager.Users.FirstOrDefault(u => u.UserName == User.Identity.Name).FullName</a>
+                        <a class="logout" href="#">Logout</a>
+                    }
+
+                    else
+                    {
+                        <a asp-controller="Account" asp-action="Login">Login</a>
+                        <a asp-controller="Account" asp-action="Register">Register</a>
+                    }
                 </div>
             </div>
         </div>

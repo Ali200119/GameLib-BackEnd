@@ -1,7 +1,10 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Domain.Models;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 using Repository.Data;
 using Repository.Repositories;
 using Repository.Repositories.Interfaces;
+using Service.Helpers;
 using Service.Services;
 using Service.Services.Interfaces;
 using System;
@@ -15,7 +18,43 @@ builder.Services.AddDbContext<AppDbContext>(option => {
     option.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
 });
 
+builder.Services.Configure<EmailSetting>(builder.Configuration.GetSection("Smtp"));
+
+builder.Services.AddIdentity<AppUser, IdentityRole>().AddEntityFrameworkStores<AppDbContext>().AddDefaultTokenProviders();
+builder.Services.Configure<IdentityOptions>(opt =>
+{
+    #region Password
+
+    opt.Password.RequireDigit = true;
+    opt.Password.RequiredLength = 8;
+    opt.Password.RequireLowercase = true;
+    opt.Password.RequireUppercase = true;
+    opt.Password.RequireNonAlphanumeric = true;
+
+    #endregion
+
+
+
+    #region User
+
+    opt.User.RequireUniqueEmail = true;
+    opt.SignIn.RequireConfirmedEmail = true;
+
+    #endregion
+
+
+
+    #region Lockout
+
+    opt.Lockout.MaxFailedAccessAttempts = 3;
+    opt.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(15);
+    opt.Lockout.AllowedForNewUsers = false;
+
+    #endregion
+});
+
 builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
+builder.Services.AddScoped<IAboutRepository, AboutRepository>();
 builder.Services.AddScoped<IAdvantageRepository, AdvantageRepository>();
 builder.Services.AddScoped<IBlogRepository, BlogRepository>();
 builder.Services.AddScoped<IGameRepository, GameRepository>();
@@ -27,7 +66,9 @@ builder.Services.AddScoped<ISocialRepository, SocialRepository>();
 builder.Services.AddScoped<IPlatformRepository, PlatformRepository>();
 builder.Services.AddScoped<IGenreRepository, GenreRepository>();
 builder.Services.AddScoped<IContactRepository, ContactRepository>();
+builder.Services.AddScoped<IGameCommentRepository, GameCommentRepository>();
 
+builder.Services.AddScoped<IAboutService, AboutService>();
 builder.Services.AddScoped<IAdvantageService, AdvantageService>();
 builder.Services.AddScoped<IBlogService, BlogService>();
 builder.Services.AddScoped<IGameService, GameService>();
@@ -38,6 +79,9 @@ builder.Services.AddScoped<ISocialService, SocialService>();
 builder.Services.AddScoped<IPlatformService, PlatformService>();
 builder.Services.AddScoped<IGenreService, GenreService>();
 builder.Services.AddScoped<IContactService, ContactService>();
+builder.Services.AddScoped<IEmailService, EmailService>();
+builder.Services.AddScoped<IGameCommentService, GameCommentService>();
+builder.Services.AddScoped<EmailSetting>();
 
 var app = builder.Build();
 

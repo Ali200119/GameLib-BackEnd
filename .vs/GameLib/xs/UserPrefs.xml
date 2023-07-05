@@ -1,26 +1,11 @@
 ﻿<Properties StartupConfiguration="{DA011D14-646D-4E53-88D4-623F2AE99E63}|Default">
   <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.ItemProperties.GameLib PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Repository/Data/AppDbContext.cs">
-    <Files>
-      <File FileName="Repository/Data/AppDbContext.cs" Line="887" Column="46" />
-      <File FileName="GameLib/Views/Shared/_Layout.cshtml" Line="80" Column="8" />
-    </Files>
+  <MonoDevelop.Ide.Workbench>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="GameLib" expanded="True">
-            <Node name="GameLib" expanded="True">
-              <Node name="Views" expanded="True">
-                <Node name="Shared" expanded="True" />
-              </Node>
-            </Node>
-            <Node name="Repository" expanded="True">
-              <Node name="Data" expanded="True">
-                <Node name="AppDbContext.cs" selected="True" />
-              </Node>
-            </Node>
-          </Node>
+          <Node name="GameLib" expanded="True" />
         </State>
       </Pad>
       <Pad Id="MonoDevelop.Debugger.WatchPad">

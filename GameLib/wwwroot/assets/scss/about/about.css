@@ -284,6 +284,7 @@ main #text .content .description {
   color: #bdbbc4;
   font-size: 14px;
   margin-bottom: 27px;
+  line-height: 22px;
 }
 main #text .content .btn-shine {
   padding: 15px 20px;

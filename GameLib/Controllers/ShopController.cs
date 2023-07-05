@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Domain.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Service.Services.Interfaces;
@@ -17,18 +18,21 @@ namespace GameLib.Controllers
         private readonly IPlatformService _platformService;
         private readonly IGenreService _genreService;
         private readonly ISocialService _socialService;
+        private readonly IGameCommentService _gameCommentService;
 
         public ShopController(IStaticDataService staticDataService,
                               IGameService gameService,
                               IPlatformService platformService,
                               IGenreService genreService,
-                              ISocialService socialService)
+                              ISocialService socialService,
+                              IGameCommentService gameCommentService)
         {
             _staticDataService = staticDataService;
             _gameService = gameService;
             _platformService = platformService;
             _genreService = genreService;
             _socialService = socialService;
+            _gameCommentService = gameCommentService;
         }
 
 
@@ -129,14 +133,76 @@ namespace GameLib.Controllers
 
                 ViewBag.Platforms = await GetPlatformsAsync((int)id);
                 Dictionary<string, string> sectionHeaders = _staticDataService.GetAllSectionHeaders();
+                IEnumerable<GameComment> gameComments = await _gameCommentService.GetAllAsync(id);
 
                 GameDetailsVM model = new GameDetailsVM
                 {
                     SectionHeaders = sectionHeaders,
-                    Game = game
+                    Game = game,
+                    Comments = gameComments
                 };
 
                 return View(model);
+            }
+
+            catch (ArgumentNullException)
+            {
+                return BadRequest();
+            }
+
+            catch (NullReferenceException)
+            {
+                return NotFound();
+            }
+        }
+
+        [HttpPost]
+        [Authorize]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> PostComment(GameDetailsVM model, string userId, int? gameId)
+        {
+            try
+            {
+                if (model.GameComment.Comment is null)
+                {
+                    return RedirectToAction(nameof(Details), new { id = gameId });
+                }
+
+                if (userId is null || gameId is null) throw new ArgumentNullException();
+
+                GameComment gameComment = new GameComment
+                {
+                    Comment = model.GameComment.Comment,
+                    UserId = userId,
+                    GameId = (int)gameId
+                };
+
+                await _gameCommentService.CreateAsync(gameComment);
+
+                return RedirectToAction(nameof(Details), new { id = gameId });
+            }
+
+            catch (ArgumentNullException)
+            {
+                return BadRequest();
+            }
+
+            catch (NullReferenceException)
+            {
+                return NotFound();
+            }
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> DeleteComment(int? id)
+        {
+            try
+            {
+                if (id is null) throw new ArgumentNullException();
+
+                await _gameCommentService.DeleteAsync(id);
+
+                return Ok();
             }
 
             catch (ArgumentNullException)

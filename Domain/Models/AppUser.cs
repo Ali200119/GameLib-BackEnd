@@ -6,5 +6,6 @@ namespace Domain.Models
 	public class AppUser: IdentityUser
 	{
 		public string FullName { get; set; }
+		public ICollection<GameComment> GameComments { get; set; }
 	}
 }

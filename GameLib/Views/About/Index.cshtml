@@ -1,4 +1,6 @@
-﻿@{
+﻿@model About
+
+@{
     ViewBag.Title = "About";
 }
 
@@ -17,18 +19,18 @@
 }
 
 <section id="image">
-    <img src="~/assets/img/about/Ninja Cyberpunk.jpg">
+    <img src="~/assets/img/about/@Model.Image">
 </section>
 
 <section id="text">
     <div class="content">
-        <h1 class="title">Welcome to GameLib!</h1>
+        <h1 class="title">@Model.Title</h1>
 
         <div class="description">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo dolore, harum neque odit ea illum sed veniam impedit tempora reprehenderit!
+            @Html.Raw(Model.Description)
         </div>
 
-        <a href="./home.html" class="btn-shine">Back to Home</a>
+        <a asp-controller="Home" asp-action="Index" class="btn-shine">Back to Home</a>
     </div>
 </section>
 

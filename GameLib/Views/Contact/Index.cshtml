@@ -1,7 +1,10 @@
 ﻿@model ContactVM
+@inject UserManager<AppUser> _userManager;
 
 @{
     ViewBag.Title = "Contact Us";
+
+    AppUser user = _userManager.Users.FirstOrDefault(u => u.UserName == User.Identity.Name);
 }
 
 @section CSS {
@@ -19,7 +22,7 @@
 }
 
 <section id="contact-bg">
-    <img src="~/assets/img/static-images/Contact BG.jpeg">
+    <img src="~/assets/img/static-images/@Model.SectionHeaders["ContactBG"]">
 
     <h1 class="title">Contact Us</h1>
 </section>
@@ -40,18 +43,35 @@
         </section>
 
         <section id="form">
-            <form method="post" asp-controller="Contact" asp-action="Index">
-                <input asp-for="@Model.Contact.FullName" autocomplete="off" placeholder="Full Name *">
-                <span asp-validation-for="@Model.Contact.FullName" style="color: red;"></span>
+            @if (User.Identity.IsAuthenticated)
+            {
+                <form method="post" asp-controller="Contact" asp-action="Index">
+                    <input asp-for="Contact.FullName" readonly value="@user.FullName">
 
-                <input asp-for="@Model.Contact.Email" autocomplete="off" placeholder="Email *">
-                <span asp-validation-for="@Model.Contact.Email" style="color: red;"></span>
+                    <input class="email-input" asp-for="Contact.Email" readonly value="@user.Email">
 
-                <textarea asp-for="@Model.Contact.Message" rows="7" placeholder="Message *"></textarea>
-                <span asp-validation-for="@Model.Contact.Message" style="color: red; display: block;"></span>
+                    <textarea asp-for="Contact.Message" rows="7" placeholder="Message *"></textarea>
+                    <span asp-validation-for="@Model.Contact.Message" style="color: red; display: block;"></span>
 
-                <button type="submit" class="btn-shine">Submit</button>
-            </form>
+                    <button type="submit" class="btn-shine">Submit</button>
+                </form>
+            }
+
+            else
+            {
+                <form method="post" asp-controller="Contact" asp-action="Index">
+                    <input asp-for="Contact.FullName" autocomplete="off" placeholder="Full Name *">
+                    <span asp-validation-for="Contact.FullName" style="color: red;"></span>
+
+                    <input class="email-input" asp-for="Contact.Email" autocomplete="off" placeholder="Email *">
+                    <span asp-validation-for="Contact.Email" style="color: red;"></span>
+
+                    <textarea asp-for="Contact.Message" rows="7" placeholder="Message *"></textarea>
+                    <span asp-validation-for="Contact.Message" style="color: red; display: block;"></span>
+
+                    <button type="submit" class="btn-shine">Submit</button>
+                </form>
+            }
         </section>
     </div>
 </section>

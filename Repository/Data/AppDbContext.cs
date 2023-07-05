@@ -10,6 +10,7 @@ namespace Repository.Data
 	{
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
 
+        public DbSet<About> Abouts { get; set; }
         public DbSet<Advantage> Advantages { get; set; }
         public DbSet<Blog> Blogs { get; set; }
         public DbSet<BlogAuthor> BlogAuthors { get; set; }
@@ -26,12 +27,14 @@ namespace Repository.Data
         public DbSet<Subscribe> Subscribes { get; set; }
         public DbSet<Platform> Platforms { get; set; }
         public DbSet<GamePlatform> GamePlatforms { get; set; }
+        public DbSet<GameComment> GameComments { get; set; }
 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
 
+            modelBuilder.Entity<About>().HasQueryFilter(a => !a.SoftDelete);
             modelBuilder.Entity<Advantage>().HasQueryFilter(a => !a.SoftDelete);
             modelBuilder.Entity<Blog>().HasQueryFilter(b => !b.SoftDelete);
             modelBuilder.Entity<BlogAuthor>().HasQueryFilter(ba => !ba.SoftDelete);
@@ -48,8 +51,19 @@ namespace Repository.Data
             modelBuilder.Entity<GamePlatform>().HasQueryFilter(gp => !gp.SoftDelete);
             modelBuilder.Entity<Genre>().HasQueryFilter(g => !g.SoftDelete);
             modelBuilder.Entity<GameGenre>().HasQueryFilter(gg => !gg.SoftDelete);
+            modelBuilder.Entity<GameComment>().HasQueryFilter(gc => !gc.SoftDelete);
 
 
+
+            modelBuilder.Entity<About>().HasData(
+                new About
+                {
+                    Id = 1,
+                    Image = "Ninja Cyberpunk.jpg",
+                    Title = "Welcome to GameLib!",
+                    Description = "At GameLib, we are passionate about video games and committed to bringing you the ultimate gaming experience. Our website is a haven for all gaming enthusiasts, offering a wide selection of the latest and greatest video games across multiple platforms.Discover a vast library of games covering various genres, from action-packed adventures to immersive role-playing worlds. Whether you're a casual gamer or a hardcore enthusiast, GameLib has something for everyone. Dive into captivating storylines, engage in intense multiplayer battles, or challenge yourself with mind-bending puzzles – the possibilities are endless.We pride ourselves on curating a diverse collection of games from renowned publishers and independent developers alike. Our team meticulously selects each title to ensure that only the highest quality and most exciting games make it to your fingertips."
+                }
+            );
 
             modelBuilder.Entity<Advantage>().HasData(
                 new Advantage
@@ -1661,6 +1675,20 @@ namespace Repository.Data
                     Id = 10,
                     Key = "ContactBG",
                     Value = "Contact BG.jpeg"
+                },
+
+                new SectionHeader
+                {
+                    Id = 11,
+                    Key = "RegisterBG",
+                    Value = "Register BG.jpg"
+                },
+
+                new SectionHeader
+                {
+                    Id = 12,
+                    Key = "LoginBG",
+                    Value = "Login BG.jpg"
                 }
             );
 

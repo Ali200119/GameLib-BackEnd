@@ -329,7 +329,7 @@ main #devide .container #form form input {
 main #devide .container #form form input:focus {
   border-color: white;
 }
-main #devide .container #form form input:nth-child(3) {
+main #devide .container #form form .email-input {
   margin-top: 30px;
 }
 main #devide .container #form form textarea {

@@ -785,6 +785,18 @@
       "PackagePath": "staticwebassets/assets/scss/user/register.scss"
     },
     {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/scss/user/verify-email.css",
+      "PackagePath": "staticwebassets/assets/scss/user/verify-email.css"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/scss/user/verify-email.css.map",
+      "PackagePath": "staticwebassets/assets/scss/user/verify-email.css.map"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/scss/user/verify-email.scss",
+      "PackagePath": "staticwebassets/assets/scss/user/verify-email.scss"
+    },
+    {
       "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/scss/utilities/_settings.scss",
       "PackagePath": "staticwebassets/assets/scss/utilities/_settings.scss"
     },
@@ -795,6 +807,10 @@
     {
       "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/slick/slick.min.js",
       "PackagePath": "staticwebassets/assets/slick/slick.min.js"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/templates/VerifyEmail.html",
+      "PackagePath": "staticwebassets/assets/templates/VerifyEmail.html"
     },
     {
       "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/lib/jquery-validation-unobtrusive/LICENSE.txt",

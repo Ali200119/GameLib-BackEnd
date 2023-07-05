@@ -24,4 +24,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Repository\Repository.csproj" />
   </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="MailKit" Version="4.1.0" />
+  </ItemGroup>
 </Project>

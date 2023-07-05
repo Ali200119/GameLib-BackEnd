@@ -18,6 +18,7 @@
     <None Remove="Views\Shop\" />
     <None Remove="Views\Search\" />
     <None Remove="Views\Error\" />
+    <None Remove="Views\Account\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\Home\" />
@@ -28,6 +29,8 @@
     <Folder Include="Views\Shop\" />
     <Folder Include="Views\Search\" />
     <Folder Include="Views\Error\" />
+    <Folder Include="Views\Account\" />
+    <Folder Include="wwwroot\assets\templates\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.15" />
@@ -46,5 +49,8 @@
     <ProjectReference Include="..\Service\Service.csproj">
       <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="wwwroot\assets\templates\" />
   </ItemGroup>
 </Project>

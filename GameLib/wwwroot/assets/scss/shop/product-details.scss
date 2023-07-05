@@ -478,6 +478,8 @@ main {
                     font-size: 12px;
                     background-color: #d31c3d;
                     cursor: pointer;
+                    opacity: 0;
+                    pointer-events: none;
 
                     &:hover {
                         background-color: white;

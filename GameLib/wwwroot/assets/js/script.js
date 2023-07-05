@@ -90,6 +90,7 @@ document.querySelector("#subscribe form").addEventListener("submit", function (e
 
 
 
+
 // Functions
 
 function subscribe() {
