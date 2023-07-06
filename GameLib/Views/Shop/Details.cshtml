@@ -194,16 +194,6 @@
     <div class="container">
         <h1 class="title"><span>0</span> Thoughts on @Model.Game.Name</h1>
 
-        @*@if (Model.Comments.Count() != 0)
-        {
-            <h1 class="title">@Model.Game.GameComments.Count() Thoughts on @Model.Game.Name</h1>
-        }
-
-        else
-        {
-            <h1 class="title">0 Thoughts on @Model.Game.Name</h1>
-        }*@
-
         <div class="items">
             @foreach (var comment in Model.Comments)
             {

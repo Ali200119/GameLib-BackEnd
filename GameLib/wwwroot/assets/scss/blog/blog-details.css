@@ -279,7 +279,7 @@ main #title .content {
   flex-direction: column;
   align-items: center;
 }
-main #title .content span {
+main #title .content .game {
   text-transform: uppercase;
   font-size: 13px;
   color: white;
@@ -545,6 +545,8 @@ main #devide .container #blog-content .comments .post-comment .btn-shine {
   font-size: 12px;
   background-color: #d31c3d;
   cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
 }
 main #devide .container #blog-content .comments .post-comment .btn-shine:hover {
   background-color: white;

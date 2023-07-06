@@ -32,7 +32,7 @@ main {
             flex-direction: column;
             align-items: center;
 
-            span {
+            .game {
                 text-transform: uppercase;
                 font-size: 13px;
                 color: white;
@@ -345,6 +345,8 @@ main {
                             font-size: 12px;
                             background-color: #d31c3d;
                             cursor: pointer;
+                            opacity: 0;
+                            pointer-events: none;
 
                             &:hover {
                                 background-color: white;

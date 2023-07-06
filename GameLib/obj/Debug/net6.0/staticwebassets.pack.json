@@ -541,6 +541,10 @@
       "PackagePath": "staticwebassets/assets/img/static-images/Footer BG.jpg"
     },
     {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/img/static-images/Forgot Password BG.jpeg",
+      "PackagePath": "staticwebassets/assets/img/static-images/Forgot Password BG.jpeg"
+    },
+    {
       "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/img/static-images/Login BG.jpg",
       "PackagePath": "staticwebassets/assets/img/static-images/Login BG.jpg"
     },
@@ -759,6 +763,18 @@
     {
       "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/scss/shop/shop.scss",
       "PackagePath": "staticwebassets/assets/scss/shop/shop.scss"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/scss/user/forgot-password.css",
+      "PackagePath": "staticwebassets/assets/scss/user/forgot-password.css"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/scss/user/forgot-password.css.map",
+      "PackagePath": "staticwebassets/assets/scss/user/forgot-password.css.map"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/scss/user/forgot-password.scss",
+      "PackagePath": "staticwebassets/assets/scss/user/forgot-password.scss"
     },
     {
       "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/scss/user/login.css",

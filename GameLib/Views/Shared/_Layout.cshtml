@@ -1,6 +1,7 @@
 ﻿@inject IStaticDataService _staticDataService;
 @inject ISocialService _socialService;
 @inject UserManager<AppUser> _userManager;
+@inject ICartService _cartService;
 
 @{
     IEnumerable<Social> socials = await _socialService.GetAllAsync();
@@ -32,7 +33,18 @@
 
         @if (User.Identity.IsAuthenticated)
         {
-            <a asp-controller="Cart" asp-action="Index" asp-route-userId="@user.Id"><i class="fa-solid fa-bag-shopping circle"></i></a>
+            if (await _cartService.CheckCartAsync(user.Id) != 0)
+            {
+                <a style="position: relative" asp-controller="Cart" asp-action="Index" asp-route-userId="@user.Id">
+                    <i class="fa-solid fa-bag-shopping circle"></i>
+                    <div style="position: absolute; background-color: #d31c3d; width: 6px; height: 6px; border-radius: 50%; top: 7px; right: 7px;"></div>
+                </a>
+            }
+
+            else
+            {
+                <a class="cart" asp-controller="Cart" asp-action="Index" asp-route-userId="@user.Id"><i class="fa-solid fa-bag-shopping circle"></i></a>
+            }
         }
 
         else

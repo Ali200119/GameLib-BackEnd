@@ -26,15 +26,55 @@ document.querySelector("#panel .search .search-input input").addEventListener("k
 
 
 
+// Comments' Count
+
+commentsCount(document.querySelector("#title .content .date-author-comments").lastElementChild.firstElementChild);
+commentsCount(document.querySelector("#blog-content .comments .title span"));
+
+
+
+// Check Comment
+
+document.querySelector("#blog-content .comments form textarea").addEventListener("keyup", function () {
+    if (this.value != "") {
+        this.nextElementSibling.style.opacity = 1;
+        this.nextElementSibling.style.pointerEvents = "unset";
+    }
+
+    else {
+        this.nextElementSibling.style.opacity = 0;
+        this.nextElementSibling.style.pointerEvents = "none";
+    }
+});
+
+
+
 // Delete Comment
 
-let removeCommentBtns = document.querySelectorAll("#blog-content .comments .items .item i");
+if (document.querySelector("#blog-content .comments .items").children.length != 0) {
+    let removeCommentBtns = document.querySelectorAll("#blog-content .comments .items .item i");
 
-for (const remove of removeCommentBtns) {
-    remove.addEventListener("click", function() {
-        this.parentNode.remove();
-    });
+    for (const removeBtn of removeCommentBtns) {
+        if (removeBtn.classList.contains("delete")) {
+            removeBtn.addEventListener("click", function () {
+                let commentId = this.getAttribute("data-commentId");
+                let comment = this.parentNode;
+                let url = `/Blog/DeleteComment?id=${commentId}`;
+
+                fetch(url, {
+                    method: "POST"
+                }).then(function (response) {
+                    if (response.ok) {
+                        comment.remove();
+                        commentsCount(document.querySelector("#title .content .date-author-comments").lastElementChild.firstElementChild);
+                        commentsCount(document.querySelector("#blog-content .comments .title span"));
+                    }
+                });
+            });
+        }
+    }
 }
+
 
 
 
@@ -47,4 +87,10 @@ function search() {
     if (searchText.value.trim() != "") {
         window.location.assign(`/Search/SearchByBlogs?searchText=${searchText.value}`);
     }
+}
+
+function commentsCount(element) {
+    let count = document.querySelector("#blog-content .comments .items").children.length;
+
+    element.innerText = count;
 }

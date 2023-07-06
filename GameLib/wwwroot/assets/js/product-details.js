@@ -170,20 +170,20 @@ document.querySelector("#comments form textarea").addEventListener("keyup", func
 // Delete Comment
 
 if (document.querySelector("#comments .items").children.length != 0) {
-    let comments = document.querySelectorAll("#comments .items .item");
+    let removeCommentBtns = document.querySelectorAll("#comments .items .item i");
 
-    for (const comment of comments) {
-        if (comment.lastElementChild.classList.contains("delete")) {
-            comment.lastElementChild.addEventListener("click", function () {
+    for (const removeBtn of removeCommentBtns) {
+        if (removeBtn.classList.contains("delete")) {
+            removeBtn.addEventListener("click", function () {
                 let commentId = this.getAttribute("data-commentId");
-                let element = this.parentNode;
+                let comment = this.parentNode;
                 let url = `/Shop/DeleteComment?id=${commentId}`;
 
                 fetch(url, {
                     method: "POST"
                 }).then(function (response) {
                     if (response.ok) {
-                        element.remove();
+                        comment.remove();
                         commentsCount();
                     }
                 });

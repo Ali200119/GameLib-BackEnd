@@ -13,6 +13,7 @@ namespace Repository.Data
         public DbSet<About> Abouts { get; set; }
         public DbSet<Advantage> Advantages { get; set; }
         public DbSet<Blog> Blogs { get; set; }
+        public DbSet<BlogComment> BlogComments { get; set; }
         public DbSet<BlogAuthor> BlogAuthors { get; set; }
         public DbSet<BlogImage> BlogImages { get; set; }
         public DbSet<Contact> Contacts { get; set; }
@@ -39,6 +40,7 @@ namespace Repository.Data
             modelBuilder.Entity<About>().HasQueryFilter(a => !a.SoftDelete);
             modelBuilder.Entity<Advantage>().HasQueryFilter(a => !a.SoftDelete);
             modelBuilder.Entity<Blog>().HasQueryFilter(b => !b.SoftDelete);
+            modelBuilder.Entity<BlogComment>().HasQueryFilter(bc => !bc.SoftDelete);
             modelBuilder.Entity<BlogAuthor>().HasQueryFilter(ba => !ba.SoftDelete);
             modelBuilder.Entity<BlogImage>().HasQueryFilter(bi => !bi.SoftDelete);
             modelBuilder.Entity<Contact>().HasQueryFilter(c => !c.SoftDelete);
@@ -1693,6 +1695,13 @@ namespace Repository.Data
                     Id = 12,
                     Key = "LoginBG",
                     Value = "Login BG.jpg"
+                },
+
+                new SectionHeader
+                {
+                    Id = 13,
+                    Key = "ForgotPasswordBG",
+                    Value = "Forgot Password BG.jpeg"
                 }
             );
 

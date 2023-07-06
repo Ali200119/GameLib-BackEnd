@@ -68,6 +68,7 @@ builder.Services.AddScoped<IContactRepository, ContactRepository>();
 builder.Services.AddScoped<IGameCommentRepository, GameCommentRepository>();
 builder.Services.AddScoped<ICartRepository, CartRepository>();
 builder.Services.AddScoped<ICartGameRepository, CartGameRepository>();
+builder.Services.AddScoped<IBlogCommentRepository, BlogCommentRepository>();
 
 builder.Services.AddScoped<IAboutService, AboutService>();
 builder.Services.AddScoped<IAdvantageService, AdvantageService>();
@@ -83,6 +84,7 @@ builder.Services.AddScoped<IContactService, ContactService>();
 builder.Services.AddScoped<IEmailService, EmailService>();
 builder.Services.AddScoped<IGameCommentService, GameCommentService>();
 builder.Services.AddScoped<ICartService, CartService>();
+builder.Services.AddScoped<IBlogCommentService, BlogCommentService>();
 builder.Services.AddScoped<EmailSetting>();
 
 var app = builder.Build();

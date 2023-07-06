@@ -13,5 +13,6 @@ namespace Domain.Models
 		public ICollection<BlogImage> BlogImages { get; set; }
 		public int BlogAuthorId { get; set; }
 		public BlogAuthor BlogAuthor { get; set; }
-	}
+		public ICollection<BlogComment> BlogComments { get; set; }
+    }
 }

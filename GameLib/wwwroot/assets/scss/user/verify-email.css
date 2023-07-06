@@ -202,7 +202,9 @@ header .user-panel .user .login-register a:hover {
 }
 #content .container .flex img {
   width: 200px;
-  height: auto;
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 #content .container .flex h5 {
   margin-top: 40px;

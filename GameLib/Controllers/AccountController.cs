@@ -188,6 +188,20 @@ namespace GameLib.Controllers
             return RedirectToAction("Index", "Home");
         }
 
+        [HttpGet]
+        public async Task<IActionResult> ForgotPassword()
+        {
+            Dictionary<string, string> sectionHeaders = _staticDataService.GetAllSectionHeaders();
+
+            RegisterVM model = new RegisterVM
+            {
+                SectionHeaders = sectionHeaders
+            };
+
+            return View(model);
+        }
+
+
         [HttpPost]
         public async Task<IActionResult> Logout()
         {

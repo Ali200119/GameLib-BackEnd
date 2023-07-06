@@ -7,5 +7,6 @@ namespace Domain.Models
 	{
 		public string FullName { get; set; }
 		public ICollection<GameComment> GameComments { get; set; }
-	}
+		public ICollection<BlogComment> BlogComments { get; set; }
+    }
 }

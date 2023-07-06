@@ -9,5 +9,7 @@ namespace Service.ViewModels
 		public Blog Blog { get; set; }
 		public IEnumerable<Blog> LatestBlogs { get; set; }
 		public IEnumerable<Social> Socials { get; set; }
+		public IEnumerable<BlogComment> Comments { get; set; }
+		public BlogComment BlogComment { get; set; }
 	}
 }

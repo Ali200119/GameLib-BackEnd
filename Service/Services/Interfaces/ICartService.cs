@@ -13,5 +13,6 @@ namespace Service.Services.Interfaces
         Task IncreaseGameCountAsync(int? gameId, string userId);
         Task DecreaseGameCountAsync(int? gameId, string userId);
         Task ClearCartAsync(string userId);
+        Task<int> CheckCartAsync(string userId);
     }
 }

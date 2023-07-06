@@ -28,29 +28,29 @@
         <div class="inputBox">
             <input asp-for="FullName" autocomplete="off" placeholder="Full Name">
         </div>
-        <span asp-validation-for="@Model.FullName" style="color: red;"></span>
+        <span asp-validation-for="FullName" style="color: red;"></span>
 
         <div class="inputBox">
-            <input asp-for="@Model.Email" autocomplete="off" placeholder="Email">
+            <input asp-for="Email" autocomplete="off" placeholder="Email">
         </div>
         <span asp-validation-for="Email" style="color: red;"></span>
 
         <div class="inputBox">
             <input asp-for="Username" autocomplete="off" placeholder="Username">
         </div>
-        <span asp-validation-for="@Model.Username" style="color: red;"></span>
+        <span asp-validation-for="Username" style="color: red;"></span>
 
         <div class="inputBox">
             <input asp-for="Password" autocomplete="off" placeholder="Password">
             <i class="fa-regular fa-eye"></i>
         </div>
-        <span asp-validation-for="@Model.Password" style="color: red;"></span>
+        <span asp-validation-for="Password" style="color: red;"></span>
 
         <div class="inputBox">
             <input asp-for="ConfirmPassword" autocomplete="off" placeholder="Confirm Password">
             <i class="fa-regular fa-eye"></i>
         </div>
-        <span asp-validation-for="@Model.ConfirmPassword" style="color: red;"></span>
+        <span asp-validation-for="ConfirmPassword" style="color: red;"></span>
 
         <div class="flex">
             <h5>Already have an account? <a asp-controller="Account" asp-action="Login">Login</a></h5>
@@ -65,6 +65,7 @@
 </section>
 
 @section Scripts {
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="~/assets/js/user.js"></script>
     <partial name="_ValidationScriptsPartial"/>
 }

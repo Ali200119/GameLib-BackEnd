@@ -113,12 +113,19 @@ namespace Service.Services
             }
         }
 
+        public async Task<int> CheckCartAsync(string userId)
+        {
+            if (userId is null) throw new ArgumentNullException();
+
+            Cart cart = await GetCartByUserIdAsync(userId);
+
+            return cart.CartGames.Count();
+        }
+
 
 
         private async Task<Cart> GetCartByUserIdAsync(string userId)
         {
-            if (userId is null) throw new ArgumentNullException();
-
             return await _cartRepo.GetByUserIdAsync(userId);
         }
     }

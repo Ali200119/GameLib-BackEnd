@@ -201,12 +201,12 @@ namespace GameLib.Controllers
         {
             try
             {
+                if (userId is null || gameId is null) throw new ArgumentNullException();
+
                 if (model.GameComment.Comment is null)
                 {
                     return RedirectToAction(nameof(Details), new { id = gameId });
                 }
-
-                if (userId is null || gameId is null) throw new ArgumentNullException();
 
                 GameComment gameComment = new GameComment
                 {

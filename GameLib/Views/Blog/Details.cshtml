@@ -1,7 +1,9 @@
 ﻿@model BlogDetailsVM
+@inject UserManager<AppUser> _userManager;
 
 @{
     ViewBag.Title = Model.Blog.Title;
+    AppUser user = _userManager.Users.FirstOrDefault(u => u.UserName == User.Identity.Name);
 }
 
 @section CSS {
@@ -24,14 +26,14 @@
 
 <section id="title">
     <div class="content">
-        <span>@Model.Blog.Game</span>
+        <span class="game">@Model.Blog.Game</span>
 
         <h1>@Model.Blog.Title</h1>
 
         <div class="date-author-comments">
             <h4>@Model.Blog.CreatedAt.ToString("MMMM dd, yyyy", new CultureInfo("en"))</h4>
             <h4>@Model.Blog.BlogAuthor.Name</h4>
-            <h4>2 Comments</h4>
+            <h4><span></span> Comments</h4>
         </div>
     </div>
 </section>
@@ -100,41 +102,52 @@
             </div>
 
             <div class="comments">
-                <h1 class="title">1 Thoughts on "@Model.Blog.Title"</h1>
+                <h1 class="title"><span>0</span> Thoughts on "@Model.Blog.Title"</h1>
 
                 <div class="items">
-                    <div class="item">
-                        <h4 class="username">Ali200119</h4>
+                    @foreach (var comment in Model.Comments)
+                    {
+                        <div class="item">
+                            <h4 class="username">@comment.User.UserName</h4>
 
-                        <span class="date">June 7, 2023 at 15:03 PM</span>
+                            <span class="date">@comment.CreatedAt.ToString("MMMM dd, yyyy", new CultureInfo("en")) at @comment.CreatedAt.ToString("hh:mm tt")</span>
 
-                        <p class="description">
-                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rerum recusandae sunt dolorum maiores nesciunt minus sint, non laudantium ut aperiam? Consectetur laborum odio nobis dolore deserunt, quisquam veniam exercitationem magni?
-                        </p>
+                            <p class="description">
+                                @comment.Comment
+                            </p>
 
-                        <i class="fa-solid fa-trash-can"></i>
-                    </div>
-
-                    <div class="item">
-                        <h4 class="username">Ali200119</h4>
-
-                        <span class="date">June 7, 2023 at 15:03 PM</span>
-
-                        <p class="description">
-                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rerum recusandae sunt dolorum maiores nesciunt minus sint, non laudantium ut aperiam? Consectetur laborum odio nobis dolore deserunt, quisquam veniam exercitationem magni?
-                        </p>
-
-                        <i class="fa-solid fa-trash-can"></i>
-                    </div>
+                            @if (User.Identity.IsAuthenticated)
+                            {
+                                if (user.Id == comment.User.Id)
+                                {
+                                    <i data-commentId="@comment.Id" class="fa-solid fa-trash-can delete"></i>
+                                }
+                            }
+                        </div>
+                    }
                 </div>
 
-                <form class="post-comment">
-                    <h1 class="title">Leave a Comment</h1>
+                @if (User.Identity.IsAuthenticated)
+                {
+                    <form class="post-comment" method="post" asp-controller="Blog" asp-action="PostComment" asp-route-userId="@user.Id" asp-route-blogId="@Model.Blog.Id">
+                        <h1 class="title">Leave a Comment</h1>
 
-                    <textarea rows="10" placeholder="Your Comment"></textarea>
+                        <textarea asp-for="BlogComment.Comment" rows="10" placeholder="Your Comment"></textarea>
 
-                    <button class="btn-shine">Post Comment</button>
-                </form>
+                        <button type="submit" class="btn-shine">Post Comment</button>
+                    </form>
+                }
+
+                else
+                {
+                    <form class="post-comment" method="post" asp-controller="Blog" asp-action="PostComment">
+                        <h1 class="title">Leave a Comment</h1>
+
+                        <textarea asp-for="BlogComment.Comment" rows="10" placeholder="Your Comment"></textarea>
+
+                        <button type="submit" class="btn-shine">Post Comment</button>
+                    </form>
+                }
             </div>
         </section>
     </div>
