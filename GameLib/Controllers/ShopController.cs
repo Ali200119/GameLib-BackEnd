@@ -6,6 +6,7 @@ using Domain.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Service.Services;
 using Service.Services.Interfaces;
 using Service.ViewModels;
 
@@ -19,13 +20,15 @@ namespace GameLib.Controllers
         private readonly IGenreService _genreService;
         private readonly ISocialService _socialService;
         private readonly IGameCommentService _gameCommentService;
+        private readonly ICartService _cartService;
 
         public ShopController(IStaticDataService staticDataService,
                               IGameService gameService,
                               IPlatformService platformService,
                               IGenreService genreService,
                               ISocialService socialService,
-                              IGameCommentService gameCommentService)
+                              IGameCommentService gameCommentService,
+                              ICartService cartService)
         {
             _staticDataService = staticDataService;
             _gameService = gameService;
@@ -33,6 +36,7 @@ namespace GameLib.Controllers
             _genreService = genreService;
             _socialService = socialService;
             _gameCommentService = gameCommentService;
+            _cartService = cartService;
         }
 
 
@@ -158,6 +162,40 @@ namespace GameLib.Controllers
 
         [HttpPost]
         [Authorize]
+        public async Task<IActionResult> AddToCart(int? gameId, string platform, string userId)
+        {
+            try
+            {
+                if (gameId is null || platform is null || userId is null) throw new ArgumentNullException();
+
+                Game game = await _gameService.GetByIdWithIncludesAsync(gameId);
+
+                if (game is null) throw new NullReferenceException();
+
+                Cart cart = await _cartService.GetUserCartAsync(userId);
+
+                if(cart is null) throw new NullReferenceException();
+
+                CartGame existedGame = cart.CartGames.FirstOrDefault(cg => cg.GameId == game.Id && cg.Platform == platform);
+
+                await _cartService.AddToCartAsync(userId, existedGame, game.Id, platform);
+
+                return Ok();
+            }
+
+            catch (ArgumentNullException)
+            {
+                return BadRequest();
+            }
+
+            catch (NullReferenceException)
+            {
+                return NotFound();
+            }
+        }
+
+        [HttpPost]
+        [Authorize]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> PostComment(GameDetailsVM model, string userId, int? gameId)
         {
@@ -222,7 +260,7 @@ namespace GameLib.Controllers
         {
             Game game = await _gameService.GetByIdWithIncludesAsync(id);
 
-            return new SelectList(game.GamePlatforms.Select(gm => gm.Platform), "Id", "Name");
+            return new SelectList(game.GamePlatforms.Select(gm => gm.Platform), "Name", "Name");
         }
     }
 }

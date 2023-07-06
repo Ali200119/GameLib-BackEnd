@@ -4,6 +4,7 @@
 
 @{
     IEnumerable<Social> socials = await _socialService.GetAllAsync();
+    AppUser user = _userManager.Users.FirstOrDefault(u => u.UserName == User.Identity.Name);
 }
 
 <!DOCTYPE html>
@@ -29,7 +30,15 @@
                 <i class="fa-solid fa-magnifying-glass circle open-close"></i>
             </div>
 
-            <a asp-controller="Cart" asp-action="Index"><i class="fa-solid fa-bag-shopping circle"></i></a>
+            @if (User.Identity.IsAuthenticated)
+            {
+                <a asp-controller="Cart" asp-action="Index" asp-route-userId="@user.Id"><i class="fa-solid fa-bag-shopping circle"></i></a>
+            }
+
+            else
+            {
+                <a asp-controller="Cart" asp-action="Index"><i class="fa-solid fa-bag-shopping circle"></i></a>
+            }
 
             <div class="user">
                 <i class="fa-solid fa-user circle"></i>
@@ -37,7 +46,7 @@
                 <div class="login-register">
                     @if (User.Identity.IsAuthenticated)
                     {
-                        <a href="#">@_userManager.Users.FirstOrDefault(u => u.UserName == User.Identity.Name).FullName</a>
+                        <a href="#">@user.FullName</a>
                         <a class="logout" href="#">Logout</a>
                     }
 

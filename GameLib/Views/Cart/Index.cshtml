@@ -1,4 +1,6 @@
-﻿@{
+﻿@model Cart
+
+@{
     ViewBag.Title = "Cart";
 }
 
@@ -33,65 +35,43 @@
                 </thead>
 
                 <tbody>
-                    <tr>
-                        <td class="name">
-                            <i class="fa-solid fa-xmark"></i>
-                            <img src="~/assets/img/games/Marvel's Spider-Man Miles Morales.jpeg">
-                            <span>Marvel's Spider-Man Miles Morales</span>
-                        </td>
+                    @if (Model.CartGames.Count() != 0)
+                    {
+                        @foreach (var game in Model.CartGames)
+                        {
+                            <tr>
+                                <td class="name">
+                                    <i data-gameId="@game.GameId" data-userId="@Model.UserId" class="fa-solid fa-xmark"></i>
+                                    <img src="~/assets/img/games/@game.Game.GameImages.FirstOrDefault(gi => gi.IsMain).Name">
+                                    <span>@game.Game.Name</span>
+                                </td>
 
-                        <td>PS5</td>
+                                <td>@game.Platform</td>
 
-                        <td class="price">
-                            <span>$</span>
-                            <span>59.99</span>
-                        </td>
+                                <td class="price">
+                                    <span>$</span>
+                                    <span>@game.Game.Price</span>
+                                </td>
 
-                        <td>
-                            <div class="count">
-                                <i class="fa-solid fa-minus decrease"></i>
-                                <span>1</span>
-                                <i class="fa-solid fa-plus increase"></i>
-                            </div>
-                        </td>
+                                <td>
+                                    <div class="count">
+                                        <i data-gameId="@game.GameId" data-userId="@Model.UserId" class="fa-solid fa-minus decrease"></i>
+                                        <span>@game.Count</span>
+                                        <i data-gameId="@game.GameId" data-userId="@Model.UserId" class="fa-solid fa-plus increase"></i>
+                                    </div>
+                                </td>
 
-                        <td class="subtotal">
-                            <span>$</span>
-                            <span>59.99</span>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td class="name">
-                            <i class="fa-solid fa-xmark"></i>
-                            <img src="~/assets/img/games/Marvel's Spider-Man Remastered.jpg">
-                            <span>Marvel's Spider-Man Remastered</span>
-                        </td>
-
-                        <td>PS5</td>
-
-                        <td class="price">
-                            <span>$</span>
-                            <span>59.99</span>
-                        </td>
-
-                        <td>
-                            <div class="count">
-                                <i class="fa-solid fa-minus decrease"></i>
-                                <span>1</span>
-                                <i class="fa-solid fa-plus increase"></i>
-                            </div>
-                        </td>
-
-                        <td class="subtotal">
-                            <span>$</span>
-                            <span>59.99</span>
-                        </td>
-                    </tr>
+                                <td class="subtotal">
+                                    <span>$</span>
+                                    <span>0</span>
+                                </td>
+                            </tr>
+                        }
+                    }
                 </tbody>
             </table>
 
-            <button class="btn-shine clear">Clear Cart</button>
+            <button data-userId="@Model.UserId" class="btn-shine clear">Clear Cart</button>
         </section>
 
         <h4 class="empty">Your cart is currently empty</h4>
@@ -104,7 +84,7 @@
 
                 <div class="price">
                     <span>$</span>
-                    <span></span>
+                    <span>0</span>
                 </div>
             </div>
 

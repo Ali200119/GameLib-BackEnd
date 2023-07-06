@@ -7,7 +7,6 @@ using Repository.Repositories.Interfaces;
 using Service.Helpers;
 using Service.Services;
 using Service.Services.Interfaces;
-using System;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -67,6 +66,8 @@ builder.Services.AddScoped<IPlatformRepository, PlatformRepository>();
 builder.Services.AddScoped<IGenreRepository, GenreRepository>();
 builder.Services.AddScoped<IContactRepository, ContactRepository>();
 builder.Services.AddScoped<IGameCommentRepository, GameCommentRepository>();
+builder.Services.AddScoped<ICartRepository, CartRepository>();
+builder.Services.AddScoped<ICartGameRepository, CartGameRepository>();
 
 builder.Services.AddScoped<IAboutService, AboutService>();
 builder.Services.AddScoped<IAdvantageService, AdvantageService>();
@@ -81,6 +82,7 @@ builder.Services.AddScoped<IGenreService, GenreService>();
 builder.Services.AddScoped<IContactService, ContactService>();
 builder.Services.AddScoped<IEmailService, EmailService>();
 builder.Services.AddScoped<IGameCommentService, GameCommentService>();
+builder.Services.AddScoped<ICartService, CartService>();
 builder.Services.AddScoped<EmailSetting>();
 
 var app = builder.Build();

@@ -5,6 +5,9 @@ using System.Threading.Tasks;
 using Domain.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using Repository.Data;
+using Service.Services;
 using Service.Services.Interfaces;
 using Service.ViewModels;
 
@@ -16,16 +19,22 @@ namespace GameLib.Controllers
         private readonly SignInManager<AppUser> _signInManager;
         private readonly IStaticDataService _staticDataService;
         private readonly IEmailService _emailService;
+        private readonly ICartService _cartService;
+        private readonly AppDbContext _context;
 
         public AccountController(UserManager<AppUser> userManager,
                                  SignInManager<AppUser> signInManager,
                                  IStaticDataService staticDataService,
-                                 IEmailService emailService)
+                                 IEmailService emailService,
+                                 ICartService cartService,
+                                 AppDbContext context)
         {
             _userManager = userManager;
             _signInManager = signInManager;
             _staticDataService = staticDataService;
             _emailService = emailService;
+            _cartService = cartService;
+            _context = context;
         }
 
 
@@ -69,6 +78,7 @@ namespace GameLib.Controllers
                     ModelState.AddModelError(string.Empty, error.Description);
                 }
 
+                model.SectionHeaders = _staticDataService.GetAllSectionHeaders();
                 return View(model);
             }
 
@@ -97,16 +107,30 @@ namespace GameLib.Controllers
         [HttpGet]
         public async Task<IActionResult> ConfirmEmail(string userId, string token)
         {
-            if (userId is null || token is null) return BadRequest();
+            try
+            {
+                if (userId is null || token is null) throw new ArgumentNullException();
 
-            AppUser user = await _userManager.FindByIdAsync(userId);
+                AppUser user = await _userManager.FindByIdAsync(userId);
 
-            if (user is null) return NotFound();
+                if (user is null) throw new NullReferenceException();
 
-            await _userManager.ConfirmEmailAsync(user, token);
-            await _signInManager.SignInAsync(user, false);
+                await _userManager.ConfirmEmailAsync(user, token);
+                await _signInManager.SignInAsync(user, false);
+                await _cartService.CreateUserCartAsync(userId);
 
-            return RedirectToAction("Index", "Home");
+                return RedirectToAction("Index", "Home");
+            }
+
+            catch (ArgumentNullException)
+            {
+                return BadRequest();
+            }
+
+            catch(NullReferenceException)
+            {
+                return NotFound();
+            }
         }
 
         [HttpGet]
@@ -132,7 +156,11 @@ namespace GameLib.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Login(LoginVM model)
         {
-            if (!ModelState.IsValid) return View(model);
+            if (!ModelState.IsValid)
+            {
+                model.SectionHeaders = _staticDataService.GetAllSectionHeaders();
+                return View(model);
+            }
 
             AppUser user = await _userManager.FindByEmailAsync(model.UsernameOrEmail);
 

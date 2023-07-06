@@ -8,18 +8,18 @@ namespace Service.Services
 {
 	public class AboutService: IAboutService
 	{
-        private readonly IAboutRepository _aboutRepository;
+        private readonly IAboutRepository _aboutRepo;
 
-        public AboutService(IAboutRepository aboutRepository)
+        public AboutService(IAboutRepository aboutRepo)
         {
-            _aboutRepository = aboutRepository;
+            _aboutRepo = aboutRepo;
         }
 
 
 
         public async Task<IEnumerable<About>> GetAsync()
         {
-            return await _aboutRepository.GetAllAsync();
+            return await _aboutRepo.GetAllAsync();
         }
     }
 }

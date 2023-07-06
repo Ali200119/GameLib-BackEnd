@@ -4,6 +4,7 @@
 
 @{
     IEnumerable<Social> socials = await _socialService.GetAllAsync();
+    AppUser user = _userManager.Users.FirstOrDefault(u => u.UserName == User.Identity.Name);
 }
 
 <!DOCTYPE html>
@@ -24,31 +25,39 @@
 
         @RenderSection("NavBar", false)
 
-        <div class="user-panel">
-            <div class="search">
-                <i class="fa-solid fa-magnifying-glass circle open-close"></i>
-            </div>
+    <div class="user-panel">
+        <div class="search">
+            <i class="fa-solid fa-magnifying-glass circle open-close"></i>
+        </div>
 
+        @if (User.Identity.IsAuthenticated)
+        {
+            <a asp-controller="Cart" asp-action="Index" asp-route-userId="@user.Id"><i class="fa-solid fa-bag-shopping circle"></i></a>
+        }
+
+        else
+        {
             <a asp-controller="Cart" asp-action="Index"><i class="fa-solid fa-bag-shopping circle"></i></a>
+        }
 
-            <div class="user">
-                <i class="fa-solid fa-user circle"></i>
+        <div class="user">
+            <i class="fa-solid fa-user circle"></i>
 
-                <div class="login-register">
-                    @if (User.Identity.IsAuthenticated)
-                    {
-                        <a href="#">@_userManager.Users.FirstOrDefault(u => u.UserName == User.Identity.Name).FullName</a>
-                        <a class="logout" href="#">Logout</a>
-                    }
+            <div class="login-register">
+                @if (User.Identity.IsAuthenticated)
+                {
+                    <a href="#">@user.FullName</a>
+                    <a class="logout" href="#">Logout</a>
+                }
 
-                    else
-                    {
-                        <a asp-controller="Account" asp-action="Login">Login</a>
-                        <a asp-controller="Account" asp-action="Register">Register</a>
-                    }
-                </div>
+                else
+                {
+                    <a asp-controller="Account" asp-action="Login">Login</a>
+                    <a asp-controller="Account" asp-action="Register">Register</a>
+                }
             </div>
         </div>
+    </div>
     </header>
 
     <main>

@@ -28,6 +28,8 @@ namespace Repository.Data
         public DbSet<Platform> Platforms { get; set; }
         public DbSet<GamePlatform> GamePlatforms { get; set; }
         public DbSet<GameComment> GameComments { get; set; }
+        public DbSet<Cart> Carts { get; set; }
+        public DbSet<CartGame> CartGames { get; set; }
 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -52,6 +54,8 @@ namespace Repository.Data
             modelBuilder.Entity<Genre>().HasQueryFilter(g => !g.SoftDelete);
             modelBuilder.Entity<GameGenre>().HasQueryFilter(gg => !gg.SoftDelete);
             modelBuilder.Entity<GameComment>().HasQueryFilter(gc => !gc.SoftDelete);
+            modelBuilder.Entity<Cart>().HasQueryFilter(c => !c.SoftDelete);
+            modelBuilder.Entity<CartGame>().HasQueryFilter(cg => !cg.SoftDelete);
 
 
 

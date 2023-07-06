@@ -21,5 +21,6 @@ namespace Domain.Models
         public ICollection<GamePlatform> GamePlatforms { get; set; }
         public ICollection<GameGenre> GameGenres { get; set; }
 		public ICollection<GameComment> GameComments { get; set; }
+		public ICollection<CartGame> CartGames { get; set; }
 	}
 }

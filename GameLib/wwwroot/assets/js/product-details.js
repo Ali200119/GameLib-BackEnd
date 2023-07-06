@@ -33,27 +33,45 @@ window.addEventListener("scroll", function () {
 // Add to Cart
 
 if (document.querySelector("#cover-key-art-options #key-art-options .options").lastElementChild.classList.contains("add-to-cart")) {
-    document.querySelector("#cover-key-art-options #key-art-options .options .add-to-cart button").addEventListener("click", function () {
+    document.querySelector("#cover-key-art-options #key-art-options .options button").addEventListener("click", function () {
         let alert = document.getElementById("game-added-alert");
+        let gameName = this.parentNode.parentNode.firstElementChild.innerText;
+        let gameId = parseInt(this.getAttribute("data-gameId"));
+        let platform = this.parentNode.previousElementSibling.previousElementSibling.firstElementChild.value;
+        let userId = this.getAttribute("data-userId");
 
-        alert.innerText = `${this.parentNode.parentNode.firstElementChild.innerText} has been added to the cart`;
-        alert.style.opacity = 1;
-        alert.style.pointerEvents = "unset";
+        let url = `/Shop/AddToCart?gameId=${gameId}&platform=${platform}&userId=${userId}`;
 
-        setTimeout(function () {
-            alert.style.opacity = 0;
-            alert.style.pointerEvents = "none";
-        }, 3000);
+        fetch(url, {
+            method: "POST"
+        }).then(function (response) {
+            if (response.ok) {
+                alert.innerText = `${gameName} has been added to the cart`;
+                alert.style.opacity = 1;
+                alert.style.pointerEvents = "unset";
+
+                setTimeout(function () {
+                    alert.style.opacity = 0;
+                    alert.style.pointerEvents = "none";
+                }, 3000);
+            }
+        });
     });
 }
 
-else {
-    document.querySelector("#cover-key-art-options #key-art-options .options .coming-soon button").addEventListener("click", function () {
+if (document.querySelector("#cover-key-art-options #key-art-options .options").lastElementChild.classList.contains("coming-soon")) {
+    document.querySelector("#cover-key-art-options #key-art-options .options button").addEventListener("click", function () {
         Swal.fire(
             'Coming soon',
             `${this.parentNode.parentNode.firstElementChild.innerText} hasn't been released yet`,
             'info'
         )
+    });
+}
+
+if (document.querySelector("#cover-key-art-options #key-art-options .options").lastElementChild.classList.contains("login")) {
+    document.querySelector("#cover-key-art-options #key-art-options .options button").addEventListener("click", function () {
+        window.location.assign("/Account/Login");
     });
 }
 

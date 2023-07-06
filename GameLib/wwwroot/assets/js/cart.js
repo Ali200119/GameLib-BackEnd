@@ -1,15 +1,34 @@
 "use strict"
 
+// Check Cart
+
+if (document.querySelector("#devide #games table tbody").children.length == 0) {
+    clearCart();
+}
+
+
+
 // Increase Count
 
 let increaseCountBtns = document.querySelectorAll("#devide #games table tbody tr .count .increase");
 
 for (const increase of increaseCountBtns) {
     increase.addEventListener("click", function () {
-        this.previousElementSibling.innerText++;
+        let count = this.previousElementSibling;
+        let gameId = this.getAttribute("data-gameId");
+        let userId = this.getAttribute("data-userId");
+        let url = `/Cart/IncreaseGameCount?gameId=${gameId}&userId=${userId}`
 
-        subtotal();
-        total();
+        fetch(url, {
+            method: "POST"
+        }).then(function (response) {
+            if (response.ok) {
+                count.innerText++;
+
+                subtotal();
+                total();
+            }
+        })
     });
 }
 
@@ -21,20 +40,41 @@ let decreaseCountBtns = document.querySelectorAll("#devide #games table tbody tr
 
 for (const decrease of decreaseCountBtns) {
     decrease.addEventListener("click", function () {
-        if (parseInt(this.nextElementSibling.innerText) > 1) {
-            this.nextElementSibling.innerText--;
+        let game = this.parentNode.parentNode.parentNode;
+        let count = this.nextElementSibling;
+        let gameId = this.getAttribute("data-gameId");
+        let userId = this.getAttribute("data-userId");
 
-            subtotal();
-            total();
+        if (parseInt(this.nextElementSibling.innerText) > 1) {
+            let url = `/Cart/DecreaseGameCount?gameId=${gameId}&userId=${userId}`
+
+            fetch(url, {
+                method: "POST"
+            }).then(function (response) {
+                if (response.ok) {
+                    count.innerText--;
+
+                    subtotal();
+                    total();
+                }
+            })
         }
 
         else {
-            this.parentNode.parentNode.parentNode.remove();
-            total();
+            let url = `/Cart/RemoveGameFromCart?gameId=${gameId}&userId=${userId}`;
 
-            if(document.querySelector("#devide #games table tbody").children.length == 0) {
-                clearCart();
-            }
+            fetch(url, {
+                method: "POST"
+            }).then(function (response) {
+                if (response.ok) {
+                    game.remove();
+                    total();
+
+                    if (document.querySelector("#devide #games table tbody").children.length == 0) {
+                        clearCart();
+                    }
+                }
+            })
         }
     });
 }
@@ -44,7 +84,16 @@ for (const decrease of decreaseCountBtns) {
 // Clear Cart
 
 document.querySelector("#devide #games .clear").addEventListener("click", function () {
-    clearCart();
+    let userId = this.getAttribute("data-userId");
+    let url = `/Cart/ClearCart?userId=${userId}`;
+
+    fetch(url, {
+        method: "POST"
+    }).then(function (response) {
+        if (response.ok) {
+            clearCart();
+        }
+    });
 });
 
 
@@ -55,14 +104,25 @@ let removeBtn = document.querySelectorAll("#devide #games table tbody tr .name i
 
 for (const remove of removeBtn) {
     remove.addEventListener("click", function () {
-        this.parentNode.parentNode.remove();
+        let game = this.parentNode.parentNode;
+        let gameId = this.getAttribute("data-gameId");
+        let userId = this.getAttribute("data-userId");
+        let url = `/Cart/RemoveGameFromCart?gameId=${gameId}&userId=${userId}`
 
-        if (document.querySelector("#devide #games table tbody").children.length == 0) {
-            clearCart();
-        }
+        fetch(url, {
+            method: "POST"
+        }).then(function (response) {
+            if (response.ok) {
+                game.remove();
+
+                if (document.querySelector("#devide #games table tbody").children.length == 0) {
+                    clearCart();
+                }
 
 
-        total();
+                total();
+            }
+        })
     });
 }
 

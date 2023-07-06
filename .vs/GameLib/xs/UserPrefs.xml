@@ -1,21 +1,37 @@
 ﻿<Properties StartupConfiguration="{DA011D14-646D-4E53-88D4-623F2AE99E63}|Default">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.ItemProperties.GameLib PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench ActiveDocument="Service/Services/CartService.cs">
+    <Files>
+      <File FileName="GameLib/Controllers/CartController.cs" Line="13" Column="27" />
+      <File FileName="Service/Services/CartService.cs" Line="18" Column="73" />
+      <File FileName="GameLib/Program.cs" Line="73" Column="75" />
+    </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="GameLib" expanded="True" />
+          <Node name="GameLib" expanded="True">
+            <Node name="Domain" expanded="True">
+              <Node name="Models" expanded="True" />
+            </Node>
+            <Node name="GameLib" expanded="True">
+              <Node name="Controllers" expanded="True" />
+              <Node name="Views" expanded="True" />
+            </Node>
+            <Node name="Service" expanded="True">
+              <Node name="Services" expanded="True">
+                <Node name="Interfaces" expanded="True" />
+                <Node name="CartService.cs" selected="True" />
+              </Node>
+            </Node>
+          </Node>
         </State>
-      </Pad>
-      <Pad Id="MonoDevelop.Debugger.WatchPad">
-        <State />
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.GameLib PreferredExecutionTarget="/Applications/Google Chrome.app" />
 </Properties>

@@ -61,15 +61,31 @@
 
                 else
                 {
-                    <div class="add-to-cart">
-                        <button>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            Add to Cart
-                        </button>
-                    </div>
+                    if (User.Identity.IsAuthenticated)
+                    {
+                        <div class="add-to-cart">
+                            <button data-gameId="@Model.Game.Id" data-userId="@user.Id">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                Add to Cart
+                            </button>
+                        </div>
+                    }
+
+                    else
+                    {
+                        <div class="login">
+                            <button>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                Add to Cart
+                            </button>
+                        </div>
+                    }
                 }
             </div>
         </div>
