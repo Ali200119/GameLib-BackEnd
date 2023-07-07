@@ -837,6 +837,10 @@
       "PackagePath": "staticwebassets/assets/slick/slick.min.js"
     },
     {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/templates/OrderConfirmation.html",
+      "PackagePath": "staticwebassets/assets/templates/OrderConfirmation.html"
+    },
+    {
       "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/templates/ResetPassword.html",
       "PackagePath": "staticwebassets/assets/templates/ResetPassword.html"
     },

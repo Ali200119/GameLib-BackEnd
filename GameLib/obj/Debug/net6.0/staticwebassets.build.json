@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "xZFf53KU/ZP1wMXj4ZnFzEhNYdEcLVqqxHTPU9dhBAA=",
+  "Hash": "XelPRx/jJ9AvdQx8icV+Fc0tEmf+5Co289PRVNbEcn0=",
   "Source": "GameLib",
   "BasePath": "_content/GameLib",
   "Mode": "Default",
@@ -3585,6 +3585,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/assets/slick/slick.min.js"
+    },
+    {
+      "Identity": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/templates/OrderConfirmation.html",
+      "SourceId": "GameLib",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/",
+      "BasePath": "_content/GameLib",
+      "RelativePath": "assets/templates/OrderConfirmation.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/assets/templates/OrderConfirmation.html"
     },
     {
       "Identity": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/templates/ResetPassword.html",

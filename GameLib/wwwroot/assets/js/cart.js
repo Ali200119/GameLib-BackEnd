@@ -140,6 +140,17 @@ total();
 
 
 
+// Checkout
+
+document.querySelector("#checkout button").addEventListener("click", function () {
+    let userId = this.getAttribute("data-userId");
+    let total = parseFloat(document.querySelector("#checkout .total .price").lastElementChild.innerText);
+
+    window.location.assign(`/Cart/Checkout?userId=${userId}&total=${total}`);
+});
+
+
+
 
 
 // Functions
@@ -149,17 +160,17 @@ function total() {
     let totalSum = 0;
 
     for (const price of document.querySelectorAll("#devide #games table tbody tr .subtotal :last-child")) {
-        totalSum += parseFloat(price.innerText);
+        totalSum += parseFloat(price.innerText.replace(",", "."));
     }
 
-    total.lastElementChild.innerText = totalSum;
+    total.lastElementChild.innerText = totalSum.toString().replace(".", ",");
 }
 
 function subtotal() {
     let subtotal = document.querySelectorAll("#devide #games table tbody tr .subtotal :last-child");
-
+    
     for (const item of subtotal) {
-        item.innerText = parseFloat(item.parentNode.previousElementSibling.previousElementSibling.lastElementChild.innerText) * parseInt(item.parentNode.previousElementSibling.firstElementChild.children[1].innerText);
+        item.innerText = (parseFloat(item.parentNode.previousElementSibling.previousElementSibling.lastElementChild.innerText.replace(",", ".")) * parseInt(item.parentNode.previousElementSibling.firstElementChild.children[1].innerText)).toString().replace(".", ",");
     }
 }
 

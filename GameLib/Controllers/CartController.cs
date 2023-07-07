@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Domain.Models;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Service.Services.Interfaces;
 using Service.ViewModels;
@@ -15,12 +16,18 @@ namespace GameLib.Controllers
     {
         private readonly ICartService _cartService;
         private readonly IGameService _gameService;
+        private readonly UserManager<AppUser> _userManager;
+        private readonly IEmailService _emailService;
 
         public CartController(ICartService cartService,
-                              IGameService gameService)
+                              IGameService gameService,
+                              UserManager<AppUser> userManager,
+                              IEmailService emailService)
         {
             _cartService = cartService;
             _gameService = gameService;
+            _userManager = userManager;
+            _emailService = emailService;
         }
 
 
@@ -139,6 +146,36 @@ namespace GameLib.Controllers
             {
                 return NotFound();
             }
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> Checkout(string userId, decimal total)
+        {
+            if (userId is null) throw new ArgumentNullException();
+
+            AppUser user = await _userManager.FindByIdAsync(userId);
+            await _cartService.ClearCartAsync(userId);
+
+            TempData["Email"] = user.Email;
+
+            string link = Url.Action(nameof(Index), "Shop", null, Request.Scheme, Request.Host.ToString());
+            string subject = "Order Confirmation";
+            string html;
+
+            using (StreamReader reader = new StreamReader("wwwroot/assets/templates/OrderConfirmation.html"))
+            {
+                html = reader.ReadToEnd();
+            }
+
+            string fullName = user.FullName;
+
+            html = html.Replace("{{fullName}}", fullName);
+            html = html.Replace("{{total}}", total.ToString());
+            html = html.Replace("{{link}}", link);
+
+            _emailService.Send(user.Email, subject, html);
+
+            return View();
         }
     }
 }
