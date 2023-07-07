@@ -249,7 +249,7 @@ main #inputs form .inputBox {
   margin-top: 30px;
   position: relative;
 }
-main #inputs form .inputBox:nth-child(2) {
+main #inputs form .inputBox:nth-child(3) {
   margin-top: 50px;
 }
 main #inputs form .inputBox input {

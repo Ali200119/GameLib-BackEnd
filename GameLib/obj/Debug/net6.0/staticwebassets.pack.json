@@ -801,6 +801,18 @@
       "PackagePath": "staticwebassets/assets/scss/user/register.scss"
     },
     {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/scss/user/reset-password.css",
+      "PackagePath": "staticwebassets/assets/scss/user/reset-password.css"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/scss/user/reset-password.css.map",
+      "PackagePath": "staticwebassets/assets/scss/user/reset-password.css.map"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/scss/user/reset-password.scss",
+      "PackagePath": "staticwebassets/assets/scss/user/reset-password.scss"
+    },
+    {
       "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/scss/user/verify-email.css",
       "PackagePath": "staticwebassets/assets/scss/user/verify-email.css"
     },
@@ -823,6 +835,10 @@
     {
       "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/slick/slick.min.js",
       "PackagePath": "staticwebassets/assets/slick/slick.min.js"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/templates/ResetPassword.html",
+      "PackagePath": "staticwebassets/assets/templates/ResetPassword.html"
     },
     {
       "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/templates/VerifyEmail.html",

@@ -85,7 +85,7 @@ namespace GameLib.Controllers
             TempData["Email"] = newUser.Email;
 
             string token = await _userManager.GenerateEmailConfirmationTokenAsync(newUser);
-            string link = Url.Action("ConfirmEmail", "Account", new { userId = newUser.Id, token }, Request.Scheme, Request.Host.ToString());
+            string link = Url.Action(nameof(ConfirmEmail), "Account", new { userId = newUser.Id, token }, Request.Scheme, Request.Host.ToString());
             string subject = "Email Confirmation";
             string html;
 
@@ -193,7 +193,7 @@ namespace GameLib.Controllers
         {
             Dictionary<string, string> sectionHeaders = _staticDataService.GetAllSectionHeaders();
 
-            RegisterVM model = new RegisterVM
+            ForgotPasswordVM model = new ForgotPasswordVM
             {
                 SectionHeaders = sectionHeaders
             };
@@ -201,6 +201,80 @@ namespace GameLib.Controllers
             return View(model);
         }
 
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> ForgotPassword(ForgotPasswordVM model)
+        {
+            if(!ModelState.IsValid)
+            {
+                model.SectionHeaders = _staticDataService.GetAllSectionHeaders();
+
+                return View(model);
+            }
+
+            AppUser existUser = await _userManager.FindByEmailAsync(model.Email);
+
+            if(existUser is null)
+            {
+                model.SectionHeaders = _staticDataService.GetAllSectionHeaders();
+                ModelState.AddModelError("Email", "User is not found.");
+
+                return View(model);
+            }
+
+            TempData["Email"] = existUser.Email;
+
+            string token = await _userManager.GeneratePasswordResetTokenAsync(existUser);
+            string link = Url.Action(nameof(ResetPassword), "Account", new { userId = existUser.Id, token }, Request.Scheme, Request.Host.ToString());
+            string subject = "Reset Password";
+            string html;
+
+            using (StreamReader reader = new StreamReader("wwwroot/assets/templates/ResetPassword.html"))
+            {
+                html = reader.ReadToEnd();
+            }
+
+            string fullName = existUser.FullName;
+
+            html = html.Replace("{{fullName}}", fullName);
+            html = html.Replace("{{link}}", link);
+
+            _emailService.Send(existUser.Email, subject, html);
+
+            return RedirectToAction(nameof(VerifyEmail));
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> ResetPassword(string userId, string token)
+        {
+            ResetPasswordVM model = new ResetPasswordVM
+            {
+                SectionHeaders = _staticDataService.GetAllSectionHeaders(),
+                UserId = userId,
+                Token = token
+            };
+
+            return View(model);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> ResetPassword(ResetPasswordVM model)
+        {
+            if(!ModelState.IsValid)
+            {
+                model.SectionHeaders = _staticDataService.GetAllSectionHeaders();
+                return View(model);
+            }
+
+            AppUser existUser = await _userManager.FindByIdAsync(model.UserId);
+
+            if (existUser is null) throw new NullReferenceException();
+
+            await _userManager.ResetPasswordAsync(existUser, model.Token, model.Password);
+
+            return RedirectToAction(nameof(Login));
+        }
 
         [HttpPost]
         public async Task<IActionResult> Logout()

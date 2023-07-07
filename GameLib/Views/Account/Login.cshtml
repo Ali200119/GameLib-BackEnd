@@ -41,7 +41,7 @@
         <span asp-validation-for="Password" style="color: red;"></span>
 
         <div class="options">
-            <a href="#" class="forgot-password">Forgot your password?</a>
+            <a asp-controller="Account" asp-action="ForgotPassword" class="forgot-password">Forgot your password?</a>
             <h5>Dont't have an account? <a asp-controller="Account" asp-action="Register">Register</a></h5>
         </div>
 
