@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Domain.Models;
+using GameLib.Helpers.Enums;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -17,24 +18,24 @@ namespace GameLib.Controllers
     {
         private readonly UserManager<AppUser> _userManager;
         private readonly SignInManager<AppUser> _signInManager;
+        private readonly RoleManager<IdentityRole> _roleManager;
         private readonly IStaticDataService _staticDataService;
         private readonly IEmailService _emailService;
         private readonly ICartService _cartService;
-        private readonly AppDbContext _context;
 
         public AccountController(UserManager<AppUser> userManager,
                                  SignInManager<AppUser> signInManager,
                                  IStaticDataService staticDataService,
                                  IEmailService emailService,
                                  ICartService cartService,
-                                 AppDbContext context)
+                                 RoleManager<IdentityRole> roleManager)
         {
             _userManager = userManager;
             _signInManager = signInManager;
             _staticDataService = staticDataService;
             _emailService = emailService;
             _cartService = cartService;
-            _context = context;
+            _roleManager = roleManager;
         }
 
 
@@ -81,6 +82,8 @@ namespace GameLib.Controllers
                 model.SectionHeaders = _staticDataService.GetAllSectionHeaders();
                 return View(model);
             }
+
+            await _userManager.AddToRoleAsync(newUser, Roles.Member.ToString());
 
             TempData["Email"] = newUser.Email;
 
@@ -283,5 +286,19 @@ namespace GameLib.Controllers
 
             return Ok();
         }
+
+        //[HttpGet]
+        //public async Task<IActionResult> CreateRoles()
+        //{
+        //    foreach (var role in Enum.GetValues(typeof(Roles)))
+        //    {
+        //        if (!await _roleManager.RoleExistsAsync(role.ToString()))
+        //        {
+        //            await _roleManager.CreateAsync(new IdentityRole { Name = role.ToString()});
+        //        }
+        //    }
+
+        //    return Ok("New Roles Successfully Created");
+        //}
     }
 }

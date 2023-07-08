@@ -21,5 +21,12 @@ namespace Service.Services
         {
             return await _aboutRepo.GetAllAsync();
         }
+
+        public async Task UpdateAsync(About about)
+        {
+            if (about is null) throw new ArgumentNullException();
+
+            await _aboutRepo.UpdateAsync(about);
+        }
     }
 }

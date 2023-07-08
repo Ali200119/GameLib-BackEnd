@@ -1,0 +1,30 @@
+﻿@model AboutDetailsVM
+
+@{
+    ViewBag.Title = "About Details";
+}
+
+<div style="width: 70%; margin-left: 40px">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Image</th>
+                <th scope="col">Title</th>
+                <th scope="col">Description</th>
+                <th scope="col">Create Time</th>
+                <th scope="col">Update Time</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><img style="width: 150px; height: 150px; border-radius: unset; object-fit: cover" src="~/assets/img/about/@Model.Image" /></td>
+                <td>@Model.Title</td>
+                <td>@Html.Raw(Model.Description)</td>
+                <td>@Model.CreatedAt.ToString("dd MMMM yyyy hh:mm tt")</td>
+                <td>@Model.ModifiedAt.ToString("dd MMMM yyyy hh:mm tt")</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a class="btn mt-5" style="color: white;background-color: gray" asp-area="Admin" asp-controller="About" asp-action="Index">Back</a>
+</div>

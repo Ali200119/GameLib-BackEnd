@@ -41,14 +41,14 @@ namespace Repository.Repositories
 
         public async Task<IEnumerable<T>> GetAllAsync(params Expression<Func<T, object>>[] includes)
         {
-            return await entities.IncludeMultiple(includes).ToListAsync();
+            return await entities.AsNoTracking().IncludeMultiple(includes).ToListAsync();
         }
 
         public async Task<T> GetByIdAsync(int? id, params Expression<Func<T, object>>[] includes)
         {
             if (id is null) throw new ArgumentNullException();
 
-            T entity = await entities.IncludeMultiple(includes).FirstOrDefaultAsync(e => e.Id == id);
+            T entity = await entities.AsNoTracking().IncludeMultiple(includes).FirstOrDefaultAsync(e => e.Id == id);
 
             if (entity is null) throw new NullReferenceException();
 

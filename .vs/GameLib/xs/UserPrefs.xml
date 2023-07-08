@@ -1,37 +1,42 @@
 ﻿<Properties StartupConfiguration="{DA011D14-646D-4E53-88D4-623F2AE99E63}|Default">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Service/Services/CartService.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workbench ActiveDocument="GameLib/Areas/Admin/Views/About/Details.cshtml">
     <Files>
-      <File FileName="GameLib/Controllers/CartController.cs" Line="13" Column="27" />
-      <File FileName="Service/Services/CartService.cs" Line="18" Column="73" />
-      <File FileName="GameLib/Program.cs" Line="73" Column="75" />
+      <File FileName="GameLib/Areas/Admin/Views/Shared/_Layout.cshtml" />
+      <File FileName="GameLib/Areas/Admin/Views/About/Details.cshtml" Line="27" Column="13" />
+      <File FileName="GameLib/Areas/Admin/Views/About/Edit.cshtml" />
+      <File FileName="GameLib/Areas/Admin/Controllers/AboutController.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="GameLib" expanded="True">
-            <Node name="Domain" expanded="True">
-              <Node name="Models" expanded="True" />
-            </Node>
+            <Node name="Domain" expanded="True" />
             <Node name="GameLib" expanded="True">
-              <Node name="Controllers" expanded="True" />
-              <Node name="Views" expanded="True" />
-            </Node>
-            <Node name="Service" expanded="True">
-              <Node name="Services" expanded="True">
-                <Node name="Interfaces" expanded="True" />
-                <Node name="CartService.cs" selected="True" />
+              <Node name="Areas" expanded="True">
+                <Node name="Admin" expanded="True">
+                  <Node name="Controllers" expanded="True" />
+                  <Node name="Views" expanded="True">
+                    <Node name="About" expanded="True">
+                      <Node name="Details.cshtml" selected="True" />
+                    </Node>
+                    <Node name="Shared" expanded="True" />
+                  </Node>
+                </Node>
               </Node>
+              <Node name="wwwroot" expanded="True" />
             </Node>
+            <Node name="Repository" expanded="True" />
+            <Node name="Service" expanded="True" />
           </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.ItemProperties.GameLib PreferredExecutionTarget="/Applications/Google Chrome.app" />
 </Properties>
