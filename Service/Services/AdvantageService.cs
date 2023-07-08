@@ -21,5 +21,26 @@ namespace Service.Services
         public async Task<IEnumerable<Advantage>> GetAllAsync() => await _advantageRepo.GetAllAsync();
 
         public async Task<Advantage> GetByIdAsync(int? id) => await _advantageRepo.GetByIdAsync(id);
+
+        public async Task CreateAsync(Advantage advantage)
+        {
+            if (advantage is null) throw new ArgumentNullException();
+
+            await _advantageRepo.CreateAsync(advantage);
+        }
+
+        public async Task UpdateAsync(Advantage advantage)
+        {
+            if (advantage is null) throw new ArgumentNullException();
+
+            await _advantageRepo.UpdateAsync(advantage);
+        }
+
+        public async Task DeleteAsync(Advantage advantage)
+        {
+            if (advantage is null) throw new ArgumentNullException();
+
+            await _advantageRepo.DeleteAsync(advantage);
+        }
     }
 }

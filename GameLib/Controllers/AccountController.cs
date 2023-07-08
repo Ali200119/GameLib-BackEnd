@@ -294,7 +294,7 @@ namespace GameLib.Controllers
         //    {
         //        if (!await _roleManager.RoleExistsAsync(role.ToString()))
         //        {
-        //            await _roleManager.CreateAsync(new IdentityRole { Name = role.ToString()});
+        //            await _roleManager.CreateAsync(new IdentityRole { Name = role.ToString() });
         //        }
         //    }
 

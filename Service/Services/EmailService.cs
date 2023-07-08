@@ -31,6 +31,7 @@ namespace Service.Services
             email.Body = new TextPart(TextFormat.Html) { Text = html };
 
             // send email
+
             using var smtp = new SmtpClient();
             smtp.Connect(_emailSetting.Server, _emailSetting.Port, SecureSocketOptions.StartTls);
             smtp.Authenticate(_emailSetting.Username, _emailSetting.Password);

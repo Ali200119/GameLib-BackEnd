@@ -1101,10 +1101,6 @@
       "PackagePath": "staticwebassets/admin/assets/js/codemirror.js"
     },
     {
-      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/admin/assets/js/custom.js",
-      "PackagePath": "staticwebassets/admin/assets/js/custom.js"
-    },
-    {
       "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/admin/assets/js/dashboard.js",
       "PackagePath": "staticwebassets/admin/assets/js/dashboard.js"
     },
@@ -3437,6 +3433,10 @@
       "PackagePath": "staticwebassets/admin/assets/vendors/flag-icon-css/flags/4x3/zw.svg"
     },
     {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/admin/assets/vendors/font-awesome/.DS_Store",
+      "PackagePath": "staticwebassets/admin/assets/vendors/font-awesome/.DS_Store"
+    },
+    {
       "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/admin/assets/vendors/font-awesome/css/font-awesome.min.css",
       "PackagePath": "staticwebassets/admin/assets/vendors/font-awesome/css/font-awesome.min.css"
     },
@@ -3475,6 +3475,10 @@
     {
       "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/admin/assets/vendors/js/vendor.bundle.base.js",
       "PackagePath": "staticwebassets/admin/assets/vendors/js/vendor.bundle.base.js"
+    },
+    {
+      "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/admin/assets/vendors/mdi/.DS_Store",
+      "PackagePath": "staticwebassets/admin/assets/vendors/mdi/.DS_Store"
     },
     {
       "Id": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/admin/assets/vendors/mdi/css/materialdesignicons.min.css",

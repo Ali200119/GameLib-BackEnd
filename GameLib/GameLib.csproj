@@ -30,6 +30,12 @@
     <None Remove="Helpers\Enums\" />
     <None Remove="Areas\Admin\ViewModels\About\" />
     <None Remove="Areas\Admin\Views\About\" />
+    <None Remove="Areas\Admin\ViewModels\Advantage\" />
+    <None Remove="Areas\Admin\Views\Advantage\" />
+    <None Remove="Areas\Admin\ViewModels\BlogAuthor\" />
+    <None Remove="Areas\Admin\Views\BlogAuthor\" />
+    <None Remove="Areas\Admin\ViewModels\Developer\" />
+    <None Remove="Areas\Admin\Views\Developer\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\Home\" />
@@ -53,6 +59,12 @@
     <Folder Include="Helpers\Enums\" />
     <Folder Include="Areas\Admin\ViewModels\About\" />
     <Folder Include="Areas\Admin\Views\About\" />
+    <Folder Include="Areas\Admin\ViewModels\Advantage\" />
+    <Folder Include="Areas\Admin\Views\Advantage\" />
+    <Folder Include="Areas\Admin\ViewModels\BlogAuthor\" />
+    <Folder Include="Areas\Admin\Views\BlogAuthor\" />
+    <Folder Include="Areas\Admin\ViewModels\Developer\" />
+    <Folder Include="Areas\Admin\Views\Developer\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.15" />

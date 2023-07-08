@@ -272,7 +272,7 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" asp-area="Admin" asp-controller="About" asp-action="Index">
-                            <span class="icon-bg"><i class="mdi mdi-animation"></i></span>
+                            <span class="icon-bg"><i class="mdi mdi-information-outline"></i></span>
                             <span class="menu-title">About</span>
                         </a>
                     </li>
@@ -283,16 +283,17 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" asp-area="Admin" asp-controller="Banner" asp-action="Index">
-                            <span class="icon-bg"><i class="mdi mdi-arrange-bring-forward"></i></span>
-                            <span class="menu-title">Banners</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" asp-area="Admin" asp-controller="Brand" asp-action="Index">
+                        <a class="nav-link" data-bs-toggle="collapse" href="#blog" aria-expanded="false" aria-controls="ui-basic">
                             <span class="icon-bg"><i class="mdi mdi-blogger"></i></span>
-                            <span class="menu-title">Brands</span>
+                            <span class="menu-title">Blog</span>
+                            <i class="menu-arrow"></i>
                         </a>
+                        <div class="collapse" id="blog">
+                            <ul class="nav flex-column sub-menu">
+                                <li class="nav-item"> <a class="nav-link" asp-area="Admin" asp-controller="Blog" asp-action="Index">Blogs</a></li>
+                                <li class="nav-item"> <a class="nav-link" asp-area="Admin" asp-controller="BlogAuthor" asp-action="Index">Authors</a></li>
+                            </ul>
+                        </div>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" data-bs-toggle="collapse" href="#product" aria-expanded="false" aria-controls="ui-basic">
@@ -363,6 +364,7 @@
     <!-- container-scroller -->
     <!-- plugins:js -->
     <script src="~/admin/assets/vendors/js/vendor.bundle.base.js"></script>
+    <script src="https://kit.fontawesome.com/0e5ed62bbe.js" crossorigin="anonymous"></script>
     <!-- endinject -->
     <!-- Plugin js for this page -->
     <script src="~/admin/assets/vendors/chart.js/Chart.min.js"></script>

@@ -7,5 +7,8 @@ namespace Service.Services.Interfaces
 	{
 		Task<IEnumerable<Developer>> GetAllAsync();
 		Task<Developer> GetByIdAsync(int? id);
-	}
+		Task CreateAsync(Developer developer);
+		Task UpdateAsync(Developer developer);
+		Task DeleteAsync(Developer developer);
+    }
 }

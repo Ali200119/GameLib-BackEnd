@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "iHb/AjD2cax2uJ5drWmfECNvFQSFWM6y2qLJ68DIyNk=",
+  "Hash": "qria/d/qhdW8TmMYOxBynmIzrIyPs4n8IGuXs2RVnAM=",
   "Source": "GameLib",
   "BasePath": "_content/GameLib",
   "Mode": "Default",
@@ -4707,23 +4707,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/admin/assets/js/codemirror.js"
-    },
-    {
-      "Identity": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/admin/assets/js/custom.js",
-      "SourceId": "GameLib",
-      "SourceType": "Discovered",
-      "ContentRoot": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/",
-      "BasePath": "_content/GameLib",
-      "RelativePath": "admin/assets/js/custom.js",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/admin/assets/js/custom.js"
     },
     {
       "Identity": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/admin/assets/js/dashboard.js",
@@ -14637,6 +14620,23 @@
       "OriginalItemSpec": "wwwroot/admin/assets/vendors/flag-icon-css/flags/4x3/zw.svg"
     },
     {
+      "Identity": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/admin/assets/vendors/font-awesome/.DS_Store",
+      "SourceId": "GameLib",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/",
+      "BasePath": "_content/GameLib",
+      "RelativePath": "admin/assets/vendors/font-awesome/.DS_Store",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/admin/assets/vendors/font-awesome/.DS_Store"
+    },
+    {
       "Identity": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/admin/assets/vendors/font-awesome/css/font-awesome.min.css",
       "SourceId": "GameLib",
       "SourceType": "Discovered",
@@ -14805,6 +14805,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/admin/assets/vendors/js/vendor.bundle.base.js"
+    },
+    {
+      "Identity": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/admin/assets/vendors/mdi/.DS_Store",
+      "SourceId": "GameLib",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/",
+      "BasePath": "_content/GameLib",
+      "RelativePath": "admin/assets/vendors/mdi/.DS_Store",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/admin/assets/vendors/mdi/.DS_Store"
     },
     {
       "Identity": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/admin/assets/vendors/mdi/css/materialdesignicons.min.css",

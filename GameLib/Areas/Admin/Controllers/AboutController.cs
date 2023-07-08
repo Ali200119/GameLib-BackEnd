@@ -40,7 +40,7 @@ namespace GameLib.Areas.Admin.Controllers
 
             return View(model);
         }
-
+        [HttpGet]
         public async Task<IActionResult> Details()
         {
             IEnumerable<About> about = await _aboutService.GetAsync();
@@ -58,12 +58,10 @@ namespace GameLib.Areas.Admin.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> Edit(int? id)
+        public async Task<IActionResult> Edit()
         {
             try
             {
-                if (id is null) throw new ArgumentNullException();
-
                 IEnumerable<About> about = await _aboutService.GetAsync();
 
                 AboutEditVM model = new AboutEditVM
@@ -111,7 +109,7 @@ namespace GameLib.Areas.Admin.Controllers
                     return View(model);
                 }
 
-                string fileName = Guid.NewGuid().ToString() + "_" + model.Photo.FileName;
+                string fileName = model.Photo.GenerateFileName();
                 string path = FileHelper.GetFilePath(_env.WebRootPath, "assets/img/about", fileName);
 
                 string oldImagePath = FileHelper.GetFilePath(_env.WebRootPath, "assets/img/about", about.FirstOrDefault().Image);

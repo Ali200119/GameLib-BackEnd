@@ -10,6 +10,11 @@ namespace Service.Helpers
             return file.ContentType.Contains(pattern);
         }
 
+        public static string GenerateFileName(this IFormFile file)
+        {
+            return Guid.NewGuid().ToString() + "_" + file.FileName;
+        }
+
         public static void DeleteFileFromPath(string path)
         {
             if (File.Exists(path)) File.Delete(path);
