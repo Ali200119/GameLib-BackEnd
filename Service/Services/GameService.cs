@@ -57,7 +57,7 @@ namespace Service.Services
         {
             if (game is null) throw new ArgumentNullException();
 
-            await _gameRepo.UpdateAsync(game);
+            await _gameRepo.DeleteAsync(game);
         }
     }
 }

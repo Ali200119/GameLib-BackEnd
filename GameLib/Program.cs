@@ -71,6 +71,9 @@ builder.Services.AddScoped<ICartGameRepository, CartGameRepository>();
 builder.Services.AddScoped<IBlogCommentRepository, BlogCommentRepository>();
 builder.Services.AddScoped<IBlogAuthorRepository, BlogAuthorRepository>();
 builder.Services.AddScoped<IBlogImageRepository, BlogImageRepository>();
+builder.Services.AddScoped<IGameImageRepository, GameImageRepository>();
+builder.Services.AddScoped<IGamePlatformRepository, GamePlatformRepository>();
+builder.Services.AddScoped<IGameGenreRepository, GameGenreRepository>();
 
 builder.Services.AddScoped<IAboutService, AboutService>();
 builder.Services.AddScoped<IAdvantageService, AdvantageService>();
@@ -89,6 +92,9 @@ builder.Services.AddScoped<ICartService, CartService>();
 builder.Services.AddScoped<IBlogCommentService, BlogCommentService>();
 builder.Services.AddScoped<IBlogAuthorService, BlogAuthorService>();
 builder.Services.AddScoped<IBlogImageService, BlogImageService>();
+builder.Services.AddScoped<IGameImageService, GameImageService>();
+builder.Services.AddScoped<IGamePlatformService, GamePlatformService>();
+builder.Services.AddScoped<IGameGenreService, GameGenreService>();
 builder.Services.AddScoped<EmailSetting>();
 
 var app = builder.Build();

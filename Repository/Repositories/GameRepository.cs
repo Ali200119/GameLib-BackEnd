@@ -16,7 +16,7 @@ namespace Repository.Repositories
         {
             if (id is null) throw new ArgumentNullException();
 
-            Game game = await entities.Include(g => g.GameImages)
+            Game game = await entities.AsNoTracking().Include(g => g.GameImages)
                                       .Include(g => g.GamePlatforms)
                                       .ThenInclude(gp => gp.Platform)
                                       .Include(g => g.GameGenres)

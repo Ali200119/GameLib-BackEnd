@@ -24,13 +24,6 @@ namespace Service.Services
             return await _blogImageRepo.GetAllByBlogIdAsync(id);
         }
 
-        public async Task CreateMultipleAsync(List<BlogImage> blogImages)
-        {
-            if (blogImages is null) throw new ArgumentNullException();
-
-            await _blogImageRepo.CreateMultipleAsync(blogImages);
-        }
-
         public async Task DeleteAsync(BlogImage blogImage)
         {
             if (blogImage is null) throw new ArgumentNullException();
