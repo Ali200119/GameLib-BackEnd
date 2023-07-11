@@ -1,7 +1,12 @@
 ﻿<Properties StartupConfiguration="{DA011D14-646D-4E53-88D4-623F2AE99E63}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="GameLib/Areas/Admin/Views/Game/Edit.cshtml">
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.GameLib PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="GameLib/Controllers/AccountController.cs">
     <Files>
       <File FileName="GameLib/Areas/Admin/Views/Game/Edit.cshtml" Line="30" Column="122" />
+      <File FileName="GameLib/Controllers/AccountController.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -10,12 +15,11 @@
             <Node name="GameLib" expanded="True">
               <Node name="Areas" expanded="True">
                 <Node name="Admin" expanded="True">
-                  <Node name="Views" expanded="True">
-                    <Node name="Game" expanded="True">
-                      <Node name="Edit.cshtml" selected="True" />
-                    </Node>
-                  </Node>
+                  <Node name="Views" expanded="True" />
                 </Node>
+              </Node>
+              <Node name="Controllers" expanded="True">
+                <Node name="AccountController.cs" selected="True" />
               </Node>
             </Node>
             <Node name="Repository" expanded="True" />
@@ -27,8 +31,4 @@
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.GameLib PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MultiItemStartupConfigurations />
 </Properties>

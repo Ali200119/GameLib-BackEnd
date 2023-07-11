@@ -11307,11 +11307,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/ali200119/Desktop/GameLib/GameLib/GameLib.csproj",
+      "projectUniqueName": "/Users/ali200119/Desktop/GameLib-BackEnd/GameLib/GameLib.csproj",
       "projectName": "GameLib",
-      "projectPath": "/Users/ali200119/Desktop/GameLib/GameLib/GameLib.csproj",
+      "projectPath": "/Users/ali200119/Desktop/GameLib-BackEnd/GameLib/GameLib.csproj",
       "packagesPath": "/Users/ali200119/.nuget/packages/",
-      "outputPath": "/Users/ali200119/Desktop/GameLib/GameLib/obj/",
+      "outputPath": "/Users/ali200119/Desktop/GameLib-BackEnd/GameLib/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/ali200119/.nuget/NuGet/NuGet.Config"
@@ -11327,8 +11327,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "/Users/ali200119/Desktop/GameLib/Service/Service.csproj": {
-              "projectPath": "/Users/ali200119/Desktop/GameLib/Service/Service.csproj"
+            "/Users/ali200119/Desktop/GameLib-BackEnd/Service/Service.csproj": {
+              "projectPath": "/Users/ali200119/Desktop/GameLib-BackEnd/Service/Service.csproj"
             }
           }
         }
