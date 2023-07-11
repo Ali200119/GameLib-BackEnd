@@ -43,6 +43,9 @@
     <None Remove="Areas\Admin\ViewModels\Subscribe\" />
     <None Remove="Areas\Admin\ViewModels\Blog\" />
     <None Remove="Areas\Admin\Views\Blog\" />
+    <None Remove="Areas\Admin\ViewModels\Contact\" />
+    <None Remove="Areas\Admin\ViewModels\Game\" />
+    <None Remove="Areas\Admin\Views\Game\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\Home\" />
@@ -79,6 +82,9 @@
     <Folder Include="Areas\Admin\ViewModels\Subscribe\" />
     <Folder Include="Areas\Admin\ViewModels\Blog\" />
     <Folder Include="Areas\Admin\Views\Blog\" />
+    <Folder Include="Areas\Admin\ViewModels\Contact\" />
+    <Folder Include="Areas\Admin\ViewModels\Game\" />
+    <Folder Include="Areas\Admin\Views\Game\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.15" />

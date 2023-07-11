@@ -38,5 +38,26 @@ namespace Service.Services
 
             return await _gameRepo.Sort(pattern);
         }
+
+        public async Task CreateAsync(Game game)
+        {
+            if (game is null) throw new ArgumentNullException();
+
+            await _gameRepo.CreateAsync(game);
+        }
+
+        public async Task UpdateAsync(Game game)
+        {
+            if (game is null) throw new ArgumentNullException();
+
+            await _gameRepo.UpdateAsync(game);
+        }
+
+        public async Task DeleteAsync(Game game)
+        {
+            if (game is null) throw new ArgumentNullException();
+
+            await _gameRepo.UpdateAsync(game);
+        }
     }
 }

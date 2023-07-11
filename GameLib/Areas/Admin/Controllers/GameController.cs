@@ -1,15 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Drawing;
 using System.Linq;
 using System.Threading.Tasks;
 using Domain.Models;
 using GameLib.Areas.Admin.ViewModels.Blog;
+using GameLib.Areas.Admin.ViewModels.Game;
+using GameLib.Helpers.Enums;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
-using Microsoft.EntityFrameworkCore;
-using Repository.Data;
 using Service.Helpers;
 using Service.Services.Interfaces;
 
@@ -17,43 +16,40 @@ namespace GameLib.Areas.Admin.Controllers
 {
     [Area("Admin")]
     [Authorize(Roles = "Admin")]
-    public class BlogController : Controller
+    public class GameController : Controller
     {
-        private readonly IBlogService _blogService;
-        private readonly IBlogAuthorService _blogAuthorService;
+        private readonly IGameService _gameService;
         private readonly IWebHostEnvironment _env;
-        private readonly IBlogImageService _blogImageService;
-        private readonly AppDbContext _context;
+        private readonly IPlatformService _platformService;
+        private readonly IGenreService _genreService;
 
-        public BlogController(IBlogService blogService,
-                              IBlogAuthorService blogAuthorService,
+        public GameController(IGameService gameService,
                               IWebHostEnvironment env,
-                              IBlogImageService blogImageService,
-                              AppDbContext context)
+                              IPlatformService platformService,
+                              IGenreService genreService)
         {
-            _blogService = blogService;
-            _blogAuthorService = blogAuthorService;
+            _gameService = gameService;
             _env = env;
-            _blogImageService = blogImageService;
-            _context = context;
+            _platformService = platformService;
+            _genreService = genreService;
         }
 
 
 
         public async Task<IActionResult> Index()
         {
-            IEnumerable<Blog> blogs = await _blogService.GetAllWithIncludesAsync();
+            IEnumerable<Game> games = await _gameService.GetAllWithIncludesAsync();
 
-            List<BlogListVM> model = new List<BlogListVM>();
+            List<GameListVM> model = new List<GameListVM>();
 
-            foreach (var blog in blogs)
+            foreach (var game in games)
             {
-                model.Add(new BlogListVM
+                model.Add(new GameListVM
                 {
-                    Id = blog.Id,
-                    MainImage = blog.BlogImages.FirstOrDefault(bi => bi.IsMain).Name,
-                    Title = blog.Title,
-                    Game = blog.Game
+                    Id = game.Id,
+                    MainImage = game.GameImages.FirstOrDefault(gi => gi.IsMain).Name,
+                    Name = game.Name,
+                    Developer = game.Developer
                 });
             }
 
@@ -63,16 +59,18 @@ namespace GameLib.Areas.Admin.Controllers
         [HttpGet]
         public async Task<IActionResult> Create()
         {
-            ViewBag.BlogAuthors = await GetBlogAuthorsAsync();
+            ViewBag.Platforms = await GetPlatformsAsync();
+            ViewBag.Genres = await GetGenresAsync();
 
             return View();
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create(BlogCreateVM model)
+        public async Task<IActionResult> Create(GameCreateVM model)
         {
-            ViewBag.BlogAuthors = await GetBlogAuthorsAsync();
+            ViewBag.Platforms = await GetPlatformsAsync();
+            ViewBag.Genres = await GetGenresAsync();
 
             if (!ModelState.IsValid) return View(model);
 
@@ -85,48 +83,70 @@ namespace GameLib.Areas.Admin.Controllers
                 }
             }
 
-            IEnumerable<Blog> blogs = await _blogService.GetAllWithIncludesAsync();
+            IEnumerable<Game> games = await _gameService.GetAllWithIncludesAsync();
 
-            List<BlogImage> blogImages = new List<BlogImage>();
+            List<GameImage> gameImages = new List<GameImage>();
 
             foreach (var photo in model.Photos)
             {
                 string fileName = photo.GenerateFileName();
-                string path = FileHelper.GetFilePath(_env.WebRootPath, "assets/img/blog", fileName);
+                string path = FileHelper.GetFilePath(_env.WebRootPath, "assets/img/games", fileName);
 
                 await photo.CreateLocalFileAsync(path);
 
-                BlogImage blogImage = new BlogImage
+                GameImage gameImage = new GameImage
                 {
                     Name = fileName
                 };
 
-                blogImages.Add(blogImage);
+                gameImages.Add(gameImage);
             }
 
-            blogImages.FirstOrDefault().IsMain = true;
+            List<GamePlatform> gamePlatforms = new List<GamePlatform>();
 
-            if (model.FavBlog)
+            foreach (var gamePlatformId in model.GamePlatformIdies)
             {
-                Blog favBlog = blogs.FirstOrDefault(b => b.FavBlog);
-
-                favBlog.FavBlog = false;
-
-                await _blogService.UpdateAsync(favBlog);
+                gamePlatforms.Add(new GamePlatform
+                {
+                    PlatformId = gamePlatformId
+                });
             }
 
-            Blog newBlog = new Blog
+            List<GameGenre> gameGenres = new List<GameGenre>();
+
+            foreach (var gameGenreId in model.GameGenreIdies)
             {
-                Title = model.Title,
-                Game = model.Game,
-                ShortDescription = model.ShortDescription,
+                gameGenres.Add(new GameGenre
+                {
+                    GenreId = gameGenreId
+                });
+            }
+
+            gameImages.FirstOrDefault().IsMain = true;
+
+            if (model.FavGame) games.FirstOrDefault(b => b.FavGame).FavGame = false;
+
+            decimal convertedPrice = decimal.Parse(model.Price.Replace(",", "."));
+
+            Game newGame = new Game
+            {
+                Name = model.Name,
+                Price = convertedPrice,
                 Description = model.Description,
-                FavBlog = model.FavBlog,
-                BlogImages = blogImages,
-                BlogAuthorId = model.BlogAuthorId
+                Developer = model.Developer,
+                Publisher = model.Publisher,
+                FavGame = model.FavGame,
+                ForPlaySation = model.ForPlayStation,
+                ForXbox = model.ForXbox,
+                ForPC = model.ForPC,
+                ReleaseDate = model.ReleaseDate,
+                Trailer = model.Trailer,
+                GameImages = gameImages,
+                GamePlatforms = gamePlatforms,
+                GameGenres = gameGenres
             };
 
-            await _blogService.CreateAsync(newBlog);
+            await _gameService.CreateAsync(newGame);
 
             return RedirectToAction(nameof(Index));
         }
@@ -168,7 +188,8 @@ namespace GameLib.Areas.Admin.Controllers
         [HttpGet]
         public async Task<IActionResult> Edit(int? id)
         {
-            ViewBag.BlogAuthors = await GetBlogAuthorsAsync();
+            ViewBag.Platforms = await GetPlatformsAsync();
+            ViewBag.Genres = await GetGenresAsync();
 
             if (id is null) throw new ArgumentNullException();
 
@@ -202,7 +223,8 @@ namespace GameLib.Areas.Admin.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(BlogEditVM model)
         {
-            ViewBag.BlogAuthors = await GetBlogAuthorsAsync();
+            ViewBag.Platforms = await GetPlatformsAsync();
+            ViewBag.Genres = await GetGenresAsync();
 
             Blog blog = await _blogService.GetByIdWithIncludesAsync(model.Id);
 
@@ -249,6 +271,7 @@ namespace GameLib.Areas.Admin.Controllers
 
                     BlogImage blogImage = new BlogImage
                     {
+                        BlogId = model.Id,
                         Name = fileName
                     };
 
@@ -256,29 +279,20 @@ namespace GameLib.Areas.Admin.Controllers
                 }
 
                 blogImages.FirstOrDefault().IsMain = true;
-
-                IEnumerable<BlogImage> dbBlogImages = await _blogImageService.GetAllByBlogIdAsync(model.Id);
-
-                foreach (var image in dbBlogImages)
-                {
-                    string oldPathImage = FileHelper.GetFilePath(_env.WebRootPath, "assets/img/blog", image.Name);
-
-                    FileHelper.DeleteFileFromPath(oldPathImage);
-
-                    await _blogImageService.DeleteAsync(image);
-                }
             }
 
-            IEnumerable<Blog> blogs = await _blogService.GetAllWithIncludesAsync();
+            IEnumerable<BlogImage> dbBlogImages = await _blogImageService.GetAllByBlogIdAsync(model.Id);
 
-            if (model.FavBlog)
+            foreach (var image in dbBlogImages)
             {
-                Blog favBlog = blogs.FirstOrDefault(b => b.FavBlog);
+                string oldPathImage = FileHelper.GetFilePath(_env.WebRootPath, "assets/img/blog", image.Name);
 
-                favBlog.FavBlog = false;
+                FileHelper.DeleteFileFromPath(oldPathImage);
 
-                await _blogService.UpdateAsync(favBlog);
+                await _blogImageService.DeleteAsync(image);
             }
+
+            await _blogImageService.CreateMultipleAsync(blogImages);
 
             Blog updatedBlog = new Blog
             {
@@ -289,7 +303,6 @@ namespace GameLib.Areas.Admin.Controllers
                 Description = model.Description,
                 FavBlog = model.FavBlog,
                 BlogAuthorId = model.BlogAuthorId,
-                BlogImages = blogImages,
                 CreatedAt = blog.CreatedAt,
                 ModifiedAt = DateTime.Now
             };
@@ -318,27 +331,24 @@ namespace GameLib.Areas.Admin.Controllers
 
             await _blogService.DeleteAsync(blog);
 
-            if (blog.FavBlog)
-            {
-                IEnumerable<Blog> blogs = await _blogService.GetAllWithIncludesAsync();
-
-                Blog firstBlog = blogs.FirstOrDefault();
-
-                firstBlog.FavBlog = true;
-
-                await _blogService.UpdateAsync(firstBlog);
-            }
-
             return RedirectToAction(nameof(Index));
         }
 
 
 
-        private async Task<SelectList> GetBlogAuthorsAsync()
+        private async Task<SelectList> GetPlatformsAsync()
         {
-            IEnumerable<BlogAuthor> blogAuthors = await _blogAuthorService.GetAllAsync();
+            IEnumerable<Platform> platforms = await _platformService.GetAllAsync();
 
-            return new SelectList(blogAuthors, "Id", "Name");
+            return new SelectList(platforms, "Id", "Name");
+        }
+
+        private async Task<SelectList> GetGenresAsync()
+        {
+            IEnumerable<Genre> genres = await _genreService.GetAllAsync();
+
+            return new SelectList(genres, "Id", "Name");
         }
     }
 }
+

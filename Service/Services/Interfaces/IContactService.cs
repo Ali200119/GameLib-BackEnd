@@ -5,6 +5,9 @@ namespace Service.Services.Interfaces
 {
 	public interface IContactService
 	{
-		Task CreateAsync(Contact contact);
-	}
+		Task<IEnumerable<Contact>> GetAllAsync();
+		Task<Contact> GetByIdAsync(int? id);
+        Task CreateAsync(Contact contact);
+		Task DeleteAsync(Contact contact);
+    }
 }

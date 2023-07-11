@@ -85,6 +85,6 @@ namespace Repository.Repositories
             return await entities.CountAsync();
         }
 
-        private async Task SaveChangesAsync() => await _context.SaveChangesAsync();
+        public async Task SaveChangesAsync() => await _context.SaveChangesAsync();
     }
 }

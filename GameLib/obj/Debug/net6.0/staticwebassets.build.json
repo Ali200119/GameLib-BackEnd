@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "kvbOpbxLH8fdMiXfMnpfC5SsnCFoWTReojrrNDfw1xU=",
+  "Hash": "cHZY6zkRUpqe11BvPoTC91xoTR++94e+wgpyIm66NxI=",
   "Source": "GameLib",
   "BasePath": "_content/GameLib",
   "Mode": "Default",
@@ -22761,6 +22761,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/assets/img/blog/.DS_Store"
+    },
+    {
+      "Identity": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/img/blog/2966c41a-ec6d-4b22-b7b3-691fb85b98c4_Marvel's Spider-Man 2.jpeg",
+      "SourceId": "GameLib",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/",
+      "BasePath": "_content/GameLib",
+      "RelativePath": "assets/img/blog/2966c41a-ec6d-4b22-b7b3-691fb85b98c4_Marvel's Spider-Man 2.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/assets/img/blog/2966c41a-ec6d-4b22-b7b3-691fb85b98c4_Marvel's Spider-Man 2.jpeg"
+    },
+    {
+      "Identity": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/img/blog/64ae9146-431e-43e5-b146-97c170a87c68_Marvel's Spider-Man 2.jpeg",
+      "SourceId": "GameLib",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/",
+      "BasePath": "_content/GameLib",
+      "RelativePath": "assets/img/blog/64ae9146-431e-43e5-b146-97c170a87c68_Marvel's Spider-Man 2.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/assets/img/blog/64ae9146-431e-43e5-b146-97c170a87c68_Marvel's Spider-Man 2.jpeg"
     },
     {
       "Identity": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/img/blog/Assassin's Creed Mirage Screenshot 1.jpeg",
