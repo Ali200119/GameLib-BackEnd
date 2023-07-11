@@ -32,7 +32,7 @@ namespace GameLib.Controllers
 
 
 
-        public async Task<IActionResult> Index(int page = 1, int take = 2)
+        public async Task<IActionResult> Index(int page = 1, int take = 3)
         {
             Dictionary<string, string> sectionHeaders = _staticDataService.GetAllSectionHeaders();
             IEnumerable<Blog> blogs = await _blogService.GetAllWithIncludesAsync();
@@ -68,7 +68,7 @@ namespace GameLib.Controllers
                 {
                     SectionHeaders = sectionHeaders,
                     Blog = blog,
-                    LatestBlogs = latestBlogs.OrderByDescending(b => b.CreatedAt).Take(5),
+                    LatestBlogs = latestBlogs.OrderByDescending(b => b.CreatedAt).Take(4),
                     Socials = socials,
                     Comments = blogComments
                 };

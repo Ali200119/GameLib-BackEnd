@@ -20,6 +20,34 @@ namespace Service.Services
 
         public async Task<IEnumerable<Genre>> GetAllAsync() => await _genreRepo.GetAllAsync();
 
+        public async Task<Genre> GetByIdAsync(int? id)
+        {
+            if (id is null) throw new ArgumentNullException();
+
+            return await _genreRepo.GetByIdAsync(id);
+        }
+
+        public async Task CreateAsync(Genre genre)
+        {
+            if (genre is null) throw new ArgumentNullException();
+
+            await _genreRepo.CreateAsync(genre);
+        }
+
+        public async Task UpdateAsync(Genre genre)
+        {
+            if (genre is null) throw new ArgumentNullException();
+
+            await _genreRepo.UpdateAsync(genre);
+        }
+
+        public async Task DeleteAsync(Genre genre)
+        {
+            if (genre is null) throw new ArgumentNullException();
+
+            await _genreRepo.DeleteAsync(genre);
+        }
+
         public async Task<IEnumerable<Game>> FilterGames(int? id)
         {
             if (id is null) throw new ArgumentNullException();

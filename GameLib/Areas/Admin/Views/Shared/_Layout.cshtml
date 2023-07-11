@@ -22,7 +22,7 @@
     <!-- Layout styles -->
     <link rel="stylesheet" href="~/admin/assets/css/style.css">
     <!-- End layout styles -->
-    <link rel="shortcut icon" href="~/admin/assets/images/favicon.png" />
+    <link rel="shortcut icon" href="~/assets/img/static-images/icon.png" />
 </head>
 <body>
     <div class="container-scroller">
@@ -296,37 +296,35 @@
                         </div>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" data-bs-toggle="collapse" href="#product" aria-expanded="false" aria-controls="ui-basic">
-                            <span class="icon-bg"><i class="mdi mdi-cart"></i></span>
-                            <span class="menu-title">Product</span>
+                        <a class="nav-link" data-bs-toggle="collapse" href="#game" aria-expanded="false" aria-controls="ui-basic">
+                            <span class="icon-bg"><i class="mdi mdi-controller-classic"></i></span>
+                            <span class="menu-title">Game</span>
                             <i class="menu-arrow"></i>
                         </a>
-                        <div class="collapse" id="product">
+                        <div class="collapse" id="game">
                             <ul class="nav flex-column sub-menu">
-                                <li class="nav-item"> <a class="nav-link" asp-area="Admin" asp-controller="Product" asp-action="Index">Products</a></li>
-                                <li class="nav-item"> <a class="nav-link" asp-area="Admin" asp-controller="Size" asp-action="Index">Sizes</a></li>
-                                <li class="nav-item"> <a class="nav-link" asp-area="Admin" asp-controller="Category" asp-action="Index">Categories</a></li>
-                                <li class="nav-item"> <a class="nav-link" asp-area="Admin" asp-controller="Color" asp-action="Index">Colors</a></li>
-                                <li class="nav-item"> <a class="nav-link" asp-area="Admin" asp-controller="Tag" asp-action="Index">Tags</a></li>
+                                <li class="nav-item"> <a class="nav-link" asp-area="Admin" asp-controller="Game" asp-action="Index">Games</a></li>
+                                <li class="nav-item"> <a class="nav-link" asp-area="Admin" asp-controller="Platform" asp-action="Index">Platforms</a></li>
+                                <li class="nav-item"> <a class="nav-link" asp-area="Admin" asp-controller="Genre" asp-action="Index">Genres</a></li>
                             </ul>
                         </div>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" asp-area="Admin" asp-controller="Contact" asp-action="Index">
-                            <span class="icon-bg"><i class="mdi mdi-phone-classic"></i></span>
-                            <span class="menu-title">Contacts</span>
+                        <a class="nav-link" asp-area="Admin" asp-controller="Developer" asp-action="Index">
+                            <span class="icon-bg"><i class="mdi mdi-alpha-d-circle-outline"></i></span>
+                            <span class="menu-title">Developers</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" asp-area="Admin" asp-controller="BlogComment" asp-action="Index">
-                            <span class="icon-bg"><i class="mdi mdi-account-card-details"></i></span>
-                            <span class="menu-title">Blog Comments</span>
+                        <a class="nav-link" asp-area="Admin" asp-controller="Social" asp-action="Index">
+                            <span class="icon-bg"><i class="mdi mdi-alpha-s-circle-outline"></i></span>
+                            <span class="menu-title">Socials</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" asp-area="Admin" asp-controller="ProductComment" asp-action="Index">
-                            <span class="icon-bg"><i class="mdi mdi-account-card-details"></i></span>
-                            <span class="menu-title">Product Comments</span>
+                        <a class="nav-link" asp-area="Admin" asp-controller="Subscribe" asp-action="Index">
+                            <span class="icon-bg"><i class="mdi mdi-playlist-check"></i></span>
+                            <span class="menu-title">Subscribers</span>
                         </a>
                     </li>
                     <li class="nav-item sidebar-user-actions">

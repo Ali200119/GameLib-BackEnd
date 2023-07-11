@@ -447,7 +447,7 @@ namespace Repository.Data
                     ForPlaySation = true,
                     ForXbox = false,
                     ForPC = true,
-                    Trailer = "1E051WtpyWg",
+                    Trailer = "utuTNW0Msoc",
                     ReleaseDate = new DateTime(2023, 05, 04)
                 },
 
@@ -1701,7 +1701,7 @@ namespace Repository.Data
                 {
                     Id = 13,
                     Key = "ForgotPasswordBG",
-                    Value = "Forgot Password BG.jpeg"
+                    Value = "Forgot Password BG.webp"
                 }
             );
 

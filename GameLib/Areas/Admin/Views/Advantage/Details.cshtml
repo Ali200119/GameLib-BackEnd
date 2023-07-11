@@ -24,7 +24,7 @@
     <div class="mt-5">
         <h1>Title</h1>
 
-        <p class="mt-2">@Model.Title</p>
+        <h2 class="mt-2">@Model.Title</h2>
     </div>
 
     <div class="mt-5">
@@ -42,7 +42,15 @@
     <div class="mt-5">
         <h1>Update Time</h1>
 
-        <h2 class="mt-2">@Model.ModifiedAt.ToString("dd MMMM yyyy hh:mm tt", new CultureInfo("en"))</h2>
+        @if (Model.ModifiedAt.ToString("dd MMMM yyyy hh:mm:ss", new CultureInfo("en")) == Model.CreatedAt.ToString("dd MMMM yyyy hh:mm:ss", new CultureInfo("en")))
+        {
+            <h2 class="mt-2">Not modified yet</h2>
+        }
+
+        else
+        {
+            <h2 class="mt-2">@Model.ModifiedAt.ToString("dd MMMM yyyy hh:mm tt", new CultureInfo("en"))</h2>
+        }
     </div>
 
 

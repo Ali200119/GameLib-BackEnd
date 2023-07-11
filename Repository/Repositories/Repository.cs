@@ -31,6 +31,14 @@ namespace Repository.Repositories
             await SaveChangesAsync();
         }
 
+        public async Task CreateMultipleAsync(List<T> entity)
+        {
+            if (entities is null) throw new ArgumentNullException();
+
+            await entities.AddRangeAsync(entity);
+            await SaveChangesAsync();
+        }
+
         public async Task DeleteAsync(T entity)
         {
             if (entity is null) throw new ArgumentNullException();

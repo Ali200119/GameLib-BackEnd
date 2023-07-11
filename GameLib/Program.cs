@@ -70,6 +70,7 @@ builder.Services.AddScoped<ICartRepository, CartRepository>();
 builder.Services.AddScoped<ICartGameRepository, CartGameRepository>();
 builder.Services.AddScoped<IBlogCommentRepository, BlogCommentRepository>();
 builder.Services.AddScoped<IBlogAuthorRepository, BlogAuthorRepository>();
+builder.Services.AddScoped<IBlogImageRepository, BlogImageRepository>();
 
 builder.Services.AddScoped<IAboutService, AboutService>();
 builder.Services.AddScoped<IAdvantageService, AdvantageService>();
@@ -87,6 +88,7 @@ builder.Services.AddScoped<IGameCommentService, GameCommentService>();
 builder.Services.AddScoped<ICartService, CartService>();
 builder.Services.AddScoped<IBlogCommentService, BlogCommentService>();
 builder.Services.AddScoped<IBlogAuthorService, BlogAuthorService>();
+builder.Services.AddScoped<IBlogImageService, BlogImageService>();
 builder.Services.AddScoped<EmailSetting>();
 
 var app = builder.Build();

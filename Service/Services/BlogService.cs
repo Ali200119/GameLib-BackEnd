@@ -22,6 +22,27 @@ namespace Service.Services
         
         public async Task<Blog> GetByIdWithIncludesAsync(int? id) => await _blogRepo.GetByIdAsync(id, b => b.BlogImages, b => b.BlogAuthor);
 
+        public async Task CreateAsync(Blog blog)
+        {
+            if (blog is null) throw new ArgumentNullException();
+
+            await _blogRepo.CreateAsync(blog);
+        }
+
+        public async Task UpdateAsync(Blog blog)
+        {
+            if (blog is null) throw new ArgumentNullException();
+
+            await _blogRepo.UpdateAsync(blog);
+        }
+
+        public async Task DeleteAsync(Blog blog)
+        {
+            if (blog is null) throw new ArgumentNullException();
+
+            await _blogRepo.DeleteAsync(blog);
+        }
+
         public async Task<IEnumerable<Blog>> GetPaginatedDatasAsync(int page, int take)
         {
             IEnumerable<Blog> blogs = await _blogRepo.GetAllAsync(b => b.BlogImages, b => b.BlogAuthor);

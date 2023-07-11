@@ -30,31 +30,58 @@ namespace GameLib.Areas.Admin.Controllers
 
         public async Task<IActionResult> Index()
         {
-            IEnumerable<About> about = await _aboutService.GetAsync();
-
-            AboutVM model = new AboutVM
+            try
             {
-                Image = about.FirstOrDefault().Image,
-                Title = about.FirstOrDefault().Title
-            };
+                IEnumerable<About> about = await _aboutService.GetAsync();
 
-            return View(model);
+                AboutVM model = new AboutVM
+                {
+                    Image = about.FirstOrDefault().Image,
+                    Title = about.FirstOrDefault().Title
+                };
+
+                return View(model);
+            }
+
+            catch (ArgumentNullException)
+            {
+                return BadRequest();
+            }
+
+            catch (NullReferenceException)
+            {
+                return NotFound();
+            }
         }
+
         [HttpGet]
         public async Task<IActionResult> Details()
         {
-            IEnumerable<About> about = await _aboutService.GetAsync();
-
-            AboutDetailsVM model = new AboutDetailsVM
+            try
             {
-                Image = about.FirstOrDefault().Image,
-                Title = about.FirstOrDefault().Title,
-                Description = about.FirstOrDefault().Description,
-                CreatedAt = about.FirstOrDefault().CreatedAt,
-                ModifiedAt = about.FirstOrDefault().ModifiedAt
-            };
+                IEnumerable<About> about = await _aboutService.GetAsync();
 
-            return View(model);
+                AboutDetailsVM model = new AboutDetailsVM
+                {
+                    Image = about.FirstOrDefault().Image,
+                    Title = about.FirstOrDefault().Title,
+                    Description = about.FirstOrDefault().Description,
+                    CreatedAt = about.FirstOrDefault().CreatedAt,
+                    ModifiedAt = about.FirstOrDefault().ModifiedAt
+                };
+
+                return View(model);
+            }
+
+            catch (ArgumentNullException)
+            {
+                return BadRequest();
+            }
+
+            catch (NullReferenceException)
+            {
+                return NotFound();
+            }
         }
 
         [HttpGet]
@@ -90,50 +117,63 @@ namespace GameLib.Areas.Admin.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(AboutEditVM model)
         {
-            IEnumerable<About> about = await _aboutService.GetAsync();
-
-            if (!ModelState.IsValid)
+            try
             {
-                model.Image = about.FirstOrDefault().Image;
-                return View(model);
-            }
+                IEnumerable<About> about = await _aboutService.GetAsync();
 
-            if (model.Photo is null) model.Image = about.FirstOrDefault().Image;
-
-            else
-            {
-                if (!model.Photo.CheckFileType("image/"))
+                if (!ModelState.IsValid)
                 {
-                    ModelState.AddModelError("Photo", "File type must be image.");
                     model.Image = about.FirstOrDefault().Image;
                     return View(model);
                 }
 
-                string fileName = model.Photo.GenerateFileName();
-                string path = FileHelper.GetFilePath(_env.WebRootPath, "assets/img/about", fileName);
+                if (model.Photo is null) model.Image = about.FirstOrDefault().Image;
 
-                string oldImagePath = FileHelper.GetFilePath(_env.WebRootPath, "assets/img/about", about.FirstOrDefault().Image);
+                else
+                {
+                    if (!model.Photo.CheckFileType("image/"))
+                    {
+                        ModelState.AddModelError("Photo", "File type must be image.");
+                        model.Image = about.FirstOrDefault().Image;
+                        return View(model);
+                    }
 
-                await model.Photo.CreateLocalFileAsync(path);
+                    string fileName = model.Photo.GenerateFileName();
+                    string path = FileHelper.GetFilePath(_env.WebRootPath, "assets/img/about", fileName);
 
-                FileHelper.DeleteFileFromPath(oldImagePath);
+                    string oldImagePath = FileHelper.GetFilePath(_env.WebRootPath, "assets/img/about", about.FirstOrDefault().Image);
 
-                model.Image = fileName;
+                    await model.Photo.CreateLocalFileAsync(path);
+
+                    FileHelper.DeleteFileFromPath(oldImagePath);
+
+                    model.Image = fileName;
+                }
+
+                About updatedAbout = new About
+                {
+                    Id = model.Id,
+                    Image = model.Image,
+                    Title = model.Title,
+                    Description = model.Description,
+                    CreatedAt = about.FirstOrDefault().CreatedAt,
+                    ModifiedAt = DateTime.Now
+                };
+
+                await _aboutService.UpdateAsync(updatedAbout);
+
+                return RedirectToAction(nameof(Index));
             }
 
-            About updatedAbout = new About
+            catch (ArgumentException)
             {
-                Id = model.Id,
-                Image = model.Image,
-                Title = model.Title,
-                Description = model.Description,
-                CreatedAt = about.FirstOrDefault().CreatedAt,
-                ModifiedAt = DateTime.Now
-            };
+                return BadRequest();
+            }
 
-            await _aboutService.UpdateAsync(updatedAbout);
-
-            return RedirectToAction(nameof(Index));
+            catch (NullReferenceException)
+            {
+                return NotFound();
+            }
         }
     }
 }

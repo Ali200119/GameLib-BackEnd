@@ -1,42 +1,57 @@
 ﻿<Properties StartupConfiguration="{DA011D14-646D-4E53-88D4-623F2AE99E63}|Default">
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workbench ActiveDocument="GameLib/Areas/Admin/Views/About/Details.cshtml">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Service/Helpers/FileHelper.cs">
     <Files>
-      <File FileName="GameLib/Areas/Admin/Views/Shared/_Layout.cshtml" />
-      <File FileName="GameLib/Areas/Admin/Views/About/Details.cshtml" Line="27" Column="13" />
-      <File FileName="GameLib/Areas/Admin/Views/About/Edit.cshtml" />
-      <File FileName="GameLib/Areas/Admin/Controllers/AboutController.cs" />
+      <File FileName="GameLib/Areas/Admin/Views/_ViewImports.cshtml" Line="9" Column="43" IsPinned="True" />
+      <File FileName="GameLib/Areas/Admin/Views/Shared/_Layout.cshtml" Line="313" Column="71" IsPinned="True" />
+      <File FileName="GameLib/Areas/Admin/Controllers/BlogController.cs" Line="68" Column="35" />
+      <File FileName="GameLib/Areas/Admin/Views/Blog/Create.cshtml" Line="47" Column="80" />
+      <File FileName="GameLib/Areas/Admin/Views/About/Details.cshtml" Line="37" Column="29" />
+      <File FileName="Service/Helpers/FileHelper.cs" Line="3" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="GameLib" expanded="True">
-            <Node name="Domain" expanded="True" />
+            <Node name="Domain" expanded="True">
+              <Node name="Common" expanded="True" />
+              <Node name="Models" expanded="True" />
+            </Node>
             <Node name="GameLib" expanded="True">
               <Node name="Areas" expanded="True">
                 <Node name="Admin" expanded="True">
                   <Node name="Controllers" expanded="True" />
+                  <Node name="ViewModels" expanded="True">
+                    <Node name="Blog" expanded="True" />
+                  </Node>
                   <Node name="Views" expanded="True">
-                    <Node name="About" expanded="True">
-                      <Node name="Details.cshtml" selected="True" />
-                    </Node>
+                    <Node name="About" expanded="True" />
                     <Node name="Shared" expanded="True" />
                   </Node>
                 </Node>
               </Node>
-              <Node name="wwwroot" expanded="True" />
             </Node>
-            <Node name="Repository" expanded="True" />
-            <Node name="Service" expanded="True" />
+            <Node name="Repository" expanded="True">
+              <Node name="Data" expanded="True" />
+              <Node name="Repositories" expanded="True" />
+            </Node>
+            <Node name="Service" expanded="True">
+              <Node name="Helpers" expanded="True">
+                <Node name="FileHelper.cs" selected="True" />
+              </Node>
+              <Node name="Services" expanded="True">
+                <Node name="Interfaces" expanded="True" />
+              </Node>
+            </Node>
           </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.ItemProperties.GameLib PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
 </Properties>

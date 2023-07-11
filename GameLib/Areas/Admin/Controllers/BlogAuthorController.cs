@@ -28,20 +28,33 @@ namespace GameLib.Areas.Admin.Controllers
 
         public async Task<IActionResult> Index()
         {
-            IEnumerable<BlogAuthor> blogAuthors = await _blogAuthorService.GetAllAsync();
-
-            List<BlogAuthorListVM> model = new List<BlogAuthorListVM>();
-
-            foreach (var blogAuthor in blogAuthors)
+            try
             {
-                model.Add(new BlogAuthorListVM
+                IEnumerable<BlogAuthor> blogAuthors = await _blogAuthorService.GetAllAsync();
+
+                List<BlogAuthorListVM> model = new List<BlogAuthorListVM>();
+
+                foreach (var blogAuthor in blogAuthors)
                 {
-                    Id = blogAuthor.Id,
-                    Name = blogAuthor.Name
-                });
+                    model.Add(new BlogAuthorListVM
+                    {
+                        Id = blogAuthor.Id,
+                        Name = blogAuthor.Name
+                    });
+                }
+
+                return View(model);
             }
 
-            return View(model);
+            catch (ArgumentNullException)
+            {
+                return BadRequest();
+            }
+
+            catch (NullReferenceException)
+            {
+                return NotFound();
+            }
         }
 
         [HttpGet]
@@ -52,6 +65,8 @@ namespace GameLib.Areas.Admin.Controllers
                 if (id is null) throw new ArgumentNullException();
 
                 BlogAuthor blogAuthor = await _blogAuthorService.GetByIdAsync(id);
+
+                if (blogAuthor is null) throw new NullReferenceException();
 
                 BlogAuthorDetailsVM model = new BlogAuthorDetailsVM
                 {
@@ -84,16 +99,29 @@ namespace GameLib.Areas.Admin.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(BlogAuthorCreateVM model)
         {
-            if (!ModelState.IsValid) return View(model);
-
-            BlogAuthor newBlogAuthor = new BlogAuthor
+            try
             {
-                Name = model.Name
-            };
+                if (!ModelState.IsValid) return View(model);
 
-            await _blogAuthorService.CreateAsync(newBlogAuthor);
+                BlogAuthor newBlogAuthor = new BlogAuthor
+                {
+                    Name = model.Name
+                };
 
-            return RedirectToAction(nameof(Index));
+                await _blogAuthorService.CreateAsync(newBlogAuthor);
+
+                return RedirectToAction(nameof(Index));
+            }
+
+            catch (ArgumentNullException)
+            {
+                return BadRequest();
+            }
+
+            catch (NullReferenceException)
+            {
+                return NotFound();
+            }
         }
 
         [HttpGet]

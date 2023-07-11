@@ -7,7 +7,10 @@ namespace Service.Services.Interfaces
 	{
 		Task<IEnumerable<Blog>> GetAllWithIncludesAsync();
 		Task<Blog> GetByIdWithIncludesAsync(int? id);
-		Task<IEnumerable<Blog>> GetPaginatedDatasAsync(int page, int take);
+        Task CreateAsync(Blog blog);
+        Task UpdateAsync(Blog blog);
+        Task DeleteAsync(Blog blog);
+        Task<IEnumerable<Blog>> GetPaginatedDatasAsync(int page, int take);
         Task<IEnumerable<Blog>> GetByNameWithIncludesAsync(string searchText);
         Task<int> GetCountAsync();
     }

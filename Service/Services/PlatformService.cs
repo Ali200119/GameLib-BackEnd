@@ -20,6 +20,34 @@ namespace Service.Services
 
         public async Task<IEnumerable<Platform>> GetAllAsync() => await _platformRepo.GetAllAsync();
 
+        public async Task<Platform> GetByIdAsync(int? id)
+        {
+            if (id is null) throw new ArgumentNullException();
+
+            return await _platformRepo.GetByIdAsync(id);
+        }
+
+        public async Task CreateAsync(Platform platform)
+        {
+            if(platform is null) throw new ArgumentNullException();
+
+            await _platformRepo.CreateAsync(platform);
+        }
+
+        public async Task UpdateAsync(Platform platform)
+        {
+            if (platform is null) throw new ArgumentNullException();
+
+            await _platformRepo.UpdateAsync(platform);
+        }
+
+        public async Task DeleteAsync(Platform platform)
+        {
+            if (platform is null) throw new ArgumentNullException();
+
+            await _platformRepo.DeleteAsync(platform);
+        }
+
         public async Task<IEnumerable<Platform>> GetAllWithIncludesAsync() => await _platformRepo.GetAllWithFullDataAsync();
 
         public async Task<IEnumerable<Game>> FilterGames(int? id)

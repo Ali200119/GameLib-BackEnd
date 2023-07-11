@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "qria/d/qhdW8TmMYOxBynmIzrIyPs4n8IGuXs2RVnAM=",
+  "Hash": "kvbOpbxLH8fdMiXfMnpfC5SsnCFoWTReojrrNDfw1xU=",
   "Source": "GameLib",
   "BasePath": "_content/GameLib",
   "Mode": "Default",
@@ -24956,12 +24956,12 @@
       "OriginalItemSpec": "wwwroot/assets/img/static-images/Footer BG.jpg"
     },
     {
-      "Identity": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/img/static-images/Forgot Password BG.jpeg",
+      "Identity": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/img/static-images/Forgot Password BG.webp",
       "SourceId": "GameLib",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/",
       "BasePath": "_content/GameLib",
-      "RelativePath": "assets/img/static-images/Forgot Password BG.jpeg",
+      "RelativePath": "assets/img/static-images/Forgot Password BG.webp",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -24970,7 +24970,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/assets/img/static-images/Forgot Password BG.jpeg"
+      "OriginalItemSpec": "wwwroot/assets/img/static-images/Forgot Password BG.webp"
     },
     {
       "Identity": "/Users/ali200119/Desktop/GameLib/GameLib/wwwroot/assets/img/static-images/icon.png",

@@ -144,7 +144,7 @@ total();
 
 document.querySelector("#checkout button").addEventListener("click", function () {
     let userId = this.getAttribute("data-userId");
-    let total = parseFloat(document.querySelector("#checkout .total .price").lastElementChild.innerText);
+    let total = parseFloat(document.querySelector("#checkout .total .price").lastElementChild.innerText.replace(",", "."));
 
     window.location.assign(`/Cart/Checkout?userId=${userId}&total=${total}`);
 });
@@ -163,14 +163,14 @@ function total() {
         totalSum += parseFloat(price.innerText.replace(",", "."));
     }
 
-    total.lastElementChild.innerText = totalSum.toString().replace(".", ",");
+    total.lastElementChild.innerText = totalSum.toFixed(2).toString().replace(".", ",");
 }
 
 function subtotal() {
     let subtotal = document.querySelectorAll("#devide #games table tbody tr .subtotal :last-child");
     
     for (const item of subtotal) {
-        item.innerText = (parseFloat(item.parentNode.previousElementSibling.previousElementSibling.lastElementChild.innerText.replace(",", ".")) * parseInt(item.parentNode.previousElementSibling.firstElementChild.children[1].innerText)).toString().replace(".", ",");
+        item.innerText = (parseFloat(item.parentNode.previousElementSibling.previousElementSibling.lastElementChild.innerText.replace(",", ".")) * parseInt(item.parentNode.previousElementSibling.firstElementChild.children[1].innerText)).toFixed(2).toString().replace(".", ",");
     }
 }
 

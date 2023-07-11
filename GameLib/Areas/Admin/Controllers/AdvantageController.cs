@@ -26,21 +26,34 @@ namespace GameLib.Areas.Admin.Controllers
 
         public async Task<IActionResult> Index()
         {
-            IEnumerable<Advantage> advantages = await _advantageService.GetAllAsync();
-
-            List<AdvantageListVM> model = new List<AdvantageListVM>();
-
-            foreach (var advantage in advantages)
+            try
             {
-                model.Add(new AdvantageListVM
+                IEnumerable<Advantage> advantages = await _advantageService.GetAllAsync();
+
+                List<AdvantageListVM> model = new List<AdvantageListVM>();
+
+                foreach (var advantage in advantages)
                 {
-                    Id = advantage.Id,
-                    Icon = advantage.Icon,
-                    Title = advantage.Title
-                });
+                    model.Add(new AdvantageListVM
+                    {
+                        Id = advantage.Id,
+                        Icon = advantage.Icon,
+                        Title = advantage.Title
+                    });
+                }
+
+                return View(model);
             }
 
-            return View(model);
+            catch (ArgumentNullException)
+            {
+                return BadRequest();
+            }
+
+            catch (NullReferenceException)
+            {
+                return NotFound();
+            }
         }
 
         [HttpGet]
@@ -85,29 +98,42 @@ namespace GameLib.Areas.Admin.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(AdvantageCreateVM model)
         {
-            if (!ModelState.IsValid) return View(model);
-
-            IEnumerable<Advantage> advantages = await _advantageService.GetAllAsync();
-
-            foreach (var advantage in advantages)
+            try
             {
-                if(advantage.Title.Trim().ToLower() == model.Title.Trim().ToLower())
+                if (!ModelState.IsValid) return View(model);
+
+                IEnumerable<Advantage> advantages = await _advantageService.GetAllAsync();
+
+                foreach (var advantage in advantages)
                 {
-                    ModelState.AddModelError("Title", "Advantage with this name is already exists.");
-                    return View(model);
+                    if (advantage.Title.Trim().ToLower() == model.Title.Trim().ToLower())
+                    {
+                        ModelState.AddModelError("Title", "Advantage with this title is already exists.");
+                        return View(model);
+                    }
                 }
+
+                Advantage newAdvantage = new Advantage
+                {
+                    Icon = model.Icon,
+                    Title = model.Title,
+                    Description = model.Description
+                };
+
+                await _advantageService.CreateAsync(newAdvantage);
+
+                return RedirectToAction(nameof(Index));
             }
 
-            Advantage newAdvantage = new Advantage
+            catch (ArgumentNullException)
             {
-                Icon = model.Icon,
-                Title = model.Title,
-                Description = model.Description
-            };
+                return BadRequest();
+            }
 
-            await _advantageService.CreateAsync(newAdvantage);
-
-            return RedirectToAction(nameof(Index));
+            catch (NullReferenceException)
+            {
+                return NotFound();
+            }
         }
 
         [HttpGet]
@@ -157,7 +183,7 @@ namespace GameLib.Areas.Admin.Controllers
                 {
                     if (advantage.Title.Trim().ToLower() == model.Title.Trim().ToLower() && advantage.Id != model.Id)
                     {
-                        ModelState.AddModelError("Title", "Advantage with this name is already exists.");
+                        ModelState.AddModelError("Title", "Advantage with this title is already exists.");
                         return View(model);
                     }
                 }

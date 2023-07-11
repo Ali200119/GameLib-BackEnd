@@ -122,7 +122,7 @@ namespace GameLib.Areas.Admin.Controllers
                 {
                     if (developer.Name.Trim().ToLower() == model.Name.Trim().ToLower())
                     {
-                        ModelState.AddModelError("Title", "Developer with this name is already exists.");
+                        ModelState.AddModelError("Name", "Developer with this name is already exists.");
                         return View(model);
                     }
                 }
@@ -163,6 +163,8 @@ namespace GameLib.Areas.Admin.Controllers
 
                 Developer developer = await _developerService.GetByIdAsync(id);
 
+                if (developer is null) throw new NullReferenceException();
+
                 DeveloperEditVM model = new DeveloperEditVM
                 {
                     Id = developer.Id,
@@ -190,29 +192,43 @@ namespace GameLib.Areas.Admin.Controllers
         {
             try
             {
-                Developer developer = await _developerService.GetByIdAsync(model.Id);
+                Developer oldDeveloper = await _developerService.GetByIdAsync(model.Id);
+
+                if (oldDeveloper is null) throw new NullReferenceException();
 
                 if (!ModelState.IsValid)
                 {
-                    model.Logo = developer.Logo;
+                    model.Logo = oldDeveloper.Logo;
                     return View(model);
                 }
 
-                if (model.Photo is null) model.Logo = developer.Logo;
+                IEnumerable<Developer> developers = await _developerService.GetAllAsync();
+
+                foreach (var developer in developers)
+                {
+                    if (developer.Name.Trim().ToLower() == model.Name.Trim().ToLower() && developer.Id != model.Id)
+                    {
+                        model.Logo = oldDeveloper.Logo;
+                        ModelState.AddModelError("Name", "Developer with this name is already exists.");
+                        return View(model);
+                    }
+                }
+
+                if (model.Photo is null) model.Logo = oldDeveloper.Logo;
 
                 else
                 {
                     if (!model.Photo.CheckFileType("image/"))
                     {
                         ModelState.AddModelError("Photo", "File type must be image.");
-                        model.Logo = developer.Logo;
+                        model.Logo = oldDeveloper.Logo;
                         return View(model);
                     }
 
                     string fileName = model.Photo.GenerateFileName();
                     string path = FileHelper.GetFilePath(_env.WebRootPath, "assets/img/developers", fileName);
 
-                    string oldImagePath = FileHelper.GetFilePath(_env.WebRootPath, "assets/img/developers", developer.Logo);
+                    string oldImagePath = FileHelper.GetFilePath(_env.WebRootPath, "assets/img/developers", oldDeveloper.Logo);
 
                     await model.Photo.CreateLocalFileAsync(path);
 
@@ -226,7 +242,7 @@ namespace GameLib.Areas.Admin.Controllers
                     Id = model.Id,
                     Logo = model.Logo,
                     Name = model.Name,
-                    CreatedAt = developer.CreatedAt,
+                    CreatedAt = oldDeveloper.CreatedAt,
                     ModifiedAt = DateTime.Now
                 };
 

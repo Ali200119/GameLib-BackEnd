@@ -7,5 +7,9 @@ namespace Service.Services.Interfaces
 	{
 		Task<IEnumerable<Genre>> GetAllAsync();
 		Task<IEnumerable<Game>> FilterGames(int? id);
+		Task<Genre> GetByIdAsync(int? id);
+		Task CreateAsync(Genre genre);
+        Task UpdateAsync(Genre genre);
+        Task DeleteAsync(Genre genre);
     }
 }

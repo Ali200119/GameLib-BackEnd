@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Threading.Tasks;
 using Domain.Models;
@@ -168,9 +169,11 @@ namespace GameLib.Controllers
             }
 
             string fullName = user.FullName;
+            string date = $"{DateTime.Now.ToString("MMMM dd, yyyy", new CultureInfo("en"))} at {DateTime.Now.ToString("hh:mm tt")}";
 
             html = html.Replace("{{fullName}}", fullName);
             html = html.Replace("{{total}}", total.ToString());
+            html = html.Replace("{{date}}", date);
             html = html.Replace("{{link}}", link);
 
             _emailService.Send(user.Email, subject, html);

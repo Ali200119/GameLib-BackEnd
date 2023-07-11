@@ -36,6 +36,13 @@
     <None Remove="Areas\Admin\Views\BlogAuthor\" />
     <None Remove="Areas\Admin\ViewModels\Developer\" />
     <None Remove="Areas\Admin\Views\Developer\" />
+    <None Remove="Areas\Admin\ViewModels\Social\" />
+    <None Remove="Areas\Admin\Views\Social\" />
+    <None Remove="Areas\Admin\ViewModels\Platform\" />
+    <None Remove="Areas\Admin\ViewModels\Genre\" />
+    <None Remove="Areas\Admin\ViewModels\Subscribe\" />
+    <None Remove="Areas\Admin\ViewModels\Blog\" />
+    <None Remove="Areas\Admin\Views\Blog\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\Home\" />
@@ -65,6 +72,13 @@
     <Folder Include="Areas\Admin\Views\BlogAuthor\" />
     <Folder Include="Areas\Admin\ViewModels\Developer\" />
     <Folder Include="Areas\Admin\Views\Developer\" />
+    <Folder Include="Areas\Admin\ViewModels\Social\" />
+    <Folder Include="Areas\Admin\Views\Social\" />
+    <Folder Include="Areas\Admin\ViewModels\Platform\" />
+    <Folder Include="Areas\Admin\ViewModels\Genre\" />
+    <Folder Include="Areas\Admin\ViewModels\Subscribe\" />
+    <Folder Include="Areas\Admin\ViewModels\Blog\" />
+    <Folder Include="Areas\Admin\Views\Blog\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.15" />
@@ -78,6 +92,7 @@
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.14" />
+    <PackageReference Include="Microsoft.AspNetCore.Http" Version="2.2.2" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Service\Service.csproj">
